@@ -6,8 +6,6 @@ import type { Metadata } from "next";
 import { SITE_CONFIG } from "@/lib/constants";
 import { InvestigationCard } from "@/components/InvestigationCard";
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = {
   title: `${SITE_CONFIG.NAME} — Platform Investigasi Bisnis-Politik Indonesia`,
   description: SITE_CONFIG.DESCRIPTION,
