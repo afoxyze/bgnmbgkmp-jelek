@@ -19,23 +19,11 @@ export function GraphPage({ caseStudy: initialCaseStudy }: { caseStudy: CaseStud
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!data) {
-      fetch("/api/casestudy")
-        .then((res) => {
-          if (!res.ok) throw new Error("Gagal mengambil data investigasi.");
-          return res.json();
-        })
-        .then((caseData) => {
-          setData(caseData);
-          setLoading(false);
-        })
-        .catch((err) => {
-          console.error(err);
-          setError(err.message);
-          setLoading(false);
-        });
+    if (!data && !initialCaseStudy) {
+      setError("Data investigasi tidak tersedia.");
+      setLoading(false);
     }
-  }, [data]);
+  }, [data, initialCaseStudy]);
 
   return (
     <div className="flex-1 relative overflow-hidden flex flex-col bg-[var(--bg-base)]">

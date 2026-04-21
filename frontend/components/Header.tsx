@@ -21,21 +21,8 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [liveStats, setLiveStats] = useState<{TOTAL_ENTITIES: number, TOTAL_RED_FLAGS: number} | null>(null);
 
-  // Load dynamic stats from API
-  useEffect(() => {
-    fetch("/api/casestudy")
-      .then(res => res.json())
-      .then(data => {
-        if (data.stats) {
-          setLiveStats({
-            TOTAL_ENTITIES: data.stats.TOTAL_ENTITIES,
-            TOTAL_RED_FLAGS: data.stats.TOTAL_RED_FLAGS
-          });
-        }
-      })
-      .catch(err => console.error("Failed to fetch header stats:", err));
-  }, []);
-
+  // Stats loading removed for static export compatibility
+  
   // Mencegah menu terbuka saat ukuran layar berubah ke desktop
   useEffect(() => {
     const handleResize = () => {
