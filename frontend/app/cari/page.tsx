@@ -6,8 +6,6 @@ export const metadata: Metadata = {
   title: "Cari Entitas — KONEKSI.ID",
 };
 
-export const dynamic = "force-dynamic";
-
 export default async function CariPage() {
   const caseStudy = await getCaseStudy();
 

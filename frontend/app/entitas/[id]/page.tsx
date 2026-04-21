@@ -19,7 +19,15 @@ export async function generateMetadata({ params }: EntitasPageProps): Promise<Me
   };
 }
 
-export const dynamic = "force-dynamic";
+// Generate static paths for all entities during build
+export async function generateStaticParams() {
+  const caseStudy = await getCaseStudy();
+  if (!caseStudy) return [];
+  
+  return caseStudy.entities.map((entity) => ({
+    id: entity.id,
+  }));
+}
 
 export default async function EntitasPage({ params }: EntitasPageProps) {
   const { id } = await params;
