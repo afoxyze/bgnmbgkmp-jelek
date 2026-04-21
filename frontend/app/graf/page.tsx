@@ -1,10 +1,14 @@
 import { GraphPage } from "@/components/GraphPage";
+import { getCaseStudy } from "@/lib/data";
+import type { Metadata } from "next";
 
-/**
- * Server page component for the graph explorer.
- * No data fetching here to prevent SSR-related text flashes.
- * The Client component (GraphPage) handles data fetching via API.
- */
-export default function Page() {
-  return <GraphPage caseStudy={null} />;
+export const metadata: Metadata = {
+  title: "Eksplorasi Graf — KONEKSI.ID",
+  description: "Visualisasi jaringan hubungan antara aktor bisnis dan politik dalam proyek strategis nasional.",
+};
+
+export default async function Page() {
+  const caseStudy = await getCaseStudy();
+  
+  return <GraphPage caseStudy={caseStudy} />;
 }
