@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "tanggal_riset": "2026-04-11",
+    "sumber": "KPK Investigation, Seputar Indonesia, Radar Post, Patroli Hukum",
+    "status": "investigasi_aktif"
+  },
+  "entities": [
+    {
+      "id": "person-shoraya",
+      "label": "Shoraya Lolyta Oktaviana",
+      "type": "Person",
+      "properties": {
+        "jabatan": "CEO PT Indoraya Multi Internasional (IMI)",
+        "koneksi": "Terafiliasi dengan Nanik S. Deyang (Wakil Kepala BGN)",
+        "red_flag": "Dugaan NIK Ganda dan pemenangan kontrak tanpa tender di ekosistem Agrinas"
+      },
+      "sumber": [
+        "https://www.seputarindonesia.co.id/politik/kpk-selidiki-agrinas-700m",
+        "https://radarpost.id/investigasi/shoraya-nik-ganda"
+      ]
+    },
+    {
+      "id": "org-imi",
+      "label": "PT Indoraya Multi Internasional (IMI)",
+      "type": "Organization",
+      "properties": {
+        "alamat_akta": "Plaza Kaha Lt. 4, Tebet, Jakarta Selatan (DILAPORKAN KOSONG)",
+        "lokasi_fisik": "Gudang Pusziad TNI AD, Cileungsi (Temuan Unit Rak)",
+        "kontrak": "Rp 375 Miliar (Pengadaan Rak SPPG)",
+        "red_flag": "Menggunakan fasilitas gudang militer (Pusziad TNI AD) untuk penyimpanan unit komersial hasil proyek pemerintah."
+      },
+      "sumber": [
+        "https://patrolihukum.net/investigasi-unit-rak-di-gudang-pusziad"
+      ]
+    },
+    {
+      "id": "org-nsp",
+      "label": "PT Nagatama Septa Persada (NSP)",
+      "type": "Organization",
+      "properties": {
+        "alamat": "Plaza Kaha Lt. 4, Tebet, Jakarta Selatan (Sama dengan PT IMI)",
+        "kontrak": "Rp 320 Miliar",
+        "status": "Diduga Paper Company"
+      },
+      "sumber": [
+        "https://companieshouse.id/pt-nagatama-septa-persada"
+      ]
+    },
+    {
+      "id": "org-agrinas-pangan",
+      "type": "Organization",
+      "label": "PT Agrinas Pangan Nusantara",
+      "properties": {
+        "jenis": "Anak Perusahaan Agrinas Group",
+        "fokus_bisnis": "Logistik, Distribusi Pangan, dan Operasional Koperasi",
+        "mandat": "Pengelola operasional Koperasi Merah Putih selama 2 tahun pertama"
+      },
+      "sumber": [
+        "https://agrinas.id"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "from": "person-shoraya",
+      "to": "org-imi",
+      "type": "BENEFICIAL_OWNER",
+      "konteks": "Kendali penuh sebagai CEO and pemilik utama."
+    },
+    {
+      "from": "person-shoraya",
+      "to": "org-nsp",
+      "type": "BENEFICIAL_OWNER",
+      "konteks": "Diduga sebagai pengendali di balik nama nominee."
+    },
+    {
+      "from": "org-imi",
+      "to": "org-agrinas-pangan",
+      "type": "MENERIMA_KONTRAK",
+      "konteks": "Penunjukan langsung Rp 375 Miliar."
+    },
+    {
+      "from": "org-nsp",
+      "to": "org-agrinas-pangan",
+      "type": "MENERIMA_KONTRAK",
+      "konteks": "Penunjukan langsung Rp 320 Miliar."
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "rf-nik-shoraya",
+      "severity": "HIGH",
+      "type": "IDENTITAS_GANDA",
+      "deskripsi": "Ditemukan indikasi kepemilikan 3 NIK aktif berbeda atas nama Shoraya Lolyta Oktaviana guna penyamaran identitas dalam bisnis.",
+      "entitas_terlibat": [
+        "person-shoraya"
+      ],
+      "sumber": [
+        "https://radarpost.id/investigasi/shoraya-nik-ganda"
+      ]
+    },
+    {
+      "id": "rf-gudang-tni",
+      "severity": "HIGH",
+      "type": "PENGGUNAAN_FASILITAS_NEGARA_ILEGAL",
+      "deskripsi": "Ribuan unit rak hasil proyek PT IMI ditemukan disimpan di Gudang Pusziad TNI AD Cileungsi tanpa kejelasan status sewa komersial.",
+      "entitas_terlibat": [
+        "org-imi"
+      ],
+      "sumber": [
+        "https://patrolihukum.net/investigasi-unit-rak-di-gudang-pusziad"
+      ]
+    }
+  ],
+  "investigasi_lanjutan": []
+}

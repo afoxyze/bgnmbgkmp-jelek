@@ -1,0 +1,55 @@
+{
+  "entities": [
+    {
+      "name": "PT Agrinas Pangan Nusantara",
+      "ahu_id": "2452889",
+      "type": "PT",
+      "board": [
+        {"name": "Ida Bagus Purwalaksana", "role": "Komisaris", "tags": ["Kemenhan", "Eks Wamenhan"]},
+        {"name": "Joao Angelo De Sousa Mota", "role": "Direktur Utama (Resigned Aug 2025)", "tags": ["Tim Kampanye"]},
+        {"name": "Valentinus Rudy Hartono", "role": "Direktur", "tags": []}
+      ],
+      "red_flags": ["Transformasi BUMN Karya untuk Program MBG", "Pengunduran diri mendadak Dirut"]
+    },
+    {
+      "name": "PT Mastersystem Infotama Tbk",
+      "ahu_id": "23645",
+      "type": "PT (Public)",
+      "board": [
+        {"name": "Jupri Wijaya", "role": "Presiden Komisaris", "tags": []},
+        {"name": "Ronald Waas", "role": "Komisaris", "tags": ["Eks Deputi Gubernur BI"]},
+        {"name": "Eddy Anthony", "role": "Presiden Direktur", "tags": ["Founder"]}
+      ],
+      "red_flags": ["Pemenang infrastruktur IT MBG senilai ratusan miliar"]
+    },
+    {
+      "name": "PT Indoraya Multi Internasional",
+      "ahu_id": "68317",
+      "type": "PT",
+      "board": [
+        {"name": "Shoraya Lolyta Oktaviana", "role": "CEO / Direktur Utama", "tags": ["Unhan", "HIPMI", "KPK Witness"]}
+      ],
+      "red_flags": ["Kontrak Rak Rp 700M tanpa tender", "Koneksi ke Pejabat UNHAN", "Isu Kepemilikan Multiple NIK"]
+    },
+    {
+      "name": "Yayasan Pengembangan Potensi Sumber Daya Pertahanan (YPPSDP)",
+      "ahu_id": "907969",
+      "type": "Yayasan",
+      "board": [
+        {"name": "Prabowo Subianto", "role": "Ketua Pembina", "tags": ["Presiden RI", "Menhan"]},
+        {"name": "Musa Bangun", "role": "Ketua", "tags": ["Waketum Gerindra"]},
+        {"name": "Khoirul Arifin", "role": "Bendahara", "tags": ["Eks Marsda TNI"]}
+      ],
+      "red_flags": ["Super Node pengendali Agrinas & TMI", "Pengurus didominasi elite partai & purnawirawan"]
+    },
+    {
+      "name": "Yayasan Yasika Aulia Ramadhany",
+      "ahu_id": "1608873",
+      "type": "Yayasan",
+      "board": [
+        {"name": "Yasika Aulia Ramadhany", "role": "Pembina", "tags": ["Usia 20 Tahun", "Anak Politisi Gerindra"]}
+      ],
+      "red_flags": ["Mengelola 41 dapur SPPG (Melebihi regulasi)", "Koneksi keluarga ke DPRD/Gerindra"]
+    }
+  ]
+}

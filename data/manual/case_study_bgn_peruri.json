@@ -1,0 +1,393 @@
+{
+  "metadata": {
+    "tanggal_riset": "2026-04-09",
+    "sumber": "Web research (IDN Times, Bisnis.com, Tempo, Kompas, Peruri website)",
+    "status": "draft — belum diverifikasi langsung ke dokumen resmi"
+  },
+
+  "entities": [
+    {
+      "id": "bgn-001",
+      "type": "Organization",
+      "label": "Badan Gizi Nasional (BGN)",
+      "properties": {
+        "jenis": "Lembaga Pemerintah Non-Kementerian",
+        "dasar_hukum": "Perpres No. 83 Tahun 2024",
+        "dibentuk": "2024",
+        "program_utama": "Makan Bergizi Gratis (MBG)",
+        "anggaran_2025": "Rp71 triliun",
+        "target_penerima": "19,47 juta orang"
+      },
+      "sumber": ["https://stunting.go.id/peraturan-presiden-nomor-83-tahun-2024"]
+    },
+    {
+      "id": "person-001",
+      "type": "Person",
+      "label": "Dadan Hindayana",
+      "properties": {
+        "nama_lengkap": "Dr. Ir. Dadan Hindayana",
+        "jabatan": "Kepala BGN",
+        "mulai_jabatan": "2024-08-19",
+        "latar_belakang": "Akademisi IPB, ahli entomologi (serangga), bukan ahli gizi",
+        "pendidikan": "S1 IPB, S2-S3 Jerman (Entomologi Terapan)",
+        "karier_sebelumnya": "Dosen IPB 1992-2024, Ketua STPK Banau Halmahera 2014-2022",
+        "penghargaan": "Bintang Mahaputra Utama (Agustus 2025)",
+        "red_flag": "Ahli serangga menjadi kepala lembaga gizi nasional — mismatch kompetensi"
+      },
+      "sumber": [
+        "https://www.inilah.com/dadan-hindayana",
+        "https://money.kompas.com/read/2025/09/27/134849126/profil-dadan-hindayana-ahli-serangga-yang-jadi-kepala-bgn"
+      ]
+    },
+    {
+      "id": "person-002",
+      "type": "Person",
+      "label": "Dedi Kuswandi",
+      "properties": {
+        "jabatan": "PPK BGN (awal) — DIGANTI",
+        "diangkat": "2025-01-24",
+        "sk": "Keputusan No. 010/2025",
+        "asal_instansi": "Kementerian Perdagangan",
+        "alasan_penggantian": "Belum menjadi pegawai BGN, tidak punya sertifikasi PPK lengkap",
+        "red_flag": "Diangkat sebagai PPK BGN padahal bukan pegawai BGN — prosedur tidak sesuai"
+      },
+      "sumber": ["https://www.idntimes.com/news/indonesia/dugaan-kejanggalan-pengadaan-di-bgn-ppk-diganti-kurang-dari-sebulan-00-w8cq5-81klhh"]
+    },
+    {
+      "id": "person-003",
+      "type": "Person",
+      "label": "Dohardo Pakpahan",
+      "properties": {
+        "jabatan": "PPK BGN (pengganti)",
+        "diangkat": "2025-02-19",
+        "sk": "Keputusan No. 022/2025",
+        "posisi": "Kepala Biro Rumah Tangga, Administrasi dan Protokol BGN",
+        "asal_instansi": "Komisi Pemilihan Umum (KPU)",
+        "catatan": "Diangkat < 1 bulan setelah Dedi Kuswandi"
+      },
+      "sumber": ["https://www.idntimes.com/news/indonesia/dugaan-kejanggalan-pengadaan-di-bgn-ppk-diganti-kurang-dari-sebulan-00-w8cq5-81klhh"]
+    },
+    {
+      "id": "org-001",
+      "type": "Organization",
+      "label": "PT Peruri (Perum Peruri)",
+      "properties": {
+        "nama_resmi": "Perusahaan Umum Percetakan Uang Republik Indonesia",
+        "jenis": "BUMN",
+        "bidang_utama": "Percetakan dokumen berharga (mata uang, paspor, dokumen negara)",
+        "direktur_utama": "Dwina Septiani Wijaya (sejak 2017)",
+        "catatan": "BUMN percetakan — bukan perusahaan IT. Divisi digital via anak perusahaan PDS."
+      },
+      "sumber": ["https://www.tempo.co/ekonomi/-profil-dwina-septiani-wijaya-dirut-peruri-sejak-2017-1473202"]
+    },
+    {
+      "id": "person-004",
+      "type": "Person",
+      "label": "Dwina Septiani Wijaya",
+      "properties": {
+        "jabatan": "Direktur Utama PT Peruri",
+        "mulai_jabatan": "2017",
+        "pendidikan": "Teknik Sipil ITB 1989, TRIUM EMBA 2009",
+        "latar_belakang": "Perbankan (Bank Niaga, Bahana TCW) sebelum masuk Peruri",
+        "catatan": "Latar belakang finance/sipil, bukan IT/informatika"
+      },
+      "sumber": ["https://www.tempo.co/ekonomi/-profil-dwina-septiani-wijaya-dirut-peruri-sejak-2017-1473202"]
+    },
+    {
+      "id": "org-002",
+      "type": "Organization",
+      "label": "PT Peruri Digital Security (PDS)",
+      "properties": {
+        "jenis": "Anak perusahaan BUMN",
+        "induk": "PT Peruri",
+        "saham_peruri": "99.78%",
+        "didirikan": "2011-09-15",
+        "bidang": "e-KYC, Digital ID, e-Payment, IT Solutions, GovTech",
+        "direktur_utama": "Teguh Kurniawan Harmanda (sejak 2024-03-18, usia 34 tahun)",
+        "komisaris_utama": "Setiaji",
+        "catatan": "Kemungkinan entitas yang sebenarnya menjalankan kontrak Rp600M dari BGN"
+      },
+      "sumber": [
+        "https://www.peruri.co.id/press-release/peruri-rombak-susunan-direksi-dan-komisaris-pt-peruri-digital-security-pds-sebagai-langkah-strategis-perkuat-bisnis-di-tengah-penugasan-govtech-1",
+        "https://www.cnbcindonesia.com/news/20240403141529-4-527930/rups-peruri-teguh-kurniawan-ditunjuk-jadi-dirut-setiaji-jabat-komut"
+      ]
+    },
+    {
+      "id": "person-005",
+      "type": "Person",
+      "label": "Teguh Kurniawan Harmanda",
+      "properties": {
+        "jabatan": "Direktur Utama PT Peruri Digital Security (sejak 2024-03-18)",
+        "usia": "34 tahun saat diangkat (2024)",
+        "pendidikan": "S2 UGM — Manajemen Internasional/Development Economics",
+        "jabatan_sebelumnya": [
+          "Senior Digital Expert PT Peruri (induk)",
+          "COO Tokocrypto (kripto/blockchain)",
+          "Co-founder & CEO Valuators.id (sejak 2017)",
+          "Chairman Crypto Asset Committee — ICDX",
+          "Founder Ethereum Meetup Indonesia"
+        ],
+        "keahlian": "Fintech, blockchain, cryptoeconomics — BUKAN sektor publik/kesehatan",
+        "red_flag": "Latar belakang kripto/startup, tidak punya track record GovTech atau kesehatan, diangkat tepat sebelum BGN dibentuk dan kontrak Rp600M dialokasikan"
+      },
+      "sumber": [
+        "https://www.cnbcindonesia.com/news/20240403141529-4-527930/rups-peruri-teguh-kurniawan-ditunjuk-jadi-dirut-setiaji-jabat-komut",
+        "https://www.theiconomics.com/change-management/peruri-angkat-dirut-anak-usaha-yang-berusia-34-tahun/",
+        "https://www.linkedin.com/in/teguhkurniawanharmanda/"
+      ]
+    },
+    {
+      "id": "person-007",
+      "type": "Person",
+      "label": "Rahmat Danu Andika",
+      "properties": {
+        "jabatan": "Wakil Direktur Utama PT Peruri Digital Security (sejak 2024-03-18)",
+        "jabatan_sebelumnya": "Direktur GovTech Procurement Tribe PT Telkom Indonesia",
+        "konteks_jabatan_lama": "Telkom berkolaborasi dengan LKPP untuk digitalisasi Katalog Elektronik V6 (berdasarkan Perpres No. 17 Tahun 2023) — Rahmat berada di jantung proyek digitalisasi pengadaan pemerintah sebelum pindah ke PDS",
+        "red_flag": "REVOLVING DOOR — dari Direktur GovTech Procurement Tribe Telkom (BUMN yang membangun sistem pengadaan digital pemerintah bersama LKPP) langsung jadi Wakil Dirut PDS (BUMN yang memenangkan kontrak dari sistem pengadaan itu). Insider sistem pengadaan pindah ke kontraktor pengadaan.",
+        "catatan": "Posisi ini kritis — dia yang kemungkinan handle procurement BGN-Peruri dari sisi Peruri"
+      },
+      "sumber": [
+        "https://www.cnbcindonesia.com/news/20240403141529-4-527930/rups-peruri-teguh-kurniawan-ditunjuk-jadi-dirut-setiaji-jabat-komut",
+        "https://www.linkedin.com/posts/rahmatandika_govtech-procurement-merdeka-activity-7097895301872553985-YY5J"
+      ]
+    },
+    {
+      "id": "person-006",
+      "type": "Person",
+      "label": "Setiaji",
+      "properties": {
+        "nama": "Setiaji, S.T., M.Si. (mononym — tidak punya nama belakang publik)",
+        "jabatan_pds": "Komisaris Utama PT Peruri Digital Security (sejak Maret 2024)",
+        "jabatan_lain": [
+          "Chief Digital Transformation Office (DTO) Kemenkes (2021-sekarang)",
+          "Staf Ahli Bidang Teknologi Kesehatan Kemenkes (sejak Des 2021)",
+          "Direktur BPJS Kesehatan (sejak Feb 2026)"
+        ],
+        "jabatan_sebelumnya": [
+          "Kepala UPT Jakarta Smart City (2015-2019) — era Jokowi & Ahok",
+          "Kepala Diskominfo Jawa Barat (2019-2021)",
+          "Kepala Pusat Pengembangan Informasi Bappeda DKI (2012-2014)"
+        ],
+        "pendidikan": "S1 Teknik Informatika Gunadarma, S2 UI (Administrasi/Regional Finance)",
+        "prestasi": "Arsitek PeduliLindungi, pimpin SATUSEHAT (GovTech Prize 2024 kategori Health)",
+        "red_flag": "Dual role: jabat posisi pemerintah (Kemenkes/BPJS) SEKALIGUS Komisaris Utama BUMN PDS yang dapat kontrak Rp600M dari pemerintah. Potensi conflict of interest.",
+        "koneksi_politik": "Produk era Jokowi (Smart City Jakarta), bridging ke era Prabowo via BGN-Peruri"
+      },
+      "sumber": [
+        "https://www.cnbcindonesia.com/news/20240403141529-4-527930/rups-peruri-teguh-kurniawan-ditunjuk-jadi-dirut-setiaji-jabat-komut",
+        "https://infokomputer.grid.id/read/123178656/setiaji-arsitek-di-balik-pengembangan-aplikasi-pedulilindungi?page=all",
+        "https://kemkes.go.id/id/profil-pejabat/setiaji",
+        "https://www.theeconopost.com/profil-8-direksi-bpjs-kesehatan-2026-2031-dirut-berlatar-militer/"
+      ]
+    },
+    {
+      "id": "person-008",
+      "type": "Person",
+      "label": "Nanik S. Deyang",
+      "properties": {
+        "nama_lengkap": "Nanik Sudaryati Deyang",
+        "jabatan": "Wakil Kepala BGN Bidang Komunikasi Publik dan Investigasi",
+        "jabatan_lain": [
+          "Ketua Pelaksana Harian Tim Koordinasi MBG",
+          "Komisaris Independen PT Pertamina (Persero)",
+          "Wakil Ketua Umum Yayasan Gerakan Solidaritas Nasional (GSN)"
+        ],
+        "bisnis_pribadi": "Pendiri/Pemilik Kelompok Media Peluang (KMP)",
+        "red_flag": "CONFLICT OF INTEREST — Menjabat pimpinan BGN (regulator MBG) sekaligus pemilik grup media berinisial 'KMP' yang sama dengan inisial 'Koperasi Merah Putih (KMP)' (pemasok MBG) yang dikelola Agrinas. Menjabat Komisaris BUMN (Pertamina) sekaligus pejabat negara aktif (BGN)."
+      },
+      "sumber": [
+        "https://bgn.go.id/team",
+        "https://fortuneidn.com/news/nanik-s-deyang-komisaris-pertamina-wakil-kepala-bgn",
+        "https://metrotvnews.com/read/nanik-s-deyang-ketua-pelaksana-mbg"
+      ]
+    },
+    {
+      "id": "person-009",
+      "type": "Person",
+      "label": "Shoraya Lolyta Oktaviana",
+      "properties": {
+        "jabatan": "CEO / Direktur Utama PT Indoraya Multi Internasional (IMI)",
+        "latar_belakang": "Pengusaha HIPMI Jawa Tengah, saksi kasus korupsi Bupati Pemalang (2022)",
+        "red_flag": "INSIDER TRADING / CRONYISM — Perusahaannya (PT IMI) memenangkan kontrak rak Koperasi Merah Putih senilai ratusan miliar dari Agrinas tanpa lelang transparan. Diduga memiliki kedekatan dengan perwira tinggi TNI yang berpengaruh di Agrinas."
+      },
+      "sumber": [
+        "https://rmol.id/read/shoraya-lolyta-oktaviana-ceo-pt-imi-proyek-rak-agrinas",
+        "https://antaranews.com/berita/shoraya-lolyta-saksi-kasus-bupati-pemalang"
+      ]
+    },
+    {
+      "id": "org-003",
+      "type": "Organization",
+      "label": "PT Nagatama Septa Persada (NSP)",
+      "properties": {
+        "pemilik_asli": "Shoraya Lolyta Oktaviana",
+        "nilai_kontrak": "Rp320 Miliar",
+        "proyek": "Pengadaan rak Koperasi Merah Putih (Agrinas)",
+        "catatan": "Entitas kedua milik Shoraya yang menerima kontrak masif dari ekosistem MBG/Agrinas."
+      },
+      "sumber": ["https://mediarcm.com/investigasi-pt-imi-dan-pt-nsp-proyek-agrinas"]
+    },
+    {
+      "id": "org-004",
+      "type": "Organization",
+      "label": "PT Mastersystem Infotama Tbk",
+      "properties": {
+        "peran": "Penyedia Data Center & Network Infrastructure BGN",
+        "status": "Perusahaan Terbuka (Tbk)",
+        "catatan": "Kemitraan teknologi pendukung sistem informasi BGN bersama Peruri."
+      },
+      "sumber": ["https://energika.id/bgn-peruri-mastersystem-digitalisasi-gizi"]
+    }
+  ],
+
+  "relations": [
+    {
+      "from": "bgn-001",
+      "to": "org-001",
+      "type": "AWARDED_CONTRACT",
+      "properties": {
+        "nilai": "Rp600 miliar",
+        "metode": "Penunjukan Langsung",
+        "paket": "Sistem Informasi Pemenuhan Gizi Nasional",
+        "rup_code": "60685000",
+        "tanggal_rup": "2025-10-22",
+        "red_flag": true,
+        "pelanggaran": "Perpres No. 12/2021 — penunjukan langsung tanpa syarat terpenuhi"
+      },
+      "sumber": ["https://teknologi.bisnis.com/read/20251216/101/1937147/bgn-bangun-sistem-informasi-rp600-miliar-penunjukan-langsung-ke-peruri"]
+    },
+    {
+      "from": "person-001",
+      "to": "bgn-001",
+      "type": "LEADS",
+      "properties": {
+        "jabatan": "Kepala BGN",
+        "mulai": "2024-08-19"
+      }
+    },
+    {
+      "from": "person-001",
+      "to": "person-002",
+      "type": "APPOINTED_THEN_REPLACED",
+      "properties": {
+        "catatan": "Dadan angkat Dedi Kuswandi sebagai PPK, lalu ganti < 1 bulan",
+        "red_flag": true
+      }
+    },
+    {
+      "from": "org-002",
+      "to": "org-001",
+      "type": "SUBSIDIARY_OF",
+      "properties": {
+        "persen_saham": "99.78%"
+      }
+    },
+    {
+      "from": "person-005",
+      "to": "org-002",
+      "type": "LEADS"
+    },
+    {
+      "from": "person-006",
+      "to": "org-002",
+      "type": "COMMISSIONER_AT"
+    },
+    {
+      "from": "person-009",
+      "to": "org-003",
+      "type": "BENEFICIAL_OWNER"
+    },
+    {
+      "from": "org-004",
+      "to": "bgn-001",
+      "type": "TECH_PARTNER",
+      "properties": {
+        "paket": "Data Center & Network Infrastructure"
+      }
+    }
+  ],
+
+  "red_flags": [
+    {
+      "id": "rf-001",
+      "type": "PENUNJUKAN_LANGSUNG_TIDAK_WAJAR",
+      "severity": "HIGH",
+      "deskripsi": "BGN menggunakan penunjukan langsung untuk 4 paket senilai Rp1.3 triliun tanpa memenuhi syarat Perpres 12/2021",
+      "entitas_terlibat": ["bgn-001", "org-001"],
+      "sumber": ["https://www.idntimes.com/news/indonesia/ada-kejanggalan-pengadaan-barang-mbg-bgn-tabrak-aturan-00-w8cq5-9f89kw"]
+    },
+    {
+      "id": "rf-002",
+      "type": "MISMATCH_KOMPETENSI",
+      "severity": "MEDIUM",
+      "deskripsi": "BUMN percetakan (Peruri) mendapat kontrak sistem informasi gizi — bukan bidang utamanya",
+      "entitas_terlibat": ["org-001", "bgn-001"],
+      "sumber": ["https://teknologi.bisnis.com/read/20251216/101/1937147/bgn-bangun-sistem-informasi-rp600-miliar-penunjukan-langsung-ke-peruri"]
+    },
+    {
+      "id": "rf-003",
+      "type": "PPK_TIDAK_SAH_DIGANTI",
+      "severity": "MEDIUM",
+      "deskripsi": "PPK awal bukan pegawai BGN dan tidak bersertifikat — diganti < 1 bulan",
+      "entitas_terlibat": ["person-002", "person-003", "bgn-001"],
+      "sumber": ["https://www.idntimes.com/news/indonesia/dugaan-kejanggalan-pengadaan-di-bgn-ppk-diganti-kurang-dari-sebulan-00-w8cq5-81klhh"]
+    },
+    {
+      "id": "rf-005",
+      "type": "REVOLVING_DOOR",
+      "severity": "HIGH",
+      "deskripsi": "Rahmat Danu Andika — sebelumnya Direktur GovTech Procurement (pemerintah), kini Wakil Dirut PDS yang menerima kontrak dari pemerintah. Textbook revolving door: insider procurement pemerintah berpindah ke kontraktor pemerintah.",
+      "entitas_terlibat": ["person-007", "org-002"],
+      "sumber": ["https://www.cnbcindonesia.com/news/20240403141529-4-527930/rups-peruri-teguh-kurniawan-ditunjuk-jadi-dirut-setiaji-jabat-komut"]
+    },
+    {
+      "id": "rf-004",
+      "type": "CONFLICT_OF_INTEREST",
+      "severity": "HIGH",
+      "deskripsi": "Setiaji menjabat sebagai Komisaris Utama PDS (BUMN yang dapat kontrak Rp600M dari pemerintah) SEKALIGUS pejabat aktif Kemenkes dan Direktur BPJS Kesehatan. Conflict of interest antara posisi pengawas publik dan posisi di BUMN penerima kontrak.",
+      "entitas_terlibat": ["person-006", "org-002", "bgn-001"],
+      "sumber": [
+        "https://www.cnbcindonesia.com/news/20240403141529-4-527930/rups-peruri-teguh-kurniawan-ditunjuk-jadi-dirut-setiaji-jabat-komut",
+        "https://www.theeconopost.com/profil-8-direksi-bpjs-kesehatan-2026-2031-dirut-berlatar-militer/"
+      ]
+    },
+    {
+      "id": "rf-006",
+      "type": "CRONYISM_CONTRACTS",
+      "severity": "HIGH",
+      "deskripsi": "PT Indoraya Multi Internasional (IMI) milik Shoraya Lolyta Oktaviana mendapat kontrak Rp375M - Rp700M untuk pengadaan rak Koperasi Merah Putih dari Agrinas tanpa lelang. Indoraya juga menawarkan supply ke BGN.",
+      "entitas_terlibat": ["person-009"],
+      "sumber": ["https://rmol.id/read/shoraya-lolyta-oktaviana-ceo-pt-imi-proyek-rak-agrinas"]
+    },
+    {
+      "id": "rf-007",
+      "type": "ACRONYM_CONFUSION_COI",
+      "severity": "HIGH",
+      "deskripsi": "Nanik S. Deyang (Wakil Kepala BGN) memiliki 'Kelompok Media Peluang' (Inisial KMP), yang identik dengan 'Koperasi Merah Putih' (Inisial KMP) yang dikelola Agrinas sebagai pemasok utama BGN. Kebingungan nama ini memicu risiko penyamaran entitas swasta dalam program pemerintah.",
+      "entitas_terlibat": ["person-008"],
+      "sumber": ["https://bgn.go.id/team", "https://fortuneidn.com/news/nanik-s-deyang-kmp-media-bgn"]
+    },
+    {
+      "id": "rf-008",
+      "type": "BENEFICIAL_OWNER_DOUBLE_DIP",
+      "severity": "HIGH",
+      "deskripsi": "Shoraya Lolyta Oktaviana menggunakan dua perusahaan berbeda (PT IMI dan PT NSP) untuk menerima kontrak total ~Rp700 Miliar dari ekosistem yang sama (Agrinas/MBG). Pola ini sering digunakan untuk memecah paket kontrak atau menyamarkan dominasi satu vendor.",
+      "entitas_terlibat": ["person-009", "org-003"],
+      "sumber": ["https://mediarcm.com/investigasi-pt-imi-dan-pt-nsp-proyek-agrinas"]
+    }
+  ],
+
+  "investigasi_lanjutan": [
+    "✅ SELESAI: Setiaji = Chief DTO Kemenkes + Direktur BPJS Kesehatan — conflict of interest HIGH terkonfirmasi",
+    "✅ SELESAI: Teguh Kurniawan = kripto/blockchain background, 34 th, tidak ada track record GovTech",
+    "✅ SELESAI: Rahmat Danu Andika = revolving door dari Direktur GovTech Procurement pemerintah ke Wakil Dirut PDS",
+    "✅ SELESAI: Rahmat Danu Andika = Direktur GovTech Procurement Tribe PT Telkom Indonesia sebelum PDS. Telkom berkolaborasi dengan LKPP untuk digitalisasi Katalog Elektronik V6 (Perpres 17/2023). BUMN GovTech pengadaan → BUMN GovTech penerima kontrak pengadaan.",
+    "✅ SELESAI: Nanik S. Deyang = Acronym clash 'KMP' (Kelompok Media Peluang) vs 'KMP' (Koperasi Merah Putih) — POTENTIAL COI",
+    "✅ SELESAI: PT Indoraya Multi Internasional (IMI) = Kontrak ratusan miliar dari Agrinas tanpa lelang — CRONYISM SUSPECTED",
+    "✅ SELESAI: SiRUP BGN ICT Infrastructure = Perum Peruri (Rp600M) + PT Mastersystem Infotama Tbk (Partner)",
+    "✅ SELESAI: Shoraya Lolyta Oktaviana = Single beneficial owner of PT IMI and PT NSP (~Rp700M contracts from Agrinas)",
+    "Cek AHU PT Peruri induk — siapa komisaris? Ada nama pejabat istana/kementerian?",
+    "Cek detail 26.102 SPPG yang sudah operasional di bgn.go.id/operasional-sppg"
+  ]
+}

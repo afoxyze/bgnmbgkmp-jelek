@@ -1,0 +1,25 @@
+[
+  {
+    "type": "DIRECT_CONFLICT",
+    "official": "Nanik S. Deyang",
+    "entity": "Kelompok Media Peluang (KMP)",
+    "matched_red_flag": [
+      "KMP"
+    ]
+  },
+  {
+    "type": "DIRECT_CONFLICT",
+    "official": "Shoraya Lolyta Oktaviana",
+    "entity": "PT Indoraya Multi Internasional (IMI)",
+    "matched_red_flag": [
+      "PT Indoraya Multi Internasional",
+      "IMI"
+    ]
+  },
+  {
+    "type": "ACRONYM_CLASH",
+    "official": "Nanik S. Deyang",
+    "acronym": "KMP",
+    "context": "Nanik leads 'Kelompok Media Peluang (KMP)', MBG has 'Konsorsium KMP' (Agrinas/Defense). Need to verify if they are distinct."
+  }
+]

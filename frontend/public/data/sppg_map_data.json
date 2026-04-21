@@ -1,0 +1,2042 @@
+{
+  "by_province": {
+    "JAWA BARAT": 5972,
+    "BENGKULU": 129,
+    "LAMPUNG": 1111,
+    "MALUKU UTARA": 199,
+    "JAWA TIMUR": 3790,
+    "KEPULAUAN RIAU": 223,
+    "RIAU": 674,
+    "JAWA TENGAH": 4086,
+    "SUMATERA UTARA": 1279,
+    "BANTEN": 1214,
+    "SUMATERA SELATAN": 772,
+    "BALI": 244,
+    "DAERAH ISTIMEWA YOGYAKARTA": 421,
+    "NUSA TENGGARA BARAT": 778,
+    "ACEH": 664,
+    "KALIMANTAN TIMUR": 200,
+    "NUSA TENGGARA TIMUR": 335,
+    "SULAWESI BARAT": 253,
+    "SULAWESI SELATAN": 793,
+    "KALIMANTAN BARAT": 481,
+    "KALIMANTAN SELATAN": 277,
+    "P A P U A": 81,
+    "SULAWESI TENGAH": 222,
+    "JAMBI": 192,
+    "DKI JAKARTA": 562,
+    "PAPUA TENGAH": 116,
+    "SUMATERA BARAT": 391,
+    "KALIMANTAN TENGAH": 93,
+    "SULAWESI TENGGARA": 350,
+    "KALIMANTAN UTARA": 56,
+    "GORONTALO": 86,
+    "MALUKU": 198,
+    "SULAWESI UTARA": 176,
+    "PAPUA PEGUNUNGAN": 107,
+    "KEPULAUAN BANGKA BELITUNG": 100,
+    "PAPUA SELATAN": 102,
+    "PAPUA BARAT": 133,
+    "PAPUA BARAT DAYA": 113,
+    "PAPUA": 93
+  },
+  "by_regency": {
+    "BEKASI": {
+      "count": 317,
+      "province": "JAWA BARAT"
+    },
+    "BANDUNG": {
+      "count": 483,
+      "province": "JAWA BARAT"
+    },
+    "KEPAHIANG": {
+      "count": 8,
+      "province": "BENGKULU"
+    },
+    "TASIKMALAYA": {
+      "count": 281,
+      "province": "JAWA BARAT"
+    },
+    "CIANJUR": {
+      "count": 343,
+      "province": "JAWA BARAT"
+    },
+    "LAMPUNG TENGAH": {
+      "count": 166,
+      "province": "LAMPUNG"
+    },
+    "KOTA TIDORE KEPULAUAN": {
+      "count": 9,
+      "province": "MALUKU UTARA"
+    },
+    "LUMAJANG": {
+      "count": 86,
+      "province": "JAWA TIMUR"
+    },
+    "KOTA BATAM": {
+      "count": 135,
+      "province": "KEPULAUAN RIAU"
+    },
+    "LAMONGAN": {
+      "count": 163,
+      "province": "JAWA TIMUR"
+    },
+    "ROKAN HULU": {
+      "count": 48,
+      "province": "RIAU"
+    },
+    "BENGKALIS": {
+      "count": 84,
+      "province": "RIAU"
+    },
+    "KOTA BANDUNG": {
+      "count": 250,
+      "province": "JAWA BARAT"
+    },
+    "INDRAMAYU": {
+      "count": 191,
+      "province": "JAWA BARAT"
+    },
+    "KUDUS": {
+      "count": 112,
+      "province": "JAWA TENGAH"
+    },
+    "DELI SERDANG": {
+      "count": 214,
+      "province": "SUMATERA UTARA"
+    },
+    "PURBALINGGA": {
+      "count": 108,
+      "province": "JAWA TENGAH"
+    },
+    "BANYUWANGI": {
+      "count": 141,
+      "province": "JAWA TIMUR"
+    },
+    "TANGERANG": {
+      "count": 291,
+      "province": "BANTEN"
+    },
+    "MUSI RAWAS": {
+      "count": 50,
+      "province": "SUMATERA SELATAN"
+    },
+    "MAGELANG": {
+      "count": 146,
+      "province": "JAWA TENGAH"
+    },
+    "BADUNG": {
+      "count": 29,
+      "province": "BALI"
+    },
+    "BANJARNEGARA": {
+      "count": 106,
+      "province": "JAWA TENGAH"
+    },
+    "KOTA YOGYAKARTA": {
+      "count": 44,
+      "province": "DAERAH ISTIMEWA YOGYAKARTA"
+    },
+    "JOMBANG": {
+      "count": 142,
+      "province": "JAWA TIMUR"
+    },
+    "OGAN ILIR": {
+      "count": 50,
+      "province": "SUMATERA SELATAN"
+    },
+    "SUMEDANG": {
+      "count": 147,
+      "province": "JAWA BARAT"
+    },
+    "BLITAR": {
+      "count": 117,
+      "province": "JAWA TIMUR"
+    },
+    "LOMBOK TENGAH": {
+      "count": 172,
+      "province": "NUSA TENGGARA BARAT"
+    },
+    "TULUNGAGUNG": {
+      "count": 131,
+      "province": "JAWA TIMUR"
+    },
+    "BANYUASIN": {
+      "count": 73,
+      "province": "SUMATERA SELATAN"
+    },
+    "JEMBER": {
+      "count": 202,
+      "province": "JAWA TIMUR"
+    },
+    "NGANJUK": {
+      "count": 122,
+      "province": "JAWA TIMUR"
+    },
+    "KLATEN": {
+      "count": 145,
+      "province": "JAWA TENGAH"
+    },
+    "KOTA DEPOK": {
+      "count": 190,
+      "province": "JAWA BARAT"
+    },
+    "KEDIRI": {
+      "count": 179,
+      "province": "JAWA TIMUR"
+    },
+    "BOGOR": {
+      "count": 636,
+      "province": "JAWA BARAT"
+    },
+    "CIREBON": {
+      "count": 255,
+      "province": "JAWA BARAT"
+    },
+    "PROBOLINGGO": {
+      "count": 105,
+      "province": "JAWA TIMUR"
+    },
+    "JEPARA": {
+      "count": 174,
+      "province": "JAWA TENGAH"
+    },
+    "KOTA CIREBON": {
+      "count": 47,
+      "province": "JAWA BARAT"
+    },
+    "BIREUEN": {
+      "count": 58,
+      "province": "ACEH"
+    },
+    "KUTAI KARTANEGARA": {
+      "count": 41,
+      "province": "KALIMANTAN TIMUR"
+    },
+    "CIAMIS": {
+      "count": 172,
+      "province": "JAWA BARAT"
+    },
+    "KOTA KUPANG": {
+      "count": 42,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "GARUT": {
+      "count": 448,
+      "province": "JAWA BARAT"
+    },
+    "LOMBOK TIMUR": {
+      "count": 250,
+      "province": "NUSA TENGGARA BARAT"
+    },
+    "MAMUJU TENGAH": {
+      "count": 16,
+      "province": "SULAWESI BARAT"
+    },
+    "PONOROGO": {
+      "count": 74,
+      "province": "JAWA TIMUR"
+    },
+    "PEKALONGAN": {
+      "count": 90,
+      "province": "JAWA TENGAH"
+    },
+    "SIAK": {
+      "count": 56,
+      "province": "RIAU"
+    },
+    "MALAKA": {
+      "count": 13,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "CILACAP": {
+      "count": 198,
+      "province": "JAWA TENGAH"
+    },
+    "PINRANG": {
+      "count": 44,
+      "province": "SULAWESI SELATAN"
+    },
+    "BATANG": {
+      "count": 86,
+      "province": "JAWA TENGAH"
+    },
+    "DEMAK": {
+      "count": 150,
+      "province": "JAWA TENGAH"
+    },
+    "KAYONG UTARA": {
+      "count": 15,
+      "province": "KALIMANTAN BARAT"
+    },
+    "SERANG": {
+      "count": 211,
+      "province": "BANTEN"
+    },
+    "KOTA PROBOLINGGO": {
+      "count": 29,
+      "province": "JAWA TIMUR"
+    },
+    "KUNINGAN": {
+      "count": 168,
+      "province": "JAWA BARAT"
+    },
+    "SLEMAN": {
+      "count": 133,
+      "province": "DAERAH ISTIMEWA YOGYAKARTA"
+    },
+    "KOTA BANDAR LAMPUNG": {
+      "count": 137,
+      "province": "LAMPUNG"
+    },
+    "PATI": {
+      "count": 164,
+      "province": "JAWA TENGAH"
+    },
+    "SUKOHARJO": {
+      "count": 106,
+      "province": "JAWA TENGAH"
+    },
+    "KOTA BANJARMASIN": {
+      "count": 61,
+      "province": "KALIMANTAN SELATAN"
+    },
+    "KOTA MAKASSAR": {
+      "count": 120,
+      "province": "SULAWESI SELATAN"
+    },
+    "ASAHAN": {
+      "count": 80,
+      "province": "SUMATERA UTARA"
+    },
+    "JENEPONTO": {
+      "count": 53,
+      "province": "SULAWESI SELATAN"
+    },
+    "MUARA ENIM": {
+      "count": 43,
+      "province": "SUMATERA SELATAN"
+    },
+    "KETAPANG": {
+      "count": 54,
+      "province": "KALIMANTAN BARAT"
+    },
+    "SUMENEP": {
+      "count": 100,
+      "province": "JAWA TIMUR"
+    },
+    "KEEROM": {
+      "count": 6,
+      "province": "P A P U A"
+    },
+    "KOTA MEDAN": {
+      "count": 196,
+      "province": "SUMATERA UTARA"
+    },
+    "BANDUNG BARAT": {
+      "count": 219,
+      "province": "JAWA BARAT"
+    },
+    "PANDEGLANG": {
+      "count": 188,
+      "province": "BANTEN"
+    },
+    "POSO": {
+      "count": 23,
+      "province": "SULAWESI TENGAH"
+    },
+    "TAPIN": {
+      "count": 15,
+      "province": "KALIMANTAN SELATAN"
+    },
+    "KOTA METRO": {
+      "count": 34,
+      "province": "LAMPUNG"
+    },
+    "TOBA": {
+      "count": 23,
+      "province": "SUMATERA UTARA"
+    },
+    "HALMAHERA BARAT": {
+      "count": 7,
+      "province": "MALUKU UTARA"
+    },
+    "MADIUN": {
+      "count": 56,
+      "province": "JAWA TIMUR"
+    },
+    "KARAWANG": {
+      "count": 277,
+      "province": "JAWA BARAT"
+    },
+    "KOTA SEMARANG": {
+      "count": 170,
+      "province": "JAWA TENGAH"
+    },
+    "TEBO": {
+      "count": 14,
+      "province": "JAMBI"
+    },
+    "KOTA ADM. JAKARTA TIMUR": {
+      "count": 226,
+      "province": "DKI JAKARTA"
+    },
+    "SUBANG": {
+      "count": 194,
+      "province": "JAWA BARAT"
+    },
+    "LANGKAT": {
+      "count": 75,
+      "province": "SUMATERA UTARA"
+    },
+    "KOTA CILEGON": {
+      "count": 49,
+      "province": "BANTEN"
+    },
+    "MOJOKERTO": {
+      "count": 109,
+      "province": "JAWA TIMUR"
+    },
+    "KOTA ADM. JAKARTA PUSAT": {
+      "count": 47,
+      "province": "DKI JAKARTA"
+    },
+    "BANYUMAS": {
+      "count": 212,
+      "province": "JAWA TENGAH"
+    },
+    "MALANG": {
+      "count": 224,
+      "province": "JAWA TIMUR"
+    },
+    "PEMALANG": {
+      "count": 143,
+      "province": "JAWA TENGAH"
+    },
+    "MIMIKA": {
+      "count": 19,
+      "province": "PAPUA TENGAH"
+    },
+    "SRAGEN": {
+      "count": 115,
+      "province": "JAWA TENGAH"
+    },
+    "KENDAL": {
+      "count": 117,
+      "province": "JAWA TENGAH"
+    },
+    "KEPULAUAN ANAMBAS": {
+      "count": 3,
+      "province": "KEPULAUAN RIAU"
+    },
+    "KOTA BOGOR": {
+      "count": 131,
+      "province": "JAWA BARAT"
+    },
+    "BREBES": {
+      "count": 189,
+      "province": "JAWA TENGAH"
+    },
+    "BLORA": {
+      "count": 94,
+      "province": "JAWA TENGAH"
+    },
+    "WONOSOBO": {
+      "count": 112,
+      "province": "JAWA TENGAH"
+    },
+    "PRINGSEWU": {
+      "count": 62,
+      "province": "LAMPUNG"
+    },
+    "BANGGAI": {
+      "count": 28,
+      "province": "SULAWESI TENGAH"
+    },
+    "HALMAHERA SELATAN": {
+      "count": 18,
+      "province": "MALUKU UTARA"
+    },
+    "LAMPUNG TIMUR": {
+      "count": 150,
+      "province": "LAMPUNG"
+    },
+    "AGAM": {
+      "count": 34,
+      "province": "SUMATERA BARAT"
+    },
+    "TEGAL": {
+      "count": 167,
+      "province": "JAWA TENGAH"
+    },
+    "MERANGIN": {
+      "count": 22,
+      "province": "JAMBI"
+    },
+    "KOTA PASURUAN": {
+      "count": 23,
+      "province": "JAWA TIMUR"
+    },
+    "KOTA TASIKMALAYA": {
+      "count": 116,
+      "province": "JAWA BARAT"
+    },
+    "KOTA SURAKARTA": {
+      "count": 72,
+      "province": "JAWA TENGAH"
+    },
+    "LAMPUNG BARAT": {
+      "count": 29,
+      "province": "LAMPUNG"
+    },
+    "ACEH BARAT DAYA": {
+      "count": 16,
+      "province": "ACEH"
+    },
+    "KEBUMEN": {
+      "count": 168,
+      "province": "JAWA TENGAH"
+    },
+    "LAMPUNG SELATAN": {
+      "count": 147,
+      "province": "LAMPUNG"
+    },
+    "KOTA SALATIGA": {
+      "count": 28,
+      "province": "JAWA TENGAH"
+    },
+    "KOTA BEKASI": {
+      "count": 247,
+      "province": "JAWA BARAT"
+    },
+    "SUKABUMI": {
+      "count": 354,
+      "province": "JAWA BARAT"
+    },
+    "KOTA BATU": {
+      "count": 25,
+      "province": "JAWA TIMUR"
+    },
+    "ACEH SELATAN": {
+      "count": 31,
+      "province": "ACEH"
+    },
+    "WAJO": {
+      "count": 38,
+      "province": "SULAWESI SELATAN"
+    },
+    "KOTA LHOKSEUMAWE": {
+      "count": 26,
+      "province": "ACEH"
+    },
+    "KOTA PALANGKA RAYA": {
+      "count": 28,
+      "province": "KALIMANTAN TENGAH"
+    },
+    "KOTA PALEMBANG": {
+      "count": 204,
+      "province": "SUMATERA SELATAN"
+    },
+    "KOTA MALANG": {
+      "count": 80,
+      "province": "JAWA TIMUR"
+    },
+    "KOTA JAMBI": {
+      "count": 43,
+      "province": "JAMBI"
+    },
+    "SIMALUNGUN": {
+      "count": 64,
+      "province": "SUMATERA UTARA"
+    },
+    "MEMPAWAH": {
+      "count": 31,
+      "province": "KALIMANTAN BARAT"
+    },
+    "LOMBOK BARAT": {
+      "count": 114,
+      "province": "NUSA TENGGARA BARAT"
+    },
+    "KOTA PADANG PANJANG": {
+      "count": 7,
+      "province": "SUMATERA BARAT"
+    },
+    "REMBANG": {
+      "count": 78,
+      "province": "JAWA TENGAH"
+    },
+    "KEPULAUAN SELAYAR": {
+      "count": 12,
+      "province": "SULAWESI SELATAN"
+    },
+    "DAIRI": {
+      "count": 35,
+      "province": "SUMATERA UTARA"
+    },
+    "GROBOGAN": {
+      "count": 166,
+      "province": "JAWA TENGAH"
+    },
+    "TANJUNG JABUNG TIMUR": {
+      "count": 11,
+      "province": "JAMBI"
+    },
+    "KOTA KEDIRI": {
+      "count": 53,
+      "province": "JAWA TIMUR"
+    },
+    "ENDE": {
+      "count": 16,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "KOTA KENDARI": {
+      "count": 39,
+      "province": "SULAWESI TENGGARA"
+    },
+    "KOLAKA TIMUR": {
+      "count": 8,
+      "province": "SULAWESI TENGGARA"
+    },
+    "BINTAN": {
+      "count": 18,
+      "province": "KEPULAUAN RIAU"
+    },
+    "KOTA ADM. JAKARTA SELATAN": {
+      "count": 118,
+      "province": "DKI JAKARTA"
+    },
+    "KOTA ADM. JAKARTA UTARA": {
+      "count": 101,
+      "province": "DKI JAKARTA"
+    },
+    "KAMPAR": {
+      "count": 110,
+      "province": "RIAU"
+    },
+    "TANA TIDUNG": {
+      "count": 1,
+      "province": "KALIMANTAN UTARA"
+    },
+    "MAJALENGKA": {
+      "count": 155,
+      "province": "JAWA BARAT"
+    },
+    "EMPAT LAWANG": {
+      "count": 22,
+      "province": "SUMATERA SELATAN"
+    },
+    "KAB TIMOR TENGAH SELATAN": {
+      "count": 12,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "LEBAK": {
+      "count": 193,
+      "province": "BANTEN"
+    },
+    "KOTA MATARAM": {
+      "count": 62,
+      "province": "NUSA TENGGARA BARAT"
+    },
+    "PAMEKASAN": {
+      "count": 128,
+      "province": "JAWA TIMUR"
+    },
+    "OGAN KOMERING ULU TIMUR": {
+      "count": 57,
+      "province": "SUMATERA SELATAN"
+    },
+    "PENAJAM PASER UTARA": {
+      "count": 11,
+      "province": "KALIMANTAN TIMUR"
+    },
+    "SEMARANG": {
+      "count": 126,
+      "province": "JAWA TENGAH"
+    },
+    "ACEH TIMUR": {
+      "count": 54,
+      "province": "ACEH"
+    },
+    "INDRAGIRI HULU": {
+      "count": 27,
+      "province": "RIAU"
+    },
+    "PURWAKARTA": {
+      "count": 149,
+      "province": "JAWA BARAT"
+    },
+    "BALANGAN": {
+      "count": 9,
+      "province": "KALIMANTAN SELATAN"
+    },
+    "MAJENE": {
+      "count": 26,
+      "province": "SULAWESI BARAT"
+    },
+    "TULANG BAWANG": {
+      "count": 45,
+      "province": "LAMPUNG"
+    },
+    "BATU BARA": {
+      "count": 34,
+      "province": "SUMATERA UTARA"
+    },
+    "KOTA BANJARBARU": {
+      "count": 29,
+      "province": "KALIMANTAN SELATAN"
+    },
+    "KOTA TANGERANG": {
+      "count": 81,
+      "province": "BANTEN"
+    },
+    "SOLOK": {
+      "count": 34,
+      "province": "SUMATERA BARAT"
+    },
+    "GORONTALO": {
+      "count": 35,
+      "province": "GORONTALO"
+    },
+    "SEKADAU": {
+      "count": 13,
+      "province": "KALIMANTAN BARAT"
+    },
+    "BOJONEGORO": {
+      "count": 140,
+      "province": "JAWA TIMUR"
+    },
+    "PARIGI MOUTONG": {
+      "count": 19,
+      "province": "SULAWESI TENGAH"
+    },
+    "KARANGANYAR": {
+      "count": 96,
+      "province": "JAWA TENGAH"
+    },
+    "MAROS": {
+      "count": 41,
+      "province": "SULAWESI SELATAN"
+    },
+    "KOTA GORONTALO": {
+      "count": 20,
+      "province": "GORONTALO"
+    },
+    "TANGGAMUS": {
+      "count": 68,
+      "province": "LAMPUNG"
+    },
+    "GORONTALO UTARA": {
+      "count": 4,
+      "province": "GORONTALO"
+    },
+    "BOYOLALI": {
+      "count": 119,
+      "province": "JAWA TENGAH"
+    },
+    "KOTA SERANG": {
+      "count": 94,
+      "province": "BANTEN"
+    },
+    "KOTA CIMAHI": {
+      "count": 63,
+      "province": "JAWA BARAT"
+    },
+    "KULON PROGO": {
+      "count": 53,
+      "province": "DAERAH ISTIMEWA YOGYAKARTA"
+    },
+    "KOLAKA": {
+      "count": 18,
+      "province": "SULAWESI TENGGARA"
+    },
+    "GIANYAR": {
+      "count": 27,
+      "province": "BALI"
+    },
+    "MUNA BARAT": {
+      "count": 14,
+      "province": "SULAWESI TENGGARA"
+    },
+    "KOTA BANJAR": {
+      "count": 34,
+      "province": "JAWA BARAT"
+    },
+    "SIDOARJO": {
+      "count": 139,
+      "province": "JAWA TIMUR"
+    },
+    "SINTANG": {
+      "count": 9,
+      "province": "KALIMANTAN BARAT"
+    },
+    "PESISIR SELATAN": {
+      "count": 36,
+      "province": "SUMATERA BARAT"
+    },
+    "KOTA BALIKPAPAN": {
+      "count": 34,
+      "province": "KALIMANTAN TIMUR"
+    },
+    "KOTA PEKANBARU": {
+      "count": 133,
+      "province": "RIAU"
+    },
+    "MAMASA": {
+      "count": 16,
+      "province": "SULAWESI BARAT"
+    },
+    "SAROLANGUN": {
+      "count": 14,
+      "province": "JAMBI"
+    },
+    "NGAWI": {
+      "count": 76,
+      "province": "JAWA TIMUR"
+    },
+    "BANGKALAN": {
+      "count": 125,
+      "province": "JAWA TIMUR"
+    },
+    "TANAH BUMBU": {
+      "count": 26,
+      "province": "KALIMANTAN SELATAN"
+    },
+    "KOTA SAMARINDA": {
+      "count": 56,
+      "province": "KALIMANTAN TIMUR"
+    },
+    "BIAK NUMFOR": {
+      "count": 9,
+      "province": "P A P U A"
+    },
+    "MALUKU TENGAH": {
+      "count": 25,
+      "province": "MALUKU"
+    },
+    "PURWOREJO": {
+      "count": 70,
+      "province": "JAWA TENGAH"
+    },
+    "SUMBAWA": {
+      "count": 22,
+      "province": "NUSA TENGGARA BARAT"
+    },
+    "BANTAENG": {
+      "count": 26,
+      "province": "SULAWESI SELATAN"
+    },
+    "KARIMUN": {
+      "count": 29,
+      "province": "KEPULAUAN RIAU"
+    },
+    "BULUKUMBA": {
+      "count": 45,
+      "province": "SULAWESI SELATAN"
+    },
+    "KOTA TANJUNG BALAI": {
+      "count": 18,
+      "province": "SUMATERA UTARA"
+    },
+    "OGAN KOMERING ULU": {
+      "count": 27,
+      "province": "SUMATERA SELATAN"
+    },
+    "MAGETAN": {
+      "count": 65,
+      "province": "JAWA TIMUR"
+    },
+    "PANGANDARAN": {
+      "count": 55,
+      "province": "JAWA BARAT"
+    },
+    "POLEWALI MANDAR": {
+      "count": 57,
+      "province": "SULAWESI BARAT"
+    },
+    "BUTON UTARA": {
+      "count": 5,
+      "province": "SULAWESI TENGGARA"
+    },
+    "KOTA PONTIANAK": {
+      "count": 82,
+      "province": "KALIMANTAN BARAT"
+    },
+    "KOTA DENPASAR": {
+      "count": 45,
+      "province": "BALI"
+    },
+    "KOTA ADM. JAKARTA BARAT": {
+      "count": 63,
+      "province": "DKI JAKARTA"
+    },
+    "GOWA": {
+      "count": 77,
+      "province": "SULAWESI SELATAN"
+    },
+    "MANGGARAI BARAT": {
+      "count": 10,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "BULELENG": {
+      "count": 37,
+      "province": "BALI"
+    },
+    "MESUJI": {
+      "count": 34,
+      "province": "LAMPUNG"
+    },
+    "BANTUL": {
+      "count": 119,
+      "province": "DAERAH ISTIMEWA YOGYAKARTA"
+    },
+    "SUMBAWA BARAT": {
+      "count": 15,
+      "province": "NUSA TENGGARA BARAT"
+    },
+    "TRENGGALEK": {
+      "count": 69,
+      "province": "JAWA TIMUR"
+    },
+    "MUNA": {
+      "count": 28,
+      "province": "SULAWESI TENGGARA"
+    },
+    "TANA TORAJA": {
+      "count": 14,
+      "province": "SULAWESI SELATAN"
+    },
+    "KARO": {
+      "count": 33,
+      "province": "SUMATERA UTARA"
+    },
+    "BENER MERIAH": {
+      "count": 14,
+      "province": "ACEH"
+    },
+    "HULU SUNGAI TENGAH": {
+      "count": 16,
+      "province": "KALIMANTAN SELATAN"
+    },
+    "ACEH JAYA": {
+      "count": 11,
+      "province": "ACEH"
+    },
+    "LUWU UTARA": {
+      "count": 16,
+      "province": "SULAWESI SELATAN"
+    },
+    "MINAHASA": {
+      "count": 27,
+      "province": "SULAWESI UTARA"
+    },
+    "TAKALAR": {
+      "count": 41,
+      "province": "SULAWESI SELATAN"
+    },
+    "TANAH LAUT": {
+      "count": 19,
+      "province": "KALIMANTAN SELATAN"
+    },
+    "GRESIK": {
+      "count": 142,
+      "province": "JAWA TIMUR"
+    },
+    "KOTA SUBULUSSALAM": {
+      "count": 15,
+      "province": "ACEH"
+    },
+    "KOTA TANGERANG SELATAN": {
+      "count": 107,
+      "province": "BANTEN"
+    },
+    "KOTA GUNUNGSITOLI": {
+      "count": 17,
+      "province": "SUMATERA UTARA"
+    },
+    "OGAN KOMERING ILIR": {
+      "count": 83,
+      "province": "SUMATERA SELATAN"
+    },
+    "KOTA MADIUN": {
+      "count": 27,
+      "province": "JAWA TIMUR"
+    },
+    "HULU SUNGAI SELATAN": {
+      "count": 20,
+      "province": "KALIMANTAN SELATAN"
+    },
+    "TUBAN": {
+      "count": 136,
+      "province": "JAWA TIMUR"
+    },
+    "SINJAI": {
+      "count": 27,
+      "province": "SULAWESI SELATAN"
+    },
+    "ACEH UTARA": {
+      "count": 71,
+      "province": "ACEH"
+    },
+    "LABUHANBATU": {
+      "count": 37,
+      "province": "SUMATERA UTARA"
+    },
+    "ACEH SINGKIL": {
+      "count": 17,
+      "province": "ACEH"
+    },
+    "TANJUNG JABUNG BARAT": {
+      "count": 14,
+      "province": "JAMBI"
+    },
+    "LABUHANBATU UTARA": {
+      "count": 26,
+      "province": "SUMATERA UTARA"
+    },
+    "LANNY JAYA": {
+      "count": 6,
+      "province": "PAPUA PEGUNUNGAN"
+    },
+    "SITUBONDO": {
+      "count": 45,
+      "province": "JAWA TIMUR"
+    },
+    "BUOL": {
+      "count": 9,
+      "province": "SULAWESI TENGAH"
+    },
+    "KOTA LANGSA": {
+      "count": 26,
+      "province": "ACEH"
+    },
+    "BANGKA SELATAN": {
+      "count": 9,
+      "province": "KEPULAUAN BANGKA BELITUNG"
+    },
+    "BONDOWOSO": {
+      "count": 76,
+      "province": "JAWA TIMUR"
+    },
+    "PASURUAN": {
+      "count": 104,
+      "province": "JAWA TIMUR"
+    },
+    "KOTA MANADO": {
+      "count": 44,
+      "province": "SULAWESI UTARA"
+    },
+    "KOTA BUKITTINGGI": {
+      "count": 15,
+      "province": "SUMATERA BARAT"
+    },
+    "ACEH TENGGARA": {
+      "count": 47,
+      "province": "ACEH"
+    },
+    "ROKAN HILIR": {
+      "count": 64,
+      "province": "RIAU"
+    },
+    "PACITAN": {
+      "count": 45,
+      "province": "JAWA TIMUR"
+    },
+    "KOTA SURABAYA": {
+      "count": 116,
+      "province": "JAWA TIMUR"
+    },
+    "LAMPUNG UTARA": {
+      "count": 73,
+      "province": "LAMPUNG"
+    },
+    "BATANGHARI": {
+      "count": 11,
+      "province": "JAMBI"
+    },
+    "KOTA TEBING TINGGI": {
+      "count": 25,
+      "province": "SUMATERA UTARA"
+    },
+    "KOTA LUBUK LINGGAU": {
+      "count": 33,
+      "province": "SUMATERA SELATAN"
+    },
+    "KOTA PAGAR ALAM": {
+      "count": 14,
+      "province": "SUMATERA SELATAN"
+    },
+    "WONOGIRI": {
+      "count": 84,
+      "province": "JAWA TENGAH"
+    },
+    "SAMPANG": {
+      "count": 147,
+      "province": "JAWA TIMUR"
+    },
+    "KOTA BLITAR": {
+      "count": 31,
+      "province": "JAWA TIMUR"
+    },
+    "BOVEN DIGOEL": {
+      "count": 1,
+      "province": "PAPUA SELATAN"
+    },
+    "KUTAI BARAT": {
+      "count": 3,
+      "province": "KALIMANTAN TIMUR"
+    },
+    "BUTON SELATAN": {
+      "count": 9,
+      "province": "SULAWESI TENGGARA"
+    },
+    "BIMA": {
+      "count": 65,
+      "province": "NUSA TENGGARA BARAT"
+    },
+    "MAMUJU": {
+      "count": 33,
+      "province": "SULAWESI BARAT"
+    },
+    "MERAUKE": {
+      "count": 10,
+      "province": "PAPUA SELATAN"
+    },
+    "MUSI BANYUASIN": {
+      "count": 39,
+      "province": "SUMATERA SELATAN"
+    },
+    "KARANGASEM": {
+      "count": 22,
+      "province": "BALI"
+    },
+    "GUNUNGKIDUL": {
+      "count": 72,
+      "province": "DAERAH ISTIMEWA YOGYAKARTA"
+    },
+    "SANGGAU": {
+      "count": 28,
+      "province": "KALIMANTAN BARAT"
+    },
+    "KOTA PALU": {
+      "count": 35,
+      "province": "SULAWESI TENGAH"
+    },
+    "SELUMA": {
+      "count": 10,
+      "province": "BENGKULU"
+    },
+    "KOTA DUMAI": {
+      "count": 31,
+      "province": "RIAU"
+    },
+    "ACEH TENGAH": {
+      "count": 23,
+      "province": "ACEH"
+    },
+    "KONAWE UTARA": {
+      "count": 5,
+      "province": "SULAWESI TENGGARA"
+    },
+    "NAGEKEO": {
+      "count": 9,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "KUBU RAYA": {
+      "count": 71,
+      "province": "KALIMANTAN BARAT"
+    },
+    "BULUNGAN": {
+      "count": 14,
+      "province": "KALIMANTAN UTARA"
+    },
+    "FAK FAK": {
+      "count": 7,
+      "province": "PAPUA BARAT"
+    },
+    "KOTA SUKABUMI": {
+      "count": 50,
+      "province": "JAWA BARAT"
+    },
+    "BOLAANG MONGONDOW": {
+      "count": 10,
+      "province": "SULAWESI UTARA"
+    },
+    "KOTA BAU BAU": {
+      "count": 21,
+      "province": "SULAWESI TENGGARA"
+    },
+    "KONAWE KEPULAUAN": {
+      "count": 2,
+      "province": "SULAWESI TENGGARA"
+    },
+    "TULANG BAWANG BARAT": {
+      "count": 41,
+      "province": "LAMPUNG"
+    },
+    "KAPUAS HULU": {
+      "count": 14,
+      "province": "KALIMANTAN BARAT"
+    },
+    "KEPULAUAN SULA": {
+      "count": 9,
+      "province": "MALUKU UTARA"
+    },
+    "KOTA BINJAI": {
+      "count": 37,
+      "province": "SUMATERA UTARA"
+    },
+    "SAMBAS": {
+      "count": 59,
+      "province": "KALIMANTAN BARAT"
+    },
+    "MANOKWARI": {
+      "count": 24,
+      "province": "PAPUA BARAT"
+    },
+    "LANDAK": {
+      "count": 34,
+      "province": "KALIMANTAN BARAT"
+    },
+    "ACEH BESAR": {
+      "count": 54,
+      "province": "ACEH"
+    },
+    "MELAWI": {
+      "count": 19,
+      "province": "KALIMANTAN BARAT"
+    },
+    "PADANG PARIAMAN": {
+      "count": 20,
+      "province": "SUMATERA BARAT"
+    },
+    "TAPANULI TENGAH": {
+      "count": 29,
+      "province": "SUMATERA UTARA"
+    },
+    "KOTA TANJUNG PINANG": {
+      "count": 21,
+      "province": "KEPULAUAN RIAU"
+    },
+    "KOTA BENGKULU": {
+      "count": 40,
+      "province": "BENGKULU"
+    },
+    "KOTA PEMATANGSIANTAR": {
+      "count": 39,
+      "province": "SUMATERA UTARA"
+    },
+    "WAY KANAN": {
+      "count": 53,
+      "province": "LAMPUNG"
+    },
+    "SIJUNJUNG": {
+      "count": 22,
+      "province": "SUMATERA BARAT"
+    },
+    "KOTA PADANG": {
+      "count": 70,
+      "province": "SUMATERA BARAT"
+    },
+    "PELALAWAN": {
+      "count": 32,
+      "province": "RIAU"
+    },
+    "TIMOR TENGAH UTARA": {
+      "count": 10,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "LUWU": {
+      "count": 19,
+      "province": "SULAWESI SELATAN"
+    },
+    "PESAWARAN": {
+      "count": 58,
+      "province": "LAMPUNG"
+    },
+    "TABANAN": {
+      "count": 34,
+      "province": "BALI"
+    },
+    "NIAS BARAT": {
+      "count": 8,
+      "province": "SUMATERA UTARA"
+    },
+    "OGAN KOMERING ULU SELATAN": {
+      "count": 23,
+      "province": "SUMATERA SELATAN"
+    },
+    "MALUKU TENGGARA": {
+      "count": 4,
+      "province": "MALUKU"
+    },
+    "NIAS SELATAN": {
+      "count": 26,
+      "province": "SUMATERA UTARA"
+    },
+    "BONE BOLANGO": {
+      "count": 14,
+      "province": "GORONTALO"
+    },
+    "TEMANGGUNG": {
+      "count": 87,
+      "province": "JAWA TENGAH"
+    },
+    "KOTA PALOPO": {
+      "count": 13,
+      "province": "SULAWESI SELATAN"
+    },
+    "KOTA PAYAKUMBUH": {
+      "count": 24,
+      "province": "SUMATERA BARAT"
+    },
+    "SERDANG BEDAGAI": {
+      "count": 64,
+      "province": "SUMATERA UTARA"
+    },
+    "MINAHASA SELATAN": {
+      "count": 12,
+      "province": "SULAWESI UTARA"
+    },
+    "KEPULAUAN MERANTI": {
+      "count": 22,
+      "province": "RIAU"
+    },
+    "MANGGARAI TIMUR": {
+      "count": 6,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "DONGGALA": {
+      "count": 20,
+      "province": "SULAWESI TENGAH"
+    },
+    "MALINAU": {
+      "count": 3,
+      "province": "KALIMANTAN UTARA"
+    },
+    "BANJAR": {
+      "count": 31,
+      "province": "KALIMANTAN SELATAN"
+    },
+    "SOPPENG": {
+      "count": 17,
+      "province": "SULAWESI SELATAN"
+    },
+    "JAYAPURA": {
+      "count": 23,
+      "province": "P A P U A"
+    },
+    "NIAS UTARA": {
+      "count": 14,
+      "province": "SUMATERA UTARA"
+    },
+    "TORAJA UTARA": {
+      "count": 19,
+      "province": "SULAWESI SELATAN"
+    },
+    "LIMA PULUH KOTA": {
+      "count": 17,
+      "province": "SUMATERA BARAT"
+    },
+    "MALUKU BARAT DAYA": {
+      "count": 3,
+      "province": "MALUKU"
+    },
+    "KOTA PEKALONGAN": {
+      "count": 38,
+      "province": "JAWA TENGAH"
+    },
+    "RAJA AMPAT": {
+      "count": 7,
+      "province": "PAPUA BARAT DAYA"
+    },
+    "KOTA PAREPARE": {
+      "count": 20,
+      "province": "SULAWESI SELATAN"
+    },
+    "BARRU": {
+      "count": 22,
+      "province": "SULAWESI SELATAN"
+    },
+    "KOTA BONTANG": {
+      "count": 20,
+      "province": "KALIMANTAN TIMUR"
+    },
+    "BARITO UTARA": {
+      "count": 5,
+      "province": "KALIMANTAN TENGAH"
+    },
+    "KOTA PARIAMAN": {
+      "count": 5,
+      "province": "SUMATERA BARAT"
+    },
+    "SUMBA TIMUR": {
+      "count": 4,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "GAYO LUES": {
+      "count": 17,
+      "province": "ACEH"
+    },
+    "KERINCI": {
+      "count": 23,
+      "province": "JAMBI"
+    },
+    "NUNUKAN": {
+      "count": 14,
+      "province": "KALIMANTAN UTARA"
+    },
+    "BARITO KUALA": {
+      "count": 10,
+      "province": "KALIMANTAN SELATAN"
+    },
+    "BOLAANG MONGONDOW SELATAN": {
+      "count": 6,
+      "province": "SULAWESI UTARA"
+    },
+    "KOTA BANDA ACEH": {
+      "count": 37,
+      "province": "ACEH"
+    },
+    "KOTA AMBON": {
+      "count": 32,
+      "province": "MALUKU"
+    },
+    "KOTA TARAKAN": {
+      "count": 24,
+      "province": "KALIMANTAN UTARA"
+    },
+    "KOTA PRABUMULIH": {
+      "count": 12,
+      "province": "SUMATERA SELATAN"
+    },
+    "KOTA BIMA": {
+      "count": 25,
+      "province": "NUSA TENGGARA BARAT"
+    },
+    "NAGAN RAYA": {
+      "count": 14,
+      "province": "ACEH"
+    },
+    "BELITUNG TIMUR": {
+      "count": 11,
+      "province": "KEPULAUAN BANGKA BELITUNG"
+    },
+    "KOTA SINGKAWANG": {
+      "count": 30,
+      "province": "KALIMANTAN BARAT"
+    },
+    "KEP. SIAU TAGULANDANG BIARO": {
+      "count": 11,
+      "province": "SULAWESI UTARA"
+    },
+    "KOTA SIBOLGA": {
+      "count": 11,
+      "province": "SUMATERA UTARA"
+    },
+    "MANDAILING NATAL": {
+      "count": 32,
+      "province": "SUMATERA UTARA"
+    },
+    "KOTA TEGAL": {
+      "count": 31,
+      "province": "JAWA TENGAH"
+    },
+    "TAPANULI SELATAN": {
+      "count": 14,
+      "province": "SUMATERA UTARA"
+    },
+    "BANGGAI KEPULAUAN": {
+      "count": 12,
+      "province": "SULAWESI TENGAH"
+    },
+    "HULU SUNGAI UTARA": {
+      "count": 17,
+      "province": "KALIMANTAN SELATAN"
+    },
+    "MANOKWARI SELATAN": {
+      "count": 4,
+      "province": "PAPUA BARAT"
+    },
+    "KOTA PADANG SIDEMPUAN": {
+      "count": 14,
+      "province": "SUMATERA UTARA"
+    },
+    "KOTA MOJOKERTO": {
+      "count": 18,
+      "province": "JAWA TIMUR"
+    },
+    "PADANG LAWAS": {
+      "count": 13,
+      "province": "SUMATERA UTARA"
+    },
+    "PASANGKAYU": {
+      "count": 23,
+      "province": "SULAWESI BARAT"
+    },
+    "TAPANULI UTARA": {
+      "count": 32,
+      "province": "SUMATERA UTARA"
+    },
+    "MINAHASA TENGGARA": {
+      "count": 6,
+      "province": "SULAWESI UTARA"
+    },
+    "BONE": {
+      "count": 43,
+      "province": "SULAWESI SELATAN"
+    },
+    "SIMEULUE": {
+      "count": 10,
+      "province": "ACEH"
+    },
+    "ACEH TAMIANG": {
+      "count": 33,
+      "province": "ACEH"
+    },
+    "SIDENRENG RAPPANG": {
+      "count": 28,
+      "province": "SULAWESI SELATAN"
+    },
+    "SUMBA BARAT DAYA": {
+      "count": 7,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "ENREKANG": {
+      "count": 13,
+      "province": "SULAWESI SELATAN"
+    },
+    "REJANG LEBONG": {
+      "count": 9,
+      "province": "BENGKULU"
+    },
+    "KONAWE SELATAN": {
+      "count": 28,
+      "province": "SULAWESI TENGGARA"
+    },
+    "TOLI TOLI": {
+      "count": 21,
+      "province": "SULAWESI TENGAH"
+    },
+    "KOTA SOLOK": {
+      "count": 13,
+      "province": "SUMATERA BARAT"
+    },
+    "MANGGARAI": {
+      "count": 29,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "KEPULAUAN YAPEN": {
+      "count": 8,
+      "province": "P A P U A"
+    },
+    "LOMBOK UTARA": {
+      "count": 35,
+      "province": "NUSA TENGGARA BARAT"
+    },
+    "BOALEMO": {
+      "count": 6,
+      "province": "GORONTALO"
+    },
+    "BELU": {
+      "count": 9,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "SERUYAN": {
+      "count": 5,
+      "province": "KALIMANTAN TENGAH"
+    },
+    "BELITUNG": {
+      "count": 13,
+      "province": "KEPULAUAN BANGKA BELITUNG"
+    },
+    "TELUK BINTUNI": {
+      "count": 5,
+      "province": "PAPUA BARAT"
+    },
+    "KOTA TERNATE": {
+      "count": 21,
+      "province": "MALUKU UTARA"
+    },
+    "LAHAT": {
+      "count": 13,
+      "province": "SUMATERA SELATAN"
+    },
+    "KUPANG": {
+      "count": 25,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "KOTA SUNGAI PENUH": {
+      "count": 11,
+      "province": "JAMBI"
+    },
+    "KOTA PANGKAL PINANG": {
+      "count": 19,
+      "province": "KEPULAUAN BANGKA BELITUNG"
+    },
+    "DOMPU": {
+      "count": 18,
+      "province": "NUSA TENGGARA BARAT"
+    },
+    "KAIMANA": {
+      "count": 6,
+      "province": "PAPUA BARAT"
+    },
+    "KUANTAN SINGINGI": {
+      "count": 29,
+      "province": "RIAU"
+    },
+    "JEMBRANA": {
+      "count": 26,
+      "province": "BALI"
+    },
+    "BOMBANA": {
+      "count": 18,
+      "province": "SULAWESI TENGGARA"
+    },
+    "SOLOK SELATAN": {
+      "count": 14,
+      "province": "SUMATERA BARAT"
+    },
+    "MUSI RAWAS UTARA": {
+      "count": 19,
+      "province": "SUMATERA SELATAN"
+    },
+    "HALMAHERA UTARA": {
+      "count": 20,
+      "province": "MALUKU UTARA"
+    },
+    "PASAMAN": {
+      "count": 24,
+      "province": "SUMATERA BARAT"
+    },
+    "BUTON TENGAH": {
+      "count": 15,
+      "province": "SULAWESI TENGGARA"
+    },
+    "INDRAGIRI HILIR": {
+      "count": 38,
+      "province": "RIAU"
+    },
+    "KOTAWARINGIN TIMUR": {
+      "count": 7,
+      "province": "KALIMANTAN TENGAH"
+    },
+    "SERAM BAGIAN TIMUR": {
+      "count": 6,
+      "province": "MALUKU"
+    },
+    "PIDIE JAYA": {
+      "count": 18,
+      "province": "ACEH"
+    },
+    "PANGKAJENE DAN KEPULAUAN": {
+      "count": 31,
+      "province": "SULAWESI SELATAN"
+    },
+    "KOTA JAYAPURA": {
+      "count": 29,
+      "province": "P A P U A"
+    },
+    "TOJO UNA UNA": {
+      "count": 14,
+      "province": "SULAWESI TENGAH"
+    },
+    "KOLAKA UTARA": {
+      "count": 12,
+      "province": "SULAWESI TENGGARA"
+    },
+    "PULAU TALIABU": {
+      "count": 7,
+      "province": "MALUKU UTARA"
+    },
+    "LABUHANBATU SELATAN": {
+      "count": 19,
+      "province": "SUMATERA UTARA"
+    },
+    "MUARO JAMBI": {
+      "count": 18,
+      "province": "JAMBI"
+    },
+    "PIDIE": {
+      "count": 52,
+      "province": "ACEH"
+    },
+    "KEPULAUAN TANIMBAR": {
+      "count": 2,
+      "province": "MALUKU"
+    },
+    "BENGKULU UTARA": {
+      "count": 27,
+      "province": "BENGKULU"
+    },
+    "BERAU": {
+      "count": 14,
+      "province": "KALIMANTAN TIMUR"
+    },
+    "ACEH BARAT": {
+      "count": 17,
+      "province": "ACEH"
+    },
+    "KEPULAUAN TALAUD": {
+      "count": 5,
+      "province": "SULAWESI UTARA"
+    },
+    "KAPUAS": {
+      "count": 11,
+      "province": "KALIMANTAN TENGAH"
+    },
+    "SIGI": {
+      "count": 20,
+      "province": "SULAWESI TENGAH"
+    },
+    "KONAWE": {
+      "count": 24,
+      "province": "SULAWESI TENGGARA"
+    },
+    "BUNGO": {
+      "count": 11,
+      "province": "JAMBI"
+    },
+    "ADM. KEP. SERIBU": {
+      "count": 7,
+      "province": "DKI JAKARTA"
+    },
+    "BANGKA TENGAH": {
+      "count": 15,
+      "province": "KEPULAUAN BANGKA BELITUNG"
+    },
+    "BANGKA": {
+      "count": 17,
+      "province": "KEPULAUAN BANGKA BELITUNG"
+    },
+    "BUTON": {
+      "count": 11,
+      "province": "SULAWESI TENGGARA"
+    },
+    "SIKKA": {
+      "count": 17,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "ALOR": {
+      "count": 9,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "KUTAI TIMUR": {
+      "count": 17,
+      "province": "KALIMANTAN TIMUR"
+    },
+    "KLUNGKUNG": {
+      "count": 12,
+      "province": "BALI"
+    },
+    "MINAHASA UTARA": {
+      "count": 13,
+      "province": "SULAWESI UTARA"
+    },
+    "PASAMAN BARAT": {
+      "count": 9,
+      "province": "SUMATERA BARAT"
+    },
+    "NIAS": {
+      "count": 13,
+      "province": "SUMATERA UTARA"
+    },
+    "HUMBANG HASUNDUTAN": {
+      "count": 24,
+      "province": "SUMATERA UTARA"
+    },
+    "KOTABARU": {
+      "count": 5,
+      "province": "KALIMANTAN SELATAN"
+    },
+    "TELUK WONDAMA": {
+      "count": 2,
+      "province": "PAPUA BARAT"
+    },
+    "BARITO SELATAN": {
+      "count": 5,
+      "province": "KALIMANTAN TENGAH"
+    },
+    "BENGKAYANG": {
+      "count": 22,
+      "province": "KALIMANTAN BARAT"
+    },
+    "LEBONG": {
+      "count": 3,
+      "province": "BENGKULU"
+    },
+    "SAMOSIR": {
+      "count": 8,
+      "province": "SUMATERA UTARA"
+    },
+    "KOTA SORONG": {
+      "count": 17,
+      "province": "PAPUA BARAT DAYA"
+    },
+    "PENUKAL ABAB LEMATANG ILIR": {
+      "count": 10,
+      "province": "SUMATERA SELATAN"
+    },
+    "FLORES TIMUR": {
+      "count": 8,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "KEPULAUAN SANGIHE": {
+      "count": 9,
+      "province": "SULAWESI UTARA"
+    },
+    "BANGKA BARAT": {
+      "count": 16,
+      "province": "KEPULAUAN BANGKA BELITUNG"
+    },
+    "TABALONG": {
+      "count": 19,
+      "province": "KALIMANTAN SELATAN"
+    },
+    "SORONG SELATAN": {
+      "count": 3,
+      "province": "PAPUA BARAT DAYA"
+    },
+    "WAKATOBI": {
+      "count": 9,
+      "province": "SULAWESI TENGGARA"
+    },
+    "NGADA": {
+      "count": 9,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "NABIRE": {
+      "count": 14,
+      "province": "PAPUA TENGAH"
+    },
+    "POHUWATO": {
+      "count": 7,
+      "province": "GORONTALO"
+    },
+    "PASER": {
+      "count": 4,
+      "province": "KALIMANTAN TIMUR"
+    },
+    "KAUR": {
+      "count": 6,
+      "province": "BENGKULU"
+    },
+    "SABU RAIJUA": {
+      "count": 2,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "BURU": {
+      "count": 8,
+      "province": "MALUKU"
+    },
+    "BANGGAI LAUT": {
+      "count": 7,
+      "province": "SULAWESI TENGAH"
+    },
+    "MUKO MUKO": {
+      "count": 10,
+      "province": "BENGKULU"
+    },
+    "JAYAWIJAYA": {
+      "count": 4,
+      "province": "PAPUA PEGUNUNGAN"
+    },
+    "BENGKULU SELATAN": {
+      "count": 9,
+      "province": "BENGKULU"
+    },
+    "BARITO TIMUR": {
+      "count": 5,
+      "province": "KALIMANTAN TENGAH"
+    },
+    "NATUNA": {
+      "count": 12,
+      "province": "KEPULAUAN RIAU"
+    },
+    "KOTA MAGELANG": {
+      "count": 19,
+      "province": "JAWA TENGAH"
+    },
+    "SUPIORI": {
+      "count": 1,
+      "province": "P A P U A"
+    },
+    "KOTA TUAL": {
+      "count": 4,
+      "province": "MALUKU"
+    },
+    "TANAH DATAR": {
+      "count": 28,
+      "province": "SUMATERA BARAT"
+    },
+    "LEMBATA": {
+      "count": 4,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "KOTAWARINGIN BARAT": {
+      "count": 11,
+      "province": "KALIMANTAN TENGAH"
+    },
+    "MOROWALI": {
+      "count": 12,
+      "province": "SULAWESI TENGAH"
+    },
+    "BANGLI": {
+      "count": 12,
+      "province": "BALI"
+    },
+    "PESISIR BARAT": {
+      "count": 14,
+      "province": "LAMPUNG"
+    },
+    "MOROWALI UTARA": {
+      "count": 2,
+      "province": "SULAWESI TENGAH"
+    },
+    "KOTA BITUNG": {
+      "count": 10,
+      "province": "SULAWESI UTARA"
+    },
+    "KOTA KOTAMOBAGU": {
+      "count": 7,
+      "province": "SULAWESI UTARA"
+    },
+    "HALMAHERA TIMUR": {
+      "count": 5,
+      "province": "MALUKU UTARA"
+    },
+    "PADANG LAWAS UTARA": {
+      "count": 2,
+      "province": "SUMATERA UTARA"
+    },
+    "SERAM BAGIAN BARAT": {
+      "count": 15,
+      "province": "MALUKU"
+    },
+    "SARMI": {
+      "count": 3,
+      "province": "P A P U A"
+    },
+    "DHARMASRAYA": {
+      "count": 16,
+      "province": "SUMATERA BARAT"
+    },
+    "PAKPAK BHARAT": {
+      "count": 3,
+      "province": "SUMATERA UTARA"
+    },
+    "BOLAANG MONGONDOW TIMUR": {
+      "count": 3,
+      "province": "SULAWESI UTARA"
+    },
+    "KOTA TOMOHON": {
+      "count": 11,
+      "province": "SULAWESI UTARA"
+    },
+    "LINGGA": {
+      "count": 5,
+      "province": "KEPULAUAN RIAU"
+    },
+    "KOTA SAWAHLUNTO": {
+      "count": 3,
+      "province": "SUMATERA BARAT"
+    },
+    "PULANG PISAU": {
+      "count": 3,
+      "province": "KALIMANTAN TENGAH"
+    },
+    "SUMBA TENGAH": {
+      "count": 1,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "BENGKULU TENGAH": {
+      "count": 7,
+      "province": "BENGKULU"
+    },
+    "SUMBA BARAT": {
+      "count": 3,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "PULAU MOROTAI": {
+      "count": 3,
+      "province": "MALUKU UTARA"
+    },
+    "LUWU TIMUR": {
+      "count": 14,
+      "province": "SULAWESI SELATAN"
+    },
+    "KATINGAN": {
+      "count": 6,
+      "province": "KALIMANTAN TENGAH"
+    },
+    "KOTA SABANG": {
+      "count": 3,
+      "province": "ACEH"
+    },
+    "SUKAMARA": {
+      "count": 1,
+      "province": "KALIMANTAN TENGAH"
+    },
+    "BOLAANG MONGONDOW UTARA": {
+      "count": 2,
+      "province": "SULAWESI UTARA"
+    },
+    "GUNUNG MAS": {
+      "count": 3,
+      "province": "KALIMANTAN TENGAH"
+    },
+    "ASMAT": {
+      "count": 4,
+      "province": "PAPUA SELATAN"
+    },
+    "BURU SELATAN": {
+      "count": 3,
+      "province": "MALUKU"
+    },
+    "ROTE NDAO": {
+      "count": 7,
+      "province": "NUSA TENGGARA TIMUR"
+    },
+    "YAHUKIMO": {
+      "count": 2,
+      "province": "PAPUA PEGUNUNGAN"
+    },
+    "HALMAHERA TENGAH": {
+      "count": 1,
+      "province": "MALUKU UTARA"
+    },
+    "DEIYAI": {
+      "count": 1,
+      "province": "PAPUA TENGAH"
+    },
+    "LAMANDAU": {
+      "count": 2,
+      "province": "KALIMANTAN TENGAH"
+    },
+    "SORONG": {
+      "count": 6,
+      "province": "PAPUA BARAT DAYA"
+    },
+    "KEPULAUAN ARU": {
+      "count": 2,
+      "province": "MALUKU"
+    },
+    "WAROPEN": {
+      "count": 2,
+      "province": "P A P U A"
+    },
+    "MAPPI": {
+      "count": 1,
+      "province": "PAPUA SELATAN"
+    },
+    "MURUNG RAYA": {
+      "count": 1,
+      "province": "KALIMANTAN TENGAH"
+    }
+  },
+  "total": 27066,
+  "total_official": 27066,
+  "total_suspended": 1256,
+  "certification_rate": "52.37%",
+  "total_mapped": 26103
+}

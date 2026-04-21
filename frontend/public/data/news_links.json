@@ -1,0 +1,38 @@
+[
+  {
+    "id": "news-001",
+    "title": "KPK Selidiki Dugaan Kartel Proyek Rp 700 Miliar di PT Agrinas",
+    "date": "2026-02-15",
+    "source": "Seputar Indonesia",
+    "summary": "KPK tengah menyelidiki dugaan pengondisian proyek pengadaan rak dan infrastruktur logistik senilai Rp 700 miliar. Proyek diduga dimenangkan oleh dua perusahaan (PT IMI dan PT NSP) yang dikendalikan oleh satu orang yang sama.",
+    "url": "https://www.seputarindonesia.co.id/politik/kpk-selidiki-agrinas-700m",
+    "linked_entities": ["PT AGRINAS PANGAN NUSANTARA", "PT INDORAYA MULTI INTERNASIONAL", "SHORAYA LOLYTA OKTAVIANA"]
+  },
+  {
+    "id": "news-002",
+    "title": "Skandal Impor 105.000 Mobil Mahindra: Agrinas Dikritik Habis DPR",
+    "date": "2026-03-20",
+    "source": "Kompas",
+    "summary": "Rencana impor ratusan ribu unit kendaraan operasional dari India menuai kecaman karena dianggap mematikan industri otomotif nasional dan mengabaikan TKDN.",
+    "url": "https://www.kompas.id/baca/ekonomi/skandal-mahindra-agrinas",
+    "linked_entities": ["PT AGRINAS PANGAN NUSANTARA", "JOAO ANGELO DE SOUSA MOTA"]
+  },
+  {
+    "id": "news-003",
+    "title": "ICW Temukan 28 Yayasan Mitra MBG Terafiliasi Parpol",
+    "date": "2026-04-11",
+    "source": "Tempo",
+    "summary": "Hasil investigasi ICW menunjukkan 28 yayasan pengelola SPPG memiliki afiliasi kuat dengan pengurus partai politik, dengan jumlah terbanyak dari Partai Gerindra.",
+    "url": "https://www.tempo.co/politik/icw-28-yayasan-parpol",
+    "linked_entities": ["PRABOWO SUBIANTO", "YAYASAN PENGEMBANGAN POTENSI SUMBER DAYA PERTAHANAN (YPPSDP)"]
+  },
+  {
+    "id": "news-004",
+    "title": "Mastersystem Infotama Amankan Kontrak Digitalisasi Nasional MBG",
+    "date": "2026-04-05",
+    "source": "Metro Jateng",
+    "summary": "PT Mastersystem Infotama Tbk resmi menjadi mitra teknologi untuk membangun sistem pemantauan real-time distribusi Makan Bergizi Gratis di seluruh Indonesia.",
+    "url": "https://www.metrojateng.com/bisnis/mastersystem-mbg-contract",
+    "linked_entities": ["PT MASTERSYSTEM INFOTAMA TBK"]
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "Dadan Hindayana": [
+    {
+      "file": "frontend/public/data\\case_study_motor_bgn.json",
+      "context": "Found in file content"
+    },
+    {
+      "file": "data/manual\\case_study_motor_bgn.json",
+      "context": "Found in file content"
+    },
+    {
+      "file": "frontend/public/data\\case_study_bgn_peruri.json",
+      "context": "Found in file content"
+    },
+    {
+      "file": "data/manual\\case_study_bgn_peruri.json",
+      "context": "Found in file content"
+    }
+  ],
+  "Nanik S. Deyang": [],
+  "Sony Sonjaya": [],
+  "Lodewyk Pusung": [],
+  "Dadang Hendrayudha": [],
+  "Suardi Samiran": [],
+  "Tigor Pangaribuan": [],
+  "Gunalan": []
+}

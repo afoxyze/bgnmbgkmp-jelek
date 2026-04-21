@@ -1,0 +1,460 @@
+{
+  "metadata": {
+    "tanggal_riset": "2026-04-10",
+    "sumber": "Tempo, The Gecko Project, Jakarta Post, Kompas, CNN Indonesia, Liputan6, ICW, CELIOS, Presidenri.go.id",
+    "status": "draft — berdasarkan liputan media 2025-2026, belum ada penyelidikan resmi KPK/Kejagung",
+    "thread": "Thread D — Agrinas & Koperasi Merah Putih"
+  },
+
+  "entities": [
+    {
+      "id": "org-agrinas",
+      "type": "Organization",
+      "label": "PT Agro Industri Nasional (Agrinas)",
+      "properties": {
+        "jenis": "BUMN holding — dibentuk dari penggabungan 3 BUMN konstruksi",
+        "dibentuk_via": "Perpres No. 2 Tahun 2025 (ditandatangani Prabowo Subianto)",
+        "asal_usul": "PT Virama Karya + PT Yodya Karya + PT Indra Karya → ditransformasi jadi Agrinas Group",
+        "kepemilikan": "99% saham YPPSDP/org-ppsdp (Yayasan Pengembangan Potensi Sumber Daya Pertahanan — Ketua Pembina: Prabowo, Ketua: Musa Bangun, Pendiri: Sjafrie Sjamsoeddin), 1% Koperasi Karyawan",
+        "anak_perusahaan": [
+          "PT Agrinas Pangan Nusantara (pangan & logistik)",
+          "PT Agrinas Palma Nusantara (perkebunan kelapa sawit, 800.000 ha)",
+          "PT Agrinas Jaladri Nusantara (perikanan)"
+        ],
+        "pendanaan": "Danantara (BPI Daya Anagata Nusantara)",
+        "red_flag": "BUMN yang dikuasai yayasan Prabowo (99%), mendapat kontrak pemerintah triliunan rupiah tanpa tender. Presiden yang tanda tangani Inpres sekaligus kontroler ultimate kontraktor pelaksananya."
+      },
+      "sumber": [
+        "https://majalah.tempo.co/read/investigasi/164314/peran-agrinas-dalam-food-estate-kementerian-pertahanan",
+        "https://www.law-justice.co/artikel/94820/elit-prabowo-kuasai-bisnis-pangan-baru-via-agrinas/",
+        "https://www.thejakartapost.com/business/2025/03/25/danantara-to-fund-new-soes-holding-company-agrinas-senior-minister-says.html"
+      ]
+    },
+    {
+      "id": "org-agrinas-pangan",
+      "type": "Organization",
+      "label": "PT Agrinas Pangan Nusantara",
+      "properties": {
+        "jenis": "Anak perusahaan Agrinas — food & logistics",
+        "induk": "PT Agro Industri Nasional (Agrinas)",
+        "peran_kmp": "Kontraktor utama pembangunan fisik Koperasi Desa Merah Putih — non-tender, penugasan langsung",
+        "progres": "1.357 unit terbangun per Februari 2026; ~30.500 unit dalam proses konstruksi",
+        "nilai_termin_1": "Rp600 miliar (untuk 7.923 titik koperasi)",
+        "total_potensi": "80.081 unit × Rp1,6 miliar/unit = Rp128 triliun (projected seluruh program)",
+        "operasional_awal": "Diberi mandat mengelola operasional KMP selama 2 tahun pertama",
+        "red_flag": "Satu anak perusahaan holding Prabowo menangkap seluruh konstruksi program nasional 80.000 koperasi tanpa kompetisi terbuka."
+      },
+      "sumber": [
+        "https://www.cnnindonesia.com/ekonomi/20260225052641-92-1331458/agrinas-bangun-1357-kopdes-merah-putih-30-ribu-lebih-dalam-proses",
+        "https://www.liputan6.com/bisnis/read/6307502/agrinas-pangan-bakal-kelola-koperasi-desa-merah-putih-2-tahun-pertama"
+      ]
+    },
+    {
+      "id": "org-tmi",
+      "type": "Organization",
+      "label": "PT Teknologi Militer Indonesia (TMI)",
+      "properties": {
+        "jenis": "Intermediary/konsultan pengadaan alutsista — anak perusahaan YPPSDP",
+        "didirikan": "14 Agustus 2020",
+        "modal": "Rp50 miliar",
+        "pemegang_saham": "YPPSDP (org-ppsdp): 99.8%, Koperasi Pegawai: 0.2%",
+        "presiden_direktur": "Harsusanto (mantan Direktur PT PAL Indonesia — BUMN galangan kapal)",
+        "ketua_komisaris": "Glenny H. Kairupan (Mayjen TNI Purn., lulusan AKABRI 1970 seangkatan Prabowo → Dirut Garuda Indonesia Oktober 2025)",
+        "komisaris_lain": ["Judi Magio Yusuf (lulusan AKABRI 1970 seangkatan Prabowo, aktif di Gerindra)", "Angga Raka Prabowo (Komisaris TMI → Kepala Badan Komunikasi Pemerintah September 2025 — nama 'Prabowo' perlu verifikasi apakah keluarga)"],
+        "anggaran_konteks": "Draft Perpres alutsista 25 tahun senilai USD124,99 miliar (≈Rp1,76 kuadriliun) beredar 2021 — Kemenhan menyangkal ada kontrak resmi ke TMI, menyebut TMI hanya 'konsultan quality assurance'",
+        "bukti_aktivitas": "Surat Prabowo (Menhan) No. B/2099/M/XI/2020 ke CEO Rosoboronexport (broker senjata Rusia) memperkenalkan PT TMI sebagai intermediary",
+        "laporan_ombudsman": "PBHI + ICW + Imparsial melaporkan ke Ombudsman RI (Februari 2024) atas dugaan maladministrasi — penunjukan langsung TMI tanpa melalui KKIP (Komite Kebijakan Industri Pertahanan)",
+        "red_flag": "Direksi hampir seluruhnya teman seangkatan Prabowo (AKABRI 1970) atau kader Gerindra. Intermediary alutsista dikontrol yayasan yang Ketua Pembinanya adalah presiden sekarang. Tidak ada tender, tidak ada oversight KKIP."
+      },
+      "sumber": [
+        "https://nasional.kompas.com/read/2021/06/02/15050321/profil-pt-tmi-dikaitkan-dengan-pengadaan-alutsista-rp-17-kuadriliun",
+        "https://www.cnbcindonesia.com/news/20240108095847-4-503659/heboh-pt-tmi-perusahaan-kroni-prabowo-yang-disebut-anies",
+        "https://pbhi.or.id/penunjukkan-pt-tmi-dalam-pengadaan-alutsista-diduga-maladministrasi-masyarakat-sipil-laporkan-menteri-pertahanan/",
+        "https://fin.co.id/2021/06/01/ini-ceo-rosoboronexport-yang-disurati-prabowo-soal-pt-tmi"
+      ]
+    },
+    {
+      "id": "person-glenny",
+      "type": "Person",
+      "label": "Glenny H. Kairupan",
+      "properties": {
+        "pangkat": "Mayor Jenderal TNI AD (Purnawirawan)",
+        "akabri": "Lulusan AKABRI 1970 — seangkatan Prabowo Subianto",
+        "jabatan_tmi": "Ketua Komisaris PT Teknologi Militer Indonesia (TMI)",
+        "jabatan_baru": "Direktur Utama PT Garuda Indonesia (dilantik Oktober 2025)",
+        "red_flag": "REVOLVING DOOR: Ketua Komisaris broker alutsista milik yayasan Prabowo → langsung jadi Dirut BUMN maskapai nasional (Garuda). Teman seangkatan presiden di semua jabatan strategis."
+      },
+      "sumber": [
+        "https://nasional.kompas.com/read/2025/10/15/18235781/profil-glenny-kairupan-teman-seangkatan-prabowo-di-akabri-yang-kini-jadi"
+      ]
+    },
+    {
+      "id": "person-angga-raka",
+      "type": "Person",
+      "label": "Angga Raka Prabowo",
+      "properties": {
+        "lahir": "8 September 1989",
+        "nama_catatan": "TERKONFIRMASI bukan keluarga Prabowo Subianto — nama 'Prabowo' pemberian ibu yang mengagumi Prabowo",
+        "hubungan_prabowo": "Loyalis personal 17 tahun — Sekretaris Pribadi Prabowo Subianto (2014–2017), kader Gerindra sejak 2008",
+        "jabatan_tmi": "Komisaris PT Teknologi Militer Indonesia (TMI) — 2021",
+        "jabatan_wamen": "Wakil Menteri Komunikasi dan Digital (19 Agustus 2024)",
+        "jabatan_telkom": "Komisaris Utama PT Telkom Indonesia (sejak 1 Juni 2025) — CROSS-THREAD LINK ke Thread A: Rahmat Danu Andika (Wakil Dirut Peruri Digital Security) sebelumnya Direktur GovTech Procurement Telkom",
+        "jabatan_bkp": "Kepala Badan Komunikasi Pemerintah (17 September 2025)",
+        "afiliasi": "Gerindra — Wakil Sekjen DPP, Ketua Badan Komunikasi Gerindra",
+        "red_flag": "MULTI-REVOLVING DOOR: TMI (broker alutsista YPPSDP) → Wamen Komdigi → Komut Telkom (BUMN telekomunikasi terbesar) → Kepala BKP (kontrol narasi pemerintah). Loyalis personal Prabowo 17 tahun mengisi semua posisi komunikasi + telekomunikasi strategis sekaligus."
+      },
+      "sumber": [
+        "https://nasional.kompas.com/read/2021/06/02/15050321/profil-pt-tmi-dikaitkan-dengan-pengadaan-alutsista-rp-17-kuadriliun",
+        "https://id.wikipedia.org/wiki/Angga_Raka_Prabowo",
+        "https://kompaspedia.kompas.id/baca/profil/tokoh/kepala-badan-komunikasi-pemerintah-angga-raka-prabowo",
+        "https://www.suara.com/news/2024/10/21/135703/angga-raka-prabowo-siapanya-prabowo-subianto-ditunjuk-lagi-jadi-wamen-komunikasi-dan-digital-kabinet-merah-putih"
+      ]
+    },
+    {
+      "id": "org-kmp",
+      "type": "Organization",
+      "label": "Koperasi Desa/Kelurahan Merah Putih (KMP)",
+      "properties": {
+        "jenis": "Program nasional koperasi desa — flagship Prabowo",
+        "dasar_hukum": "Inpres No. 9 Tahun 2025 (27 Maret 2025); Inpres No. 17 Tahun 2025 (22 Oktober 2025)",
+        "target": "80.081 koperasi desa/kelurahan di seluruh Indonesia",
+        "diresmikan": "21 Juli 2025 oleh Presiden Prabowo",
+        "anggaran_total": "Rp210–216 triliun (dari Danantara via Bank Himbara)",
+        "skema_pembiayaan": "Rp3 miliar/unit (Rp2,5M capex + Rp500jt opex) via Danantara; skema awal via kredit bank 6%/tahun tenor 72 bulan gagal → diganti Inpres 17/2025",
+        "unit_usaha_wajib": "Kios sembako, simpan pinjam, klinik desa, apotek, gudang/cold storage, sarana logistik",
+        "koneksi_mbg": "199 Kopdes Merah Putih sudah jadi supplier SPPG MBG (Makan Bergizi Gratis)",
+        "menteri_penanggung_jawab": "Ferry Joko Juliantono (kader Gerindra, dilantik 8 September 2025)",
+        "red_flag": "MULTI-INDICATOR RISK: (1) Konflik kepentingan Presiden via Agrinas/YPPSDP, (2) Kontrak konstruksi Rp128T tanpa tender, (3) Loop pendanaan tertutup Danantara, (4) Monopoli rantai pangan nasional MBG, (5) Risiko korupsi tata kelola lokal."
+      },
+      "sumber": [
+        "https://presidenri.go.id/siaran-pers/presiden-prabowo-resmikan-kelembagaan-80-081-koperasi-desa-kelurahan-merah-putih/",
+        "https://setneg.go.id/baca/index/inilah_inpres_9_2025_tentang_percepatan_pembentukan_koperasi_desa_kelurahan_merah_putih",
+        "https://voi.id/ekonomi/521950/danantara-segera-buka-akses-pembiayaan-untuk-kopdes-merah-putih-menkop-beri-bocoran-ini/"
+      ]
+    },
+    {
+      "id": "org-pmjs",
+      "type": "Organization",
+      "label": "PT Putra Mandiri Jembar Tbk (PMJS)",
+      "properties": {
+        "jenis": "Perusahaan publik (Tbk) — subkontraktor logistik Agrinas",
+        "kontrak": "Rp10,83 triliun dari Agrinas — suplai 20.600 truk untuk program KMP",
+        "catatan": "Mendapat subkontrak triliunan dari Agrinas tanpa proses tender terbuka. Sebagai perusahaan Tbk, kontrak ini seharusnya material disclosure di BEI.",
+        "red_flag": "Perusahaan publik mendapat kontrak Rp10,83T dari BUMN yang dikuasai yayasan presiden — transparansi ke pasar modal perlu diperiksa."
+      },
+      "sumber": [
+        "https://www.idxchannel.com/market-news/pmjs-raih-kontrak-dari-agrinas-rp108-triliun-siap-suplai-20600-truk-untuk-kmp"
+      ]
+    },
+    {
+      "id": "person-rauf-purnama",
+      "type": "Person",
+      "label": "Rauf Purnama",
+      "properties": {
+        "jabatan": "Direktur Utama PT Agro Industri Nasional (Agrinas)",
+        "afiliasi_politik": "Kader Partai Gerindra — anggota Dewan Pakar Gerindra",
+        "riwayat_gerindra": "Caleg Gerindra Dapil Jawa Timur 9 (2019); anggota tim ahli kampanye Prabowo-Sandiaga 2019",
+        "red_flag": "Direktur BUMN yang dikuasai yayasan presiden adalah kader aktif partai presiden sendiri. Bukan profesional independen."
+      },
+      "sumber": [
+        "https://www.tempo.co/ekonomi/anies-sebut-orang-dalam-di-proyek-food-estate-prabowo-ada-kader-gerindra-hingga-pejabat-kemenhan-100222"
+      ]
+    },
+    {
+      "id": "person-dirgayuza",
+      "type": "Person",
+      "label": "Dirgayuza Setyawan",
+      "properties": {
+        "jabatan_lama_agrinas": "Direktur Operasi PT Agro Industri Nasional (Agrinas)",
+        "jabatan_lama_gerindra": "Kepala Divisi Media Sosial & Informasi Publik Partai Gerindra",
+        "jabatan_sekarang": "Asisten Khusus Presiden Prabowo — Bidang Komunikasi & Analisis Kebijakan (dilantik Oktober 2025)",
+        "red_flag": "REVOLVING DOOR TERBALIK: Direktur di BUMN yayasan Prabowo (Agrinas) → langsung masuk Istana sebagai Asisten Khusus Presiden. Orang yang tahu seluruh operasi Agrinas kini berada di lingkaran inti kekuasaan."
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/profil-dirgayuza-setiawan-asisten-khusus-prabowo-di-bidang-komunikasi-dan-analis-kebijakan-2077755"
+      ]
+    },
+    {
+      "id": "person-ferry",
+      "type": "Person",
+      "label": "Ferry Joko Juliantono",
+      "properties": {
+        "jabatan": "Menteri Koperasi dan Usaha Kecil Menengah (dilantik 8 September 2025)",
+        "afiliasi_politik": "Kader Partai Gerindra — Wakil Ketua Umum DPP Gerindra Bidang Mobilisasi Massa (2020–2025)",
+        "jabatan_lain": "Ketua Dewan Pengurus Induk KUD (Inkud)",
+        "catatan": "Menteri teknis yang bertanggung jawab atas program KMP Rp210T adalah kader aktif partai presiden.",
+        "red_flag": "Menteri dari Gerindra mengelola program yang kontraktornya (Agrinas) dikuasai yayasan Prabowo (Gerindra). Tidak ada independensi pengawasan."
+      },
+      "sumber": [
+        "https://www.idntimes.com/business/economy/profil-ferry-juliantono-politikus-gerindra-jadi-menteri-koperasi-00-gshdq-cs2ts2"
+      ]
+    }
+  ],
+
+  "relations": [
+    {
+      "from": "person-prabowo",
+      "to": "org-ppsdp",
+      "type": "CONTROLS",
+      "properties": {
+        "catatan": "Prabowo mengendalikan YPPSDP — yayasan pertahanan yang memegang 99% saham Agrinas",
+        "red_flag": true
+      },
+      "sumber": ["https://majalah.tempo.co/read/investigasi/164314/peran-agrinas-dalam-food-estate-kementerian-pertahanan"]
+    },
+    {
+      "from": "org-ppsdp",
+      "to": "org-agrinas",
+      "type": "OWNS",
+      "properties": {
+        "persentase": "99%",
+        "catatan": "Kepemilikan mayoritas via yayasan non-profit — tidak ada tata kelola BUMN normal",
+        "red_flag": true
+      },
+      "sumber": ["https://majalah.tempo.co/read/investigasi/164314/peran-agrinas-dalam-food-estate-kementerian-pertahanan"]
+    },
+    {
+      "from": "org-agrinas",
+      "to": "org-agrinas-pangan",
+      "type": "PARENT_OF",
+      "properties": {
+        "catatan": "Agrinas Pangan adalah anak perusahaan Agrinas untuk sektor pangan & logistik"
+      },
+      "sumber": ["https://www.liputan6.com/bisnis/read/6307502/agrinas-pangan-bakal-kelola-koperasi-desa-merah-putih-2-tahun-pertama"]
+    },
+    {
+      "from": "person-rauf-purnama",
+      "to": "org-agrinas",
+      "type": "LEADS",
+      "properties": {
+        "jabatan": "Direktur Utama",
+        "red_flag": true
+      },
+      "sumber": ["https://www.tempo.co/ekonomi/anies-sebut-orang-dalam-di-proyek-food-estate-prabowo-ada-kader-gerindra-hingga-pejabat-kemenhan-100222"]
+    },
+    {
+      "from": "person-dirgayuza",
+      "to": "org-agrinas",
+      "type": "FORMERLY_LED",
+      "properties": {
+        "jabatan": "Direktur Operasi (sebelum Oktober 2025)",
+        "red_flag": true
+      },
+      "sumber": ["https://www.tempo.co/politik/profil-dirgayuza-setiawan-asisten-khusus-prabowo-di-bidang-komunikasi-dan-analis-kebijakan-2077755"]
+    },
+    {
+      "from": "person-dirgayuza",
+      "to": "person-prabowo",
+      "type": "ADVISES",
+      "properties": {
+        "jabatan": "Asisten Khusus Presiden — Bidang Komunikasi & Analisis Kebijakan (Oktober 2025)",
+        "catatan": "Dari Direktur BUMN yayasan Prabowo langsung ke Asisten Khusus Presiden",
+        "red_flag": true
+      },
+      "sumber": ["https://www.tempo.co/politik/profil-dirgayuza-setiawan-asisten-khusus-prabowo-di-bidang-komunikasi-dan-analis-kebijakan-2077755"]
+    },
+    {
+      "from": "org-agrinas-pangan",
+      "to": "org-kmp",
+      "type": "AWARDED_CONTRACT",
+      "properties": {
+        "nilai": "Rp128 triliun (projected 80.081 unit) — termin 1: Rp600 miliar (7.923 titik)",
+        "metode": "Penugasan langsung via Inpres — tanpa tender kompetitif",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://www.cnnindonesia.com/ekonomi/20260225052641-92-1331458/agrinas-bangun-1357-kopdes-merah-putih-30-ribu-lebih-dalam-proses",
+        "https://liputan.co.id/2026/02/proyek-raksasa-agrinas-diterpa-isu-penunjukan-langsung-kpk-bilang-begini/"
+      ]
+    },
+    {
+      "from": "org-agrinas",
+      "to": "org-pmjs",
+      "type": "SUBCONTRACTS",
+      "properties": {
+        "nilai": "Rp10,83 triliun",
+        "deskripsi": "Suplai 20.600 truk untuk logistik KMP",
+        "red_flag": true
+      },
+      "sumber": ["https://www.idxchannel.com/market-news/pmjs-raih-kontrak-dari-agrinas-rp108-triliun-siap-suplai-20600-truk-untuk-kmp"]
+    },
+    {
+      "from": "org-danantara",
+      "to": "org-kmp",
+      "type": "FUNDS",
+      "properties": {
+        "nilai": "Rp210–216 triliun",
+        "mekanisme": "Pinjaman via Bank Himbara (BUMN), bunga 6%/tahun, tenor 72 bulan",
+        "catatan": "Danantara (dipimpin Burhanuddin Abdullah, mantan terpidana korupsi) mendanai program yang kontraktornya dikuasai yayasan presiden",
+        "red_flag": true
+      },
+      "sumber": ["https://voi.id/ekonomi/521950/danantara-segera-buka-akses-pembiayaan-untuk-kopdes-merah-putih-menkop-beri-bocoran-ini/"]
+    },
+    {
+      "from": "person-glenny",
+      "to": "org-tmi",
+      "type": "BOARDS",
+      "properties": {"jabatan": "Ketua Komisaris", "red_flag": true},
+      "sumber": ["https://nasional.kompas.com/read/2021/06/02/15050321/profil-pt-tmi-dikaitkan-dengan-pengadaan-alutsista-rp-17-kuadriliun"]
+    },
+    {
+      "from": "person-angga-raka",
+      "to": "org-tmi",
+      "type": "BOARDS",
+      "properties": {"jabatan": "Komisaris (2021)", "red_flag": true},
+      "sumber": ["https://www.tempo.co/arsip/kader-gerindra-di-perusahaan-makelar-senjata-850010"]
+    },
+    {
+      "from": "person-angga-raka",
+      "to": "person-prabowo",
+      "type": "ADVISES",
+      "properties": {
+        "catatan": "Sekretaris Pribadi Prabowo 2014–2017; loyalis 17 tahun Gerindra",
+        "jabatan_sekarang": "Kepala Badan Komunikasi Pemerintah + Komisaris Utama Telkom"
+      },
+      "sumber": ["https://id.wikipedia.org/wiki/Angga_Raka_Prabowo"]
+    },
+    {
+      "from": "org-ppsdp",
+      "to": "org-tmi",
+      "type": "OWNS",
+      "properties": {
+        "persentase": "99.8%",
+        "catatan": "Yayasan yang sama (YPPSDP) yang mengendalikan Agrinas juga mengendalikan broker alutsista TMI"
+      },
+      "sumber": ["https://www.kompas.id/artikel/ada-apa-dengan-pt-tmi-dan-pembelian-alutsista/"]
+    },
+    {
+      "from": "org-danantara",
+      "to": "org-agrinas",
+      "type": "FUNDS",
+      "properties": {
+        "catatan": "Danantara mengalokasikan dana untuk mendukung operasi Agrinas dan menunjuk direksi baru PT Agrinas Palma Nusantara",
+        "red_flag": true
+      },
+      "sumber": ["https://www.thejakartapost.com/business/2025/03/25/danantara-to-fund-new-soes-holding-company-agrinas-senior-minister-says.html"]
+    },
+    {
+      "from": "person-ferry",
+      "to": "org-kmp",
+      "type": "SUPERVISES",
+      "properties": {
+        "jabatan": "Menteri Koperasi — penanggung jawab program KMP",
+        "catatan": "Menteri kader Gerindra mengawasi program yang kontraktornya dikontrol Prabowo (Gerindra)"
+      },
+      "sumber": ["https://www.idntimes.com/business/economy/profil-ferry-juliantono-politikus-gerindra-jadi-menteri-koperasi-00-gshdq-cs2ts2"]
+    },
+    {
+      "from": "org-kmp",
+      "to": "bgn-001",
+      "type": "PARTNER_OF",
+      "properties": {
+        "catatan": "199 Koperasi Desa Merah Putih sudah menjadi supplier SPPG MBG — KMP terintegrasi ke ekosistem MBG",
+        "red_flag": true
+      },
+      "sumber": ["https://money.kompas.com/read/2025/11/06/203534026/kopdes-merah-putih-jadi-supplier-sppg-mbg-menkop-pastikan-bukan-monopoli-umkm"]
+    }
+  ],
+
+  "red_flags": [
+    {
+      "id": "rf-d01",
+      "type": "PRESIDEN_KONTRAK_KE_YAYASAN_SENDIRI",
+      "severity": "HIGH",
+      "deskripsi": "Presiden Prabowo Subianto menandatangani Inpres No. 9/2025 yang meluncurkan program KMP senilai Rp210T, sekaligus mengendalikan YPPSDP yang memiliki 99% saham Agrinas — kontraktor utama program tersebut. Presiden adalah pembuat kebijakan sekaligus penerima manfaat kontrak. Ini bukan sekadar konflik kepentingan — ini adalah capture negara oleh institusi presiden.",
+      "entitas_terlibat": ["person-prabowo", "org-ppsdp", "org-agrinas", "org-kmp"],
+      "sumber": [
+        "https://majalah.tempo.co/read/investigasi/164314/peran-agrinas-dalam-food-estate-kementerian-pertahanan",
+        "https://liputan.co.id/2026/02/proyek-raksasa-agrinas-diterpa-isu-penunjukan-langsung-kpk-bilang-begini/"
+      ]
+    },
+    {
+      "id": "rf-d02",
+      "type": "REVOLVING_DOOR_AGRINAS_ISTANA",
+      "severity": "HIGH",
+      "deskripsi": "Dirgayuza Setyawan: (1) Kepala Divisi Media Sosial Gerindra → (2) Direktur Operasi Agrinas → (3) Asisten Khusus Presiden Prabowo (Oktober 2025). Orang yang mengetahui seluruh operasi internal Agrinas kini duduk di lingkaran inti istana. Akses informasi sensitif tentang kontrak KMP/food estate mengalir langsung ke Presiden via orang yang sama.",
+      "entitas_terlibat": ["person-dirgayuza", "org-agrinas", "person-prabowo"],
+      "sumber": ["https://www.tempo.co/politik/profil-dirgayuza-setiawan-asisten-khusus-prabowo-di-bidang-komunikasi-dan-analis-kebijakan-2077755"]
+    },
+    {
+      "id": "rf-d03",
+      "type": "KONTRAK_TANPA_TENDER_SKALA_RAKSASA",
+      "severity": "HIGH",
+      "deskripsi": "Agrinas mendapat kontrak pembangunan 80.081 koperasi (Rp128T projected) + impor 105.000 kendaraan India (Rp24,66T) + subkontrak ke PMJS (Rp10,83T) — total potensi Rp160T+ — semua via penugasan langsung tanpa tender kompetitif. KPK menyatakan harus ikuti 12 tahapan, namun praktiknya banyak bypass. ICW sudah menyoroti ketertutupan informasi pengadaan.",
+      "entitas_terlibat": ["org-agrinas", "org-agrinas-pangan", "org-kmp", "org-pmjs"],
+      "sumber": [
+        "https://antikorupsi.org/id/ketertutupan-informasi-pengadaan-mobil-untuk-koperasi-merah-putih",
+        "https://money.kompas.com/read/2026/02/25/093100026/impor-105-000-pikap-india-bos-agrinas--kami-sudah-dp-30-persen-",
+        "https://liputan.co.id/2026/02/proyek-raksasa-agrinas-diterpa-isu-penunjukan-langsung-kpk-bilang-begini/"
+      ]
+    },
+    {
+      "id": "rf-d04",
+      "type": "LOOP_TERTUTUP_ASET_NEGARA",
+      "severity": "HIGH",
+      "deskripsi": "Danantara (dipimpin Burhanuddin Abdullah — mantan terpidana korupsi, Thread B) mendanai Rp210T program KMP, yang kontraktor utamanya (Agrinas) dikuasai yayasan Prabowo, yang diawasi Menteri dari Gerindra (Ferry Juliantono), yang dibiayai dari Dana Desa (58% alokasi) + APBN. Satu loop tertutup: kebijakan (Prabowo) → kontraktor (Agrinas/YPPSDP) → pembiayaan (Danantara) → pengawasan (Menteri Gerindra). Tidak ada titik independen.",
+      "entitas_terlibat": ["org-danantara", "org-agrinas", "org-kmp", "person-prabowo", "person-ferry"],
+      "sumber": [
+        "https://voi.id/ekonomi/521950/danantara-segera-buka-akses-pembiayaan-untuk-kopdes-merah-putih-menkop-beri-bocoran-ini/",
+        "https://theconversation.com/koperasi-merah-putih-berisiko-tinggi-jadi-ladang-korupsi-baru-261401"
+      ]
+    },
+    {
+      "id": "rf-d05",
+      "type": "INTEGRASI_VERTIKAL_PANGAN_NASIONAL",
+      "severity": "HIGH",
+      "deskripsi": "199 Koperasi Merah Putih sudah menjadi supplier SPPG MBG. Jika program berjalan penuh, Agrinas (milik yayasan Prabowo) akan mengontrol: konstruksi dapur MBG (via SPPG), distribusi bahan pangan (via KMP), dan logistik pengiriman (via motor listrik BGN Thread C + kendaraan impor India). Satu ekosistem di bawah kendali presiden mengontrol seluruh rantai pangan program sosial nasional senilai Rp71T+.",
+      "entitas_terlibat": ["org-agrinas-pangan", "org-kmp", "bgn-001"],
+      "sumber": [
+        "https://money.kompas.com/read/2025/11/06/203534026/kopdes-merah-putih-jadi-supplier-sppg-mbg-menkop-pastikan-bukan-monopoli-umkm",
+        "https://www.thejakartapost.com/opinion/2026/04/10/analysis-agrinas-expanding-role-risks-turning-policy-ambition-into-liability.html"
+      ]
+    },
+    {
+      "id": "rf-d08",
+      "type": "REVOLVING_DOOR_TMI_BUMN",
+      "severity": "HIGH",
+      "deskripsi": "Komisaris PT TMI (broker alutsista milik YPPSDP) berpindah ke jabatan BUMN/pemerintah strategis setelah Prabowo jadi presiden: (1) Glenny Kairupan: Ketua Komisaris TMI → Dirut Garuda Indonesia (Oktober 2025), (2) Angga Raka Prabowo: Komisaris TMI → Kepala Badan Komunikasi Pemerintah (September 2025). Pola yang sama dengan Dirgayuza (Direktur Agrinas → Asisten Khusus Presiden). Satu ekosistem orang berputar antara YPPSDP-companies dan jabatan negara.",
+      "entitas_terlibat": ["org-tmi", "person-glenny", "person-angga-raka", "person-prabowo"],
+      "sumber": [
+        "https://nasional.kompas.com/read/2025/10/15/18235781/profil-glenny-kairupan-teman-seangkatan-prabowo-di-akabri-yang-kini-jadi"
+      ]
+    },
+    {
+      "id": "rf-d07",
+      "type": "YPPSDP_SUPER_NODE",
+      "severity": "HIGH",
+      "deskripsi": "YPPSDP (org-ppsdp) adalah super node yang mengendalikan tiga vehicle pengambilan anggaran negara sekaligus: (1) Agrinas — kontraktor utama KMP Rp128T+, (2) TMI — intermediary alutsista (draft Perpres 25 tahun USD124,99 miliar), (3) mitra SPPG program MBG. Ketiganya dikendalikan satu yayasan non-profit: Prabowo sebagai Ketua Pembina, Musa Bangun (Waketum Gerindra) sebagai Ketua. Seluruh direksi TMI adalah teman seangkatan Prabowo (AKABRI 1970) atau kader Gerindra. PBHI+ICW+Imparsial sudah laporkan ke Ombudsman RI (Februari 2024) atas dugaan maladministrasi.",
+      "entitas_terlibat": ["org-ppsdp", "org-agrinas", "org-tmi", "person-prabowo", "person-musa-bangun"],
+      "sumber": [
+        "https://yppsdp.id/pengurus-yppsdp-tahun-2025/",
+        "https://majalah.tempo.co/read/investigasi/164314/peran-agrinas-dalam-food-estate-kementerian-pertahanan",
+        "https://www.kompas.id/artikel/ada-apa-dengan-pt-tmi-dan-pembelian-alutsista/"
+      ]
+    },
+    {
+      "id": "rf-d06",
+      "type": "RISIKO_KORUPSI_TERSTRUKTUR_LOKAL",
+      "severity": "MEDIUM",
+      "deskripsi": "Studi CELIOS (sampel 108 kepala desa, 34 provinsi): 65% identifikasi potensi korupsi tata kelola, 76% perangkat desa menolak skema pembiayaan, potensi korupsi Rp4,8 triliun dari 80.000 koperasi. Kasus sudah terungkap: inflasi anggaran sistematis di Maluku Utara (2025), pemalsuan tanda tangan di Lampung. Perubahan mendadak skema via Inpres 17/2025 (Oktober 2025) — hanya 7 bulan setelah Inpres 9/2025 — mengindikasikan desain awal bermasalah.",
+      "entitas_terlibat": ["org-kmp"],
+      "sumber": [
+        "https://theconversation.com/koperasi-merah-putih-berisiko-tinggi-jadi-ladang-korupsi-baru-261401",
+        "https://www.suara.com/news/2025/07/22/131350/hantu-korupsi-era-orba-bangkit-proyek-koperasi-merah-putih-berpotensi-jadi-bancakan-rp48-triliun"
+      ]
+    }
+  ],
+
+  "investigasi_lanjutan": [
+    "✅ TERKONFIRMASI: YPPSDP pengurus 2025 — Ketua Pembina: Prabowo, Ketua: Musa Bangun. Yayasan berdiri sejak 1983 (awalnya YKPP), berganti nama jadi YPPSDP tahun 2020.",
+    "✅ TERKONFIRMASI: TMI didirikan 14 Agustus 2020, 99.8% milik YPPSDP. Direksi: Glenny Kairupan (AKABRI '70, seangkatan Prabowo) + Angga Raka Prabowo (Gerindra). Revolving door ke Garuda + Badan Kominfo.",
+    "🔴 PRIORITY: Angga Raka Prabowo — apakah ada hubungan keluarga dengan Prabowo Subianto? Jika iya ini nepotisme struktural di dalam TMI.",
+    "🔴 PRIORITY: Detail kontrak impor 105.000 kendaraan India (Mahindra + Tata Motors, Rp24,66T) — siapa broker di Indonesia? Markup berapa? DP Rp7,39T sudah ke rekening mana?",
+    "Status laporan Ombudsman tentang TMI (dilaporkan PBHI+ICW+Imparsial Februari 2024) — sudah ada putusan? Apa hasilnya?",
+    "Surat Prabowo ke CEO Rosoboronexport (November 2020) — apa isi lengkapnya? Apakah ada kontrak alutsista Rusia yang melibatkan TMI?",
+    "Subkontrak PMJS Rp10,83T — bagaimana proses seleksi? Pahalamas Sejahtera (71% PMJS) — siapa ultimate beneficial owner-nya?",
+    "Verifikasi food estate: 425.000 ha lahan — siapa yang pegang izin sebelumnya? Ada deforestasi atau penggusuran komunitas?",
+    "Aliran Dana Desa: 58% alokasi untuk KMP — apakah ada desa yang sudah laporkan penyimpangan ke BPK/Kejaksaan?",
+    "Apakah Kejagung atau KPK sudah mulai selidiki Agrinas/TMI setelah sorotan media 2024-2026?"
+  ]
+}

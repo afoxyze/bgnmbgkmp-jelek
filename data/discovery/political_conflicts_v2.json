@@ -1,0 +1,50 @@
+[
+  {
+    "entity": "PT Agrinas Pangan Nusantara",
+    "person_in_board": "Joao Angelo De Sousa Mota",
+    "person_role": "Direktur Utama (Resigned Aug 2025)",
+    "matched_party": "PAN",
+    "type": "PARTY_AFFILIATION_TAG"
+  },
+  {
+    "entity": "PT Indoraya Multi Internasional",
+    "person_in_board": "Shoraya Lolyta Oktaviana",
+    "person_role": "CEO / Direktur Utama",
+    "matched_official": "Shoraya Lolyta Oktaviana",
+    "official_role": "CEO IMI (Investigated)",
+    "official_party": "None",
+    "type": "DIRECT_MATCH"
+  },
+  {
+    "entity": "Yayasan Pengembangan Potensi Sumber Daya Pertahanan (YPPSDP)",
+    "person_in_board": "Prabowo Subianto",
+    "person_role": "Ketua Pembina",
+    "matched_official": "Prabowo Subianto",
+    "official_role": "President / Chairman",
+    "official_party": "Gerindra",
+    "type": "DIRECT_MATCH"
+  },
+  {
+    "entity": "Yayasan Pengembangan Potensi Sumber Daya Pertahanan (YPPSDP)",
+    "person_in_board": "Musa Bangun",
+    "person_role": "Ketua",
+    "matched_official": "Musa Bangun",
+    "official_role": "Waketum / YPPSDP Chair",
+    "official_party": "Gerindra",
+    "type": "DIRECT_MATCH"
+  },
+  {
+    "entity": "Yayasan Pengembangan Potensi Sumber Daya Pertahanan (YPPSDP)",
+    "person_in_board": "Musa Bangun",
+    "person_role": "Ketua",
+    "matched_party": "Gerindra",
+    "type": "PARTY_AFFILIATION_TAG"
+  },
+  {
+    "entity": "Yayasan Yasika Aulia Ramadhany",
+    "person_in_board": "Yasika Aulia Ramadhany",
+    "person_role": "Pembina",
+    "matched_party": "Gerindra",
+    "type": "PARTY_AFFILIATION_TAG"
+  }
+]

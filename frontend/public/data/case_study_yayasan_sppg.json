@@ -1,0 +1,1002 @@
+{
+  "metadata": {
+    "tanggal_riset": "2026-04-08",
+    "sumber": "ICW report (antikorupsi.org), Tempo.co, Gelora.co, media nasional",
+    "status": "Audit Terpadu (ICW/OSINT) — Konsolidasi laporan ICW, data AHU, dan profil pengurus yayasan."
+  },
+  "entities": [
+    {
+      "id": "org-icw-001",
+      "type": "Organization",
+      "label": "Yayasan Lazuardi Kendari",
+      "properties": {
+        "jenis": "Yayasan Mitra SPPG MBG",
+        "lokasi": "Kendari, Sulawesi Tenggara",
+        "pendiri": "Nur Alam (Eks-Terpidana Korupsi)",
+        "red_flag": "Didirikan oleh mantan terpidana korupsi yang memenangkan kemitraan program strategis nasional."
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "id": "org-icw-002",
+      "type": "Organization",
+      "label": "Yayasan Indonesia Food Security Review (IFSR)",
+      "properties": {
+        "jenis": "Yayasan Mitra SPPG MBG",
+        "pengurus_kunci": "Burhanuddin Abdullah (Ketua Danantara)",
+        "koneksi_bgn": "Didirikan oleh Tenaga Ahli BGN (I Dewa Made Agung Kertha)",
+        "red_flag": "Konflik Kepentingan: Staf internal BGN mendirikan yayasan yang menjadi mitra program BGN sendiri."
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "id": "org-icw-003",
+      "type": "Organization",
+      "label": "Yayasan Abdi Bangun Negeri",
+      "properties": {
+        "jenis": "Yayasan Mitra SPPG MBG",
+        "lokasi": "Ternate, Maluku Utara",
+        "afiliasi_koruptor": "Abdul Hamid Payapo (Terpidana Korupsi Proyek Jalan)",
+        "red_flag": "Terafiliasi dengan mantan narapidana korupsi proyek infrastruktur negara."
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "id": "org-icw-004",
+      "type": "Organization",
+      "label": "Yayasan Cahaya Wirabangsa",
+      "properties": {
+        "jenis": "Yayasan Mitra SPPG MBG",
+        "lokasi": "Garut, Jawa Barat",
+        "afiliasi_politik": "Ketua adalah Anggota DPRD Aktif (Dapil II Garut)",
+        "red_flag": "Legislator aktif mengelola yayasan yang menjadi mitra pelaksana anggaran negara."
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+        "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html"
+      ]
+    },
+    {
+      "id": "org-icw-005",
+      "type": "Organization",
+      "label": "Yayasan Insan Cendekia Jayapura",
+      "properties": {
+        "jenis": "Yayasan Mitra SPPG MBG",
+        "lokasi": "Jayapura, Papua",
+        "afiliasi_politik": "Pengawas adalah Anggota DPR RI Aktif (NasDem)",
+        "red_flag": "Conflict of Interest: Anggota DPR RI (pengawas APBN) mengelola yayasan mitra program pemerintah."
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+        "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html"
+      ]
+    },
+    {
+      "id": "org-icw-006",
+      "type": "Organization",
+      "label": "Yayasan Sahabat Pelangi",
+      "properties": {
+        "jenis": "Yayasan Mitra SPPG MBG",
+        "lokasi": "Ogan Ilir, Sumatera Selatan",
+        "afiliasi_politik": "Pendiri adalah Anggota DPRD Aktif (Hanura)",
+        "red_flag": "Legislator daerah aktif terlibat langsung dalam pengelolaan unit mitra program strategis."
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+        "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html"
+      ]
+    },
+    {
+      "id": "org-icw-007",
+      "type": "Organization",
+      "label": "Yayasan Asra Bakti Maritim",
+      "properties": {
+        "jenis": "Yayasan Mitra SPPG MBG",
+        "lokasi": "Ciamis, Jawa Barat",
+        "afiliasi_politik": "Ketua adalah Anggota DPRD Aktif (PAN)",
+        "red_flag": "Keterlibatan aktif aktor politik daerah dalam distribusi program nasional."
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+        "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html"
+      ]
+    },
+    {
+      "id": "person-nuralam",
+      "type": "Person",
+      "label": "Nur Alam",
+      "properties": {
+        "jabatan_lama": "Gubernur Sulawesi Tenggara",
+        "partai": "PAN (Partai Amanat Nasional)",
+        "peran_yayasan": "Pendiri Yayasan Lazuardi Kendari",
+        "kasus_korupsi": "Penerimaan gratifikasi Rp40,2 miliar dari PT Richcorp terkait izin pertambangan PT AHB di Buton dan Bombana",
+        "tahun_vonis": "2018",
+        "vonis": "12 tahun penjara + denda Rp1 miliar + restitusi Rp2,7 miliar",
+        "kerugian_negara": "Estimasi US$4 miliar (kerusakan lingkungan 3.000 hektar Pulau Kabena)",
+        "pencabutan_hak_politik": "5 tahun setelah selesai menjalani hukuman",
+        "red_flag": "Terpidana korupsi yang mendirikan yayasan mitra program pemerintah senilai triliunan"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+        "https://www.thejakartapost.com/news/2018/03/29/nur-alam-gets-12-years-for-bribery-linked-to-ecological-destruction.html",
+        "https://antikorupsi.org/en/article/disappointing-verdict-nur-alam"
+      ]
+    },
+    {
+      "id": "person-zayat",
+      "type": "Person",
+      "label": "Mohammad Zayat Kaimoeddin",
+      "properties": {
+        "latar_belakang": "Anak mantan Gubernur Sulawesi Tenggara La Ode Kaimoeddin; kandidat Walikota Kendari 2017",
+        "peran_yayasan": "Pendiri Yayasan Lazuardi Kendari",
+        "kasus_korupsi": "Korupsi proyek peningkatan kualitas SLTP di Dinas Pendidikan dan Kebudayaan Sulawesi Tenggara",
+        "tahun_kasus": "2003",
+        "red_flag": "Terpidana korupsi + anak dinasti politik lokal, mendirikan yayasan mitra MBG"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "id": "person-burhanuddin",
+      "type": "Person",
+      "label": "Burhanuddin Abdullah",
+      "properties": {
+        "gelar": "Dr.",
+        "jabatan_lama": "Gubernur Bank Indonesia (2003-2008)",
+        "jabatan_lain_lama": "Menko Ekuin (Juni-Agustus 2001)",
+        "jabatan_sekarang": "Komisaris Utama PLN (dilantik Juli 2024, masih aktif per Juni 2025); Ketua Tim Pakar dan Inisiator Danantara (BPI Daya Anagata Nusantara, diluncurkan Prabowo 24 Feb 2025)",
+        "peran_yayasan": "Pengawas/Pembina Yayasan Indonesia Food Security Review (IFSR)",
+        "peran_politik": "Mantan Ketua Dewan Pakar TKN Prabowo-Gibran (2024)",
+        "penghargaan": "Bintang Mahaputera Adipradana dari Presiden Prabowo (Agustus 2025) — meskipun mantan terpidana korupsi",
+        "kasus_korupsi": "Penyalahgunaan dana YLPPI senilai Rp100 miliar untuk bantuan hukum 5 mantan pejabat BI dan penyelesaian BLBI",
+        "tahun_vonis": "2008",
+        "vonis": "5 tahun penjara + denda Rp250 juta",
+        "bebas": "6 Maret 2010 (menjalani sekitar 2 tahun)",
+        "red_flag": "Terpidana korupsi → Tim Pakar TKN Prabowo → Komut PLN (BUMN terbesar) → Ketua Danantara (kelola USD 900 miliar aset BUMN) → Bintang Mahaputera dari Prabowo. Satu orang dengan track record korupsi mengendalikan BUMN senilai ratusan miliar USD."
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+        "https://en.wikipedia.org/wiki/Burhanuddin_Abdullah",
+        "https://news.detik.com/berita/d-1027781/burhanuddin-abdullah-divonis-5-tahun-bui",
+        "https://www.liputan6.com/regional/read/5933507/profil-burhanuddin-abdullah-ditunjuk-jadi-ketua-tim-pakar-dan-inisiator-danantara",
+        "https://money.kompas.com/read/2025/08/26/083100226/pernah-terjerat-korupsi-eks-gubernur-bi-burhanuddin-abdullah-dapat-bintang",
+        "https://money.kompas.com/read/2025/06/19/182546026/daftar-dewan-direksi-dan-komisaris-pln-tebaru-hasil-rups-2025"
+      ]
+    },
+    {
+      "id": "person-payapo",
+      "type": "Person",
+      "label": "Abdul Hamid Payapo",
+      "properties": {
+        "jabatan_saat_korupsi": "PPK (Pejabat Pembuat Komitmen) di BPJN IX Wilayah Halmahera IV, Maluku Utara",
+        "peran_yayasan": "Pendiri Yayasan Abdi Bangun Negeri",
+        "kasus_korupsi": "Pungutan dari kontraktor proyek jalan PUPR — total Rp5,05 miliar + US$303.124 dari 4 kontraktor",
+        "tersangkut_bersama": "Amran Hi Mustary (Kepala BPJN IX), divonis 6 tahun penjara",
+        "tahun_kasus": "2017",
+        "red_flag": "Terpidana korupsi proyek infrastruktur yang mendirikan yayasan mitra program infrastruktur pemerintah lainnya"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+        "https://www.liputan6.com/news/read/2896079/korupsi-pembangunan-jalan-amran-mustary-dituntut-9-tahun-penjara",
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "id": "person-nizar",
+      "type": "Person",
+      "label": "Raden Muhammad Nizar",
+      "properties": {
+        "jabatan": "Anggota DPRD Kabupaten Garut",
+        "partai": "PPP (Partai Persatuan Pembangunan)",
+        "dapil": "Dapil II Garut",
+        "level": "DPRD Kabupaten",
+        "peran_yayasan": "Ketua Yayasan dan Pengawas Yayasan Cahaya Wirabangsa",
+        "status": "Aktif sebagai legislator",
+        "red_flag": "Anggota DPRD aktif yang sekaligus mengelola yayasan mitra MBG — potensi konflik kepentingan pengawasan anggaran"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+        "https://dprd.garutkab.go.id/anggota/rd-muhammad-nizar-s-pd",
+        "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html"
+      ]
+    },
+    {
+      "id": "person-sulaeman",
+      "type": "Person",
+      "label": "Sulaeman Lessu Hamzah",
+      "properties": {
+        "jabatan": "Anggota DPR RI",
+        "partai": "NasDem (Partai Nasional Demokrat)",
+        "dapil": "Dapil Papua",
+        "level": "DPR RI (Nasional)",
+        "peran_yayasan": "Pengawas Yayasan Insan Cendekia Jayapura",
+        "status": "Aktif sebagai legislator nasional",
+        "red_flag": "Anggota DPR RI aktif yang menjadi pengawas yayasan mitra MBG — potensi konflik kepentingan pengawasan APBN"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+        "https://nasdemdprri.id/anggota/sulaeman-hamzah-profil",
+        "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html"
+      ]
+    },
+    {
+      "id": "person-amrina",
+      "type": "Person",
+      "label": "Raden Ayu Amrina Rosyada",
+      "properties": {
+        "gelar": "S.Si., M.Si.",
+        "jabatan": "Anggota DPRD Kabupaten Ogan Ilir",
+        "partai": "Hanura (Partai Hati Nurani Rakyat)",
+        "dapil": "Dapil III Ogan Ilir",
+        "level": "DPRD Kabupaten",
+        "periode": "2024-2029",
+        "latar_belakang": "Aktivis perempuan dan jurnalis",
+        "peran_yayasan": "Pendiri Yayasan Sahabat Pelangi (sejak 2006)",
+        "status": "Aktif sebagai legislator",
+        "red_flag": "Anggota DPRD aktif yang mendirikan yayasan mitra MBG — potensi konflik kepentingan"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+        "https://jelajahsumsell.com/2024/09/15/daerah/ogan-ilir/ra-amrina-rosyada-aktivis-perempuan-sekaligus-jurnalis-yang-kini-berkiprah-sebagai-anggota-dprd-ogan-ilir-periode-2024-2029/",
+        "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html"
+      ]
+    },
+    {
+      "id": "person-aseprahmat",
+      "type": "Person",
+      "label": "Asep Rahmat",
+      "properties": {
+        "gelar": "S.H., M.M.",
+        "jabatan": "Anggota DPRD Kabupaten Ciamis",
+        "partai": "PAN (Partai Amanat Nasional)",
+        "dapil": "Dapil VI Ciamis",
+        "level": "DPRD Kabupaten",
+        "peran_yayasan": "Ketua Yayasan Asra Bakti Maritim",
+        "status": "Aktif sebagai legislator",
+        "red_flag": "Anggota DPRD aktif yang memimpin yayasan mitra MBG — potensi konflik kepentingan"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+        "https://setdprd.ciamiskab.go.id/profile-anggota-dprd/asep-rahmat-s-h-m-m",
+        "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html"
+      ]
+    },
+    {
+      "id": "proj-mbg",
+      "type": "Project",
+      "label": "Program Makan Bergizi Gratis (MBG)",
+      "properties": {
+        "jenis_program": "Nasional — Flagship Gizi & Kesehatan",
+        "penyelenggara": "Badan Gizi Nasional (Kepala: Dadan Hindayana)",
+        "dasar_hukum": "Perpres No. 83 Tahun 2024; Inpres No. 1 Tahun 2025",
+        "alokasi_anggaran": "Rp71 triliun (alokasi APBN 2025)",
+        "target_sasaran": "82,9 juta anak sekolah, santri, dan ibu hamil",
+        "tanggal_peresmian": "Uji Coba: 2024; Operasional Nasional: Januari 2025",
+        "skema_operasional": "Distribusi via Satuan Pelayanan Pemenuhan Gizi (SPPG) di tiap wilayah",
+        "unit_usaha_layanan": "Dapur komunal SPPG, penyediaan makanan siap saji, edukasi gizi masyarakat",
+        "koneksi_strategis": "Logistik dan bahan baku disuplai secara eksklusif oleh Koperasi Merah Putih",
+        "catatan_kritis": "Risiko tata kelola pada pemilihan mitra yayasan (28 yayasan terafiliasi parpol) dan pengadaan infrastruktur dapur (SPPG) tanpa tender terbuka."
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "id": "org-gsn",
+      "type": "Organization",
+      "label": "Yayasan Gerakan Solidaritas Nasional (GSN)",
+      "properties": {
+        "jenis": "Yayasan mitra SPPG program MBG",
+        "lokasi_sppg": "Kebayunan, Kecamatan Tapos, Depok, Jawa Barat",
+        "kapasitas": "16.000 porsi per hari",
+        "didirikan_oleh": "Prabowo Subianto (April 2024)",
+        "afiliasi_parpol": "Gerindra",
+        "red_flag": "Yayasan yang didirikan presiden aktif, dengan menteri kabinet dan pimpinan BUMN sebagai pengurus, menjadi mitra program pemerintah senilai Rp71T yang presiden itu sendiri tentukan anggarannya"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/temuan-icw-soal-afiliasi-mitra-mbg-ke-partai-politik-hingga-eks-terpidana-korupsi-2093173",
+        "https://yayasangsn.id/"
+      ]
+    },
+    {
+      "id": "person-prabowo",
+      "type": "Person",
+      "label": "Prabowo Subianto",
+      "properties": {
+        "jabatan": "Presiden Republik Indonesia",
+        "partai_politik": "Ketua Umum Partai Gerindra",
+        "peran_strategis": "Pembuat kebijakan nasional program KMP & MBG",
+        "afiliasi_yayasan": "Ketua Pembina YPPSDP (Ultimate Controller Agrinas)"
+      },
+      "sumber": [
+        "https://yayasangsn.id/",
+        "https://www.tempo.co/politik/temuan-icw-soal-afiliasi-mitra-mbg-ke-partai-politik-hingga-eks-terpidana-korupsi-2093173"
+      ]
+    },
+    {
+      "id": "person-hashim",
+      "type": "Person",
+      "label": "Hashim Djojohadikusumo",
+      "properties": {
+        "hubungan": "Adik kandung Prabowo Subianto",
+        "jabatan_pemerintah": "Utusan Khusus Presiden Bidang Iklim dan Energi (sejak 2024)",
+        "peran_yayasan": "Pengurus Yayasan GSN",
+        "red_flag": "Saudara presiden, menjabat utusan khusus presiden, sekaligus pengurus yayasan mitra program pemerintah yang presiden itu pimpin"
+      },
+      "sumber": [
+        "https://yayasangsn.id/",
+        "https://www.tempo.co/politik/temuan-icw-soal-afiliasi-mitra-mbg-ke-partai-politik-hingga-eks-terpidana-korupsi-2093173"
+      ]
+    },
+    {
+      "id": "person-sjafrie",
+      "type": "Person",
+      "label": "Sjafrie Sjamsoeddin",
+      "properties": {
+        "jabatan": "Menteri Pertahanan RI (sejak 2024)",
+        "latar_belakang": "Purnawirawan Jenderal TNI",
+        "peran_yayasan": "Ketua Pembina YPPSDP (Ex-Officio)",
+        "relevansi": "Mengawasi yayasan yang mengelola bisnis pertahanan dan pangan nasional"
+      },
+      "sumber": [
+        "https://kompaspedia.kompas.id/baca/profil/tokoh/menteri-pertahanan-ri-2024-2029-sjafri-sjamsoeddin"
+      ]
+    },
+    {
+      "id": "org-ppsdp",
+      "type": "Organization",
+      "label": "Yayasan Pengembangan Potensi Sumber Daya Pertahanan (YPPSDP)",
+      "properties": {
+        "singkatan": "YPPSDP",
+        "ketua_pembina": "Sjafrie Sjamsoeddin (Menhan RI)",
+        "pendiri_kunci": "Prabowo Subianto",
+        "kepemilikan_bisnis": "Agrinas (99%) & PT TMI (99%)",
+        "red_flag": "Pusat gravitasi bisnis-politik: mengendalikan broker alutsista dan kontraktor pangan raksasa nasional."
+      },
+      "sumber": [
+        "https://yppsdp.id/sejarah/"
+      ]
+    },
+    {
+      "id": "person-musa-bangun",
+      "type": "Person",
+      "label": "Musa Bangun",
+      "properties": {
+        "pangkat": "Mayor Jenderal TNI AD (Purnawirawan)",
+        "jabatan_parpol": "Wakil Ketua Umum Partai Gerindra",
+        "jabatan_bumn": "Komisaris Utama PT Indonesia Asahan Aluminium / Inalum (dilantik Juni 2025)",
+        "peran_yayasan": "Ketua Yayasan Pengembangan Potensi Sumber Daya Pertahanan",
+        "penghargaan": "Jenderal Kehormatan Bintang 3 dari Prabowo (Agustus 2025)",
+        "red_flag": "Waketum Gerindra + Komut Inalum (BUMN) + Ketua YPPSDP (yayasan yang kendalikan Agrinas + TMI + mitra MBG). Triple akses: partai + BUMN tambang + yayasan Kemenhan. Semua jalur ke anggaran negara."
+      },
+      "sumber": [
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+        "https://www.cnnindonesia.com/ekonomi/20250612151622-92-1239059/waketum-gerindra-musa-bangun-diangkat-jadi-komut-inalum"
+      ]
+    },
+    {
+      "id": "person-idewa",
+      "type": "Person",
+      "label": "I Dewa Made Agung Kertha",
+      "properties": {
+        "jabatan": "Tenaga Ahli Badan Gizi Nasional (BGN)",
+        "peran_yayasan": "Pendiri Yayasan Indonesia Food Security Review (IFSR)",
+        "red_flag": "CROSS-REF THREAD A↔B — Tenaga Ahli BGN mendirikan yayasan yang menjadi mitra program BGN. Orang di dalam lembaga regulator sekaligus di dalam lembaga yang diregulasi."
+      },
+      "sumber": [
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "id": "org-yasika",
+      "type": "Organization",
+      "label": "Yayasan Yasika Aulia (Yasika Group)",
+      "properties": {
+        "jenis": "Yayasan mitra SPPG program MBG",
+        "lokasi": "Sulawesi Selatan",
+        "jumlah_sppg": "41 dapur (16 Makassar, 3 Parepare, 2 Gowa, 10 Bone, sisanya tersebar)",
+        "afiliasi_parpol": "Gerindra",
+        "pembina": "Yasika Aulia Ramadhani (20 tahun)",
+        "red_flag": "Mengoperasikan 41 SPPG di satu provinsi — melampaui batas BGN sendiri (maks 10 per yayasan per provinsi). Diduga menggunakan multiple foundation untuk bypass aturan."
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "id": "person-yasika-aulia",
+      "type": "Person",
+      "label": "Yasika Aulia Ramadhani",
+      "properties": {
+        "usia": "20 tahun",
+        "peran_yayasan": "Pembina Yayasan Yasika Aulia",
+        "hubungan": "Anak Yasir Machmud (Wakil Ketua DPRD Sulsel + Sekretaris DPD Gerindra Sulsel)",
+        "red_flag": "Usia 20 tahun mengelola yayasan dengan 41 dapur MBG — akses diduga melalui koneksi ayah yang pejabat partai dan legislator aktif"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "id": "person-yasir",
+      "type": "Person",
+      "label": "Yasir Machmud",
+      "properties": {
+        "jabatan": "Wakil Ketua DPRD Provinsi Sulawesi Selatan",
+        "jabatan_parpol": "Sekretaris DPD Gerindra Sulawesi Selatan",
+        "hubungan": "Ayah Yasika Aulia Ramadhani (Pembina Yayasan Yasika)",
+        "red_flag": "Legislator aktif tingkat provinsi + pejabat DPD Gerindra, anaknya mengelola 41 dapur MBG. Nepotisme + conflict of interest pengawasan anggaran daerah."
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "id": "org-pln",
+      "type": "Organization",
+      "label": "PT PLN (Persero)",
+      "properties": {
+        "jenis": "Badan Usaha Milik Negara (BUMN) — perusahaan listrik negara",
+        "komisaris_utama": "Burhanuddin Abdullah (dilantik Juli 2024, masih aktif per Juni 2025)",
+        "catatan": "Salah satu dari 7 BUMN beraset jumbo yang dikelola Danantara. PLN menandatangani HoA dengan Danantara Investment Management untuk investasi energi terbarukan (EBT) 2025.",
+        "relevansi": "Burhanuddin Abdullah = mantan terpidana korupsi + pengawas yayasan MBG + Komut PLN + Ketua Danantara. Koneksi menunjukkan akses serentak ke aset negara bernilai raksasa."
+      },
+      "sumber": [
+        "https://money.kompas.com/read/2025/06/19/182546026/daftar-dewan-direksi-dan-komisaris-pln-tebaru-hasil-rups-2025",
+        "https://www.liputan6.com/regional/read/5652931/profil-burhanuddin-abdullah-jadi-komisaris-utama-pln"
+      ]
+    },
+    {
+      "id": "org-danantara",
+      "type": "Organization",
+      "label": "Danantara (BPI Daya Anagata Nusantara)",
+      "properties": {
+        "jenis": "Sovereign Wealth Fund — Badan Pengelola Investasi milik negara",
+        "diluncurkan": "24 Februari 2025 oleh Presiden Prabowo Subianto",
+        "ketua_tim_pakar": "Burhanuddin Abdullah",
+        "aset_kelolaan": "USD 900 miliar (sekitar Rp14.715 kuadriliun) — dari konsolidasi 7 BUMN besar termasuk PLN",
+        "target_investasi": "USD 5 miliar pada 2025; dividen tahunan hingga USD 8 miliar",
+        "bumn_terkonsolidasi": "PLN, Pertamina, Bank Mandiri, BRI, BNI, Telkom, dan BUMN beraset jumbo lainnya",
+        "catatan": "Burhanuddin Abdullah (mantan terpidana korupsi) duduk sebagai Ketua Tim Pakar & Inisiator — posisi strategis di lembaga yang mengelola hampir semua aset BUMN Indonesia."
+      },
+      "sumber": [
+        "https://www.liputan6.com/regional/read/5933507/profil-burhanuddin-abdullah-ditunjuk-jadi-ketua-tim-pakar-dan-inisiator-danantara",
+        "https://govinsider.asia/indo-en/article/danantara-dan-transformasi-bumn-menuju-indonesia-emas-2045"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "from": "person-nuralam",
+      "to": "org-icw-001",
+      "type": "FOUNDED",
+      "properties": {
+        "peran": "Pendiri",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968"
+      ]
+    },
+    {
+      "from": "person-zayat",
+      "to": "org-icw-001",
+      "type": "FOUNDED",
+      "properties": {
+        "peran": "Pendiri",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968"
+      ]
+    },
+    {
+      "from": "person-burhanuddin",
+      "to": "org-icw-002",
+      "type": "SUPERVISES",
+      "properties": {
+        "peran": "Pengawas/Pembina",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968"
+      ]
+    },
+    {
+      "from": "person-payapo",
+      "to": "org-icw-003",
+      "type": "FOUNDED",
+      "properties": {
+        "peran": "Pendiri",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968"
+      ]
+    },
+    {
+      "from": "person-nizar",
+      "to": "org-icw-004",
+      "type": "LEADS",
+      "properties": {
+        "peran": "Ketua Yayasan + Pengawas",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "from": "person-sulaeman",
+      "to": "org-icw-005",
+      "type": "SUPERVISES",
+      "properties": {
+        "peran": "Pengawas",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "from": "person-amrina",
+      "to": "org-icw-006",
+      "type": "FOUNDED",
+      "properties": {
+        "peran": "Pendiri (sejak 2006)",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "from": "person-aseprahmat",
+      "to": "org-icw-007",
+      "type": "LEADS",
+      "properties": {
+        "peran": "Ketua Yayasan",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "from": "org-icw-001",
+      "to": "proj-mbg",
+      "type": "PARTNER_OF",
+      "properties": {
+        "peran": "Mitra pengelola SPPG"
+      },
+      "sumber": [
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "from": "org-icw-002",
+      "to": "proj-mbg",
+      "type": "PARTNER_OF",
+      "properties": {
+        "peran": "Mitra pengelola SPPG"
+      },
+      "sumber": [
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "from": "org-icw-003",
+      "to": "proj-mbg",
+      "type": "PARTNER_OF",
+      "properties": {
+        "peran": "Mitra pengelola SPPG"
+      },
+      "sumber": [
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "from": "org-icw-004",
+      "to": "proj-mbg",
+      "type": "PARTNER_OF",
+      "properties": {
+        "peran": "Mitra pengelola SPPG"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "from": "org-icw-005",
+      "to": "proj-mbg",
+      "type": "PARTNER_OF",
+      "properties": {
+        "peran": "Mitra pengelola SPPG"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "from": "org-icw-006",
+      "to": "proj-mbg",
+      "type": "PARTNER_OF",
+      "properties": {
+        "peran": "Mitra pengelola SPPG"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "from": "org-icw-007",
+      "to": "proj-mbg",
+      "type": "PARTNER_OF",
+      "properties": {
+        "peran": "Mitra pengelola SPPG"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "from": "person-prabowo",
+      "to": "org-gsn",
+      "type": "FOUNDED",
+      "properties": {
+        "peran": "Pendiri dan Ketua Dewan Pembina",
+        "tahun": "2024",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://yayasangsn.id/"
+      ]
+    },
+    {
+      "from": "person-hashim",
+      "to": "org-gsn",
+      "type": "AFFILIATED_WITH",
+      "properties": {
+        "peran": "Pengurus",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://yayasangsn.id/"
+      ]
+    },
+    {
+      "from": "person-sjafrie",
+      "to": "org-ppsdp",
+      "type": "LEADS",
+      "properties": {
+        "peran": "Ketua Yayasan",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "from": "person-musa-bangun",
+      "to": "org-ppsdp",
+      "type": "LEADS",
+      "properties": {
+        "peran": "Ketua Yayasan",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "from": "org-ppsdp",
+      "to": "proj-mbg",
+      "type": "PARTNER_OF",
+      "properties": {
+        "peran": "Mitra pengelola SPPG",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "from": "person-idewa",
+      "to": "org-icw-002",
+      "type": "FOUNDED",
+      "properties": {
+        "peran": "Pendiri",
+        "red_flag": true,
+        "catatan": "Tenaga Ahli BGN mendirikan yayasan mitra BGN — cross-ref Thread A↔B"
+      },
+      "sumber": [
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "from": "org-gsn",
+      "to": "proj-mbg",
+      "type": "PARTNER_OF",
+      "properties": {
+        "peran": "Mitra pengelola SPPG",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/temuan-icw-soal-afiliasi-mitra-mbg-ke-partai-politik-hingga-eks-terpidana-korupsi-2093173"
+      ]
+    },
+    {
+      "from": "person-yasika-aulia",
+      "to": "org-yasika",
+      "type": "LEADS",
+      "properties": {
+        "peran": "Pembina",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "from": "person-yasir",
+      "to": "person-yasika-aulia",
+      "type": "PARENT_OF",
+      "properties": {
+        "catatan": "Ayah dari Pembina Yayasan Yasika"
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "from": "org-yasika",
+      "to": "proj-mbg",
+      "type": "PARTNER_OF",
+      "properties": {
+        "peran": "Mitra pengelola SPPG — 41 dapur",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "from": "person-burhanuddin",
+      "to": "org-pln",
+      "type": "BOARDS",
+      "properties": {
+        "jabatan": "Komisaris Utama merangkap Komisaris Independen",
+        "sejak": "Juli 2024",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://money.kompas.com/read/2025/06/19/182546026/daftar-dewan-direksi-dan-komisaris-pln-tebaru-hasil-rups-2025"
+      ]
+    },
+    {
+      "from": "person-burhanuddin",
+      "to": "org-danantara",
+      "type": "LEADS",
+      "properties": {
+        "jabatan": "Ketua Tim Pakar dan Inisiator",
+        "sejak": "Februari 2025",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://www.liputan6.com/regional/read/5933507/profil-burhanuddin-abdullah-ditunjuk-jadi-ketua-tim-pakar-dan-inisiator-danantara"
+      ]
+    },
+    {
+      "from": "org-danantara",
+      "to": "org-pln",
+      "type": "MANAGES",
+      "properties": {
+        "catatan": "PLN adalah salah satu dari 7 BUMN beraset jumbo yang dikonsolidasikan ke Danantara. HoA ditandatangani untuk investasi energi terbarukan 2025.",
+        "nilai_aset": "Bagian dari USD 900 miliar portofolio Danantara"
+      },
+      "sumber": [
+        "https://infobanknews.com/daftar-7-bumn-beraset-jumbo-yang-dikelola-danantara/"
+      ]
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "rf-b01",
+      "type": "TERPIDANA_KORUPSI_KELOLA_PROGRAM",
+      "severity": "HIGH",
+      "deskripsi": "Nur Alam (terpidana korupsi Rp40,2 miliar, vonis 12 tahun) dan M. Zayat Kaimoeddin (terpidana korupsi proyek pendidikan) mendirikan Yayasan Lazuardi Kendari yang menjadi mitra SPPG program MBG senilai triliunan rupiah.",
+      "entitas_terlibat": [
+        "person-nuralam",
+        "person-zayat",
+        "org-icw-001",
+        "proj-mbg"
+      ],
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968"
+      ]
+    },
+    {
+      "id": "rf-b02",
+      "type": "TERPIDANA_KORUPSI_KELOLA_PROGRAM",
+      "severity": "HIGH",
+      "deskripsi": "Burhanuddin Abdullah (mantan Gubernur BI, terpidana korupsi Rp100 miliar dana YLPPI, vonis 5 tahun) menjadi Pengawas Yayasan IFSR yang mengelola 3 dapur MBG. Saat ini juga menjabat Komisaris Utama PLN dan Ketua Tim Ahli Danantara.",
+      "entitas_terlibat": [
+        "person-burhanuddin",
+        "org-icw-002",
+        "proj-mbg"
+      ],
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968"
+      ]
+    },
+    {
+      "id": "rf-b03",
+      "type": "TERPIDANA_KORUPSI_KELOLA_PROGRAM",
+      "severity": "HIGH",
+      "deskripsi": "Abdul Hamid Payapo (terpidana korupsi proyek jalan PUPR senilai Rp5,05 miliar) terafiliasi dengan Yayasan Abdi Bangun Negeri yang menjadi mitra SPPG program MBG di Ternate.",
+      "entitas_terlibat": [
+        "person-payapo",
+        "org-icw-003",
+        "proj-mbg"
+      ],
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968"
+      ]
+    },
+    {
+      "id": "rf-b04",
+      "type": "LEGISLATOR_AKTIF_KELOLA_MITRA",
+      "severity": "HIGH",
+      "deskripsi": "Sulaeman Lessu Hamzah (anggota DPR RI fraksi NasDem, Dapil Papua) menjadi Pengawas Yayasan Insan Cendekia Jayapura yang mengelola SPPG MBG. Sebagai legislator nasional, ia memiliki peran pengawasan APBN termasuk anggaran BGN — konflik kepentingan langsung.",
+      "entitas_terlibat": [
+        "person-sulaeman",
+        "org-icw-005",
+        "proj-mbg"
+      ],
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "id": "rf-b05",
+      "type": "LEGISLATOR_AKTIF_KELOLA_MITRA",
+      "severity": "MEDIUM",
+      "deskripsi": "3 anggota DPRD kabupaten aktif mengelola yayasan mitra MBG: Raden Muhammad Nizar (DPRD Garut/PPP), Raden Ayu Amrina Rosyada (DPRD Ogan Ilir/Hanura), dan Asep Rahmat (DPRD Ciamis/PAN). Potensi konflik kepentingan pengawasan anggaran daerah.",
+      "entitas_terlibat": [
+        "person-nizar",
+        "person-amrina",
+        "person-aseprahmat",
+        "org-icw-004",
+        "org-icw-006",
+        "org-icw-007"
+      ],
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "id": "rf-b06",
+      "type": "PATRONASE_POLITIK_SISTEMIK",
+      "severity": "HIGH",
+      "deskripsi": "28 dari 102 yayasan SPPG (27%) terafiliasi partai politik — Gerindra 7, PKS 5, PAN 4, PDIP 3, NasDem 3, PSI 2, Berkarya 2, Hanura 2, dan 5 partai lain @1. Program bernilai Rp71 triliun menjadi arena patronase politik.",
+      "entitas_terlibat": [
+        "proj-mbg"
+      ],
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "id": "rf-b09",
+      "type": "INSIDER_BGN_KELOLA_MITRA_BGN",
+      "severity": "HIGH",
+      "deskripsi": "I Dewa Made Agung Kertha (Tenaga Ahli BGN) mendirikan Yayasan Indonesia Food Security Review yang menjadi mitra SPPG program BGN. Alfatehan Septianta (Tim Teknis BGN) juga menjadi pengurus yayasan yang sama. Staf internal regulator sekaligus berada di dalam lembaga yang mereka awasi — ini cross-reference langsung antara Thread A (BGN) dan Thread B (Yayasan SPPG).",
+      "entitas_terlibat": [
+        "person-idewa",
+        "org-icw-002",
+        "proj-mbg",
+        "org-bgn"
+      ],
+      "sumber": [
+        "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf"
+      ]
+    },
+    {
+      "id": "rf-b07",
+      "type": "KONFLIK_KEPENTINGAN_PRESIDEN",
+      "severity": "HIGH",
+      "deskripsi": "Presiden Prabowo Subianto adalah Pembina Yayasan GSN yang menjadi mitra SPPG MBG — program bernilai Rp335 triliun (Anggaran 2026) yang presiden sendiri tentukan anggarannya melalui BGN. Adiknya (Hashim, Utusan Khusus Presiden) dan Menteri Pertahanannya (Sjafrie Sjamsoeddin) juga pengurus yayasan yang sama.",
+      "entitas_terlibat": [
+        "person-prabowo",
+        "person-hashim",
+        "person-sjafrie",
+        "org-gsn",
+        "proj-mbg"
+      ],
+      "sumber": [
+        "https://yayasangsn.id/",
+        "https://www.tempo.co/politik/temuan-icw-soal-afiliasi-mitra-mbg-ke-partai-politik-hingga-eks-terpidana-korupsi-2093173"
+      ]
+    },
+    {
+      "id": "rf-b11",
+      "type": "BUDGET_HIJACKING_PENDIDIKAN",
+      "severity": "HIGH",
+      "deskripsi": "Penggunaan dana fungsi pendidikan sebesar Rp223,6 Triliun (dari Mandatory Spending 20%) untuk membiayai program MBG. Hal ini digugat ke Mahkamah Konstitusi (MK) karena dinilai melanggar UU APBN dan merugikan hak siswa untuk mendapatkan pendidikan murni tanpa beban biaya makan.",
+      "entitas_terlibat": [
+        "org-bgn",
+        "proj-mbg"
+      ],
+      "sumber": [
+        "https://kabariku.com/politik/mk-mulai-sidang-gugatan-penggunaan-dana-pendidikan-untuk-makan-gratis/"
+      ]
+    },
+    {
+      "id": "rf-b12",
+      "type": "OPASITAS_PENGADAAN",
+      "severity": "MEDIUM",
+      "deskripsi": "Baru 8,6% (Rp1,05 Triliun) dari total Rencana Umum Pengadaan (RUP) Badan Gizi Nasional senilai Rp12,32 Triliun yang diumumkan ke sistem SIRUP LKPP hingga April 2026. Sebagian besar pengadaan dilakukan secara tertutup atau melalui penunjukan langsung yayasan mitra.",
+      "entitas_terlibat": [
+        "org-bgn"
+      ],
+      "sumber": [
+        "https://katadata.co.id/ekonomi-hijau/anggaran-bgn-2026-rup-hanya-8-persen/"
+      ]
+    },
+    {
+      "id": "rf-b08",
+      "type": "PELANGGARAN_BATAS_OPERASIONAL",
+      "severity": "HIGH",
+      "deskripsi": "Yayasan Yasika Aulia mengoperasikan 41 SPPG di Sulawesi Selatan — melampaui batas regulasi BGN (maks 10 per yayasan per provinsi). Pembinanya berusia 20 tahun, anak Yasir Machmud (Wakil Ketua DPRD Sulsel + Sekretaris DPD Gerindra Sulsel). Indikasi akses istimewa via koneksi politik.",
+      "entitas_terlibat": [
+        "org-yasika",
+        "person-yasika-aulia",
+        "person-yasir",
+        "proj-mbg"
+      ],
+      "sumber": [
+        "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889"
+      ]
+    },
+    {
+      "id": "rf-b10",
+      "type": "TERPIDANA_KORUPSI_KUASAI_ASET_NEGARA",
+      "severity": "HIGH",
+      "deskripsi": "Burhanuddin Abdullah — mantan terpidana korupsi dana YLPPI Rp100 miliar, vonis 5 tahun (2008) — kini sekaligus: (1) Komisaris Utama PLN, (2) Ketua Tim Pakar Danantara yang mengelola USD 900 miliar aset BUMN, dan (3) Pengawas Yayasan IFSR mitra BGN. Pada Agustus 2025 menerima Bintang Mahaputera Adipradana dari Presiden Prabowo. Ini bukan rehabilitasi — ini akumulasi kontrol atas institusi negara oleh orang dengan rekam jejak korupsi.",
+      "entitas_terlibat": [
+        "person-burhanuddin",
+        "org-pln",
+        "org-danantara",
+        "org-icw-002"
+      ],
+      "sumber": [
+        "https://money.kompas.com/read/2025/08/26/083100226/pernah-terjerat-korupsi-eks-gubernur-bi-burhanuddin-abdullah-dapat-bintang",
+        "https://www.liputan6.com/regional/read/5933507/profil-burhanuddin-abdullah-ditunjuk-jadi-ketua-tim-pakar-dan-inisiator-danantara",
+        "https://money.kompas.com/read/2025/06/19/182546026/daftar-dewan-direksi-dan-komisaris-pln-tebaru-hasil-rups-2025"
+      ]
+    }
+  ],
+  "investigasi_lanjutan": [
+    "✅ SELESAI: 4 anggota DPR/DPRD aktif teridentifikasi — Sulaeman (DPR RI/NasDem), Nizar (DPRD Garut/PPP), Amrina (DPRD Ogan Ilir/Hanura), Asep (DPRD Ciamis/PAN)",
+    "✅ SELESAI: Detail kasus korupsi Nur Alam, Burhanuddin Abdullah, Abdul Hamid Payapo terdokumentasi",
+    "Lookup AHU semua 7 yayasan di atas — siapa direksi lengkap dan pendiri lainnya?",
+    "Cek apakah Nur Alam sudah bebas dari penjara — jika ya, kapan?",
+    "✅ SELESAI: Burhanuddin Abdullah terkonfirmasi sebagai Komut PLN (Juli 2024) + Ketua Tim Pakar Danantara (Feb 2025) + menerima Bintang Mahaputera dari Prabowo (Agustus 2025). TIDAK ada kontrak langsung MBG ke PLN yang ditemukan.",
+    "✅ SELESAI: Yayasan GSN (Prabowo + Hashim + Sjafrie) dan Yayasan Yasika (anak Yasir Machmud/DPRD Sulsel Gerindra) teridentifikasi dari Tempo. Ini 2 dari 7 yayasan Gerindra. Sisa 5 belum diketahui.",
+    "Cek laporan keuangan yayasan-yayasan ini di AHU — apakah modal sesuai untuk kelola SPPG?",
+    "✅ SELESAI: Cross-reference Thread A ↔ B DITEMUKAN — I Dewa Made Agung Kertha (Tenaga Ahli BGN) mendirikan Yayasan IFSR yang menjadi mitra program BGN. Alfatehan Septianta (Tim Teknis BGN) juga pengurus IFSR. Ini koneksi langsung staf BGN di dalam yayasan mitra BGN.",
+    "✅ INVESTIGASI: 7 yayasan Gerindra — ICW sebut angka 7 tapi tidak publikasi nama lengkap. PDF ICW tidak bisa di-fetch publik. Perlu akses langsung ke laporan ICW atau request ke ICW."
+  ]
+}

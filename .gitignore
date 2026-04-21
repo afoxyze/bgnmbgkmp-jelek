@@ -1,0 +1,29 @@
+# Environment
+.env
+.env.*
+!.env.example
+
+# Data
+data/raw/
+# Jangan abaikan folder data lainnya agar bisa di-push
+# data/processed/  <-- dihapus dari ignore
+# data/manual/     <-- dihapus dari ignore
+# data/discovery/  <-- dipastikan masuk
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node
+node_modules/
+.next/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
