@@ -4,8 +4,7 @@ import type { CaseStudy } from "@/types/graph";
 import type { Metadata } from "next";
 
 import { SITE_CONFIG } from "@/lib/constants";
-import { getDossierSummaries } from "@/lib/dossier";
-import { DossierIndexCard } from "@/components/dossier/DossierIndexCard";
+import { InvestigationCard } from "@/components/InvestigationCard";
 
 export const metadata: Metadata = {
   title: `${SITE_CONFIG.NAME} — Platform Investigasi Bisnis-Politik Indonesia`,
@@ -218,10 +217,51 @@ function InvestigationsSection({ totalSppg }: { totalSppg: number }) {
           gap: "2rem",
         }}
       >
-        {/* DYNAMIC DOSSIER LIST */}
-        {getDossierSummaries().map((dossier) => (
-          <DossierIndexCard key={dossier.slug} dossier={dossier} />
-        ))}
+        {/* HERO CARD: 1. MBG — Makan Bergizi Gratis */}
+        <InvestigationCard
+          variant="hero"
+          thread="Proyek 01"
+          status="CRITICAL"
+          source="MK-RI / KEMENKEU / ICW"
+          judul="MBG: Krisis Konstitusi & Anggaran Rp335 Triliun"
+          poin={[
+            "Anggaran 2026 melonjak ke Rp335T, dengan dugaan 'penculikan' Dana Pendidikan (Mandatory Spending) sebesar Rp223,55T yang kini digugat di Mahkamah Kstitusi.",
+            "Krisis Transparansi: Berdasarkan data LKPP, baru 8,6% (Rp1,05T) dari total Rencana Umum Pengadaan (RUP) Badan Gizi Nasional yang diumumkan secara terbuka.",
+            "Patronase Politik: ICW mengidentifikasi 28 yayasan mitra pelaksana terafiliasi partai politik, dengan pengurus yang mencakup anggota DPR aktif dan mantan napi korupsi.",
+          ]}
+          entitas={28}
+          redFlags={12}
+        />
+
+        {/* SIDE CARD: 2. BGN — Badan Gizi Nasional */}
+        <InvestigationCard
+          thread="Proyek 02"
+          status="ACTIVE"
+          source="BPK-RI / E-PURCHASING / TEMPO"
+          judul="BGN: Anomali Pengadaan Alat IT & Logistik"
+          poin={[
+            "Audit Investigatif: Dugaan mark-up Rp7,95 Juta per unit pada pengadaan Tablet Samsung (Total Rp508,49 Miliar) untuk program Sarjana Penggerak (SPPI).",
+            "Kontrak Rp1,4T pengadaan motor listrik MBG dimenangkan PT Yasa Artha, yang jajaran direksinya merupakan saksi kunci dalam kasus korupsi bansos di KPK.",
+            "Pemborosan Anggaran: Temuan item pengadaan sekunder (semir & sikat sepatu) dengan markup harga hingga 300% melalui sistem E-Purchasing.",
+          ]}
+          entitas={26}
+          redFlags={10}
+        />
+
+        {/* SIDE CARD: 3. KMP — Koperasi Merah Putih */}
+        <InvestigationCard
+          thread="Proyek 03"
+          status="VERIFIED"
+          source="AHU-ONLINE / KPK / INVESTIGASI"
+          judul="KMP: Gurita Monopoli & Infrastruktur Desa"
+          poin={[
+            "Monopoli Vertikal: PT Agrinas (Yayasan Kemenhan) memegang kendali penuh konstruksi 80.000+ gerai KMP dengan estimasi nilai proyek Rp128T+.",
+            "Indikasi Markup Konstruksi: Selisih anggaran pembangunan gerai hingga Rp700 Juta per unit dibandingkan nilai fisik riil di lapangan (studi kasus Denpasar).",
+            "Skandal Identitas: CEO PT IMI (vendor rak SPPG Rp375M) terdeteksi memiliki 3 NIK ganda dan menggunakan gudang militer Pusziad untuk penyimpanan unit komersial.",
+          ]}
+          entitas={17}
+          redFlags={11}
+        />
 
         {/* OPEN DATA CARD: Dataset Portal — OSINT Toolkit */}
         <article

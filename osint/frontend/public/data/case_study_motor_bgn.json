@@ -1,0 +1,374 @@
+{
+  "metadata": {
+    "tanggal_riset": "2026-04-09",
+    "sumber": "Kompas, Detik, CNN Indonesia, Suara, Pinter Politik, Jakarta Satu, CBA, RMOL, The Jakarta Post",
+    "status": "Audit Lapangan (Selesai) — Verifikasi unit fisik di lapangan dan dokumen kemitraan BGN.",
+    "thread": "Thread C — Pengadaan Motor Listrik BGN"
+  },
+  "entities": [
+    {
+      "id": "org-yasa",
+      "type": "Organization",
+      "label": "PT Yasa Artha Trimanunggal",
+      "properties": {
+        "jenis": "Perusahaan Swasta — Logistik & Pengadaan",
+        "nilai_kontrak": "Rp1,2 - 1,4 Triliun (Pemenang Motor Listrik MBG)",
+        "direktur_utama": "Yenna Yuniana (Saksi Kasus Bansos KPK)",
+        "komisaris_utama": "Andri Mulyono (Saksi Kasus Bansos KPK)",
+        "red_flag": "Pemenang kontrak triliunan rupiah yang jajaran direksinya diperiksa KPK dalam kasus korupsi bansos."
+      },
+      "sumber": [
+        "https://www.suara.com/bisnis/2026/04/07/182618/siapa-pt-yasa-artha-trimanunggal-pemenang-pengadaan-motor-trail-listrik-mbg",
+        "https://rmol.id/hukum/read/2025/11/03/685380/bos-pt-yasa-artha-trimanunggal-diperiksa-kpk-kasus-korupsi-penyaluran-bansos",
+        "https://monitorindonesia.com/hukum/read/2025/11/616210/kpk-panggil-direktur-pt-yasa-artha-trimanunggal-yenna-yuniana-usut-korupsi-bansos",
+        "https://monitorindonesia.com/hukum/read/2025/10/615616/kpk-periksa-komut-pt-yasa-artha-trimanunggal-andri-mulyono-terkait-korupsi-bansos-rp-200-m"
+      ]
+    },
+    {
+      "id": "org-adlas",
+      "type": "Organization",
+      "label": "PT Adlas Sarana Elektrik",
+      "properties": {
+        "jenis": "Produsen Motor Listrik — Anak Perusahaan Yasa Group",
+        "brand": "Emmo Electric Mobility",
+        "produk_kunci": "Emmo JVX GT (Trail Listrik MBG)",
+        "red_flag": "Self-Dealing: Yasa Group memenangkan kontrak untuk mensuplai motor yang diproduksi oleh anak perusahaannya sendiri."
+      },
+      "sumber": [
+        "https://oto.detik.com/motor-listrik/d-8434152/diborong-proyek-mbg-desain-motor-listrik-emmo-baru-didaftarkan-akhir-tahun-lalu",
+        "https://www.jawapos.com/otomotif/2604070320/spesifikasi-motor-listrik-mbg-emmo-jvx-gt-harga-rp-49-jutaan/",
+        "https://portal-islam.id/kejanggalan-proyek-pengadaan-motor-mbg/"
+      ]
+    },
+    {
+      "id": "org-kaisar",
+      "type": "Organization",
+      "label": "PT Kaisar Motorindo Industri",
+      "properties": {
+        "jenis": "Produsen kendaraan bermotor",
+        "lokasi": "Karang Asem Timur, Citeureup, Kabupaten Bogor, Jawa Barat",
+        "berdiri": "2005",
+        "direktur_utama": "Herman Jaya",
+        "catatan": "Alamat pabrik Citeureup identik dengan PT Adlas Sarana Elektrik (Emmo). Herman Jaya tercatat sebagai Direktur Utama. Kemungkinan: parent company, fasilitas bersama, atau Adlas adalah entitas turunan Kaisar yang dibuat khusus untuk kontrak pemerintah.",
+        "status": "LEAD — koneksi dengan Adlas belum terkonfirmasi via akta resmi"
+      },
+      "sumber": [
+        "https://portal-islam.id/kejanggalan-proyek-pengadaan-motor-mbg/",
+        "https://www.otoplus-online.com/post/siapa-di-balik-emmo-si-motor-mbg-simak-penelusuran-berbasis-data-berikut-ini"
+      ]
+    },
+    {
+      "id": "person-herman-jaya",
+      "type": "Person",
+      "label": "Herman Jaya",
+      "properties": {
+        "jabatan": "Direktur Utama PT Kaisar Motorindo Industri",
+        "perusahaan": "PT Kaisar Motorindo Industri (Citeureup, Bogor, berdiri 2005)",
+        "catatan": "Alamat pabrik Kaisar identik dengan PT Adlas Sarana Elektrik (produsen Emmo). Apakah Herman Jaya juga berada di balik Adlas belum terkonfirmasi — perlu cek AHU/akta.",
+        "status": "LEAD — nama pertama yang terhubung ke alamat Adlas/Emmo di Citeureup"
+      },
+      "sumber": [
+        "https://portal-islam.id/kejanggalan-proyek-pengadaan-motor-mbg/",
+        "https://www.otoplus-online.com/post/siapa-di-balik-emmo-si-motor-mbg-simak-penelusuran-berbasis-data-berikut-ini"
+      ]
+    },
+    {
+      "id": "person-budiharja",
+      "type": "Person",
+      "label": "Ir. Budiharja R",
+      "properties": {
+        "jabatan": "Komisaris PT Yasa Artha Trimanunggal",
+        "latar_belakang": "Laksamana Muda TNI (Pensiun) — perwira tinggi TNI Angkatan Laut",
+        "perusahaan": "PT Yasa Artha Trimanunggal",
+        "catatan": "Perwira militer senior (setara Rear Admiral) duduk di board perusahaan logistik sipil yang kemudian memenangkan kontrak pengadaan pemerintah Rp1T+. Koneksi ke kementerian/lembaga pertahanan belum diverifikasi.",
+        "status": "TERKONFIRMASI — disebutkan dalam profil korporat Yasa Group",
+        "red_flag": "Military insider di board perusahaan pemenang kontrak pemerintah — pola yang sering ditemukan dalam pengadaan bermasalah di Indonesia."
+      },
+      "sumber": [
+        "https://www.suara.com/lifestyle/2026/04/09/105355/profil-pt-yasa-artha-trimanunggal-pemasok-motor-operasional-mbg-bgn"
+      ]
+    },
+    {
+      "id": "person-ridho",
+      "type": "Person",
+      "label": "Ridho MM Pandoe",
+      "properties": {
+        "jabatan": "Direktur Bisnis & Pengembangan PT Yasa Artha Trimanunggal",
+        "perusahaan": "PT Yasa Artha Trimanunggal",
+        "catatan": "Disebutkan dalam profil korporat Yasa Group. Background dan afiliasi belum diverifikasi.",
+        "status": "TERKONFIRMASI jabatan — background perlu penggalian lebih lanjut"
+      },
+      "sumber": [
+        "https://www.suara.com/lifestyle/2026/04/09/105355/profil-pt-yasa-artha-trimanunggal-pemasok-motor-operasional-mbg-bgn"
+      ]
+    },
+    {
+      "id": "org-samair",
+      "type": "Organization",
+      "label": "PT Semuwa Aviasi Mandiri (SAM Air)",
+      "properties": {
+        "jenis": "Maskapai penerbangan perintis",
+        "tanggal_akuisisi": "30 September 2024",
+        "pengakuisisi": "PT Yasa Artha Trimanunggal (melalui Yenna Yuniana)",
+        "rencana_pesawat": "2 Cassa 212 + 10 N219 dari PTDI (NDA ditandatangani November 2024)",
+        "alasan_resmi": "Mendukung distribusi Bantuan Pangan Nasional (BPN) ke daerah 3T",
+        "timing_kritis": "Diakuisisi 6 minggu setelah Dadan Hindayana ditunjuk Kepala BGN (19 Agustus 2024) — ekspansi agresif tepat setelah akses ke program BGN/BPN terbuka",
+        "red_flag": "Perusahaan logistik tiba-tiba membeli maskapai + memesan 12 pesawat dari PTDI (BUMN pertahanan) dalam 2 bulan setelah kepala BGN ditunjuk. Skala ekspansi tidak wajar untuk perusahaan yang didirikan 2016."
+      },
+      "sumber": [
+        "https://investor.id/business/381251/yasa-artha-akuisisi-sam-air-dan-beli-pesawat-dari-ptdi",
+        "https://ekonomi.bisnis.com/read/20241125/98/1818881/yasa-artha-trimanunggal-akuisisi-maskapai-perintis-sam-air",
+        "https://yasa-sam.net/yasa-artha-trimanunggal-akuisisi-maskapai-sam-air/"
+      ]
+    },
+    {
+      "id": "person-hendrar",
+      "type": "Person",
+      "label": "Hendrar Prihadi",
+      "properties": {
+        "jabatan": "Kepala LKPP (10 Oktober 2022 – 17 September 2025)",
+        "jabatan_sekarang": "Digantikan Sarah Sadiqa pada 17 September 2025 oleh Presiden Prabowo",
+        "afiliasi_politik": "Kader PDI-P — mantan Walikota Semarang 2010–2022",
+        "relevansi": "Hendrar menjabat saat motor Emmo kemungkinan masuk e-Katalog LKPP (Agustus–Oktober 2025). Proses verifikasi e-Katalog ada di bawah kepemimpinannya. Diganti September 2025, sebelum PO ditandatangani (14 Oktober 2025).",
+        "catatan": "Tanggal pasti masuk e-Katalog Emmo tidak dipublikasikan. Tidak ada bukti Hendrar terlibat langsung, tapi sebagai Kepala LKPP dia adalah gatekeeper persetujuan verifikasi.",
+        "status": "LEAD — perlu verifikasi lebih lanjut apakah Hendrar atau jajaran LKPP memberi fast-track untuk Emmo"
+      },
+      "sumber": [
+        "https://www.cnnindonesia.com/ekonomi/20250917192530-92-1274830/profil-sarah-sadiqa-kepala-lkpp-baru-pengganti-hendrar-prihadi",
+        "https://nasional.kompas.com/read/2025/09/17/16313921/sarah-sadiqa-dilantik-jadi-kepala-lkpp-gantikan-elite-pdi-p-hendrar-prihadi"
+      ]
+    },
+    {
+      "id": "person-dadan",
+      "type": "Person",
+      "label": "Dadan Hindayana",
+      "properties": {
+        "jabatan": "Kepala Badan Gizi Nasional (BGN)",
+        "latar_belakang": "Akademisi IPB",
+        "tugas_utama": "Mengelola anggaran Rp71T untuk program Makan Bergizi Gratis"
+      },
+      "sumber": [
+        "https://bgn.go.id"
+      ]
+    },
+    {
+      "id": "org-bgn",
+      "type": "Organization",
+      "label": "Badan Gizi Nasional (BGN)",
+      "properties": {
+        "jenis_lembaga": "Lembaga Pemerintah Non-Kementerian (LPNK)",
+        "dibentuk_via": "Perpres No. 83 Tahun 2024",
+        "anggaran_2025": "Rp 71 Triliun",
+        "kepala_badan": "Dadan Hindayana",
+        "wakil_kepala": "Nanik S. Deyang",
+        "fungsi_utama": "Regulator dan pengawas distribusi Makan Bergizi Gratis (MBG)"
+      },
+      "sumber": [
+        "https://bgn.go.id"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "from": "org-bgn",
+      "to": "org-yasa",
+      "type": "AWARDED_CONTRACT",
+      "properties": {
+        "nilai": "Rp1,2–1,4 triliun (klaim BGN) / Rp3,2 triliun termasuk pengiriman (klaim CBA)",
+        "unit": "21.801 unit terealisasi dari target 25.000 unit",
+        "metode": "E-purchasing via e-Katalog LKPP — tanpa tender kompetitif",
+        "tahun_anggaran": "APBN 2025",
+        "red_flag": true,
+        "pelanggaran": "Kemenkeu sebelumnya menolak pengadaan ini, BGN tetap melanjutkan dari anggaran 2025"
+      },
+      "sumber": [
+        "https://oto.detik.com/motor-listrik/d-8434070/ada-25-000-motor-listrik-buat-dipakai-mbg-habis-duit-berapa",
+        "https://nasional.kompas.com/read/2026/04/08/14463381/purbaya-langsung-potong-anggaran-bgn-pastikan-tak-beli-motor-listrik-rp-42"
+      ]
+    },
+    {
+      "from": "org-yasa",
+      "to": "org-adlas",
+      "type": "PARENT_OF",
+      "properties": {
+        "catatan": "PT Adlas adalah anak perusahaan Yasa Group — TERKONFIRMASI dari holding structure Yasa. Yasa memproduksi lewat Adlas, lalu Yasa sendiri menang kontrak distribusi ke BGN.",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://yasagroup.net/tentang-kami/profil-perusahaan/"
+      ]
+    },
+    {
+      "from": "org-adlas",
+      "to": "org-kaisar",
+      "type": "SHARES_FACILITY_WITH",
+      "properties": {
+        "catatan": "Alamat pabrik Citeureup identik — koneksi belum terkonfirmasi, perlu cek AHU",
+        "status": "LEAD"
+      },
+      "sumber": [
+        "https://portal-islam.id/kejanggalan-proyek-pengadaan-motor-mbg/"
+      ]
+    },
+    {
+      "from": "org-yasa",
+      "to": "org-samair",
+      "type": "ACQUIRED",
+      "properties": {
+        "tanggal": "30 September 2024",
+        "catatan": "Yasa Artha mengakuisisi SAM Air dan berencana membeli 12 pesawat dari PTDI. Timing: 6 minggu setelah BGN dibentuk dan Dadan Hindayana ditunjuk.",
+        "red_flag": true
+      },
+      "sumber": [
+        "https://investor.id/business/381251/yasa-artha-akuisisi-sam-air-dan-beli-pesawat-dari-ptdi"
+      ]
+    },
+    {
+      "from": "person-budiharja",
+      "to": "org-yasa",
+      "type": "BOARDS",
+      "properties": {
+        "jabatan": "Komisaris",
+        "catatan": "Laksamana Muda TNI (Pensiun) duduk di board perusahaan logistik yang memenangkan kontrak Rp1T+"
+      },
+      "sumber": [
+        "https://www.suara.com/lifestyle/2026/04/09/105355/profil-pt-yasa-artha-trimanunggal-pemasok-motor-operasional-mbg-bgn"
+      ]
+    },
+    {
+      "from": "person-ridho",
+      "to": "org-yasa",
+      "type": "LEADS",
+      "properties": {
+        "jabatan": "Direktur Bisnis & Pengembangan"
+      },
+      "sumber": [
+        "https://www.suara.com/lifestyle/2026/04/09/105355/profil-pt-yasa-artha-trimanunggal-pemasok-motor-operasional-mbg-bgn"
+      ]
+    },
+    {
+      "from": "person-dadan",
+      "to": "org-bgn",
+      "type": "LEADS",
+      "properties": {
+        "jabatan": "Kepala Badan Gizi Nasional"
+      }
+    },
+    {
+      "from": "person-hendrar",
+      "to": "org-bgn",
+      "type": "PROCESS_BY",
+      "properties": {
+        "peran": "Kepala LKPP saat proses verifikasi e-Katalog"
+      }
+    },
+    {
+      "from": "person-herman-jaya",
+      "to": "org-kaisar",
+      "type": "LEADS",
+      "properties": {
+        "jabatan": "Direktur Utama"
+      }
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "rf-c01",
+      "type": "PRODUK_BARU_TIDAK_TERUJI",
+      "severity": "HIGH",
+      "deskripsi": "Motor Emmo JVX GT dan JVH Max baru didaftarkan desainnya pada Agustus–Oktober 2025 — tepat sebelum kontrak BGN. Merek Emmo baru berdiri 2021, belum memiliki track record lapangan. APBN digunakan untuk memborong 21.801 unit produk yang belum teruji.",
+      "entitas_terlibat": [
+        "org-bgn",
+        "org-adlas",
+        "org-yasa"
+      ],
+      "sumber": [
+        "https://oto.detik.com/motor-listrik/d-8434152/diborong-proyek-mbg-desain-motor-listrik-emmo-baru-didaftarkan-akhir-tahun-lalu"
+      ]
+    },
+    {
+      "id": "rf-c02",
+      "type": "SELF_DEALING_VERTIKAL",
+      "severity": "HIGH",
+      "deskripsi": "PT Yasa Artha Trimanunggal adalah induk dari PT Adlas Sarana Elektrik (produsen Emmo). Yasa Group menciptakan anak perusahaan untuk memproduksi motor, lalu holding yang sama memenangkan kontrak pengadaan untuk mensuplai motor itu ke BGN. Satu entitas mengontrol seluruh rantai: produksi (Adlas) + distribusi + pemenang kontrak (Yasa) = tidak ada kompetisi yang sesungguhnya. Direktur Utama dan Komisaris Utama Yasa keduanya diperiksa KPK kasus bansos Rp200 miliar.",
+      "entitas_terlibat": [
+        "org-bgn",
+        "org-yasa",
+        "org-adlas"
+      ],
+      "sumber": [
+        "https://yasagroup.net/tentang-kami/profil-perusahaan/",
+        "https://www.pinterpolitik.com/in-depth/motor-bgn-agrinas-jilid-2/",
+        "https://monitorindonesia.com/hukum/read/2025/11/616210/kpk-panggil-direktur-pt-yasa-artha-trimanunggal-yenna-yuniana-usut-korupsi-bansos"
+      ]
+    },
+    {
+      "id": "rf-c03",
+      "type": "LANJUT_SETELAH_DITOLAK_KEMENKEU",
+      "severity": "HIGH",
+      "deskripsi": "Menteri Keuangan Purbaya Yudhi Sadewa mengonfirmasi pihaknya langsung memotong anggaran BGN untuk motor listrik di 2026 setelah mengetahui pengadaan ini. Namun BGN sudah melanjutkan pengadaan dari APBN 2025 sebelum ada penghentian formal. Ini mengindikasikan BGN berjalan di luar mekanisme anggaran yang disetujui Kemenkeu.",
+      "entitas_terlibat": [
+        "org-bgn",
+        "person-dadan"
+      ],
+      "sumber": [
+        "https://nasional.kompas.com/read/2026/04/08/14463381/purbaya-langsung-potong-anggaran-bgn-pastikan-tak-beli-motor-listrik-rp-42"
+      ]
+    },
+    {
+      "id": "rf-c05",
+      "type": "MILITARY_INSIDER_DI_BOARD",
+      "severity": "HIGH",
+      "deskripsi": "Ir. Budiharja R, Laksamana Muda TNI (Pensiun), duduk sebagai Komisaris PT Yasa Artha Trimanunggal. Perwira militer senior di board perusahaan logistik sipil yang kemudian memenangkan kontrak pengadaan pemerintah Rp1,2 triliun. Ini mengindikasikan akses jaringan militer/pemerintah digunakan untuk memenangkan kontrak.",
+      "entitas_terlibat": [
+        "org-yasa",
+        "person-budiharja"
+      ],
+      "sumber": [
+        "https://www.suara.com/lifestyle/2026/04/09/105355/profil-pt-yasa-artha-trimanunggal-pemasok-motor-operasional-mbg-bgn"
+      ]
+    },
+    {
+      "id": "rf-c06",
+      "type": "EKSPANSI_AGRESIF_PASCA_BGN",
+      "severity": "MEDIUM",
+      "deskripsi": "Yasa Artha mengakuisisi maskapai SAM Air (30 September 2024) hanya 6 minggu setelah Dadan Hindayana ditunjuk sebagai Kepala BGN (19 Agustus 2024). Dalam 2 bulan berikutnya, menandatangani NDA pembelian 12 pesawat dari PTDI (BUMN pertahanan) senilai besar. Pola: perusahaan berkembang sangat agresif tepat setelah mendapat akses ke program pemerintah besar (BPN, MBG). Bukan perilaku bisnis normal.",
+      "entitas_terlibat": [
+        "org-yasa",
+        "org-samair"
+      ],
+      "sumber": [
+        "https://investor.id/business/381251/yasa-artha-akuisisi-sam-air-dan-beli-pesawat-dari-ptdi",
+        "https://ekonomi.bisnis.com/read/20241125/98/1818881/yasa-artha-trimanunggal-akuisisi-maskapai-perintis-sam-air"
+      ]
+    },
+    {
+      "id": "rf-c04",
+      "type": "HARGA_TIDAK_TRANSPARAN",
+      "severity": "MEDIUM",
+      "deskripsi": "BGN mengklaim harga Rp42 juta/unit — di bawah harga pasar Rp49,95–56,8 juta/unit. Center for Budget Analysis (CBA) menghitung total anggaran Rp3,2 triliun untuk 65.067 unit termasuk biaya pengiriman Rp528,9 miliar — berbeda jauh dari klaim BGN. CBA meminta Kejagung menyelidiki dugaan penyimpangan.",
+      "entitas_terlibat": [
+        "org-bgn",
+        "org-yasa"
+      ],
+      "sumber": [
+        "https://jakartasatu.com/2026/04/08/cba-minta-kejagung-selidiki-dugaan-penyimpangan-pengadaan-dan-jasa-pengiriman-motor-bgn-rp32-triliun/",
+        "https://www.liputan6.com/news/read/6312652/kepala-bgn-soal-21800-motor-listrik-untuk-sppg-harga-pasaran-rp-52-juta-kita-beli-rp-42-juta-per-unit"
+      ]
+    }
+  ],
+  "investigasi_lanjutan": [
+    "✅ TERKONFIRMASI: PT Adlas Sarana Elektrik adalah anak perusahaan PT Yasa Artha Trimanunggal — listed eksplisit di halaman holding Yasa Group (yasagroup.net). Self-dealing terkonfirmasi: satu holding produksi + distribusi + menang kontrak.",
+    "✅ TERKONFIRMASI: Ir. Budiharja R (Laksamana Muda TNI Pensiun) adalah Komisaris Yasa Artha. Ridho MM Pandoe adalah Direktur Bisnis & Pengembangan.",
+    "✅ TERKONFIRMASI: Yasa Artha mengakuisisi SAM Air (30 September 2024) + rencana beli 12 pesawat PTDI — ekspansi agresif tepat setelah BGN dibentuk.",
+    "🔴 PRIORITY: Siapa TIGA PENDIRI PT Yasa Artha Trimanunggal? Nama mereka tidak pernah dipublikasikan. Perlu: dokumen Kemenkumham/BPUI, atau sumber AHU. Kemungkinan hidden owners dengan koneksi ke Gerindra/militer.",
+    "🔴 PRIORITY: Siapa yang mendaftarkan motor Emmo ke e-Katalog LKPP, dan kapan? Proses masuk e-katalog butuh verifikasi LKPP — siapa yang approve? Purchase order tercatat 14 Oktober 2025 (sebelum paten!)",
+    "Background Ir. Budiharja R — Laksamana Muda TNI dari angkatan apa, jabatan terakhir apa sebelum pensiun? Apakah punya koneksi ke lingkaran militer Prabowo?",
+    "Koneksi PT Kaisar Motorindo (Dirut: Herman Jaya) dengan Yasa Group/Adlas — apakah Yasa menyewa fasilitas Kaisar atau ada kepemilikan silang?",
+    "Direktur Utama Yasa (Yenna Yuniana) dan Komut (Andri Mulyono) diperiksa KPK bansos — apa detail peran mereka? Apakah Yasa jadi subkontraktor Dosni Roha?",
+    "Apakah ada koneksi antara Yenna Yuniana/Andri Mulyono/Budiharja R dengan pejabat BGN (Dadan Hindayana) atau lingkaran Prabowo/Gerindra?",
+    "Hasil pemeriksaan DPR Komisi IX terhadap BGN — kapan dan apa hasilnya?",
+    "Apakah Kejagung atau KPK sudah mulai selidiki setelah permintaan CBA (April 2026)?",
+    "Timeline koneksi: Dadan Hindayana ditunjuk 19 Agustus 2024 → Yasa Artha akuisisi SAM Air 30 September 2024 → kontrak motor listrik (Oktober-Desember 2025). Apakah ada pertemuan antara Yasa dan BGN yang bisa dikonfirmasi?"
+  ]
+}

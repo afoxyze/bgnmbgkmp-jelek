@@ -9,7 +9,6 @@ import { SITE_CONFIG } from "@/lib/constants";
 
 const NAV_LINKS = [
   { href: "/", label: "BERANDA" },
-  { href: "/dossier", label: "DOSSIER" },
   { href: "/graf", label: "GRAF" },
   { href: "/cari", label: "CARI" },
   { href: "/tentang", label: "TENTANG" },

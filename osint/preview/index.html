@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KONEKSI.ID — Dossier Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+  <header class="preview-header">
+    <div class="ph-brand">
+      <span class="ph-name">KONEKSI.ID</span>
+      <span class="ph-tag">Preview · Next.js dossier route</span>
+    </div>
+    <nav class="ph-nav">
+      <button data-slug="bgn-peruri" class="on">01 · BGN</button>
+      <button data-slug="agrinas-kmp">02 · KMP</button>
+      <button data-slug="motor-bgn">03 · MBG</button>
+    </nav>
+    <div class="ph-right">
+      <button class="ph-theme" id="themeBtn" title="Toggle theme">☾</button>
+    </div>
+  </header>
+
+  <main class="content-page">
+    <div id="page" style="max-width: 1160px; margin: 0 auto; padding: 0 clamp(1rem, 3vw, 2rem);"></div>
+  </main>
+
+  <div class="mode-switch">
+    <button id="m-dossier" class="on">Dossier Page</button>
+    <button id="m-landing">Landing Cards</button>
+  </div>
+
+  <script src="data.js?v=2"></script>
+  <script src="render.js?v=2"></script>
+</body>
+</html>

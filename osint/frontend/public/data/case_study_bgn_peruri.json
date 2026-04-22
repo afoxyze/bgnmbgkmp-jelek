@@ -1,0 +1,345 @@
+{
+  "metadata": {
+    "tanggal_riset": "2026-04-08",
+    "sumber": "Tempo, IDN Times, Bisnis.com, CNBC Indonesia, AHU Online",
+    "status": "Data Terverifikasi (LPSE/AHU)",
+    "thread": "Thread A — BGN & Peruri (Sistem Informasi)"
+  },
+  "entities": [
+    {
+      "id": "org-bgn",
+      "type": "Organization",
+      "label": "Badan Gizi Nasional (BGN)",
+      "properties": {
+        "jenis_lembaga": "Lembaga Pemerintah Non-Kementerian (LPNK)",
+        "dibentuk_via": "Perpres No. 83 Tahun 2024",
+        "anggaran_2025": "Rp 71 Triliun",
+        "kepala_badan": "Dadan Hindayana",
+        "wakil_kepala": "Nanik S. Deyang",
+        "fungsi_utama": "Regulator dan pengawas distribusi Makan Bergizi Gratis (MBG)"
+      },
+      "sumber": [
+        "https://bgn.go.id"
+      ]
+    },
+    {
+      "id": "org-peruri",
+      "type": "Organization",
+      "label": "Perum Percetakan Uang RI (Peruri)",
+      "properties": {
+        "jenis": "Badan Usaha Milik Negara (BUMN)",
+        "bidang_utama": "Percetakan dokumen berharga (uang, paspor, pita cukai)",
+        "direktur_utama": "Dwina Septiani Wijaya",
+        "peran_bgn": "Pemenang kontrak Sistem Informasi Gizi Rp600 Miliar",
+        "red_flag": "Mismatch Kompetensi: BUMN percetakan memenangkan proyek sistem informasi kesehatan nasional via penunjukan langsung."
+      },
+      "sumber": [
+        "https://peruri.co.id"
+      ]
+    },
+    {
+      "id": "org-pds",
+      "type": "Organization",
+      "label": "PT Peruri Digital Security (PDS)",
+      "properties": {
+        "jenis": "Anak Perusahaan BUMN (99.78% milik Peruri)",
+        "fokus_bisnis": "IT Solutions, GovTech, Digital ID, e-KYC",
+        "direktur_utama": "Teguh Kurniawan Harmanda (Eks-Tokocrypto)",
+        "wakil_dirut": "Rahmat Danu Andika (Eks-Telkom GovTech)",
+        "komisaris_utama": "Setiaji (Chief DTO Kemenkes)",
+        "red_flag": "REVOLVING DOOR & COI: Jajaran direksi berasal dari insider pengadaan pemerintah (Telkom) dan regulator aktif (Kemenkes)."
+      },
+      "sumber": [
+        "https://pds.co.id"
+      ]
+    },
+    {
+      "id": "person-dadan",
+      "type": "Person",
+      "label": "Dadan Hindayana",
+      "properties": {
+        "jabatan": "Kepala Badan Gizi Nasional (BGN)",
+        "latar_belakang": "Akademisi IPB",
+        "tugas_utama": "Mengelola anggaran Rp71T untuk program Makan Bergizi Gratis"
+      },
+      "sumber": [
+        "https://bgn.go.id/team"
+      ]
+    },
+    {
+      "id": "person-setiaji",
+      "type": "Person",
+      "label": "Setiaji",
+      "properties": {
+        "jabatan_pds": "Komisaris Utama Peruri Digital Security (PDS)",
+        "jabatan_pemerintah": "Chief DTO Kementerian Kesehatan",
+        "red_flag": "CONFLICT OF INTEREST — Pejabat aktif Kemenkes menjabat sebagai pengawas di BUMN yang menerima kontrak besar dari pemerintah."
+      }
+    },
+    {
+      "id": "person-danu-andika",
+      "type": "Person",
+      "label": "Rahmat Danu Andika",
+      "properties": {
+        "jabatan": "Wakil Direktur Utama PDS",
+        "jabatan_lama": "Direktur GovTech Procurement (Pemerintah)",
+        "red_flag": "REVOLVING DOOR — Pindah dari regulator pengadaan pemerintah langsung ke perusahaan pemenang kontrak pemerintah."
+      }
+    },
+    {
+      "id": "person-shoraya",
+      "type": "Person",
+      "label": "Shoraya Lolyta Oktaviana",
+      "properties": {
+        "jabatan": "CEO PT Indoraya Multi Internasional (IMI)",
+        "koneksi": "Terafiliasi dengan Nanik S. Deyang (Wakil Kepala BGN)",
+        "red_flag": "Dugaan NIK Ganda dan pemenangan kontrak tanpa tender di ekosistem Agrinas"
+      }
+    },
+    {
+      "id": "org-imi",
+      "type": "Organization",
+      "label": "PT Indoraya Multi Internasional (IMI)",
+      "properties": {
+        "pemilik_asli": "Shoraya Lolyta Oktaviana",
+        "nilai_kontrak": "Rp375 Miliar",
+        "proyek": "Pengadaan rak Koperasi Merah Putih (Agrinas)"
+      }
+    },
+    {
+      "id": "org-nsp",
+      "type": "Organization",
+      "label": "PT Nagatama Septa Persada (NSP)",
+      "properties": {
+        "pemilik_asli": "Shoraya Lolyta Oktaviana",
+        "nilai_kontrak": "Rp320 Miliar",
+        "proyek": "Pengadaan rak Koperasi Merah Putih (Agrinas)"
+      }
+    },
+    {
+      "id": "proj-bgn-eo",
+      "type": "Project",
+      "label": "Jasa Event Organizer BGN",
+      "properties": {
+        "nilai_total": "Rp 113 Miliar",
+        "tujuan": "Dukungan operasional dan sosialisasi program MBG",
+        "red_flag": "Anggaran jasa EO yang sangat besar untuk lembaga baru, berpotensi terjadi inefisiensi belanja seremonial."
+      },
+      "sumber": [
+        "https://www.antaranews.com/berita/4321501/kepala-bgn-klarifikasi-anggaran-eo-rp113-miliar",
+        "https://news.detik.com/berita/d-7531201/dadan-hindayana-buka-suara-soal-anggaran-eo-badan-gizi-rp-113-m"
+      ]
+    },
+    {
+      "id": "proj-bgn-alat-makan",
+      "type": "Project",
+      "label": "Pengadaan Alat Makan SPPG",
+      "properties": {
+        "nilai_pagu": "Rp 89,32 Miliar",
+        "volume": "1,2 Juta Paket",
+        "target": "315 Satuan Pelayanan Pemenuhan Gizi (SPPG)",
+        "red_flag": "Skala pengadaan alat makan yang masif di tahap awal operasional."
+      },
+      "sumber": [
+        "https://www.bbc.com/indonesia/articles/crr110erpyeo"
+      ]
+    },
+    {
+      "id": "proj-bgn-sikat-sepatu",
+      "type": "Project",
+      "label": "Pengadaan Sikat & Semir Sepatu SPPI",
+      "properties": {
+        "nilai_total": "Rp 1,57 Miliar",
+        "jumlah_paket": "12 Paket Kontrak (E-Purchasing)",
+        "item": "Sikat Sepatu & Semir (Merek Kiwi)",
+        "anomali_harga": "Harga Inaproc Rp 50rb-56rb vs Harga Pasar Rp 18rb-19rb (Mark-up ~300%)",
+        "red_flag": "Dugaan penggelembungan harga satuan pada barang konsumsi massal."
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/bgn-hamburkan-rp-1-5-miliar-buat-beli-sikat-and-semir-sepatu-2129673",
+        "https://fin.co.id/read/189745/bgn-belanja-sikat-dan-semir-sepatu-rp15-miliar-harga-satuan-diduga-markup-3-kali-lipat"
+      ]
+    },
+    {
+      "id": "org-gajah-mitra",
+      "type": "Organization",
+      "label": "PT Gajah Mitra Paragon",
+      "properties": {
+        "lokasi": "Bandung, Jawa Barat",
+        "peran": "Penyedia utama sikat dan semir sepatu BGN",
+        "nilai_kontrak_terdeteksi": "Rp 768 Juta (akumulasi paket semir & sikat)"
+      }
+    },
+    {
+      "id": "org-bijee-galang",
+      "type": "Organization",
+      "label": "PT Bijee Galang Indonesia",
+      "properties": {
+        "peran": "Vendor pendukung pengadaan fasilitas SPPI (Seragam/Perlengkapan)"
+      }
+    },
+    {
+      "id": "org-mht",
+      "type": "Organization",
+      "label": "PT Mitrawira Hutama Teknologi",
+      "properties": {
+        "peran": "Vendor utama pengadaan Tablet Samsung BGN",
+        "nilai_transaksi_terdeteksi": "Rp 84,7 Miliar (salah satu paket)"
+      }
+    },
+    {
+      "id": "proj-bgn-tablet",
+      "type": "Project",
+      "label": "Pengadaan Tablet Samsung SPPI",
+      "properties": {
+        "nilai_total_pagu": "Rp 508,4 Miliar",
+        "perangkat": "Samsung Galaxy Tab Active5",
+        "anomali_harga": "Harga E-Katalog Rp 17,93 Juta vs Harga Pasar Rp 9-12 Juta",
+        "red_flag": "Dugaan Mark-up Rp 7,95 Juta per unit (Analisis ICW)."
+      },
+      "sumber": [
+        "https://www.jawapos.com/ekonomi/015096329/icw-soroti-pengadaan-tablet-bgn-ada-potensi-markup",
+        "https://www.pikiran-rakyat.com/nasional/pr-0189745/viral-pengadaan-tablet-badan-gizi-nasional-rp508-miliar"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "from": "org-mht",
+      "to": "proj-bgn-tablet",
+      "type": "SUPPLIES"
+    },
+    {
+      "from": "org-bgn",
+      "to": "proj-bgn-tablet",
+      "type": "EXPENDITURE",
+      "properties": {
+        "nilai": "Rp 508,4 Miliar"
+      }
+    },
+    {
+      "from": "org-bgn",
+      "to": "proj-bgn-alat-makan",
+      "type": "MANDATES",
+      "properties": {
+        "volume": "1,2 Juta Unit"
+      }
+    },
+    {
+      "from": "org-gajah-mitra",
+      "to": "proj-bgn-sikat-sepatu",
+      "type": "SUPPLIES",
+      "properties": {
+        "metode": "E-Purchasing"
+      }
+    },
+    {
+      "from": "org-bijee-galang",
+      "to": "org-bgn",
+      "type": "PARTNER_OF"
+    },
+    {
+      "from": "org-bgn",
+      "to": "proj-bgn-sikat-sepatu",
+      "type": "EXPENDITURE",
+      "properties": {
+        "nilai": "Rp 1,5 Miliar"
+      }
+    },
+    {
+      "from": "org-bgn",
+      "to": "proj-bgn-eo",
+      "type": "AWARDED_CONTRACT",
+      "properties": {
+        "nilai": "Rp 113 Miliar"
+      }
+    },
+    {
+      "from": "org-bgn",
+      "to": "org-pds",
+      "type": "AWARDED_CONTRACT",
+      "properties": {
+        "nilai": "Rp600 Miliar",
+        "metode": "Penunjukan Langsung"
+      }
+    },
+    {
+      "from": "org-pds",
+      "to": "org-peruri",
+      "type": "SUBSIDIARY_OF",
+      "properties": {
+        "persen_saham": "99.78%"
+      }
+    },
+    {
+      "from": "person-setiaji",
+      "to": "org-pds",
+      "type": "COMMISSIONER_AT"
+    },
+    {
+      "from": "person-danu-andika",
+      "to": "org-pds",
+      "type": "LEADS"
+    },
+    {
+      "from": "person-shoraya",
+      "to": "org-imi",
+      "type": "BENEFICIAL_OWNER"
+    },
+    {
+      "from": "person-shoraya",
+      "to": "org-nsp",
+      "type": "BENEFICIAL_OWNER"
+    }
+  ],
+  "red_flags": [
+    {
+      "id": "rf-001",
+      "type": "PENUNJUKAN_LANGSUNG_TIDAK_WAJAR",
+      "severity": "HIGH",
+      "deskripsi": "BGN menggunakan penunjukan langsung untuk kontrak sistem informasi senilai Rp600 Miliar kepada Peruri.",
+      "entitas_terlibat": [
+        "org-bgn",
+        "org-peruri"
+      ]
+    },
+    {
+      "id": "rf-008",
+      "type": "BENEFICIAL_OWNER_DOUBLE_DIP",
+      "severity": "HIGH",
+      "deskripsi": "Shoraya Lolyta Oktaviana menggunakan dua perusahaan berbeda (PT IMI dan PT NSP) untuk menerima kontrak total ~Rp700 Miliar.",
+      "entitas_terlibat": [
+        "person-shoraya",
+        "org-imi",
+        "org-nsp"
+      ]
+    },
+    {
+      "id": "rf-012",
+      "type": "PEMBOROSAN_OPERASIONAL_NON_PRIORITAS",
+      "severity": "MEDIUM",
+      "deskripsi": "Badan Gizi Nasional mengalokasikan Rp 1,5 Miliar untuk pembelian sikat dan semir sepatu sebagai pendukung pendidikan SPPI. Pengadaan ini dinilai tidak mendesak dan tidak relevan dengan fokus utama penanganan krisi gizi nasional.",
+      "entitas_terlibat": [
+        "org-bgn",
+        "proj-bgn-sikat-sepatu"
+      ],
+      "sumber": [
+        "https://www.tempo.co/politik/bgn-hamburkan-rp-1-5-miliar-buat-beli-sikat-and-semir-sepatu-2129673"
+      ]
+    },
+    {
+      "id": "rf-013",
+      "type": "PAGU_ALAT_MAKAN_FANTASTIS",
+      "severity": "MEDIUM",
+      "deskripsi": "Pengadaan 1,2 juta paket alat makan dengan pagu anggaran mencapai Rp 89,32 Miliar untuk 315 SPPG. Skala pengadaan barang konsumsi yang sangat masif di awal operasional lembaga mengindikasikan risiko inefisiensi anggaran.",
+      "entitas_terlibat": [
+        "org-bgn",
+        "proj-bgn-alat-makan"
+      ],
+      "sumber": [
+        "https://www.bbc.com/indonesia/articles/crr110erpyeo"
+      ]
+    }
+  ],
+  "investigasi_lanjutan": []
+}
