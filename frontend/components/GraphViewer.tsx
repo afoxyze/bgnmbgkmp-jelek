@@ -5,7 +5,6 @@ import {
   isRedFlagRelation,
   getNodeColor,
   formatRelationType,
-  truncateLabel,
 } from "@/lib/graph-utils";
 import type {
   CaseStudy,
@@ -13,6 +12,7 @@ import type {
   GraphSelection,
   Relation,
 } from "@/types/graph";
+import type cytoscape from "cytoscape";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 interface CyTheme {
@@ -66,13 +66,13 @@ export function GraphViewer({
   onReady,
 }: GraphViewerProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const cyRef = useRef<any>(null);
+  const cyRef = useRef<cytoscape.Core | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   const redFlagIds = useMemo(() => getRedFlagEntityIds(caseStudy.red_flags), [caseStudy.red_flags]);
   const theme = isDark ? GRAPH_THEME.dark : GRAPH_THEME.light;
 
-  const buildStyle = useCallback((t: CyTheme) => {
+  const buildStyle = useCallback((t: CyTheme): cytoscape.StylesheetJson => {
     return [
       {
         selector: "node",
@@ -84,7 +84,7 @@ export function GraphViewer({
           "font-size": "data(fontSize)",
           "font-weight": 600,
           "font-family": "Inter, system-ui, sans-serif",
-          "text-valign": "bottom" as const,
+          "text-valign": "bottom",
           "text-margin-y": 12,
           "text-wrap": "wrap",
           "text-max-width": "120px",
@@ -106,7 +106,7 @@ export function GraphViewer({
           "overlay-padding": "6px",
           "overlay-color": "#ffffff",
           "overlay-opacity": 0,
-          "transition-property": "background-color, line-color, target-arrow-color, width, height, border-width",
+          "transition-property": "background-color, line-color, target-arrow-color, width, height, border-width, opacity",
           "transition-duration": 250,
         },
       },
@@ -119,6 +119,31 @@ export function GraphViewer({
           "underlay-color": "#EF4444",
           "underlay-padding": "12px",
           "underlay-opacity": 0.4,
+        },
+      },
+      {
+        selector: "node.highlighted",
+        style: {
+          "border-width": 5,
+          "border-color": t.selectedEdge,
+          "underlay-color": t.selectedEdge,
+          "underlay-padding": "18px",
+          "underlay-opacity": 0.55,
+          "z-index": 50,
+        },
+      },
+      {
+        selector: "node.faded",
+        style: {
+          opacity: 0.15,
+          "text-opacity": 0.2,
+        },
+      },
+      {
+        selector: "edge.faded",
+        style: {
+          opacity: 0.1,
+          "text-opacity": 0,
         },
       },
       {
@@ -163,16 +188,6 @@ export function GraphViewer({
         },
       },
       {
-        selector: "node:selected",
-        style: {
-          "border-width": 6,
-          "border-color": t.selectedNodeBorder,
-          "border-opacity": 1,
-          "background-opacity": 1,
-          "z-index": 100,
-        },
-      },
-      {
         selector: "edge:selected",
         style: {
           width: 4,
@@ -182,13 +197,13 @@ export function GraphViewer({
           "z-index": 100,
         },
       },
-    ];
+    ] as unknown as cytoscape.StylesheetJson;
   }, []);
 
   const elements = useMemo(() => {
     const nodeIds = new Set(caseStudy.entities.map((e) => e.id));
     const degrees: Record<string, number> = {};
-    caseStudy.relations.forEach(rel => {
+    caseStudy.relations.forEach((rel) => {
       if (nodeIds.has(rel.from) && nodeIds.has(rel.to)) {
         degrees[rel.from] = (degrees[rel.from] || 0) + 1;
         degrees[rel.to] = (degrees[rel.to] || 0) + 1;
@@ -197,8 +212,11 @@ export function GraphViewer({
 
     const nodes = caseStudy.entities.map((entity: Entity) => {
       const degree = degrees[entity.id] || 0;
-      const size = Math.min(50, 25 + (degree * 4));
-      const hasFlag = redFlagIds.has(entity.id) || (typeof entity.properties["red_flag"] === "string" && (entity.properties["red_flag"] as string).length > 0);
+      const size = Math.min(50, 25 + degree * 4);
+      const hasFlag =
+        redFlagIds.has(entity.id) ||
+        (typeof entity.properties["red_flag"] === "string" &&
+          (entity.properties["red_flag"] as string).length > 0);
 
       return {
         data: {
@@ -206,9 +224,9 @@ export function GraphViewer({
           label: entity.label,
           fullLabel: entity.label,
           color: getNodeColor(entity.type),
-          size: size,
-          fontSize: Math.min(12, 9 + (degree * 0.5)),
-          hasFlag: hasFlag,
+          size,
+          fontSize: Math.min(12, 9 + degree * 0.5),
+          hasFlag,
         },
       };
     });
@@ -217,20 +235,19 @@ export function GraphViewer({
       .filter((rel) => nodeIds.has(rel.from) && nodeIds.has(rel.to))
       .map((rel: Relation, idx: number) => {
         const isRedFlag = isRedFlagRelation(rel);
-        
-        // Semantic Edge Styling based on relation type
+
         let lineColor = theme.edgeColor;
         let width = 1.5;
 
         const type = rel.type.toUpperCase();
         if (type.includes("OWNER") || type.includes("OWNS") || type.includes("CONTROLS") || type.includes("PARENT")) {
-          lineColor = isDark ? "#60A5FA" : "#3B82F6"; // Blue for ownership
+          lineColor = isDark ? "#60A5FA" : "#3B82F6";
           width = 2.2;
         } else if (type.includes("CONTRACT") || type.includes("FUNDS") || type.includes("MENDANAI")) {
-          lineColor = isDark ? "#34D399" : "#10B981"; // Green for finance/contracts
+          lineColor = isDark ? "#34D399" : "#10B981";
           width = 2.2;
         } else if (type.includes("CONNECTION") || type.includes("AFFILIATED")) {
-          lineColor = isDark ? "#94A3B8" : "#64748B"; // Slate for personal connections
+          lineColor = isDark ? "#94A3B8" : "#64748B";
           width = 1.2;
         }
 
@@ -241,9 +258,9 @@ export function GraphViewer({
             target: rel.to,
             label: formatRelationType(rel.type),
             relationType: rel.type,
-            isRedFlag: isRedFlag,
+            isRedFlag,
             lineColor: isRedFlag ? "#EF4444" : lineColor,
-            width: width,
+            width,
           },
         };
       });
@@ -251,13 +268,11 @@ export function GraphViewer({
     return [...nodes, ...edges];
   }, [caseStudy, redFlagIds, theme.edgeColor, isDark]);
 
-  // Handle elements change
+  // Handle elements change (e.g. switching case study)
   useEffect(() => {
-    if (!cyRef.current || !isLoaded) return;
-    
     const cy = cyRef.current;
-    
-    // Stop any existing layouts or animations to prevent 'notify' error
+    if (!cy || !isLoaded) return;
+
     cy.stop();
 
     cy.batch(() => {
@@ -265,8 +280,8 @@ export function GraphViewer({
       cy.add(elements);
     });
 
-    const layout = cy.layout({ 
-      name: "cose", 
+    const layout = cy.layout({
+      name: "cose",
       animate: true,
       animationDuration: 1000,
       padding: 30,
@@ -274,17 +289,17 @@ export function GraphViewer({
       componentSpacing: 150,
       refresh: 20,
       fit: true,
-      idealEdgeLength: (edge: any) => 150,
-      edgeElasticity: (edge: any) => 100,
-      nodeRepulsion: (node: any) => 1000000,
+      idealEdgeLength: () => 150,
+      edgeElasticity: () => 100,
+      nodeRepulsion: () => 1000000,
       nestingFactor: 1.2,
       gravity: 0.1,
       initialTemp: 300,
       coolingFactor: 0.99,
       minTemp: 1.0,
-      randomize: false
-    });
-    
+      randomize: false,
+    } as cytoscape.LayoutOptions);
+
     layout.run();
   }, [elements, isLoaded]);
 
@@ -293,47 +308,49 @@ export function GraphViewer({
     if (!containerRef.current) return;
 
     let destroyed = false;
-    let cyInstance: any = null;
+    let cyInstance: cytoscape.Core | null = null;
 
     const init = async () => {
       try {
-        const cytoscape = (await import("cytoscape")).default;
+        const cytoscapeLib = (await import("cytoscape")).default;
         if (destroyed || !containerRef.current) return;
 
-        cyInstance = cytoscape({
+        cyInstance = cytoscapeLib({
           container: containerRef.current,
-          elements: elements,
-          style: buildStyle(theme) as any[],
+          elements,
+          style: buildStyle(theme),
           minZoom: 0.05,
           maxZoom: 3,
         });
 
-        cyInstance.on("tap", "node", (evt: any) => {
+        cyInstance.on("tap", "node", (evt: cytoscape.EventObject) => {
           if (destroyed) return;
           const entity = caseStudy.entities.find((e) => e.id === evt.target.id());
           if (entity) onSelectionChange({ kind: "entity", entity });
         });
 
-        cyInstance.on("tap", "edge", (evt: any) => {
+        cyInstance.on("tap", "edge", (evt: cytoscape.EventObject) => {
           if (destroyed) return;
           const data = evt.target.data();
-          const relation = caseStudy.relations.find(r => r.from === data.source && r.to === data.target && r.type === data.relationType);
-          const fromEntity = caseStudy.entities.find(e => e.id === data.source);
-          const toEntity = caseStudy.entities.find(e => e.id === data.target);
+          const relation = caseStudy.relations.find(
+            (r) => r.from === data.source && r.to === data.target && r.type === data.relationType,
+          );
+          const fromEntity = caseStudy.entities.find((e) => e.id === data.source);
+          const toEntity = caseStudy.entities.find((e) => e.id === data.target);
           if (relation && fromEntity && toEntity) {
             onSelectionChange({ kind: "relation", relation, fromEntity, toEntity });
           }
         });
 
-        cyInstance.on("tap", (evt: any) => {
+        cyInstance.on("tap", (evt: cytoscape.EventObject) => {
           if (destroyed) return;
           if (evt.target === cyInstance) onSelectionChange({ kind: "none" });
         });
 
         cyRef.current = cyInstance;
 
-        const layout = cyInstance.layout({ 
-          name: "cose", 
+        const layout = cyInstance.layout({
+          name: "cose",
           animate: true,
           animationDuration: 1000,
           padding: 30,
@@ -341,16 +358,16 @@ export function GraphViewer({
           componentSpacing: 150,
           refresh: 20,
           fit: true,
-          idealEdgeLength: (edge: any) => 150,
-          edgeElasticity: (edge: any) => 100,
-          nodeRepulsion: (node: any) => 1000000,
+          idealEdgeLength: () => 150,
+          edgeElasticity: () => 100,
+          nodeRepulsion: () => 1000000,
           nestingFactor: 1.2,
           gravity: 0.1,
           initialTemp: 300,
           coolingFactor: 0.99,
           minTemp: 1.0,
-          randomize: true
-        });
+          randomize: true,
+        } as cytoscape.LayoutOptions);
 
         layout.one("layoutstop", () => {
           if (destroyed) return;
@@ -377,31 +394,78 @@ export function GraphViewer({
   }, []);
 
   useEffect(() => {
-    if (cyRef.current && isLoaded) {
-      cyRef.current.style(buildStyle(theme) as any[]);
+    const cy = cyRef.current;
+    if (cy && isLoaded) {
+      cy.style(buildStyle(theme));
     }
   }, [theme, isLoaded, buildStyle]);
 
   useEffect(() => {
     if (cyRef.current && isLoaded) {
       const timer = setTimeout(() => {
-        cyRef.current.resize();
+        cyRef.current?.resize();
       }, 350);
       return () => clearTimeout(timer);
     }
   }, [sidebarOpen, isLoaded]);
 
+  // Red-flag highlighting: emphasise nodes mentioned in a red flag and
+  // softly fade everything else so the user sees the triangle of involvement.
+  useEffect(() => {
+    const cy = cyRef.current;
+    if (!cy || !isLoaded) return;
+
+    cy.batch(() => {
+      cy.nodes().removeClass("highlighted faded");
+      cy.edges().removeClass("faded");
+
+      if (highlightedEntityIds.size === 0) return;
+
+      const ids = Array.from(highlightedEntityIds);
+      const selector = ids.map((id) => `node[id = "${id}"]`).join(", ");
+      if (!selector) return;
+
+      const highlighted = cy.$(selector);
+      highlighted.addClass("highlighted");
+
+      const connectedEdges = highlighted.connectedEdges();
+      cy.nodes().not(highlighted).addClass("faded");
+      cy.edges().not(connectedEdges).addClass("faded");
+    });
+  }, [highlightedEntityIds, isLoaded]);
+
+  // Deep-link focus: zoom + center on an arbitrary subset of nodes whenever
+  // the caller passes a non-empty `focusNodeIds`. Used by the scenario engine
+  // to scroll the graph to, e.g., `?focus=bgn,peruri`.
+  useEffect(() => {
+    const cy = cyRef.current;
+    if (!cy || !isLoaded || !focusNodeIds || focusNodeIds.length === 0) return;
+
+    const selector = focusNodeIds.map((id) => `node[id = "${id}"]`).join(", ");
+    if (!selector) return;
+
+    const targets = cy.$(selector);
+    if (targets.length === 0) return;
+
+    cy.stop();
+    cy.animate(
+      {
+        fit: { eles: targets, padding: 80 },
+      },
+      { duration: 600, easing: "ease-in-out-cubic" },
+    );
+  }, [focusNodeIds, isLoaded]);
+
   function handleFitGraph() {
-    if (cyRef.current) cyRef.current.fit(undefined, 30);
+    cyRef.current?.fit(undefined, 30);
   }
 
   return (
     <div className="relative w-full h-full" style={{ backgroundColor: theme.bg }}>
       <div ref={containerRef} className="w-full h-full" />
-      
+
       {isLoaded && (
         <>
-          {/* Zoom Control */}
           <button
             onClick={handleFitGraph}
             className="absolute bottom-6 right-6 w-10 h-10 rounded-xl flex items-center justify-center bg-[var(--bg-surface)] shadow-lg border border-[var(--border-base)] text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors z-20"
@@ -412,10 +476,9 @@ export function GraphViewer({
             </svg>
           </button>
 
-          {/* Legend Panel */}
           <div className="absolute bottom-6 left-6 rounded-2xl p-4 bg-[var(--bg-surface)]/95 backdrop-blur-md border border-[var(--border-base)] shadow-xl hidden md:flex flex-col gap-3 z-20 min-w-[160px]">
             <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)] mb-1 text-center">Legenda Data</span>
-            
+
             <div className="space-y-2">
               <span className="text-[9px] font-bold text-[var(--text-tertiary)] uppercase block border-b border-[var(--border-base)] pb-1">Entitas</span>
               {[
