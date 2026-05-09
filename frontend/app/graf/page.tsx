@@ -1,6 +1,7 @@
 import { GraphPage } from "@/components/GraphPage";
 import { getCaseStudy } from "@/lib/data";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Graf Data - PBP.ID",
@@ -10,5 +11,9 @@ export const metadata: Metadata = {
 export default async function Page() {
   const caseStudy = await getCaseStudy();
 
-  return <GraphPage caseStudy={caseStudy} />;
+  return (
+    <Suspense fallback={null}>
+      <GraphPage caseStudy={caseStudy} />
+    </Suspense>
+  );
 }

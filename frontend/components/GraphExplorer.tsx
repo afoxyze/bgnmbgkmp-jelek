@@ -3,7 +3,8 @@
 import { DetailSidebar } from "@/components/DetailSidebar";
 import { GraphViewer } from "@/components/GraphViewer";
 import type { CaseStudy, GraphSelection } from "@/types/graph";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { useSearchParams } from "next/navigation";
 import { findEntityById } from "@/lib/graph-utils";
 
 interface GraphExplorerProps {
@@ -12,13 +13,24 @@ interface GraphExplorerProps {
 }
 
 export function GraphExplorer({ caseStudy, isDark }: GraphExplorerProps) {
+  const searchParams = useSearchParams();
   const [mounted, setMounted] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [graphStable, setGraphStable] = useState(false);
   const [selection, setSelection] = useState<GraphSelection>({ kind: "none" });
   const [highlightedEntityIds, setHighlightedEntityIds] = useState<ReadonlySet<string>>(new Set());
-  const [focusNodeIds, setFocusNodeIds] = useState<readonly string[]>([]);
   const [highlightedFlagId, setHighlightedFlagId] = useState<string | null>(null);
+
+  // Parse focus param: ?focus=id1,id2,id3 — filter against known entities to stay safe.
+  const focusNodeIds = useMemo(() => {
+    const raw = searchParams.get("focus");
+    if (!raw) return [] as const;
+    const known = new Set(caseStudy.entities.map((e) => e.id));
+    return raw
+      .split(",")
+      .map((s) => s.trim())
+      .filter((id) => id.length > 0 && known.has(id));
+  }, [searchParams, caseStudy.entities]);
 
   useEffect(() => {
     setMounted(true);

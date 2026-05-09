@@ -391,6 +391,42 @@ export function GraphViewer({
     }
   }, [sidebarOpen, isLoaded]);
 
+  // Focus effect: highlight + zoom to subset driven by ?focus= URL param.
+  // When focusNodeIds empties, fade back to full-graph view.
+  useEffect(() => {
+    const cy = cyRef.current;
+    if (!cy || !isLoaded) return;
+
+    const nodes = cy.nodes();
+    const edges = cy.edges();
+
+    if (!focusNodeIds || focusNodeIds.length === 0) {
+      nodes.style("opacity", 1);
+      edges.style("opacity", "");
+      cy.animate({ fit: { eles: cy.elements(), padding: 30 }, duration: 400, easing: "ease-out" });
+      return;
+    }
+
+    const focusSet = new Set(focusNodeIds);
+    const focused = cy.nodes().filter((n: any) => focusSet.has(n.id()));
+    if (focused.length === 0) return;
+
+    // Include immediate neighbors so relations stay readable.
+    const neighborhood = focused.neighborhood().add(focused);
+    const neighborhoodIds = new Set<string>();
+    neighborhood.forEach((el: any) => neighborhoodIds.add(el.id()));
+
+    nodes.forEach((n: any) => {
+      n.style("opacity", neighborhoodIds.has(n.id()) ? 1 : 0.15);
+    });
+    edges.forEach((e: any) => {
+      const inSubgraph = neighborhoodIds.has(e.source().id()) && neighborhoodIds.has(e.target().id());
+      e.style("opacity", inSubgraph ? 0.9 : 0.08);
+    });
+
+    cy.animate({ fit: { eles: neighborhood, padding: 80 }, duration: 600, easing: "ease-in-out" });
+  }, [focusNodeIds, isLoaded]);
+
   function handleFitGraph() {
     if (cyRef.current) cyRef.current.fit(undefined, 30);
   }
