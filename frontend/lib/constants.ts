@@ -1,17 +1,16 @@
-// KONEKSI.ID — Global UI Constants & Narrative Controller
-// Centralized source for all text and statistics to allow instant rebranding.
+// PBP.ID global UI constants.
 
 export const SITE_CONFIG = {
-  NAME: "KONEKSI.ID",
-  TAGLINE: "Audit Jaringan Kekuasaan & Proyek Strategis",
-  DESCRIPTION: "Platform OSINT independen yang membongkar aliansi bisnis-politik dan konsentrasi kekuasaan di balik proyek strategis pemerintah Indonesia.",
+  NAME: "PBP.ID",
+  TAGLINE: "Data Publik Proyek Pemerintah",
+  DESCRIPTION: "Katalog data publik untuk membantu masyarakat melihat proyek pemerintah, angka anggaran, vendor, dan relasinya dengan lebih mudah.",
   
-  INVESTIGATION_TITLE: "Audit Pengadaan Strategis",
-  INVESTIGATION_SUBTITLE: "Investigasi Aktif",
+  INVESTIGATION_TITLE: "Catatan Proyek",
+  INVESTIGATION_SUBTITLE: "Data Publik",
   
-  DISCLAIMER: "Analisis berbasis dokumen publik (AHU, LPSE, SiRUP). Disajikan untuk mendukung transparansi anggaran dan akuntabilitas publik.",
+  DISCLAIMER: "Berbasis dokumen publik dan sumber terbuka. Situs ini bersifat informatif, bukan tuduhan atau putusan hukum.",
   
-  KEYWORDS: ["Investigasi Agrinas", "Skandal Koperasi Merah Putih", "Audit Danantara", "Relasi Bisnis Politik", "OSINT Indonesia", "Transparansi Anggaran"],
+  KEYWORDS: ["Data proyek pemerintah", "Koperasi Merah Putih", "BGN", "Relasi bisnis politik", "Transparansi anggaran", "Data publik Indonesia"],
 };
 
 export const THEME_COLORS = {

@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useMemo } from "react";
 
-// ─── Constants & Types ───────────────────────────────────────────────────────
+// Constants and types
 
 interface SPPGPoint {
   id: string;
@@ -34,7 +34,7 @@ const POLITICAL_FOUNDATIONS: Record<string, string> = {
   "Yayasan Insan Cendekia Jayapura": "NASDEM (Sulaeman Hamzah)",
   "Yayasan Sahabat Pelangi": "HANURA (Raden Ayu Amrina)",
   "Yayasan Asra Bakti Maritim": "PAN (Asep Rahmat)",
-  "Yayasan Indonesia Food Security Review (IFSR)": "BGN / KOALISI (Conflict of Interest)",
+  "Yayasan Indonesia Food Security Review (IFSR)": "BGN / Koalisi",
   "Yayasan Lazuardi Kendari": "TERPIDANA (Nur Alam)",
   "Yayasan Abdi Bangun Negeri": "TERPIDANA (Abdul Hamid Payapo)"
 };
@@ -98,7 +98,7 @@ export default function SPPGPage() {
     return (
       <div className="flex items-center justify-center min-h-[60vh]">
         <div className="animate-pulse text-sm" style={{ color: "var(--text-secondary)" }}>
-          Sinkronisasi data nasional...
+          Menata data nasional...
         </div>
       </div>
     );
@@ -111,21 +111,21 @@ export default function SPPGPage() {
 
   return (
     <main className="content-page p-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1160px] mx-auto">
         <header className="mb-8 border-b pb-6" style={{ borderColor: "var(--border-base)" }}>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
               <div className="inline-block px-2 py-0.5 bg-green-900/20 text-green-500 font-mono text-[8px] font-bold uppercase tracking-widest border border-green-500/30 rounded mb-2">
-                ● Data Sinkron: 100% Verified
+                Data publik: sinkron
               </div>
               <h1 
                 className="text-3xl font-bold mb-2 uppercase tracking-tight" 
                 style={{ fontFamily: "'IBM Plex Serif', serif", color: "var(--text-primary)" }}
               >
-                Database Nasional SPPG
+                Data Nasional SPPG
               </h1>
               <p className="text-xs text-[var(--text-secondary)] font-mono uppercase tracking-widest">
-                Monitoring Satuan Pelayanan & Integritas Operasional
+                Titik layanan, status operasional, dan hal-hal yang perlu dicek lagi
               </p>
             </div>
             <div className="bg-[var(--bg-surface)] border border-[var(--border-base)] p-3 rounded-lg">
@@ -140,11 +140,11 @@ export default function SPPGPage() {
           <StatBox 
             label="Total Titik SPPG" 
             value={totalOfficial.toLocaleString()} 
-            sub="Unit Terverifikasi Nasional"
+            sub="Unit resmi nasional"
             highlight
           />
           <div className="p-6 bg-[var(--bg-surface)] border-l-4 border-[var(--accent-danger)] rounded-lg shadow-sm border border-[var(--border-base)]">
-            <h3 className="text-sm font-mono font-bold text-[var(--text-primary)] mb-4 uppercase">Status Integritas Operasional</h3>
+            <h3 className="text-sm font-mono font-bold text-[var(--text-primary)] mb-4 uppercase">Yang Perlu Dicek</h3>
             <div className="space-y-4">
               <div>
                 <div className="flex justify-between text-[10px] font-mono mb-1">
@@ -156,7 +156,7 @@ export default function SPPGPage() {
                 </div>
               </div>
               <div className="flex justify-between items-baseline">
-                <span className="text-[10px] font-mono text-[var(--text-secondary)] uppercase">Unit Ditangguhkan (Suspend)</span>
+                <span className="text-[10px] font-mono text-[var(--text-secondary)] uppercase">Unit Ditangguhkan</span>
                 <span className="text-xl font-mono font-bold text-[var(--accent-danger)]">{data.total_suspended?.toLocaleString() || "1,256"}</span>
               </div>
               <p className="text-[9px] text-[var(--text-tertiary)] leading-relaxed italic">
@@ -281,13 +281,13 @@ export default function SPPGPage() {
 
                     <div className="flex flex-wrap gap-1.5 items-center justify-center w-full">
                       {isSuspended ? (
-                        <Badge label="SUSPENDED" color="orange" />
+                        <Badge label="DITANGGUHKAN" color="orange" />
                       ) : (
                         <Badge label="AKTIF" color="green" />
                       )}
-                      {isUncertified && <Badge label="NON-SLHS" color="yellow" />}
+                      {isUncertified && <Badge label="BELUM SLHS" color="yellow" />}
                       {isPolitical && <Badge label="POLITIK" color="red" />}
-                      {p.investigation_status === "FLAGGED" && <Badge label="FLAGGED" color="red" />}
+                      {p.investigation_status === "FLAGGED" && <Badge label="CEK LAGI" color="red" />}
                     </div>
                   </div>
                 );
@@ -339,7 +339,7 @@ export default function SPPGPage() {
 
               {selectedSPPG.operational_status === "SUSPENDED" && (
                 <div className="p-4 rounded-xl bg-orange-500/10 border border-orange-500/30">
-                  <div className="text-[10px] font-bold text-orange-600 dark:text-orange-400 uppercase mb-1">Peringatan Operasional</div>
+                  <div className="text-[10px] font-bold text-orange-600 dark:text-orange-400 uppercase mb-1">Catatan Operasional</div>
                   <p className="text-xs text-orange-900 dark:text-orange-100 font-medium">Unit ini ditangguhkan operasionalnya per 1 April 2026 karena kegagalan standar IPAL/Sanitasi.</p>
                 </div>
               )}
@@ -347,7 +347,7 @@ export default function SPPGPage() {
               {/* Affiliation Info */}
               {(selectedSPPG.affiliated_foundations?.length || 0) > 0 && (
                 <div className="space-y-4 p-4 rounded-xl bg-red-500/5 border border-red-500/20">
-                  <div className="text-[10px] font-bold text-red-600 dark:text-red-400 uppercase tracking-widest">Afiliasi & Konflik Kepentingan</div>
+                  <div className="text-[10px] font-bold text-red-600 dark:text-red-400 uppercase tracking-widest">Afiliasi yang Perlu Dicek</div>
                   <div className="space-y-3">
                     <div className="space-y-1">
                        <div className="text-[9px] text-gray-500 uppercase">Yayasan Pengelola</div>

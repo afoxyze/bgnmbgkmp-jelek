@@ -1,4 +1,4 @@
-// RelatedDossiers — bottom "up next" block, deep-links to the other investigations.
+// Bottom "up next" block for other public-data notes.
 
 import Link from "next/link";
 import type { DossierMeta } from "@/lib/dossier";
@@ -20,7 +20,7 @@ export function RelatedDossiers({ dossiers }: Props) {
             fontWeight: 700,
           }}
         >
-          Dossier Lainnya
+          Catatan Lainnya
         </span>
       </header>
 
@@ -91,7 +91,7 @@ export function RelatedDossiers({ dossiers }: Props) {
                 alignItems: "center",
               }}
             >
-              Buka Dossier →
+              Buka catatan -&gt;
             </div>
           </Link>
         ))}

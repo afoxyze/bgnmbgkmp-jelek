@@ -1,6 +1,3 @@
-// KONEKSI.ID — /dossier/[slug] page
-// Server component. Renders a single investigation dossier.
-
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -25,9 +22,9 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const dossier = await loadDossier(slug);
-  if (!dossier) return { title: `${SITE_CONFIG.NAME} — Dossier tidak ditemukan` };
+  if (!dossier) return { title: `${SITE_CONFIG.NAME} - Catatan tidak ditemukan` };
   return {
-    title: `${dossier.meta.title} — ${SITE_CONFIG.NAME}`,
+    title: `${dossier.meta.title} - ${SITE_CONFIG.NAME}`,
     description: dossier.meta.lede.slice(0, 180),
   };
 }
@@ -42,7 +39,6 @@ export default async function DossierPage({ params }: PageProps) {
   return (
     <main className="content-page" style={{ fontFamily: "'Inter', 'system-ui', sans-serif" }}>
       <div style={{ maxWidth: "1160px", margin: "0 auto", padding: "0 clamp(1rem, 3vw, 2rem)" }}>
-        {/* Breadcrumb */}
         <nav
           style={{
             display: "flex",
@@ -58,7 +54,7 @@ export default async function DossierPage({ params }: PageProps) {
         >
           <Link href="/" style={{ color: "var(--text-tertiary)", textDecoration: "none" }}>Beranda</Link>
           <span style={{ opacity: 0.5 }}>/</span>
-          <span>Dossier</span>
+          <span>Catatan</span>
           <span style={{ opacity: 0.5 }}>/</span>
           <span style={{ color: "var(--accent-danger)" }}>{dossier.meta.code}</span>
           <span style={{ flex: 1 }} />

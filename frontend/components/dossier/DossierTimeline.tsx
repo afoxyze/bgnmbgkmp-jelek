@@ -1,4 +1,4 @@
-// DossierTimeline — chronological events strip.
+// Chronological events strip.
 
 import type { DossierTimelineEvent } from "@/lib/dossier";
 
@@ -87,7 +87,7 @@ export function DossierTimeline({ events }: Props) {
                   letterSpacing: "0.06em",
                 }}
               >
-                src: {ev.source}
+                sumber: {ev.source}
               </div>
             )}
           </article>

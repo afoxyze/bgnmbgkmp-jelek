@@ -53,7 +53,7 @@ export function formatPropertyKey(key: string): string {
     .join(" ");
 }
 
-// Node colors per entity type — investigative dark-theme palette
+// Node colors per entity type.
 export const NODE_COLORS: Record<string, string> = {
   Person: "#3B82F6",        // blue
   Orang: "#3B82F6",         // blue (alias)
@@ -80,7 +80,7 @@ export const ENTITY_TYPE_LABELS: Record<EntityType, string> = {
   LegalCase: "Kasus Hukum",
 };
 
-// Risk severity color mapping for UI components
+// Question severity color mapping for UI components.
 export const SEVERITY_COLORS = {
   HIGH: {
     bg: "bg-red-500/10",
@@ -142,7 +142,7 @@ export function findEntityById(
 // Truncate long labels for node display
 export function truncateLabel(label: string, maxLength = 12): string {
   if (label.length <= maxLength) return label;
-  return label.slice(0, maxLength - 1) + "…";
+  return label.slice(0, maxLength - 3) + "...";
 }
 
 // Determine if a relation has a red_flag property set to true

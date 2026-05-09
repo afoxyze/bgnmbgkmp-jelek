@@ -4,8 +4,8 @@ import type { Metadata } from "next";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: `Dossier Investigasi — ${SITE_CONFIG.NAME}`,
-  description: "Daftar laporan investigasi mendalam mengenai jaringan bisnis-politik di Indonesia.",
+  title: `Catatan Proyek - ${SITE_CONFIG.NAME}`,
+  description: "Daftar catatan data publik tentang proyek pemerintah yang angkanya besar dan polanya perlu dilihat ulang.",
 };
 
 export default function DossierIndexPage() {
@@ -13,18 +13,21 @@ export default function DossierIndexPage() {
 
   return (
     <main className="content-page" style={{ fontFamily: "'Inter', 'system-ui', sans-serif" }}>
-      <div style={{ maxWidth: "860px", margin: "0 auto" }}>
+      <div style={{ maxWidth: "1160px", margin: "0 auto" }}>
         <header style={{ marginBottom: "3rem", borderBottom: "1px solid var(--border-base)", paddingBottom: "2rem" }}>
-          <h1 style={{ 
-            fontFamily: "'IBM Plex Serif', serif", 
-            fontSize: "2.5rem", 
-            fontWeight: 700,
-            marginBottom: "1rem" 
-          }}>
-            Arsip Investigasi
+          <h1
+            style={{
+              fontFamily: "'IBM Plex Serif', serif",
+              fontSize: "2.5rem",
+              fontWeight: 700,
+              marginBottom: "1rem",
+            }}
+          >
+            Catatan Proyek
           </h1>
-          <p style={{ color: "var(--text-secondary)", fontSize: "1.125rem", maxWidth: "600px" }}>
-            Laporan mendalam mengenai aliansi strategis, konsentrasi kepemilikan saham, dan potensi konflik kepentingan dalam proyek pemerintah.
+          <p style={{ color: "var(--text-secondary)", fontSize: "1.125rem", maxWidth: "640px" }}>
+            Kumpulan catatan data publik tentang proyek pemerintah, anggaran,
+            vendor, dan relasi yang bisa diperiksa ulang.
           </p>
         </header>
 

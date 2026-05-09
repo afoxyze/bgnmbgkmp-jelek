@@ -59,7 +59,7 @@ export function GraphExplorer({ caseStudy, isDark }: GraphExplorerProps) {
   return (
     <div className="flex h-full w-full overflow-hidden bg-[var(--bg-base)] relative flex-row items-stretch">
       
-      {/* 1. LEFT: THE GRAPH */}
+      {/* Graph area */}
       <main className="flex-1 relative min-w-0 h-full bg-[var(--bg-base)] z-0">
         <GraphViewer
           caseStudy={caseStudy}
@@ -74,12 +74,12 @@ export function GraphExplorer({ caseStudy, isDark }: GraphExplorerProps) {
         {!graphStable && (
           <div className="absolute inset-0 z-50 flex flex-col items-center justify-center bg-[var(--bg-base)]">
             <div className="w-10 h-10 border-2 rounded-full animate-spin border-[var(--border-strong)] border-t-[var(--accent-danger)]" />
-            <p className="mt-4 text-[10px] font-bold text-[var(--text-tertiary)] uppercase tracking-[0.2em]">Sinkronisasi Jaringan...</p>
+            <p className="mt-4 text-[10px] font-bold text-[var(--text-tertiary)] uppercase tracking-[0.2em]">Memuat graf data...</p>
           </div>
         )}
       </main>
 
-      {/* 2. RIGHT: SIDEBAR (Sliding Container) */}
+      {/* Sidebar */}
       <aside 
         className="hidden md:block flex-shrink-0 relative z-10 bg-[var(--bg-sidebar)] transition-all duration-300 ease-in-out border-l border-[var(--border-base)] overflow-hidden"
         style={{ 
@@ -97,7 +97,7 @@ export function GraphExplorer({ caseStudy, isDark }: GraphExplorerProps) {
         </div>
       </aside>
 
-      {/* 3. FLOATING TOGGLE BUTTON */}
+      {/* Floating toggle button */}
       <button
         onClick={() => setSidebarOpen(!sidebarOpen)}
         className="hidden md:flex fixed top-1/2 -translate-y-1/2 z-[100] w-6 h-12 items-center justify-center rounded-l-xl bg-[var(--bg-surface-2)] border border-[var(--border-base)] border-r-0 shadow-xl transition-all hover:bg-[var(--bg-interactive-hover)] cursor-pointer"
@@ -114,7 +114,7 @@ export function GraphExplorer({ caseStudy, isDark }: GraphExplorerProps) {
         </span>
       </button>
 
-      {/* 4. MOBILE OVERLAY */}
+      {/* Mobile overlay */}
       <div className="md:hidden">
         <div 
           className={`fixed bottom-0 left-0 right-0 bg-[var(--bg-surface)] shadow-[0_-10px_40px_-5px_rgba(0,0,0,0.3)] z-[1000] rounded-t-3xl transition-all duration-500 ease-out border-t border-[var(--border-base)] ${
@@ -128,7 +128,7 @@ export function GraphExplorer({ caseStudy, isDark }: GraphExplorerProps) {
             <div className="w-12 h-1.5 bg-[var(--border-strong)] rounded-full mb-1" />
             {!sidebarOpen && selection.kind === 'none' && (
               <span className="text-[10px] font-bold text-[var(--text-tertiary)] uppercase tracking-widest">
-                Ketuk untuk Panel Investigasi
+                Ketuk untuk Panel Data
               </span>
             )}
           </button>

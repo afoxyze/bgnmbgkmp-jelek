@@ -1,4 +1,4 @@
-// KONEKSI.ID — Dossier loader & slug registry
+// PBP.ID — Dossier loader & slug registry
 // Server-only. Loads a single case_study_*.json and enriches it with
 // pre-computed facts (severity counts, people/orgs split, budget totals).
 
@@ -42,11 +42,11 @@ export interface DossierTimelineEvent {
 export const DOSSIER_REGISTRY: readonly DossierMeta[] = [
   {
     slug: "bgn-peruri",
-    code: "DOSSIER 01",
+    code: "PROYEK 01",
     file: "case_study_bgn_peruri.json",
-    title: "Kontrak Rp 600 Miliar Tanpa Tender.",
-    subtitle: "Bagaimana BUMN percetakan memenangkan proyek sistem informasi kesehatan nasional.",
-    lede: "Badan Gizi Nasional memberikan kontrak Sistem Informasi Gizi senilai Rp 600 miliar kepada Perum Peruri melalui penunjukan langsung. Jajaran direksi anak perusahaan penerima kontrak mencakup pejabat aktif Kementerian Kesehatan dan mantan direktur GovTech procurement.",
+    title: "Kontrak Rp 600 Miliar untuk Sistem Informasi Gizi",
+    subtitle: "Catatan tentang kontrak sistem informasi BGN yang diberikan kepada Perum Peruri.",
+    lede: "Badan Gizi Nasional memberi kontrak Sistem Informasi Gizi senilai Rp 600 miliar kepada Perum Peruri melalui penunjukan langsung. Catatan ini merangkum angka, jalur pengadaan, dan entitas yang muncul di dokumen publik.",
     severity: "CRITICAL",
     thread: "Thread A — BGN & Peruri",
     categoryShort: "BGN",
@@ -55,28 +55,28 @@ export const DOSSIER_REGISTRY: readonly DossierMeta[] = [
     anggaranLabel: "Kontrak penunjukan langsung",
     findings: [
       {
-        tag: "Penunjukan Langsung",
-        title: "Mismatch kompetensi — BUMN cetak uang memenangkan proyek IT Rp 600 M.",
+        tag: "Pengadaan",
+        title: "Peruri tercatat menerima proyek IT senilai Rp 600 miliar.",
         body: "Peruri secara historis adalah BUMN percetakan dokumen berharga. Kontrak sistem informasi kesehatan diberikan via penunjukan langsung kepada anak perusahaannya, PT Peruri Digital Security (PDS), tanpa tender kompetitif terbuka.",
         relatedEntityIds: ["org-bgn", "org-peruri", "org-pds"],
         relatedRedFlagIds: ["rf-001"],
       },
       {
-        tag: "Konflik Kepentingan",
-        title: "Chief DTO Kemenkes menjabat sebagai Komisaris Utama PDS.",
+        tag: "Jabatan",
+        title: "Nama pejabat Kemenkes muncul di kursi komisaris PDS.",
         body: "Setiaji, Chief DTO Kementerian Kesehatan, duduk sebagai Komisaris Utama PDS — lembaga yang menerima kontrak IT dari lembaga pemerintah. Wakil Direktur Utama, Rahmat Danu Andika, sebelumnya menjabat Direktur GovTech Procurement di pemerintahan.",
         relatedEntityIds: ["person-setiaji", "person-danu-andika", "org-pds"],
       },
       {
-        tag: "Beneficial Owner",
+        tag: "Pemilik Manfaat",
         title: "Satu CEO, dua perusahaan, akumulasi kontrak ~Rp 700 M.",
         body: "Shoraya Lolyta Oktaviana terdaftar sebagai pemilik manfaat dua entitas berbeda (PT IMI dan PT NSP), yang keduanya memenangkan paket pengadaan rak Koperasi Merah Putih dengan nilai kumulatif ~Rp 695 miliar.",
         relatedEntityIds: ["person-shoraya", "org-imi", "org-nsp"],
         relatedRedFlagIds: ["rf-008"],
       },
       {
-        tag: "Anomali Harga",
-        title: "Markup ~300% pada pengadaan sikat dan semir sepatu SPPI.",
+        tag: "Harga",
+        title: "Pengadaan sikat dan semir sepatu SPPI tercatat dengan selisih harga yang perlu dilihat lagi.",
         body: "Harga satuan di Inaproc mencapai Rp 50.000–56.000 per unit, dibandingkan harga pasar eceran Rp 18.000–19.000. Total alokasi Rp 1,57 miliar untuk 12 paket kontrak via E-Purchasing.",
         relatedEntityIds: ["proj-bgn-sikat-sepatu", "org-gajah-mitra"],
         relatedRedFlagIds: ["rf-012"],
@@ -88,16 +88,16 @@ export const DOSSIER_REGISTRY: readonly DossierMeta[] = [
       { date: "Mar 2025", event: "Kontrak Sistem Informasi Gizi Rp 600 M diberikan ke Peruri via penunjukan langsung.", source: "LPSE" },
       { date: "Okt 2025", event: "Temuan anomali harga tablet Samsung Galaxy Tab Active5 (markup Rp 7,95 juta/unit).", source: "Jawa Pos, ICW" },
       { date: "Feb 2026", event: "Viral: pengadaan sikat & semir sepatu Rp 1,57 M dengan markup 300%.", source: "Tempo, Detik" },
-      { date: "Apr 2026", event: "Audit silang AHU + LPSE mengungkap dua entitas Shoraya Lolyta Oktaviana.", source: "Investigasi KONEKSI.ID" },
+      { date: "Apr 2026", event: "Catatan silang AHU + LPSE menampilkan dua entitas Shoraya Lolyta Oktaviana.", source: "Catatan PBP.ID" },
     ],
   },
   {
     slug: "agrinas-kmp",
-    code: "DOSSIER 02",
+    code: "PROYEK 02",
     file: "case_study_agrinas_kmp.json",
-    title: "Gurita Monopoli Rp 128 Triliun.",
-    subtitle: "Satu yayasan Kemenhan memegang kendali konstruksi 80.000+ gerai Koperasi Merah Putih.",
-    lede: "PT Agrinas, entitas yang berafiliasi dengan Yayasan Pembinaan Pembangunan Sumber Daya Pertanian (YPPSDP) di bawah Kementerian Pertahanan, memegang kendali konstruksi lebih dari 80.000 gerai Koperasi Merah Putih — sebuah struktur pasar yang secara efektif menghilangkan kompetisi di infrastruktur desa.",
+    title: "Rencana Gerai Koperasi Merah Putih Senilai Rp 128 Triliun",
+    subtitle: "Satu ekosistem muncul dominan di rencana konstruksi gerai Koperasi Merah Putih.",
+    lede: "PT Agrinas dan jejaring terkaitnya muncul dalam catatan konstruksi puluhan ribu gerai Koperasi Merah Putih. Karena skalanya besar, publik perlu bisa melihat data anggaran, pelaksana, dan relasi yang terkait.",
     severity: "VERIFIED",
     thread: "Thread C — Agrinas & KMP",
     categoryShort: "KMP",
@@ -106,24 +106,24 @@ export const DOSSIER_REGISTRY: readonly DossierMeta[] = [
     anggaranLabel: "Estimasi nilai proyek total",
     findings: [
       {
-        tag: "Monopoli Vertikal",
-        title: "Satu ekosistem menguasai 80.000+ gerai infrastruktur desa.",
+        tag: "Satu Pintu",
+        title: "Target 80.000+ gerai terlihat terhubung ke ekosistem yang terbatas.",
         body: "PT Agrinas dan jejaring entitas afiliasinya memegang kontrak konstruksi untuk lebih dari 80.000 gerai Koperasi Merah Putih. Skala ini menghilangkan ruang partisipasi kontraktor lokal dan kompetisi harga terbuka.",
       },
       {
-        tag: "Markup Konstruksi",
-        title: "Selisih hingga Rp 700 juta per gerai — studi kasus Denpasar.",
+        tag: "Selisih Harga",
+        title: "Selisih hingga Rp 700 juta per gerai dalam catatan Denpasar.",
         body: "Anggaran per unit gerai yang diklaim mencapai angka tertentu, sementara penilaian fisik di lapangan (studi kasus Denpasar) menunjukkan selisih hingga Rp 700 juta per unit dari nilai konstruksi riil.",
       },
       {
-        tag: "Jaringan Kekuasaan",
-        title: "Menhan ex-officio memimpin YPPSDP — regulator anggaran sekaligus operator.",
+        tag: "Jabatan Strategis",
+        title: "Menhan ex-officio muncul di YPPSDP, yayasan induk ekosistem Agrinas.",
         body: "Menteri Pertahanan aktif tercatat sebagai pimpinan ex-officio YPPSDP, yayasan induk ekosistem Agrinas. Ini mengikat regulator anggaran pertahanan langsung ke operator proyek infrastruktur desa.",
       },
       {
-        tag: "Infrastruktur Militer",
+        tag: "Lokasi Barang",
         title: "Ribuan unit rak SPPG ditemukan di gudang Pusziad TNI AD, Cileungsi.",
-        body: "Temuan fisik oleh tim investigasi: ribuan unit rak proyek SLO (Sarana Logistik Operasional) yang seharusnya terdistribusi ke SPPG tersimpan di gudang militer Pusziad TNI AD Cileungsi — indikasi penyimpangan rantai distribusi.",
+        body: "Catatan lapangan menyebut ribuan unit rak proyek SLO (Sarana Logistik Operasional) yang seharusnya terdistribusi ke SPPG tersimpan di gudang militer Pusziad TNI AD Cileungsi.",
       },
     ],
     timeline: [
@@ -137,11 +137,11 @@ export const DOSSIER_REGISTRY: readonly DossierMeta[] = [
   },
   {
     slug: "motor-bgn",
-    code: "DOSSIER 03",
+    code: "PROYEK 03",
     file: "case_study_motor_bgn.json",
-    title: "Rp 1,4 Triliun untuk Motor Listrik MBG.",
-    subtitle: "Vendor pemenang adalah saksi kunci dalam kasus korupsi bansos di KPK.",
-    lede: "Kontrak pengadaan motor listrik senilai Rp 1,4 triliun untuk distribusi program Makan Bergizi Gratis dimenangkan oleh PT Yasa Artha. Jajaran direksinya tercatat sebagai saksi kunci dalam kasus korupsi bansos yang saat ini sedang dalam penyidikan KPK.",
+    title: "Pengadaan Motor Listrik MBG Senilai Rp 1,4 Triliun",
+    subtitle: "Vendor pemenang punya jejak nama di berkas perkara bansos KPK.",
+    lede: "Kontrak pengadaan motor listrik senilai Rp 1,4 triliun untuk distribusi program Makan Bergizi Gratis dimenangkan oleh PT Yasa Artha. Catatan publik juga memunculkan nama jajaran direksinya dalam perkara bansos di KPK, sehingga datanya perlu diperiksa lebih dekat.",
     severity: "ACTIVE",
     thread: "Thread B — Logistik MBG",
     categoryShort: "MBG",
@@ -150,17 +150,17 @@ export const DOSSIER_REGISTRY: readonly DossierMeta[] = [
     anggaranLabel: "Kontrak pengadaan motor listrik",
     findings: [
       {
-        tag: "Rekam Jejak",
-        title: "Direksi vendor pemenang adalah saksi kunci kasus bansos KPK.",
+        tag: "Jejak Nama",
+        title: "Nama direksi vendor muncul dalam catatan kasus bansos KPK.",
         body: "Jajaran direksi PT Yasa Artha tercatat dalam berkas penyidikan KPK sebagai saksi kunci dalam kasus dugaan korupsi pengadaan bansos. Fakta ini tidak menggugurkan status vendor dalam sistem pengadaan pemerintah.",
       },
       {
-        tag: "Skala Anggaran",
-        title: "Rp 1,4 triliun untuk satu lini logistik — proporsi patut dipertanyakan.",
+        tag: "Angka Besar",
+        title: "Rp 1,4 triliun dialokasikan untuk satu lini logistik.",
         body: "Alokasi Rp 1,4 T untuk motor listrik saja merupakan porsi signifikan dari total anggaran logistik MBG. Tidak ada data publik yang menjustifikasi pilihan teknologi atau unit cost.",
       },
       {
-        tag: "Sirkularitas",
+        tag: "Nama Berulang",
         title: "Ekosistem vendor MBG tumpang tindih dengan ekosistem Agrinas.",
         body: "Beberapa entitas vendor yang muncul dalam paket logistik MBG juga tercatat sebagai pemasok dalam ekosistem Agrinas/KMP, mengindikasikan konsentrasi pasar yang sempit.",
       },

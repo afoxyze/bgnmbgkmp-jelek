@@ -414,7 +414,7 @@ export function GraphViewer({
 
           {/* Legend Panel */}
           <div className="absolute bottom-6 left-6 rounded-2xl p-4 bg-[var(--bg-surface)]/95 backdrop-blur-md border border-[var(--border-base)] shadow-xl hidden md:flex flex-col gap-3 z-20 min-w-[160px]">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)] mb-1 text-center">Legenda Investigasi</span>
+            <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-tertiary)] mb-1 text-center">Legenda Data</span>
             
             <div className="space-y-2">
               <span className="text-[9px] font-bold text-[var(--text-tertiary)] uppercase block border-b border-[var(--border-base)] pb-1">Entitas</span>
@@ -447,7 +447,7 @@ export function GraphViewer({
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-6 border-t-2 border-dashed border-[#EF4444]" />
-                <span className="text-[11px] font-bold text-red-500">Red Flag (Risiko)</span>
+                <span className="text-[11px] font-bold text-red-500">Perlu Dicek</span>
               </div>
             </div>
           </div>

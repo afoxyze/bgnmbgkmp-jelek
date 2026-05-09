@@ -12,7 +12,7 @@ export function SourceLink({ url, index }: SourceLinkProps) {
     const hostname = parsed.hostname.replace(/^www\./, "");
     displayText = hostname;
   } catch {
-    // malformed URL — keep default
+    // Keep the default label for malformed URLs.
   }
 
   return (

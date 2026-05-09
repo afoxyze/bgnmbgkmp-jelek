@@ -33,7 +33,7 @@ function mergeCaseStudies(studies: readonly CaseStudy[]): CaseStudy {
 
   const investigasi_lanjutan = studies.flatMap((s) => s.investigasi_lanjutan);
 
-  // Latest date wins; sources are joined; status is normalized to "draft"
+  // Latest date wins and sources are joined.
   const latestDate = studies
     .map((s) => s.metadata.tanggal_riset)
     .sort()
@@ -46,13 +46,13 @@ function mergeCaseStudies(studies: readonly CaseStudy[]): CaseStudy {
   const metadata: CaseStudyMetadata = {
     tanggal_riset: latestDate,
     sumber: combinedSumber,
-    status: "Audit Selesai (Terverifikasi)",
+    status: "Data Publik Tersusun",
   };
 
   return { metadata, entities, relations, red_flags, investigasi_lanjutan };
 }
 
-// Shared data loader — reads and merges all case study JSON files from public/data/.
+// Shared data loader reads and merges all case study JSON files from public/data/.
 // Called server-side only; never imported in client components.
 export async function getCaseStudy(onlyFeatured = false): Promise<CaseStudy | null> {
   try {
@@ -71,7 +71,7 @@ export async function getCaseStudy(onlyFeatured = false): Promise<CaseStudy | nu
       const data: unknown = JSON.parse(raw);
 
       if (!isCaseStudy(data)) {
-        console.error(`Data JSON tidak valid — ${filename} tidak sesuai skema.`);
+        console.error(`Data JSON tidak valid: ${filename} tidak sesuai skema.`);
         continue;
       }
 
@@ -85,7 +85,7 @@ export async function getCaseStudy(onlyFeatured = false): Promise<CaseStudy | nu
 
     return mergeCaseStudies(studies);
   } catch (err) {
-    console.error("Gagal memuat data kasus:", err);
+    console.error("Gagal memuat data:", err);
     return null;
   }
 }

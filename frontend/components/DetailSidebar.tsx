@@ -58,14 +58,14 @@ export function DetailSidebar({
         )}
       </div>
 
-      {/* Red Flags — pinned at bottom */}
+      {/* Pinned question panel */}
       <div style={{ borderTop: "1px solid var(--border-base)" }} className="flex-shrink-0 bg-[var(--bg-surface)]">
         <div className="px-6 py-3 flex items-center gap-2 border-b border-[var(--border-base)]">
           <span className="text-[11px] font-bold text-red-500 uppercase tracking-[0.15em]">
-            Panel Investigasi
+            Panel Catatan
           </span>
           <span className="ml-auto text-[10px] bg-red-500/10 text-red-500 border border-red-500/20 px-2 py-0.5 rounded-full font-mono font-bold">
-            {caseStudy.red_flags.length} KASUS
+            {caseStudy.red_flags.length} CATATAN
           </span>
         </div>
         <div className="max-h-64 overflow-y-auto pb-4 bg-[var(--bg-surface-2)]">
@@ -80,7 +80,7 @@ export function DetailSidebar({
   );
 }
 
-// ─── Shared UI Components ───────────────────────────────────────────────────
+// Shared UI components
 
 function PanelHeader({ 
   title, 
@@ -145,7 +145,7 @@ function StatCard({ label, value, danger }: { label: string; value: number; dang
   );
 }
 
-// ─── Panels ──────────────────────────────────────────────────────────────────
+// Panels
 
 function OverviewPanel({ caseStudy }: { caseStudy: CaseStudy }) {
   const highCount = caseStudy.red_flags.filter((rf) => rf.severity === "HIGH").length;
@@ -154,7 +154,7 @@ function OverviewPanel({ caseStudy }: { caseStudy: CaseStudy }) {
   return (
     <div className="flex flex-col">
       <PanelHeader 
-        title="Audit Jaringan & Pengadaan Strategis" 
+        title="Peta Data Proyek Pemerintah" 
         subtitle={`UPDATE: ${caseStudy.metadata.tanggal_riset}`}
         badge={
           <span className="text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider text-amber-700 bg-amber-500/20 border border-amber-500/30">
@@ -167,16 +167,16 @@ function OverviewPanel({ caseStudy }: { caseStudy: CaseStudy }) {
         <div className="grid grid-cols-3 gap-3">
           <StatCard label="Relasi" value={caseStudy.relations.length} />
           <StatCard label="Entitas" value={caseStudy.entities.length} />
-          <StatCard label="Indikasi" value={caseStudy.red_flags.length} danger />
+          <StatCard label="Catatan" value={caseStudy.red_flags.length} danger />
         </div>
 
         <div className="p-5 rounded-xl border bg-[var(--bg-surface)] shadow-sm" style={{ borderColor: "var(--border-base)" }}>
-          <SectionLabel>Pemetaan Risiko</SectionLabel>
+          <SectionLabel>Yang Perlu Dicek</SectionLabel>
           <div className="flex flex-col gap-3 mt-4">
             <div className="flex items-center gap-3">
               <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent-danger)] shadow-[0_0_8px_var(--accent-danger)] flex-shrink-0" />
               <span className="text-sm font-medium" style={{ color: "var(--text-primary)" }}>
-                Risiko Tinggi (HIGH)
+                Prioritas tinggi
               </span>
               <span className="ml-auto text-sm text-[var(--accent-danger)] font-mono font-bold">
                 {highCount}
@@ -185,7 +185,7 @@ function OverviewPanel({ caseStudy }: { caseStudy: CaseStudy }) {
               <div className="flex items-center gap-3">
               <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent-warning)] shadow-[0_0_8px_var(--accent-warning)] flex-shrink-0" />
               <span className="text-sm font-medium" style={{ color: "var(--text-primary)" }}>
-                Risiko Sedang (MEDIUM)
+                Prioritas sedang
               </span>
               <span className="ml-auto text-sm text-[var(--accent-warning)] font-mono font-bold">
                 {medCount}
@@ -195,7 +195,7 @@ function OverviewPanel({ caseStudy }: { caseStudy: CaseStudy }) {
         </div>
 
         <div className="p-4 rounded-lg bg-blue-500/5 border border-blue-500/20 text-xs leading-relaxed text-blue-600 dark:text-blue-400">
-          <strong>Tip Interaksi:</strong> Klik simpul atau garis relasi pada graf untuk melihat profil detail.
+          <strong>Tip:</strong> Klik simpul atau garis relasi untuk melihat detail data.
         </div>
       </div>
     </div>
@@ -222,13 +222,15 @@ function EntityPanel({ entity, caseStudy, onSelectEntity }: { entity: Entity; ca
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-red-500">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-              <SectionLabel>Indikasi Masalah</SectionLabel>
+              <SectionLabel>Catatan yang Perlu Dicek</SectionLabel>
             </div>
             <div className="flex flex-col gap-3">
               {entityRedFlags.map(rf => (
                 <div key={rf.id} className={`p-4 rounded-xl border ${rf.severity === "HIGH" ? 'bg-red-500/10 border-red-500/30' : 'bg-amber-500/10 border-amber-500/30'}`}>
                   <div className="flex items-center gap-2 mb-2">
-                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${rf.severity === "HIGH" ? 'bg-red-500' : 'bg-amber-500'} text-white`}>{rf.severity}</span>
+                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${rf.severity === "HIGH" ? 'bg-red-500' : 'bg-amber-500'} text-white`}>
+                      {rf.severity === "HIGH" ? "BESAR" : "SEDANG"}
+                    </span>
                     <span className="text-[11px] font-mono text-[var(--text-secondary)] truncate">{formatRelationType(rf.type)}</span>
                   </div>
                   <p className={`text-sm leading-relaxed ${rf.severity === "HIGH" ? 'text-red-700 dark:text-red-300' : 'text-amber-700 dark:text-amber-300'}`}>{rf.deskripsi}</p>
@@ -258,7 +260,7 @@ function EntityPanel({ entity, caseStudy, onSelectEntity }: { entity: Entity; ca
                 <button key={c.id} onClick={() => onSelectEntity(c.id)} className="flex items-center gap-3 text-left py-2 px-3 rounded-lg hover:bg-[var(--bg-surface)] transition-all group">
                   <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: getNodeColor(c.type) }} />
                   <span className="text-sm font-medium text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] truncate">{c.label}</span>
-                  <span className="ml-auto opacity-0 group-hover:opacity-100 text-[var(--text-tertiary)]">→</span>
+                  <span className="ml-auto opacity-0 group-hover:opacity-100 text-[var(--text-tertiary)]">-&gt;</span>
                 </button>
               ))}
             </div>
@@ -294,7 +296,7 @@ function RelationPanel({ relation, onSelectEntity }: { relation: Extract<GraphSe
             <SectionLabel>Dari (Sumber)</SectionLabel>
             <button onClick={() => onSelectEntity(fromEntity.id)} className="block w-full text-left text-sm font-medium mt-1 text-sky-600 dark:text-sky-400 hover:underline">{fromEntity.label}</button>
           </div>
-          <div className="flex justify-center text-[var(--text-tertiary)]">↓</div>
+          <div className="flex justify-center text-[var(--text-tertiary)]">v</div>
           <div>
             <SectionLabel>Ke (Target)</SectionLabel>
             <button onClick={() => onSelectEntity(toEntity.id)} className="block w-full text-left text-sm font-medium mt-1 text-sky-600 dark:text-sky-400 hover:underline">{toEntity.label}</button>
@@ -327,7 +329,7 @@ function RelationPanel({ relation, onSelectEntity }: { relation: Extract<GraphSe
 }
 
 function formatPropertyValue(value: unknown): string {
-  if (value === null || value === undefined) return "—";
+  if (value === null || value === undefined) return "-";
   if (typeof value === "boolean") return value ? "Ya" : "Tidak";
   if (Array.isArray(value)) return value.map(String).join(", ");
   if (typeof value === "object") return JSON.stringify(value);

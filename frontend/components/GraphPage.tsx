@@ -5,13 +5,12 @@ import { useTheme } from "@/lib/theme-context";
 import type { CaseStudy } from "@/types/graph";
 import { useState, useEffect } from "react";
 
-// Load GraphExplorer only on the client
+// Load GraphExplorer only on the client.
 const GraphExplorer = dynamic(
   () => import("@/components/GraphExplorer").then((mod) => mod.GraphExplorer),
   { ssr: false }
 );
 
-// GraphPage component (updated sidebar positioning)
 export function GraphPage({ caseStudy: initialCaseStudy }: { caseStudy: CaseStudy | null }) {
   const { isDark } = useTheme();
   const [data, setData] = useState<CaseStudy | null>(initialCaseStudy);
@@ -20,7 +19,7 @@ export function GraphPage({ caseStudy: initialCaseStudy }: { caseStudy: CaseStud
 
   useEffect(() => {
     if (!data && !initialCaseStudy) {
-      setError("Data investigasi tidak tersedia.");
+      setError("Data publik belum tersedia.");
       setLoading(false);
     }
   }, [data, initialCaseStudy]);
@@ -32,7 +31,7 @@ export function GraphPage({ caseStudy: initialCaseStudy }: { caseStudy: CaseStud
           <div className="flex flex-col items-center gap-4">
             <div className="w-10 h-10 border-2 rounded-full animate-spin border-[var(--border-strong)] border-t-[var(--accent-danger)]" />
             <div className="text-[10px] font-bold text-[var(--text-tertiary)] uppercase tracking-[0.2em]">
-              Inisialisasi Sistem OSINT...
+              Memuat data...
             </div>
           </div>
         </div>

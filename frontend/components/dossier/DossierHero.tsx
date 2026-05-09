@@ -1,5 +1,4 @@
-// DossierHero — editorial opening for a single investigation.
-// Server component, no client JS. Matches /app/page.tsx typography system.
+// Editorial opening for a single public-data note.
 
 import type { DossierMeta } from "@/lib/dossier";
 import type { DossierFacts } from "@/lib/dossier";
@@ -13,7 +12,7 @@ interface Props {
 export function DossierHero({ meta, facts: _facts, status }: Props) {
   return (
     <section style={{ padding: "2rem 0 3rem", borderBottom: "1px solid var(--border-base)" }}>
-      {/* Meta row — code / category / severity */}
+      {/* Meta row */}
       <div
         style={{
           display: "flex",
@@ -29,7 +28,7 @@ export function DossierHero({ meta, facts: _facts, status }: Props) {
         }}
       >
         <span style={{ color: "var(--accent-danger)", fontWeight: 700 }}>{meta.code}</span>
-        <span style={{ opacity: 0.4 }}>·</span>
+        <span style={{ opacity: 0.4 }}>/</span>
         <span>{meta.categoryLong}</span>
       </div>
 
@@ -66,7 +65,7 @@ export function DossierHero({ meta, facts: _facts, status }: Props) {
         {meta.subtitle}
       </p>
 
-      {/* Lede — drop-cap first paragraph */}
+      {/* Lede */}
       <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 720px) 1fr", gap: "3rem" }} className="dossier-lede-grid">
         <p
           style={{
@@ -139,7 +138,7 @@ export function DossierHero({ meta, facts: _facts, status }: Props) {
                 letterSpacing: "0.06em",
               }}
             >
-              STATUS: {status}
+              CATATAN: {status}
             </div>
           </aside>
         )}

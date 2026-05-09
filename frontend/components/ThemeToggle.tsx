@@ -1,7 +1,7 @@
 "use client";
 
 // ThemeToggle: toggles the "dark" class on <html> and persists to localStorage.
-// No useEffect — theme is applied by the inline script in layout.tsx on load,
+// No useEffect: theme is applied by the inline script in layout.tsx on load,
 // and toggled here via direct DOM mutation driven by the click event.
 
 interface ThemeToggleProps {

@@ -1,4 +1,4 @@
-// SourcesBlock — collected source URLs + primary source string.
+// Collected source URLs and primary source string.
 
 import { SourceLink } from "@/components/SourceLink";
 
@@ -90,9 +90,8 @@ export function SourcesBlock({ sources, primarySource }: Props) {
           color: "var(--text-secondary)",
         }}
       >
-        DISCLAIMER — Analisis di atas berbasis dokumen publik (AHU, LPSE, SiRUP) dan laporan media
-        terverifikasi. Platform ini bukan tuduhan hukum, melainkan alat bantu pemetaan fakta dokumen
-        untuk mendukung pengawasan publik.
+        CATATAN: Katalog ini berbasis dokumen publik, data pengadaan, dan laporan media.
+        Isinya bersifat informatif dan perlu dibaca bersama sumber aslinya.
       </p>
     </section>
   );

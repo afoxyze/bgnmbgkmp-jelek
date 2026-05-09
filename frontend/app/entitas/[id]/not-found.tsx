@@ -20,7 +20,7 @@ export default function EntitasNotFound() {
           className="text-sm mb-6"
           style={{ color: "var(--text-secondary)" }}
         >
-          ID entitas yang Anda cari tidak ada dalam data studi kasus ini.
+          ID entitas yang dicari belum ada di data ini.
         </p>
         <Link
           href="/cari"

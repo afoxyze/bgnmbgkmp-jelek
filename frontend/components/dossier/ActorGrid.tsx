@@ -1,4 +1,4 @@
-// ActorGrid — People / Organizations / Projects split cards, deep-linking to /entitas/[id].
+// People, organizations, and projects split cards.
 
 import Link from "next/link";
 import type { Entity } from "@/types/graph";
@@ -59,11 +59,11 @@ function ActorRow({ e }: { e: Entity }) {
               border: "1px solid var(--accent-danger)",
             }}
           >
-            ⚑ RED FLAG
+            CATATAN
           </span>
         )}
       </div>
-      <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.75rem", color: "var(--text-tertiary)" }}>→</span>
+      <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.75rem", color: "var(--text-tertiary)" }}>-&gt;</span>
     </Link>
   );
 }
@@ -99,7 +99,7 @@ function ActorColumn({ title, entities }: { title: string; entities: readonly En
         </span>
       </header>
       {entities.length === 0 ? (
-        <p style={{ fontSize: "0.75rem", color: "var(--text-tertiary)", fontStyle: "italic", margin: "0.75rem 0" }}>—</p>
+        <p style={{ fontSize: "0.75rem", color: "var(--text-tertiary)", fontStyle: "italic", margin: "0.75rem 0" }}>-</p>
       ) : (
         entities.map((e) => <ActorRow key={e.id} e={e} />)
       )}
@@ -121,7 +121,7 @@ export function ActorGrid({ people, orgs, projects }: Props) {
             margin: 0,
           }}
         >
-          Aktor & Entitas
+          Entitas Terkait
         </h2>
         <span style={{ flex: 1, height: "1px", background: "var(--border-base)" }} />
         <span
@@ -145,9 +145,9 @@ export function ActorGrid({ people, orgs, projects }: Props) {
         }}
         className="actor-grid"
       >
-        <ActorColumn title="Person" entities={people} />
-        <ActorColumn title="Organization" entities={orgs} />
-        <ActorColumn title="Project" entities={projects} />
+        <ActorColumn title="Orang" entities={people} />
+        <ActorColumn title="Organisasi" entities={orgs} />
+        <ActorColumn title="Proyek" entities={projects} />
       </div>
       <style>{`
         .actor-row:hover > div:first-child > div:first-child { color: var(--accent-danger); }

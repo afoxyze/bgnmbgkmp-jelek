@@ -3,7 +3,7 @@ import { SearchPage } from "@/components/SearchPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cari Entitas — KONEKSI.ID",
+  title: "Cari Entitas - PBP.ID",
 };
 
 export default async function CariPage() {
@@ -12,7 +12,7 @@ export default async function CariPage() {
   if (!caseStudy) {
     return (
       <div className="content-page">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[1160px] mx-auto">
           <p className="text-sm" style={{ color: "#EF4444" }}>
             Gagal memuat data. Pastikan file data tersedia.
           </p>

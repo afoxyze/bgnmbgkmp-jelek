@@ -13,22 +13,21 @@ export default function NotFound() {
           marginBottom: "1rem",
         }}
       >
-        404 — Dossier tidak terdaftar
+        404 - Catatan tidak ditemukan
       </div>
       <h1
         style={{
           fontFamily: "'IBM Plex Serif', 'Georgia', serif",
           fontSize: "clamp(2rem, 5vw, 3rem)",
           fontWeight: 700,
-          letterSpacing: "-0.02em",
           color: "var(--text-primary)",
           margin: "0 0 1rem",
         }}
       >
-        Dossier ini belum tersedia.
+        Catatan ini belum tersedia.
       </h1>
       <p style={{ color: "var(--text-secondary)", lineHeight: 1.6, marginBottom: "2rem" }}>
-        Slug yang Anda tuju tidak terdaftar dalam registri investigasi. Kembali ke beranda untuk melihat dossier yang tersedia.
+        Slug yang dituju belum ada di katalog. Silakan kembali ke beranda untuk melihat catatan yang tersedia.
       </p>
       <Link
         href="/"
@@ -47,7 +46,7 @@ export default function NotFound() {
           textDecoration: "none",
         }}
       >
-        ← Kembali ke Beranda
+        Kembali ke Beranda
       </Link>
     </main>
   );

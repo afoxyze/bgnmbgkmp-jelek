@@ -17,7 +17,7 @@ interface SearchPageProps {
 
 const ALL_TYPES: EntityType[] = ["Person", "Organization", "Project"];
 
-// Picks the first 2–3 property entries for the card preview (skips red_flag boolean).
+// Picks the first 2-3 property entries for the card preview.
 function getPreviewProperties(entity: Entity): Array<{ key: string; value: string }> {
   const entries = Object.entries(entity.properties).filter(
     ([k, v]) => k !== "red_flag" && v !== null && v !== undefined && v !== ""
@@ -72,7 +72,7 @@ export function SearchPage({ caseStudy }: SearchPageProps) {
 
   return (
     <div className="content-page p-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1160px] mx-auto">
         {/* ... existing header ... */}
         <header className="mb-10 border-b pb-8" style={{ borderColor: "var(--border-base)" }}>
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
@@ -85,16 +85,17 @@ export function SearchPage({ caseStudy }: SearchPageProps) {
                   Indeks Entitas
                 </h1>
                 <span className="text-[10px] px-2 py-0.5 border border-[var(--accent-danger)] text-[var(--accent-danger)] font-mono font-bold rounded">
-                  SYSTEM ACTIVE
+                  DATA PUBLIK
                 </span>
               </div>
               <p className="text-sm" style={{ color: "var(--text-secondary)", maxWidth: "600px" }}>
-                Database terpusat untuk menelusuri aktor, korporasi, dan proyek strategis dalam ekosistem pertahanan & pangan nasional.
+                Cari nama orang, organisasi, dan proyek yang muncul di catatan
+                data publik.
               </p>
             </div>
             <div className="text-right hidden md:block">
               <span className="text-[10px] font-mono text-[var(--text-tertiary)] uppercase tracking-widest">
-                Last Sync: {caseStudy.metadata.tanggal_riset || "April 2026"}
+                Update: {caseStudy.metadata.tanggal_riset || "April 2026"}
               </span>
             </div>
           </div>
@@ -111,7 +112,7 @@ export function SearchPage({ caseStudy }: SearchPageProps) {
               <input
                 id="search-input"
                 type="search"
-                placeholder="INPUT ENTITY NAME / ID..."
+                placeholder="Cari nama entitas atau ID..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 font-mono text-sm rounded-xl outline-none transition-all shadow-inner"
@@ -172,7 +173,7 @@ export function SearchPage({ caseStudy }: SearchPageProps) {
         {/* Results Metadata */}
         <div className="flex items-center justify-between mb-6 px-1">
           <p className="font-mono text-[10px] text-[var(--text-tertiary)] uppercase tracking-widest">
-            Found: <span className="text-[var(--text-primary)] font-bold">{filtered.length}</span> Objects 
+            Ditemukan: <span className="text-[var(--text-primary)] font-bold">{filtered.length}</span> data
             {query && <span> / Query: "{query}"</span>}
           </p>
         </div>
@@ -198,7 +199,7 @@ export function SearchPage({ caseStudy }: SearchPageProps) {
                   onClick={() => setLimit((prev) => prev + 48)}
                   className="px-10 py-4 bg-[var(--bg-surface)] border border-[var(--accent-danger)] text-[var(--accent-danger)] rounded-xl font-mono text-xs font-bold hover:bg-[var(--accent-danger)] hover:text-white transition-all shadow-lg shadow-red-500/10 uppercase tracking-widest"
                 >
-                  Muat Lebih Banyak ({filtered.length - limit} Entitas Tersisa)
+                  Muat Lebih Banyak ({filtered.length - limit} data tersisa)
                 </button>
               </div>
             )}
@@ -235,12 +236,12 @@ function EntityCard({ entity, caseStudy }: EntityCardProps) {
           <div className="flex gap-1.5">
             {entity.sumber && entity.sumber.length > 0 && (
               <span className="text-[9px] font-mono font-bold px-1.5 py-0.5 rounded bg-[var(--bg-surface-2)] text-[var(--text-tertiary)] border border-[var(--border-base)]">
-                {entity.sumber.length} SRC
+                {entity.sumber.length} SUMBER
               </span>
             )}
             {isFlagged && (
               <span className="text-[9px] font-mono font-bold px-2 py-0.5 rounded bg-[var(--accent-danger)] text-white animate-pulse">
-                {redFlags.length} RED FLAG
+                {redFlags.length} CATATAN
               </span>
             )}
           </div>
@@ -275,7 +276,7 @@ function EntityCard({ entity, caseStudy }: EntityCardProps) {
 
         <div className="pt-2 flex items-center justify-between">
            <span className="text-[9px] font-mono text-[var(--text-tertiary)] opacity-0 group-hover:opacity-100 transition-opacity">
-             VIEW_DATA_STREAM →
+             LIHAT DATA
            </span>
            <ChevronRightIcon />
         </div>
@@ -300,7 +301,7 @@ function EmptyState({ query }: { query: string }) {
         Data Tidak Ditemukan
       </p>
       <p className="text-sm font-mono text-[var(--text-secondary)] max-w-sm mx-auto">
-        {query ? `Entitas "${query}" tidak terdaftar dalam database kami.` : "Silakan pilih minimal satu kategori filter tipe entitas."}
+        {query ? `Entitas "${query}" belum ada di data ini.` : "Silakan pilih kategori atau langsung ketik nama yang dicari."}
       </p>
     </div>
   );

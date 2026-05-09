@@ -64,7 +64,7 @@ export function EntityDetailPage({ entity, caseStudy }: EntityDetailPageProps) {
 
   return (
     <div className="content-page">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-[1160px] mx-auto">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-1.5 mb-6 text-xs" aria-label="Navigasi halaman">
           <Link href="/" className="text-[var(--text-tertiary)] hover:text-[var(--text-secondary)] transition-colors">Beranda</Link>
@@ -80,7 +80,7 @@ export function EntityDetailPage({ entity, caseStudy }: EntityDetailPageProps) {
             <NodeBadge type={entity.type} />
             {redFlags.length > 0 && (
               <span className="text-xs px-1.5 py-0.5 rounded font-medium text-red-600 dark:text-red-400 bg-red-500/10 border border-red-500/20">
-                {redFlags.length} indikasi
+                {redFlags.length} catatan
               </span>
             )}
           </div>
@@ -124,9 +124,9 @@ export function EntityDetailPage({ entity, caseStudy }: EntityDetailPageProps) {
             </Section>
           )}
 
-          {/* RED FLAG */}
+          {/* Public-data questions */}
           {redFlags.length > 0 && (
-            <Section title="RED FLAG">
+            <Section title="CATATAN">
               <div className="flex flex-col gap-3">
                 {redFlags.map((rf) => (
                   <RedFlagCard key={rf.id} redFlag={rf} />
@@ -135,7 +135,7 @@ export function EntityDetailPage({ entity, caseStudy }: EntityDetailPageProps) {
             </Section>
           )}
 
-          {/* Berita Terkait (SMOKING GUNS) */}
+          {/* Berita terkait */}
           {relatedNews.length > 0 && (
             <Section title="Berita Terkait">
               <div className="flex flex-col gap-4">
@@ -149,7 +149,7 @@ export function EntityDetailPage({ entity, caseStudy }: EntityDetailPageProps) {
                     style={{ borderColor: "var(--border-base)" }}
                   >
                     <div className="flex justify-between items-start mb-2">
-                      <div className="text-[10px] font-bold text-[var(--accent-danger)] uppercase tracking-widest">{news.source} · {news.date}</div>
+                      <div className="text-[10px] font-bold text-[var(--accent-danger)] uppercase tracking-widest">{news.source} / {news.date}</div>
                       <svg className="w-3 h-3 text-gray-500 group-hover:text-[var(--accent-danger)] transition-colors" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" strokeLinecap="round" strokeLinejoin="round"></path></svg>
                     </div>
                     <h3 className="text-sm font-bold text-[var(--text-primary)] group-hover:text-[var(--accent-danger)] transition-colors mb-2 leading-tight">
@@ -166,7 +166,7 @@ export function EntityDetailPage({ entity, caseStudy }: EntityDetailPageProps) {
 
           {/* Sumber */}
           {Array.isArray(entity.sumber) && entity.sumber.length > 0 && (
-            <Section title="Sumber Data Primer">
+            <Section title="Sumber Data">
               <div className="flex flex-col gap-0.5">
                 {entity.sumber.map((url, i) => (
                   <SourceLink key={url} url={url} index={i} />
@@ -188,7 +188,7 @@ export function EntityDetailPage({ entity, caseStudy }: EntityDetailPageProps) {
   );
 }
 
-// ─── Sub-components ──────────────────────────────────────────────────────────
+// Sub-components
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -210,8 +210,8 @@ interface RelationRowProps {
 function RelationRow({ relation, entity, direction }: RelationRowProps) {
   const color = NODE_COLORS[entity.type];
   const label = direction === "out"
-    ? `→ ${formatRelationType(relation.type)}`
-    : `← ${formatRelationType(relation.type)}`;
+    ? `-> ${formatRelationType(relation.type)}`
+    : `<- ${formatRelationType(relation.type)}`;
 
   return (
     <Link
@@ -230,11 +230,12 @@ function RelationRow({ relation, entity, direction }: RelationRowProps) {
 
 function RedFlagCard({ redFlag }: { redFlag: RedFlag }) {
   const colors = SEVERITY_COLORS[redFlag.severity];
+  const severityLabel = redFlag.severity === "HIGH" ? "TINGGI" : "SEDANG";
   return (
     <div className={`px-5 py-4 rounded-xl border ${colors.bg} ${colors.border} shadow-sm`}>
       <div className="flex items-center gap-2 mb-3">
         <span className={`text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full ${colors.bg} ${colors.text} border ${colors.border}`}>
-          {redFlag.severity}
+          {severityLabel}
         </span>
         <span className="text-[10px] font-bold uppercase text-[var(--text-secondary)]">
           {formatRelationType(redFlag.type)}
@@ -259,7 +260,7 @@ function BreadcrumbSep() {
 }
 
 function formatPropertyValue(value: unknown): string {
-  if (value === null || value === undefined) return "—";
+  if (value === null || value === undefined) return "-";
   if (typeof value === "boolean") return value ? "Ya" : "Tidak";
   if (Array.isArray(value)) return (value as unknown[]).map(String).join(", ");
   if (typeof value === "object") return JSON.stringify(value);

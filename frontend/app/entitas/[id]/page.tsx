@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: EntitasPageProps): Promise<Me
   const entity = caseStudy ? findEntityById(caseStudy.entities, id) : undefined;
   return {
     title: entity
-      ? `${entity.label} — KONEKSI.ID`
-      : "Entitas Tidak Ditemukan — KONEKSI.ID",
+      ? `${entity.label} - PBP.ID`
+      : "Entitas Tidak Ditemukan - PBP.ID",
   };
 }
 
@@ -36,7 +36,7 @@ export default async function EntitasPage({ params }: EntitasPageProps) {
   if (!caseStudy) {
     return (
       <div className="content-page">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-[1160px] mx-auto">
           <p className="text-sm" style={{ color: "#EF4444" }}>
             Gagal memuat data. Pastikan file data tersedia.
           </p>

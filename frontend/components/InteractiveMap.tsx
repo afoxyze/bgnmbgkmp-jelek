@@ -71,7 +71,7 @@ export default function InteractiveMap({ points }: InteractiveMapProps) {
           <div style="font-family: sans-serif; padding: 5px; color: #1e293b;">
             <b style="color: ${p.investigation_status === 'FLAGGED' ? '#EF4444' : '#0f172a'};">${p.label}</b><br/>
             <span style="font-size: 11px; color: #64748b;">${p.kab}, ${p.prov}</span>
-            ${p.investigation_status === 'FLAGGED' ? '<br/><span style="color: #EF4444; font-weight: bold; font-size: 10px; text-transform: uppercase;">⚠️ Investigasi Aktif</span>' : ''}
+            ${p.investigation_status === 'FLAGGED' ? '<br/><span style="color: #EF4444; font-weight: bold; font-size: 10px; text-transform: uppercase;">Perlu dicek lagi</span>' : ''}
           </div>
         `;
         
@@ -102,7 +102,7 @@ export default function InteractiveMap({ points }: InteractiveMapProps) {
   if (!isClient) {
     return (
       <div className="h-[650px] flex items-center justify-center bg-[var(--bg-surface-2)] animate-pulse rounded-lg text-[var(--text-tertiary)]">
-        Inisialisasi Peta Nasional...
+        Menata peta nasional...
       </div>
     );
   }
@@ -119,7 +119,7 @@ export default function InteractiveMap({ points }: InteractiveMapProps) {
         </div>
         <div className="flex items-center gap-2">
           <div className="w-2.5 h-2.5 rounded-full bg-red-500 border border-white shadow-[0_0_8px_rgba(239,68,68,0.5)]"></div>
-          <span className="text-[10px] font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Dalam Investigasi</span>
+          <span className="text-[10px] font-bold text-slate-600 dark:text-slate-300 uppercase tracking-wider">Perlu Dicek</span>
         </div>
       </div>
     </div>

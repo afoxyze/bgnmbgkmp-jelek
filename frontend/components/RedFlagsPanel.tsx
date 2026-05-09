@@ -31,7 +31,7 @@ export function RedFlagsPanel({
   if (redFlags.length === 0) {
     return (
       <div className="p-6 text-sm text-[var(--text-tertiary)] italic">
-        Belum ditemukan indikasi RED FLAG.
+        Belum ada catatan untuk bagian ini.
       </div>
     );
   }
@@ -67,7 +67,7 @@ export function RedFlagsPanel({
                   <span
                     className={`text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded ${colors.badge} text-white`}
                   >
-                    {rf.severity}
+                    {rf.severity === "HIGH" ? "TINGGI" : "SEDANG"}
                   </span>
                   <span className="text-[11px] font-mono text-[var(--text-tertiary)] truncate">
                     {formatRelationType(rf.type)}

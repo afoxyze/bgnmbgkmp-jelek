@@ -1,4 +1,4 @@
-// FindingsList — numbered editorial findings, each tying back to entities & red flags.
+// Numbered notes that tie back to entities and flagged public data.
 
 import type { DossierFinding } from "@/lib/dossier";
 import type { Entity, RedFlag } from "@/types/graph";
@@ -26,7 +26,7 @@ export function FindingsList({ findings, redFlags, entities }: Props) {
             margin: 0,
           }}
         >
-          Temuan Kunci
+          Catatan Utama
         </h2>
         <span style={{ flex: 1, height: "1px", background: "var(--border-base)" }} />
         <span
@@ -38,7 +38,7 @@ export function FindingsList({ findings, redFlags, entities }: Props) {
             color: "var(--text-tertiary)",
           }}
         >
-          {findings.length.toString().padStart(2, "0")} temuan
+          {findings.length.toString().padStart(2, "0")} catatan
         </span>
       </header>
 
@@ -120,7 +120,7 @@ export function FindingsList({ findings, redFlags, entities }: Props) {
                           fontWeight: 700,
                         }}
                       >
-                        ⚑ {rf.id.toUpperCase()}
+                        TANYA {rf.id.toUpperCase()}
                       </span>
                     ))}
                     {relEnt.map((e) => (

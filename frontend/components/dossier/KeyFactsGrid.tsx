@@ -1,5 +1,3 @@
-// KeyFactsGrid — 4-up stat strip under the hero. Mirrors landing page StatCell.
-
 import type { DossierFacts, DossierMeta } from "@/lib/dossier";
 
 interface Props {
@@ -9,10 +7,10 @@ interface Props {
 
 export function KeyFactsGrid({ facts, meta }: Props) {
   const cells = [
-    { v: facts.entities.length, k: "Entitas Terpetakan", danger: false },
-    { v: facts.totalRelations, k: "Relasi Ditemukan", danger: false },
-    { v: facts.redFlagsHigh, k: "Red Flag — HIGH", danger: true },
-    { v: facts.redFlagsMedium, k: "Red Flag — MEDIUM", danger: false },
+    { v: facts.entities.length, k: "Entitas", danger: false },
+    { v: facts.totalRelations, k: "Relasi", danger: false },
+    { v: facts.redFlagsHigh, k: "Catatan Prioritas Tinggi", danger: true },
+    { v: facts.redFlagsMedium, k: "Catatan Prioritas Sedang", danger: false },
   ];
 
   return (
@@ -45,7 +43,7 @@ export function KeyFactsGrid({ facts, meta }: Props) {
                 marginBottom: "0.625rem",
               }}
             >
-              {c.v.toLocaleString()}
+              {c.v.toLocaleString("id-ID")}
             </div>
             <div
               style={{

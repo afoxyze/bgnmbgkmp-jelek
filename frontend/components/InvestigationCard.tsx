@@ -142,7 +142,7 @@ export function InvestigationCard({
             borderRadius: "2px",
             letterSpacing: "0.05em" 
           }}>
-            {status}
+            {status === "CRITICAL" ? "PERLU DICEK" : status === "VERIFIED" ? "ADA SUMBER" : status}
           </span>
         </div>
         <div style={{ 
@@ -178,7 +178,7 @@ export function InvestigationCard({
       <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", pointerEvents: "none" }}>
         {poin.map((p, i) => (
           <div key={i} style={{ display: "flex", gap: "0.75rem", alignItems: "flex-start" }}>
-            <span style={{ color: "var(--accent-danger)", fontSize: "1.25rem", lineHeight: 1, marginTop: "-2px" }}>•</span>
+            <span style={{ color: "var(--accent-danger)", fontSize: "1rem", lineHeight: 1, marginTop: "1px" }}>-</span>
             <p style={{ 
               fontSize: "0.875rem", 
               color: "var(--text-secondary)", 
@@ -205,7 +205,7 @@ export function InvestigationCard({
           <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.875rem", fontWeight: 600 }}>{entitas}</span>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
-          <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.625rem", color: "var(--accent-danger)", textTransform: "uppercase" }}>Red Flags</span>
+          <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.625rem", color: "var(--accent-danger)", textTransform: "uppercase" }}>Catatan</span>
           <span style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.875rem", fontWeight: 600, color: "var(--accent-danger)" }}>{redFlags}</span>
         </div>
       </div>
