@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-05-09",
+  "source_files": {
+    "all_sppg_locations.json": {
+      "total_official": 27066,
+      "total_suspended": 1256,
+      "certification_rate": "52.37%",
+      "last_audit": "2026-04-18",
+      "sync_date": "2026-04-18",
+      "entities_count": 27066,
+      "relations_count": 27066
+    },
+    "sppg_points.json": {
+      "mapped_count": 27066
+    }
+  },
+  "stats": {
+    "total_sppg": 27066,
+    "total_suspended": 1256,
+    "certification_rate": "52.37%",
+    "mapped_sppg": 27066
+  }
+}

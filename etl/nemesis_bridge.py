@@ -3,8 +3,8 @@ import os
 from hashlib import md5
 from master_config import PATHS
 
-# KONEKSI.ID — Nemesis Data Bridge
-# Integrasi data anomali SiRUP (Nemesis) ke dalam Graph KONEKSI.ID
+# PBP.ID — Nemesis Data Bridge
+# Integrasi data anomali SiRUP (Nemesis) ke dalam Graph PBP.ID
 
 class NemesisBridge:
     def __init__(self, db_path=None):
@@ -18,7 +18,7 @@ class NemesisBridge:
 
     def process_anomaly(self, row):
         """
-        Mengonversi satu baris anomali SiRUP menjadi struktur KONEKSI.ID
+        Mengonversi satu baris anomali SiRUP menjadi struktur PBP.ID
         """
         package_id = self.generate_id(row['nama_paket'])
         org_id = "org-bgn" if "Gizi" in row['kldi'] else "org-kemenhan"
@@ -71,7 +71,7 @@ class NemesisBridge:
             "investigasi_lanjutan": [
                 "Audit manual vendor pemenang di AHU Online",
                 "Verifikasi fisik lokasi proyek sesuai koordinat SiRUP",
-                "Cek koneksi pengurus vendor ke aktor politik di KONEKSI.ID"
+                "Cek koneksi pengurus vendor ke aktor politik di PBP.ID"
             ]
         }
         try:

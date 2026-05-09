@@ -1,5 +1,6 @@
 // Numbered notes that tie back to entities and flagged public data.
 
+import Link from "next/link";
 import type { DossierFinding } from "@/lib/dossier";
 import type { Entity, RedFlag } from "@/types/graph";
 
@@ -7,6 +8,17 @@ interface Props {
   findings: readonly DossierFinding[];
   redFlags: readonly RedFlag[];
   entities: readonly Entity[];
+}
+
+// Build /graf deep-link URL for a finding. Prefers ?flag=... when a single
+// related red flag is present (so the graf highlights that specific finding),
+// and falls back to ?focus=id1,id2 when only related entities are known.
+function buildGraphHref(finding: DossierFinding): string | null {
+  const flagId = finding.relatedRedFlagIds?.[0];
+  if (flagId) return `/graf?flag=${encodeURIComponent(flagId)}`;
+  const ids = finding.relatedEntityIds;
+  if (ids && ids.length > 0) return `/graf?focus=${ids.map(encodeURIComponent).join(",")}`;
+  return null;
 }
 
 export function FindingsList({ findings, redFlags, entities }: Props) {
@@ -106,7 +118,7 @@ export function FindingsList({ findings, redFlags, entities }: Props) {
                   {f.body}
                 </p>
                 {(relEnt.length > 0 || relFlags.length > 0) && (
-                  <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", paddingTop: "0.5rem" }}>
+                  <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", paddingTop: "0.5rem", alignItems: "center" }}>
                     {relFlags.map((rf) => (
                       <span
                         key={rf.id}
@@ -138,6 +150,31 @@ export function FindingsList({ findings, redFlags, entities }: Props) {
                         {e.label}
                       </span>
                     ))}
+                    {(() => {
+                      const href = buildGraphHref(f);
+                      if (!href) return null;
+                      return (
+                        <Link
+                          href={href}
+                          style={{
+                            fontFamily: "'IBM Plex Mono', monospace",
+                            fontSize: "0.625rem",
+                            letterSpacing: "0.1em",
+                            padding: "0.25rem 0.5rem",
+                            border: "1px solid var(--text-primary)",
+                            color: "var(--text-primary)",
+                            textDecoration: "none",
+                            fontWeight: 700,
+                            marginLeft: "auto",
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: "0.3rem",
+                          }}
+                        >
+                          LIHAT DI GRAF -&gt;
+                        </Link>
+                      );
+                    })()}
                   </div>
                 )}
               </div>

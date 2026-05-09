@@ -7,6 +7,41 @@ interface Props {
   primarySource: string;
 }
 
+// Split a free-form "primary source" string into parts, and render each part
+// as either a clickable link (if it looks like a URL) or plain text.
+function renderPrimarySource(raw: string): React.ReactNode {
+  const parts = raw.split(/\s*;\s*/).filter(Boolean);
+  return (
+    <span>
+      {parts.map((part, i) => {
+        const urlMatch = part.match(/https?:\/\/\S+/);
+        const sep = i < parts.length - 1 ? "; " : "";
+        if (urlMatch) {
+          const url = urlMatch[0];
+          const before = part.slice(0, urlMatch.index ?? 0);
+          const after = part.slice((urlMatch.index ?? 0) + url.length);
+          return (
+            <span key={i}>
+              {before}
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--accent-danger)", textDecoration: "underline" }}
+              >
+                {url}
+              </a>
+              {after}
+              {sep}
+            </span>
+          );
+        }
+        return <span key={i}>{part}{sep}</span>;
+      })}
+    </span>
+  );
+}
+
 export function SourcesBlock({ sources, primarySource }: Props) {
   return (
     <section style={{ padding: "3rem 0", borderTop: "1px solid var(--border-base)" }}>
@@ -61,7 +96,7 @@ export function SourcesBlock({ sources, primarySource }: Props) {
         >
           Sumber utama
         </span>
-        {primarySource}
+        {renderPrimarySource(primarySource)}
       </div>
 
       {sources.length > 0 && (
