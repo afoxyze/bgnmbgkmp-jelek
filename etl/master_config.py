@@ -1,4 +1,4 @@
-# KONEKSI.ID — Master Configuration & Entity Registry
+# PBP.ID — Master Configuration & Entity Registry
 # Use this as the single source of truth for IDs and Master Data.
 
 import os

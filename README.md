@@ -1,87 +1,81 @@
-# KONEKSI.ID — Platform Investigasi Bisnis-Politik Indonesia
+# PBP.ID — Data Publik Proyek Pemerintah
 
-> **"Menyingkap Jaringan di Balik Kebijakan."**
+> **"Data publik, tersaji agar bisa diperiksa ulang."**
 
-KONEKSI.ID adalah platform investigasi berbasis sumber terbuka (OSINT) yang memetakan aliansi bisnis-politik, konsentrasi kepemilikan saham, dan potensi konflik kepentingan dalam proyek strategis nasional di Indonesia.
+PBP.ID adalah katalog data publik yang memetakan entitas (pejabat, perusahaan, yayasan), relasi kepemilikan/pengurus, dan potensi konflik kepentingan di sekitar proyek strategis pemerintah Indonesia. Seluruh data disusun dari sumber terbuka: AHU Online, LPSE, SiRUP, laporan berita arus utama, dan dokumen resmi lembaga.
+
+Situs ini bersifat informatif, bukan tuduhan atau putusan hukum.
 
 ---
 
-## 🚀 Fitur Utama
+## Fitur
 
-- **Visualisasi Graf Relasi**: Pemetaan interaktif hubungan antar aktor (pejabat, pengusaha), perusahaan, dan yayasan menggunakan *Cytoscape.js*.
-- **Conflict of Interest Engine**: Deteksi otomatis "Red Flags" berdasarkan tumpang tindih kepengurusan, rekam jejak hukum, dan afiliasi partai politik.
-- **Direktori Nasional SPPG**: Peta sebaran dan database 27.000+ unit Satuan Pelayanan Gizi (SPPG) di seluruh Indonesia.
-- **Pencarian Entitas**: Modul pencarian cepat untuk memverifikasi profil individu atau organisasi dalam ekosistem proyek pemerintah.
-- **Open Data Portal**: Seluruh temuan tersedia dalam format JSON/CSV untuk mendukung jurnalisme data dan pengawasan publik.
+- **Graf relasi**: visualisasi interaktif hubungan antar aktor, perusahaan, dan yayasan (Cytoscape.js).
+- **Catatan proyek (dossier)**: ringkasan kasus per proyek strategis dengan sumber tertaut.
+- **Direktori SPPG**: peta sebaran Satuan Pelayanan Pemenuhan Gizi berdasarkan data resmi BGN.
+- **Pencarian entitas**: pencarian cepat profil individu dan organisasi dalam dataset.
+- **Ekspor data publik**: seluruh dataset tersedia dalam JSON/CSV.
 
-## 🕵️ Pusat Investigasi Aktif
+## Fokus Investigasi Saat Ini
 
-1.  **MBG (Makan Bergizi Gratis)**: Investigasi anggaran Rp335T, gugatan Dana Pendidikan di MK, dan patronase politik 28 yayasan mitra.
-2.  **BGN (Badan Gizi Nasional)**: Analisis anomali pengadaan alat IT (Tablet Samsung) dan logistik (Motor Listrik) melalui sistem E-Purchasing.
-3.  **KMP (Koperasi Merah Putih)**: Pemetaan gurita monopoli infrastruktur desa senilai Rp128T+ yang dikendalikan melalui jejaring PT Agrinas.
+1. **Program MBG** — anggaran, mitra yayasan, dan pola pengadaan di Badan Gizi Nasional.
+2. **Pengadaan BGN** — paket-paket anomali pada sistem E-Purchasing dan penunjukan langsung.
+3. **Koperasi Merah Putih** — struktur kepemilikan, penugasan konstruksi, dan rantai pasok.
 
-## 🛠️ Arsitektur Teknis
+## Arsitektur
 
-### Frontend (Aplikasi Web)
-- **Framework**: Next.js 15+ (App Router, Server Components).
-- **Visualisasi**: 
-  - **Graf**: Cytoscape.js dengan *layout* kustom.
-  - **Peta**: React Leaflet untuk pemetaan geografis SPPG.
-- **Styling**: Tailwind CSS & CSS Variables (Dark/Light Mode).
-- **Deployment**: Dioptimalkan untuk **Cloudflare Pages**.
+### Frontend
+- Next.js 15+ (App Router, static export).
+- Cytoscape.js untuk graf, React Leaflet untuk peta SPPG.
+- Tailwind CSS dengan dukungan dark/light mode.
+- Dioptimalkan untuk deployment di Cloudflare Pages.
 
-### ETL & Data (Backend)
-- **Scrapers**: Python (Playwright, Beautiful Soup) untuk ekstraksi data AHU Online, LPSE, dan Portal Berita.
-- **AI Engine**: Gemini 2.0 Flash untuk *Named Entity Recognition* (NER) dan analisis dokumen hukum.
-- **Data Storage**: Flat JSON files (Static Data) untuk performa maksimal dan kemudahan aksesibilitas.
+### ETL & Data
+- Python (Playwright, Beautiful Soup) untuk scraper AHU Online, LPSE, dan portal berita.
+- Flat JSON di `frontend/public/data/` sebagai single source untuk aplikasi web.
+- Case studies tervalidasi ada di `frontend/public/data/case_study_*.json`.
 
-## 📂 Struktur Direktori
+## Struktur Direktori
 
 ```text
-├── frontend/             # Aplikasi web Next.js
-│   ├── app/              # Routes & Pages (Hero, Graf, Cari, Tentang)
-│   ├── components/       # UI Components (GraphExplorer, InteractiveMap, dll)
-│   ├── lib/              # Data loaders & Graph utilities
-│   └── public/data/      # Database JSON statis untuk web
-├── etl/                  # Skrip pemrosesan data & deteksi konflik
-├── scrapers/             # Koleksi bot crawler (AHU, News, BGN)
-├── data/                 # Penyimpanan data lokal (Raw & Processed)
-└── docs/                 # Dokumentasi metodologi & riset lapangan
+├── frontend/         # Aplikasi web Next.js
+│   ├── app/          # Routes (Beranda, Graf, Cari, Dossier, SPPG, Tentang)
+│   ├── components/   # UI components
+│   ├── lib/          # Data loaders, konstanta, utilitas graf
+│   └── public/
+│       ├── data/     # Dataset statis untuk web (single source)
+│       └── exports/  # Ekspor publik (CSV/JSON)
+├── etl/              # Skrip pemrosesan data & deteksi konflik
+├── scrapers/         # Crawler AHU, LPSE, berita, BGN
+├── data/             # Cache raw/processed lokal
+└── docs/             # Metodologi dan catatan riset
 ```
 
-## ⚙️ Pengembangan & Instalasi
+## Instalasi
 
-### Prasyarat
-- Node.js 20+
-- Python 3.10+
+Prasyarat: Node.js 20+, Python 3.10+.
 
-### Setup Frontend
 ```bash
+# Frontend
 cd frontend
 npm install
 npm run dev
-```
 
-### Setup Scrapers/ETL
-```bash
-pip install -r requirements.txt  # Jika ada
-# atau jalankan skrip spesifik
+# ETL (jalankan skrip yang dibutuhkan saja)
 python etl/conflict_detector_v2.py
 ```
 
-## 🌐 Deployment (Cloudflare Pages)
+## Deployment (Cloudflare Pages)
 
-Proyek ini dirancang untuk dijalankan sebagai aplikasi statis di Cloudflare Pages:
-1.  Hubungkan repositori GitHub ke Cloudflare Pages.
-2.  Set **Root Directory** ke `frontend`.
-3.  Set **Build Command** ke `npm run build`.
-4.  Set **Output Directory** ke `.next`.
+1. Hubungkan repositori ke Cloudflare Pages.
+2. Root Directory: `frontend`.
+3. Build Command: `npm run build`.
+4. Output Directory: `out` (static export).
 
----
+## Metodologi
 
-## ⚖️ Metodologi & Disclaimer
-
-Analisis dalam platform ini berbasis sepenuhnya pada dokumen publik resmi (AHU Online, LPSE, SiRUP, Berita Nasional). Data disajikan "sebagaimana adanya" untuk tujuan edukasi dan transparansi publik. KONEKSI.ID **bukan merupakan tuduhan hukum** melainkan alat bantu pemetaan fakta dokumen.
+Data disusun dari dokumen publik resmi. Tiap entitas/relasi diusahakan disertai tautan sumber. Situs ini adalah alat bantu untuk melihat pola yang perlu diperiksa, bukan putusan hukum.
 
 ---
-© 2026 KONEKSI.ID — *Open Intelligence for Public Accountability.*
+
+© 2026 PBP.ID — *Data publik untuk akuntabilitas publik.*

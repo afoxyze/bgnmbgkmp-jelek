@@ -1,72 +1,34 @@
-# KONEKSI.ID — Battle Plan v6.1 (ULTIMATE)
+# PBP.ID — Catatan Pengembangan
 
-> **"Siapa di balik proyek pemerintahmu?"**
->
-> Platform OSINT yang menyambungkan 26.103 titik operasional dengan jaringan bisnis-politik elit Indonesia.
->
-> **Prinsip:** Data-driven truth. Zero orphans. Radical transparency.
-> **Terakhir diupdate:** 2026-04-12 (Sesi 12 — "Narrative Deep-Linking" COMPLETE)
+> Catatan kerja internal. Bukan rilis resmi, bukan narasi konsumsi publik.
 
----
+## Status Saat Ini
 
-## 🔖 SESSION STATE — FINAL RELEASE READY
+Proyek fase operasional. Frontend di-deploy sebagai static export ke Cloudflare Pages. Dataset inti SPPG sudah lengkap per batch resmi BGN. Case studies utama (MBG, BGN/Peruri, Motor BGN, KMP/Agrinas, Yayasan SPPG) tersedia di `frontend/public/data/`.
 
-### Posisi Sekarang
-**PROJECT FULLY VERIFIED.** Seluruh arsitektur kode telah diaudit, statistik di-*de-hardcode*, dan data investigasi telah divalidasi terhadap sumber berita April 2026. 
+## Fokus Aktif
 
-**Temuan Kritis Final (Sesi 12):**
-- **Narrative UX:** Implementasi "Scenario Engine" yang menghubungkan narasi landing page langsung ke visualisasi graf yang relevan (Deep-Linking).
-- **Sjafrie Sjamsoeddin (Menhan):** Resmi memimpin YPPSDP (ex-officio), mengunci relasi antara regulator anggaran dan ekosistem bisnis Agrinas/TMI.
-- **Pusziad TNI AD Link:** Bukti fisik ribuan unit rak proyek SLO ditemukan di gudang militer Cileungsi — smoking gun terkuat skandal infrastruktur.
-- **100% SPPG Mapping:** Sukses memetakan seluruh 26.103 unit nasional (termasuk Jakarta & Tanimbar) tanpa sisa.
-- **Silent Calibration UI:** UI Graf kini stabil 100% tanpa "bola benang" atau teks hantu saat refresh.
+- **Frontend UX** — penyempurnaan interaksi graf, panel detail, dan halaman dossier.
+- **Scenario deep-linking** — parameter URL untuk membuka graf dengan fokus entitas tertentu (plumbing sudah ada di `GraphExplorer`, implementasi di `GraphViewer` belum terhubung penuh).
+- **Anti-hardcode** — statistik di halaman beranda dihitung dari data, bukan literal. Fallback masih tersisa di `lib/data.ts#getLiveStats`, perlu dipindah ke file summary tersendiri.
+- **Attribution** — komponen `SourceLink` dipakai di `DetailSidebar`. Perlu diperluas ke panel red flag dan dossier agar setiap klaim bisa ditelusuri.
 
-### Yang Sudah Dikerjakan (Akumulatif)
-- Recon & Scrapers (BGN, AHU, News) ✅
-- Direktori Nasional SPPG 26.103 unit (100% terpetakan) ✅
-- AHU Board Mapper & Political Conflict Engine ✅
-- Global Data Export (CSV/JSON) & Open Data Portal ✅
-- **Total Refactoring:** Master Config & Global ID Sync ✅
-- **UI/UX Premium:** Indonesian Labels, Silent Load, & Dossier Styling ✅
-- **Scenario Engine:** Deep-Linking narasi ke visualisasi graf spesifik ✅
-- **Total Database: 26.103 entitas, 57 relasi tersinkronisasi, 100+ red flags.**
+## Yang Perlu Diperhatikan
 
----
+- **Dataset besar di git** — `all_sppg_locations.json` (~19 MB) dan `sppg_points.json` (~13 MB) masih tracked. Cloudflare punya batas ukuran file, jadi sudah di-minify tapi belum dipindah ke LFS/CDN.
+- **`any` di GraphViewer** — tipe Cytoscape belum disiplin. Tidak mendesak tapi bikin refactor masa depan lebih ribet.
+- **Naming** — produk pakai `PBP.ID`. Pastikan tidak ada peninggalan nama lama di kode atau teks UI.
 
-## 21. Sesi 12 — Narrative UX & Deep-Linking (2026-04-12)
+## Riwayat Ringkas
 
-**Status:** 🏆 ULTIMATE POLISH COMPLETE
-**Fokus:** Scenario-Based Exploration & Auto-Focus Graph
+- Konsolidasi frontend ke repo utama.
+- Migrasi ke static export untuk Cloudflare (menghapus route API dinamis, minify JSON besar).
+- Penambahan route `/dossier/[slug]` dan komponen investigasi.
+- Overhaul UI desktop/mobile (beranda, header, detail sidebar).
 
-### Tech Progress
-- `frontend/lib/constants.ts`: Penambahan `INVESTIGATION_SCENARIOS` (A, B, C). ✅
-- `frontend/app/page.tsx`: Sinkronisasi tombol "Investigasi" dengan parameter skenario. ✅
-- `GraphExplorer.tsx`: Logika `useSearchParams` untuk inisialisasi fokus otomatis. ✅
-- `GraphViewer.tsx`: Implementasi `focusNodeIds` & Auto-Zoom dengan animasi Cytoscape. ✅
+## Next Up
 
----
-
-## 20. Sesi 11 — Total Refactoring & Verification (2026-04-11)
-
-**Status:** 🏆 MASTERPIECE COMPLETE
-**Fokus:** Anti-Hardcoding, Data Validation, & UI Stability
-
-### Tech Progress
-- `etl/master_config.py`: Single source of truth untuk seluruh ID dan Master Data. ✅
-- `etl/sync_data.py`: Skrip tunggal sinkronisasi ID global di 5 berkas investigasi. ✅
-- `frontend/lib/constants.ts`: Pusat kendali narasi dan statistik website. ✅
-- `layout.tsx` & `ClientShell.tsx`: Implementasi "Tirai Baja" untuk membasmi FOUC/Flash. ✅
-- `GraphViewer.tsx`: Implementasi `layoutstop` listener untuk pemuatan graf yang tenang. ✅
-- `lib/graph-utils.ts`: Terjemahan relasi Bahasa Indonesia yang natural. ✅
-
-### Hasil Audit Integritas
-- **Broken Relations:** 0 (Nol)
-- **Orphan Nodes:** 0 (Semua 51 entitas inti terhubung ke jaringan)
-- **Data Freshness:** Verified April 2026.
-
----
-
-## 🏁 FINAL CONCLUSION
-KONEKSI.ID kini bukan lagi sebuah proyek pengembangan, melainkan sebuah **Produk Digital Terverifikasi**. Seluruh jaring-jaring kekuasaan dari piring makan hingga alutsista telah terpetakan secara sistematis, stabil, dan dinamis.
-
-**NEXT ACTION:** Official Deployment & Public Exposure. 🚀💎🛡️🏆🏁🇮🇩
+1. Hubungkan `focusNodeIds` + `useSearchParams` → auto-zoom di `GraphViewer`.
+2. Pisahkan metadata SPPG ringan ke `summary.json` agar `getLiveStats` tidak stream-parse file 19 MB.
+3. Wire `SourceLink` ke `RedFlagsPanel` untuk tiap red flag yang punya URL sumber.
+4. Evaluasi migrasi dataset besar ke Git LFS atau CDN terpisah.

@@ -9,13 +9,12 @@ def search_officials():
     # Names from master config
     officials_to_search = [p["name"] for p in HIGH_RISK_PEOPLE]
     
-    # Search in manual data, frontend data, and news
-    manual_files = glob.glob(os.path.join(PATHS["manual_dir"], "*.json"))
+    # Search in frontend data and news (manual/ now contains only markdown findings)
     frontend_files = glob.glob(os.path.join(PATHS["frontend_data"], "*.json"))
     raw_news_files = glob.glob(os.path.join(PATHS["raw_news"], "*.json"))
     processed_news_files = glob.glob(os.path.join(PATHS["processed_news"], "*.json"))
-    
-    all_files = list(set(manual_files + frontend_files + raw_news_files + processed_news_files))
+
+    all_files = list(set(frontend_files + raw_news_files + processed_news_files))
     
     print(f"🔎 Searching for {len(officials_to_search)} officials across {len(all_files)} files...")
     
