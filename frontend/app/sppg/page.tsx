@@ -28,6 +28,14 @@ interface MapData {
   by_province: Record<string, number>;
 }
 
+interface SummaryData {
+  total_official: number;
+  total_mapped: number;
+  total_suspended: number;
+  certification_rate: string;
+  last_updated?: string;
+}
+
 const POLITICAL_FOUNDATIONS: Record<string, string> = {
   "Yayasan Cahaya Wirabangsa": "PPP (Raden Muhammad Nizar)",
   "Yayasan Yasika Aulia (Yasika Group)": "GERINDRA (Partai Prabowo)",
@@ -41,6 +49,7 @@ const POLITICAL_FOUNDATIONS: Record<string, string> = {
 
 export default function SPPGPage() {
   const [data, setData] = useState<MapData | null>(null);
+  const [summary, setSummary] = useState<SummaryData | null>(null);
   const [points, setPoints] = useState<SPPGPoint[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedProv, setSelectedProv] = useState<string | null>("NASIONAL");
@@ -54,11 +63,13 @@ export default function SPPGPage() {
   useEffect(() => {
     Promise.all([
       fetch("/data/sppg_map_data.json").then((res) => res.json()),
-      fetch("/data/sppg_points.json").then((res) => res.json())
+      fetch("/data/sppg_points.json").then((res) => res.json()),
+      fetch("/data/sppg_summary.json").then((res) => res.json()),
     ])
-      .then(([stats, pointsData]) => {
+      .then(([stats, pointsData, summaryData]) => {
         setData(stats);
         setPoints(pointsData);
+        setSummary(summaryData);
         setLoading(false);
       })
       .catch((err) => {
@@ -107,7 +118,7 @@ export default function SPPGPage() {
   if (!data) return <div>Gagal memuat data.</div>;
 
   const sortedProvinces = Object.entries(data.by_province).sort((a, b) => a[0].localeCompare(b[0]));
-  const totalOfficial = 27066;
+  const totalOfficial = summary?.total_official ?? data.total_official ?? data.total ?? 0;
 
   return (
     <main className="content-page p-6">

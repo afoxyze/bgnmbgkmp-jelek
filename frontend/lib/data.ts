@@ -91,53 +91,41 @@ export async function getCaseStudy(onlyFeatured = false): Promise<CaseStudy | nu
 }
 
 /**
- * Calculates aggregate stats from all available case studies.
+ * Calculates aggregate stats from all available case studies plus the
+ * SPPG summary file. Summary is a small, pre-computed file so this avoids
+ * streaming or partially parsing the 19 MB all_sppg_locations.json.
  */
 export async function getLiveStats() {
   const fullData = await getCaseStudy(true);
   if (!fullData) return null;
 
-  let totalSppg = 27066; // Fallback
+  // Sensible empty defaults; overridden when summary file is available.
+  let totalSppg = 0;
   let mappedSppg = 0;
   let totalSuspended = 0;
   let certificationRate = "0%";
 
   try {
-    const { createReadStream } = await import("fs");
-    const { join } = await import("path");
-    
-    // Read just the first chunk of all_sppg_locations.json to get metadata
-    const sppgPath = join(process.cwd(), "public", "data", "all_sppg_locations.json");
-    const stream = createReadStream(sppgPath, { start: 0, end: 2048 });
-    
-    let chunk = "";
-    for await (const data of stream) {
-      chunk += data.toString();
-    }
-    
-    // Extract metadata block using regex since JSON might be incomplete in the chunk
-    const metaMatch = chunk.match(/"metadata":\s*\{[\s\S]*?\}/);
-    if (metaMatch) {
-      try {
-        const meta = JSON.parse("{" + metaMatch[0] + "}");
-        totalSppg = meta.metadata.total_official || totalSppg;
-        totalSuspended = meta.metadata.total_suspended || 0;
-        certificationRate = meta.metadata.certification_rate || "0%";
-      } catch (e) {
-        console.error("Failed to parse partial SPPG metadata");
-      }
-    }
-
-    // Get mapped count from the smaller points file
-    const pointsPath = join(process.cwd(), "public", "data", "sppg_points.json");
     const { readFile } = await import("fs/promises");
-    const pointsData = JSON.parse(await readFile(pointsPath, "utf-8"));
-    mappedSppg = pointsData.length;
+    const { join } = await import("path");
 
+    const summaryPath = join(process.cwd(), "public", "data", "sppg_summary.json");
+    const summaryRaw = await readFile(summaryPath, "utf-8");
+    const summary = JSON.parse(summaryRaw) as {
+      total_official?: number;
+      total_mapped?: number;
+      total_suspended?: number;
+      certification_rate?: string;
+    };
+
+    totalSppg = summary.total_official ?? 0;
+    mappedSppg = summary.total_mapped ?? 0;
+    totalSuspended = summary.total_suspended ?? 0;
+    certificationRate = summary.certification_rate ?? "0%";
   } catch (err) {
     console.error("Gagal memuat statistik SPPG:", err);
   }
-  
+
   return {
     TOTAL_ENTITIES: fullData.entities.length,
     TOTAL_RELATIONS: fullData.relations.length,

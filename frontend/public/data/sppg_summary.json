@@ -1,0 +1,8 @@
+{
+  "total_official": 27066,
+  "total_mapped": 26103,
+  "total_suspended": 1256,
+  "certification_rate": "52.37%",
+  "source": "BGN official batch (derived from sppg_map_data.json)",
+  "last_updated": "2026-04-18"
+}
