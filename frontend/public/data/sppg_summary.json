@@ -1,0 +1,10 @@
+{
+  "generated_from": "all_sppg_locations.json",
+  "generated_at": "2026-05-09",
+  "tanggal_riset": "2026-04-11",
+  "last_audit": "2026-04-18",
+  "sumber": "Scraped from bgn.go.id/operasional-sppg",
+  "total_official": 27066,
+  "total_suspended": 1256,
+  "certification_rate": "52.37%"
+}

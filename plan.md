@@ -1,72 +1,44 @@
-# KONEKSI.ID — Battle Plan v6.1 (ULTIMATE)
+# PBP.ID — Project Plan
 
-> **"Siapa di balik proyek pemerintahmu?"**
->
-> Platform OSINT yang menyambungkan 26.103 titik operasional dengan jaringan bisnis-politik elit Indonesia.
->
-> **Prinsip:** Data-driven truth. Zero orphans. Radical transparency.
-> **Terakhir diupdate:** 2026-04-12 (Sesi 12 — "Narrative Deep-Linking" COMPLETE)
+> **Platform data publik untuk memeriksa proyek pemerintah.**
+> Terakhir diperbarui: 2026-05-09
 
 ---
 
-## 🔖 SESSION STATE — FINAL RELEASE READY
+## Status
 
-### Posisi Sekarang
-**PROJECT FULLY VERIFIED.** Seluruh arsitektur kode telah diaudit, statistik di-*de-hardcode*, dan data investigasi telah divalidasi terhadap sumber berita April 2026. 
+Situs dalam kondisi **pre-launch beta** — arsitektur stabil, data mayoritas tersinkron, tapi masih ada beberapa bagian yang perlu ditutup sebelum go-public.
 
-**Temuan Kritis Final (Sesi 12):**
-- **Narrative UX:** Implementasi "Scenario Engine" yang menghubungkan narasi landing page langsung ke visualisasi graf yang relevan (Deep-Linking).
-- **Sjafrie Sjamsoeddin (Menhan):** Resmi memimpin YPPSDP (ex-officio), mengunci relasi antara regulator anggaran dan ekosistem bisnis Agrinas/TMI.
-- **Pusziad TNI AD Link:** Bukti fisik ribuan unit rak proyek SLO ditemukan di gudang militer Cileungsi — smoking gun terkuat skandal infrastruktur.
-- **100% SPPG Mapping:** Sukses memetakan seluruh 26.103 unit nasional (termasuk Jakarta & Tanimbar) tanpa sisa.
-- **Silent Calibration UI:** UI Graf kini stabil 100% tanpa "bola benang" atau teks hantu saat refresh.
+### Yang Sudah Jalan
+- Recon & scrapers dasar (BGN, AHU, news) — selesai untuk cakupan saat ini.
+- Direktori SPPG nasional (~27.066 unit terdata).
+- AHU Board Mapper + deteksi konflik dasar.
+- Ekspor CSV/JSON untuk dataset inti.
+- Master config (`etl/master_config.py`) sebagai sumber tunggal ID.
+- Frontend: halaman beranda, dossier, graf, cari, peta SPPG, tentang.
+- Schema + type guards di `frontend/types/graph.ts` (strict TS).
+- Dossier registry di `frontend/lib/dossier.ts`.
 
-### Yang Sudah Dikerjakan (Akumulatif)
-- Recon & Scrapers (BGN, AHU, News) ✅
-- Direktori Nasional SPPG 26.103 unit (100% terpetakan) ✅
-- AHU Board Mapper & Political Conflict Engine ✅
-- Global Data Export (CSV/JSON) & Open Data Portal ✅
-- **Total Refactoring:** Master Config & Global ID Sync ✅
-- **UI/UX Premium:** Indonesian Labels, Silent Load, & Dossier Styling ✅
-- **Scenario Engine:** Deep-Linking narasi ke visualisasi graf spesifik ✅
-- **Total Database: 26.103 entitas, 57 relasi tersinkronisasi, 100+ red flags.**
+### Known Issues (prioritas turun)
+1. **Integritas angka** — `getLiveStats()` sempat pakai fallback statis; perlu dipastikan semua angka derived dari dataset aktual.
+2. **Dataset besar di-commit** — `all_sppg_locations.json` (~19 MB), `sppg_points.json` (~13 MB), dan dua file ekspor. Pilihan: LFS, atau generate saat build.
+3. **Types `any` di `GraphViewer.tsx`** — perlu diganti dengan tipe dari `@types/cytoscape`.
+4. **Review legal / reputasi** — klaim yang menyebut nama individu perlu URL sumber yang bisa diklik di UI sebelum publik.
+5. **Styling double-track** — campuran Tailwind utility + inline `style={{}}` di beberapa file. Perlu dikonsolidasi ke utility class atau reusable `@layer`.
 
----
+## Next Actions
 
-## 21. Sesi 12 — Narrative UX & Deep-Linking (2026-04-12)
-
-**Status:** 🏆 ULTIMATE POLISH COMPLETE
-**Fokus:** Scenario-Based Exploration & Auto-Focus Graph
-
-### Tech Progress
-- `frontend/lib/constants.ts`: Penambahan `INVESTIGATION_SCENARIOS` (A, B, C). ✅
-- `frontend/app/page.tsx`: Sinkronisasi tombol "Investigasi" dengan parameter skenario. ✅
-- `GraphExplorer.tsx`: Logika `useSearchParams` untuk inisialisasi fokus otomatis. ✅
-- `GraphViewer.tsx`: Implementasi `focusNodeIds` & Auto-Zoom dengan animasi Cytoscape. ✅
+1. Refactor `getLiveStats()` untuk baca `sppg_summary.json` penuh (ganti regex parsing 2 KB).
+2. Pastikan semua `rf.sumber` di UI dirender sebagai tautan (pakai `SourceLink`).
+3. Tighten tipe Cytoscape di `GraphViewer.tsx` + `GraphExplorer.tsx`.
+4. Evaluasi pemindahan dataset besar ke LFS atau object storage.
+5. Legal review untuk halaman dossier sebelum go-public.
 
 ---
 
-## 20. Sesi 11 — Total Refactoring & Verification (2026-04-11)
+## Changelog Ringkas
 
-**Status:** 🏆 MASTERPIECE COMPLETE
-**Fokus:** Anti-Hardcoding, Data Validation, & UI Stability
-
-### Tech Progress
-- `etl/master_config.py`: Single source of truth untuk seluruh ID dan Master Data. ✅
-- `etl/sync_data.py`: Skrip tunggal sinkronisasi ID global di 5 berkas investigasi. ✅
-- `frontend/lib/constants.ts`: Pusat kendali narasi dan statistik website. ✅
-- `layout.tsx` & `ClientShell.tsx`: Implementasi "Tirai Baja" untuk membasmi FOUC/Flash. ✅
-- `GraphViewer.tsx`: Implementasi `layoutstop` listener untuk pemuatan graf yang tenang. ✅
-- `lib/graph-utils.ts`: Terjemahan relasi Bahasa Indonesia yang natural. ✅
-
-### Hasil Audit Integritas
-- **Broken Relations:** 0 (Nol)
-- **Orphan Nodes:** 0 (Semua 51 entitas inti terhubung ke jaringan)
-- **Data Freshness:** Verified April 2026.
-
----
-
-## 🏁 FINAL CONCLUSION
-KONEKSI.ID kini bukan lagi sebuah proyek pengembangan, melainkan sebuah **Produk Digital Terverifikasi**. Seluruh jaring-jaring kekuasaan dari piring makan hingga alutsista telah terpetakan secara sistematis, stabil, dan dinamis.
-
-**NEXT ACTION:** Official Deployment & Public Exposure. 🚀💎🛡️🏆🏁🇮🇩
+- **2026-05-09** — Cleanup: dead code dihapus (InvestigationCard, folder osint, draft case studies di `data/manual/`); naming disinkronkan ke PBP.ID; ekspor direname `koneksi_id_*` → `pbp_id_*`.
+- **2026-04-12** — Scenario engine deep-linking (prop `focusNodeIds` di `GraphViewer` — implementasi dalam progress).
+- **2026-04-11** — Total refactoring: master config, sinkronisasi ID global, UI stability (silent graph calibration).
+- **2026-04-08** — Recon dataset existing (LKPP, PyProc, INAPROC API).

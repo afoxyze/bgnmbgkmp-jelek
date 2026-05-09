@@ -277,10 +277,10 @@ function OpenDataBand({
             dibandingkan, dan diperiksa lagi oleh siapa pun.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
-            <Link className="data-link-primary" href="/exports/koneksi_id_sppg_data.csv">
+            <Link className="data-link-primary" href="/exports/pbp_id_sppg_data.csv">
               Unduh CSV
             </Link>
-            <Link className="data-link-secondary" href="/exports/koneksi_id_sppg_data.json">
+            <Link className="data-link-secondary" href="/exports/pbp_id_sppg_data.json">
               Unduh JSON
             </Link>
             <Link className="data-link-secondary" href="/cari">
@@ -431,8 +431,8 @@ function Footer() {
         </FooterColumn>
 
         <FooterColumn title="Data">
-          <FooterLink href="/exports/koneksi_id_sppg_data.csv">Ekspor CSV</FooterLink>
-          <FooterLink href="/exports/koneksi_id_sppg_data.json">Ekspor JSON</FooterLink>
+          <FooterLink href="/exports/pbp_id_sppg_data.csv">Ekspor CSV</FooterLink>
+          <FooterLink href="/exports/pbp_id_sppg_data.json">Ekspor JSON</FooterLink>
           <FooterLink href="/data/case_study_bgn_peruri.json">Contoh catatan JSON</FooterLink>
         </FooterColumn>
 

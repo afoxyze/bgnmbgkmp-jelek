@@ -1,5 +1,7 @@
 // Numbered notes that tie back to entities and flagged public data.
 
+import Link from "next/link";
+import { SourceLink } from "@/components/SourceLink";
 import type { DossierFinding } from "@/lib/dossier";
 import type { Entity, RedFlag } from "@/types/graph";
 
@@ -46,6 +48,16 @@ export function FindingsList({ findings, redFlags, entities }: Props) {
         {findings.map((f, i) => {
           const relEnt = (f.relatedEntityIds ?? []).map((id) => entityMap.get(id)).filter(Boolean) as Entity[];
           const relFlags = (f.relatedRedFlagIds ?? []).map((id) => flagMap.get(id)).filter(Boolean) as RedFlag[];
+
+          // Aggregate source URLs from both the finding's own entities and its red flags,
+          // deduplicated, so each claim carries a visible trail to public documents.
+          const sourceSet = new Set<string>();
+          relEnt.forEach((e) => e.sumber?.forEach((s) => sourceSet.add(s)));
+          relFlags.forEach((rf) => rf.sumber?.forEach((s) => sourceSet.add(s)));
+          const sources = Array.from(sourceSet);
+
+          const focusIds = relEnt.map((e) => e.id);
+          const grafHref = focusIds.length > 0 ? `/graf?focus=${focusIds.join(",")}` : "/graf";
 
           return (
             <li
@@ -138,6 +150,55 @@ export function FindingsList({ findings, redFlags, entities }: Props) {
                         {e.label}
                       </span>
                     ))}
+                  </div>
+                )}
+
+                {sources.length > 0 && (
+                  <div style={{ marginTop: "1rem" }}>
+                    <div
+                      style={{
+                        fontFamily: "'IBM Plex Mono', monospace",
+                        fontSize: "0.625rem",
+                        letterSpacing: "0.12em",
+                        textTransform: "uppercase",
+                        color: "var(--text-tertiary)",
+                        marginBottom: "0.5rem",
+                      }}
+                    >
+                      Sumber terkait
+                    </div>
+                    <div
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))",
+                        gap: "0.375rem",
+                      }}
+                    >
+                      {sources.map((url, idx) => (
+                        <SourceLink key={`${i}-${url}`} url={url} index={idx} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {focusIds.length > 0 && (
+                  <div style={{ marginTop: "1rem" }}>
+                    <Link
+                      href={grafHref}
+                      style={{
+                        fontFamily: "'IBM Plex Mono', monospace",
+                        fontSize: "0.625rem",
+                        letterSpacing: "0.14em",
+                        textTransform: "uppercase",
+                        color: "var(--text-primary)",
+                        textDecoration: "none",
+                        borderBottom: "1px solid var(--text-primary)",
+                        paddingBottom: "2px",
+                        fontWeight: 700,
+                      }}
+                    >
+                      Lihat di graf &rarr;
+                    </Link>
                   </div>
                 )}
               </div>
