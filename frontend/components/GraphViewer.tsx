@@ -5,7 +5,6 @@ import {
   isRedFlagRelation,
   getNodeColor,
   formatRelationType,
-  truncateLabel,
 } from "@/lib/graph-utils";
 import type {
   CaseStudy,
@@ -13,6 +12,7 @@ import type {
   GraphSelection,
   Relation,
 } from "@/types/graph";
+import type cytoscape from "cytoscape";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 interface CyTheme {
@@ -66,7 +66,7 @@ export function GraphViewer({
   onReady,
 }: GraphViewerProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const cyRef = useRef<any>(null);
+  const cyRef = useRef<cytoscape.Core | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   const redFlagIds = useMemo(() => getRedFlagEntityIds(caseStudy.red_flags), [caseStudy.red_flags]);
@@ -182,8 +182,32 @@ export function GraphViewer({
           "z-index": 100,
         },
       },
+      // Dim non-focused elements when a focus subset is active.
+      {
+        selector: ".focus-dim",
+        style: {
+          "background-opacity": 0.1,
+          "border-opacity": 0.2,
+          "text-opacity": 0.25,
+          "line-opacity": 0.08,
+          "underlay-opacity": 0,
+        },
+      },
+      // Emphasize focused nodes.
+      {
+        selector: ".focus-on",
+        style: {
+          "border-width": 5,
+          "border-color": isDark ? "#FBBF24" : "#F59E0B",
+          "border-opacity": 1,
+          "underlay-color": isDark ? "#FBBF24" : "#F59E0B",
+          "underlay-padding": "14px",
+          "underlay-opacity": 0.35,
+          "z-index": 50,
+        },
+      },
     ];
-  }, []);
+  }, [isDark]);
 
   const elements = useMemo(() => {
     const nodeIds = new Set(caseStudy.entities.map((e) => e.id));
@@ -265,8 +289,8 @@ export function GraphViewer({
       cy.add(elements);
     });
 
-    const layout = cy.layout({ 
-      name: "cose", 
+    const layout = cy.layout({
+      name: "cose",
       animate: true,
       animationDuration: 1000,
       padding: 30,
@@ -274,16 +298,16 @@ export function GraphViewer({
       componentSpacing: 150,
       refresh: 20,
       fit: true,
-      idealEdgeLength: (edge: any) => 150,
-      edgeElasticity: (edge: any) => 100,
-      nodeRepulsion: (node: any) => 1000000,
+      idealEdgeLength: () => 150,
+      edgeElasticity: () => 100,
+      nodeRepulsion: () => 1000000,
       nestingFactor: 1.2,
       gravity: 0.1,
       initialTemp: 300,
       coolingFactor: 0.99,
       minTemp: 1.0,
       randomize: false
-    });
+    } as cytoscape.LayoutOptions);
     
     layout.run();
   }, [elements, isLoaded]);
@@ -308,13 +332,13 @@ export function GraphViewer({
           maxZoom: 3,
         });
 
-        cyInstance.on("tap", "node", (evt: any) => {
+        cyInstance.on("tap", "node", (evt: cytoscape.EventObject) => {
           if (destroyed) return;
           const entity = caseStudy.entities.find((e) => e.id === evt.target.id());
           if (entity) onSelectionChange({ kind: "entity", entity });
         });
 
-        cyInstance.on("tap", "edge", (evt: any) => {
+        cyInstance.on("tap", "edge", (evt: cytoscape.EventObject) => {
           if (destroyed) return;
           const data = evt.target.data();
           const relation = caseStudy.relations.find(r => r.from === data.source && r.to === data.target && r.type === data.relationType);
@@ -325,15 +349,15 @@ export function GraphViewer({
           }
         });
 
-        cyInstance.on("tap", (evt: any) => {
+        cyInstance.on("tap", (evt: cytoscape.EventObject) => {
           if (destroyed) return;
           if (evt.target === cyInstance) onSelectionChange({ kind: "none" });
         });
 
         cyRef.current = cyInstance;
 
-        const layout = cyInstance.layout({ 
-          name: "cose", 
+        const layout = cyInstance.layout({
+          name: "cose",
           animate: true,
           animationDuration: 1000,
           padding: 30,
@@ -341,16 +365,16 @@ export function GraphViewer({
           componentSpacing: 150,
           refresh: 20,
           fit: true,
-          idealEdgeLength: (edge: any) => 150,
-          edgeElasticity: (edge: any) => 100,
-          nodeRepulsion: (node: any) => 1000000,
+          idealEdgeLength: () => 150,
+          edgeElasticity: () => 100,
+          nodeRepulsion: () => 1000000,
           nestingFactor: 1.2,
           gravity: 0.1,
           initialTemp: 300,
           coolingFactor: 0.99,
           minTemp: 1.0,
           randomize: true
-        });
+        } as cytoscape.LayoutOptions);
 
         layout.one("layoutstop", () => {
           if (destroyed) return;
@@ -385,11 +409,53 @@ export function GraphViewer({
   useEffect(() => {
     if (cyRef.current && isLoaded) {
       const timer = setTimeout(() => {
-        cyRef.current.resize();
+        cyRef.current?.resize();
       }, 350);
       return () => clearTimeout(timer);
     }
   }, [sidebarOpen, isLoaded]);
+
+  // Focus / highlight effect. Reacts to `focusNodeIds` and `highlightedEntityIds`.
+  // Dims every node/edge outside the focus set, and (on first change) fits the
+  // viewport to the focused subset so deep-links from the dossier land on the
+  // right part of the graph.
+  useEffect(() => {
+    const cy = cyRef.current;
+    if (!cy || !isLoaded) return;
+
+    // Build the target set: explicit focus wins over highlight; otherwise clear.
+    const idSet = new Set<string>();
+    if (focusNodeIds && focusNodeIds.length > 0) {
+      focusNodeIds.forEach((id) => idSet.add(id));
+    } else if (highlightedEntityIds && highlightedEntityIds.size > 0) {
+      highlightedEntityIds.forEach((id) => idSet.add(id));
+    }
+
+    cy.batch(() => {
+      cy.elements().removeClass("focus-dim focus-on");
+      if (idSet.size === 0) return;
+
+      const focused = cy.nodes().filter((n) => idSet.has(n.id()));
+      if (focused.length === 0) return;
+
+      const neighborEdges = focused.connectedEdges();
+      const neighborNodes = neighborEdges.connectedNodes();
+
+      // Everything NOT in (focused + their direct neighbors) gets dimmed.
+      const keep = focused.union(neighborEdges).union(neighborNodes);
+      cy.elements().difference(keep).addClass("focus-dim");
+      focused.addClass("focus-on");
+    });
+
+    // Only auto-fit for explicit deep-link focus, not for transient red-flag
+    // highlights (which should stay in place so the user keeps orientation).
+    if (focusNodeIds && focusNodeIds.length > 0) {
+      const focused = cy.nodes().filter((n) => idSet.has(n.id()));
+      if (focused.length > 0) {
+        cy.animate({ fit: { eles: focused.union(focused.connectedEdges()), padding: 80 }, duration: 600, easing: "ease-in-out-cubic" });
+      }
+    }
+  }, [focusNodeIds, highlightedEntityIds, isLoaded]);
 
   function handleFitGraph() {
     if (cyRef.current) cyRef.current.fit(undefined, 30);

@@ -234,6 +234,13 @@ function EntityPanel({ entity, caseStudy, onSelectEntity }: { entity: Entity; ca
                     <span className="text-[11px] font-mono text-[var(--text-secondary)] truncate">{formatRelationType(rf.type)}</span>
                   </div>
                   <p className={`text-sm leading-relaxed ${rf.severity === "HIGH" ? 'text-red-700 dark:text-red-300' : 'text-amber-700 dark:text-amber-300'}`}>{rf.deskripsi}</p>
+                  {Array.isArray(rf.sumber) && rf.sumber.length > 0 && (
+                    <div className="mt-3 flex flex-col gap-1.5">
+                      {rf.sumber.map((url, i) => (
+                        <SourceLink key={url} url={url} index={i} />
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

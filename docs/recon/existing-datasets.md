@@ -22,7 +22,7 @@
 - **Yang ada:** Indeks kinerja pengadaan, nilai transaksi per K/L, persentase UMKM, e-katalog
 - **Yang tidak ada:** Nama PT pemenang, nama direksi, detail per paket tender
 - **Coverage:** Mayoritas 2023
-- **Kesimpulan:** ❌ **Tidak cukup untuk KONEKSI.ID** — tidak ada data winner/pemenang spesifik
+- **Kesimpulan:** ❌ **Tidak cukup untuk PBP.ID** — tidak ada data winner/pemenang spesifik
 
 ---
 

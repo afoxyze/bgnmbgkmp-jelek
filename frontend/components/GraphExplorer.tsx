@@ -4,6 +4,7 @@ import { DetailSidebar } from "@/components/DetailSidebar";
 import { GraphViewer } from "@/components/GraphViewer";
 import type { CaseStudy, GraphSelection } from "@/types/graph";
 import { useState, useEffect, useCallback } from "react";
+import { useSearchParams } from "next/navigation";
 import { findEntityById } from "@/lib/graph-utils";
 
 interface GraphExplorerProps {
@@ -20,9 +21,52 @@ export function GraphExplorer({ caseStudy, isDark }: GraphExplorerProps) {
   const [focusNodeIds, setFocusNodeIds] = useState<readonly string[]>([]);
   const [highlightedFlagId, setHighlightedFlagId] = useState<string | null>(null);
 
+  const searchParams = useSearchParams();
+
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Parse deep-link params: ?focus=id1,id2 and/or ?flag=rf-xxx
+  // Called once on mount (and when the query string actually changes).
+  useEffect(() => {
+    if (!mounted) return;
+
+    const focusParam = searchParams?.get("focus");
+    const flagParam = searchParams?.get("flag");
+
+    const ids: string[] = [];
+
+    if (focusParam) {
+      focusParam.split(",").map((s) => s.trim()).filter(Boolean).forEach((id) => {
+        if (findEntityById(caseStudy.entities, id)) ids.push(id);
+      });
+    }
+
+    if (flagParam) {
+      const rf = caseStudy.red_flags.find((r) => r.id === flagParam);
+      if (rf) {
+        rf.entitas_terlibat.forEach((id) => {
+          if (findEntityById(caseStudy.entities, id) && !ids.includes(id)) {
+            ids.push(id);
+          }
+        });
+        setHighlightedFlagId(rf.id);
+        setHighlightedEntityIds(new Set(rf.entitas_terlibat));
+      }
+    }
+
+    if (ids.length > 0) {
+      setFocusNodeIds(ids);
+      // If we were given a single entity, auto-select it so the sidebar opens
+      // on the right entry straight away.
+      const first = ids[0];
+      if (ids.length === 1 && first) {
+        const entity = findEntityById(caseStudy.entities, first);
+        if (entity) setSelection({ kind: "entity", entity });
+      }
+    }
+  }, [mounted, searchParams, caseStudy.entities, caseStudy.red_flags]);
 
   const handleGraphReady = useCallback(() => {
     setGraphStable(true);
@@ -32,6 +76,8 @@ export function GraphExplorer({ caseStudy, isDark }: GraphExplorerProps) {
     setSelection(next);
     setHighlightedEntityIds(new Set());
     setHighlightedFlagId(null);
+    // Clear any deep-link focus on explicit navigation inside the graph.
+    setFocusNodeIds([]);
   }, []);
 
   const handleSelectEntityById = useCallback((entityId: string) => {

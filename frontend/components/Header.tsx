@@ -85,7 +85,7 @@ export function Header() {
 
         <div className="flex items-center gap-1">
           <Link
-            href="/exports/koneksi_id_sppg_data.csv"
+            href={SITE_CONFIG.EXPORT_CSV}
             className="hidden lg:inline-flex items-center gap-2 px-3 py-2 rounded-md border border-[var(--border-base)] bg-[var(--bg-surface)] text-[10px] font-mono font-bold uppercase tracking-[0.12em] text-[var(--text-secondary)] hover:text-[var(--accent-danger)] hover:border-[var(--accent-danger)] transition-colors"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-danger)]" />
@@ -146,7 +146,7 @@ export function Header() {
           
           <div className="mt-auto pb-10 text-center space-y-4 pt-8">
             <Link
-              href="/exports/koneksi_id_sppg_data.csv"
+              href={SITE_CONFIG.EXPORT_CSV}
               className="inline-flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg border border-[var(--accent-danger)] text-[var(--accent-danger)] font-mono text-[10px] font-bold uppercase tracking-[0.12em]"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--accent-danger)]" />

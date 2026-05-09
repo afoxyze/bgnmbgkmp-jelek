@@ -43,13 +43,13 @@ def generate_exports():
     export_dir = PATHS["frontend_exports"]
     os.makedirs(export_dir, exist_ok=True)
     
-    json_path = os.path.join(export_dir, "koneksi_id_sppg_data.json")
+    json_path = os.path.join(export_dir, "pbp_sppg_data.json")
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(compact_data, f, indent=2, ensure_ascii=False)
     print(f"✅ JSON export created: {json_path}")
 
     # 2. Generate CSV
-    csv_path = os.path.join(export_dir, "koneksi_id_sppg_data.csv")
+    csv_path = os.path.join(export_dir, "pbp_sppg_data.csv")
     keys = compact_data[0].keys() if compact_data else []
     with open(csv_path, 'w', encoding='utf-8', newline='') as f:
         dict_writer = csv.DictWriter(f, fieldnames=keys)
@@ -72,7 +72,7 @@ def generate_exports():
         except Exception as e:
             print(f"⚠️ Warning: Could not read {cs_file}: {e}")
     
-    cs_export_path = os.path.join(export_dir, "koneksi_id_case_studies.json")
+    cs_export_path = os.path.join(export_dir, "pbp_case_studies.json")
     with open(cs_export_path, 'w', encoding='utf-8') as f:
         json.dump(combined_cases, f, indent=2, ensure_ascii=False)
     print(f"✅ Case studies export created: {cs_export_path}")

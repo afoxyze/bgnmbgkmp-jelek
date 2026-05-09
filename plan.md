@@ -1,4 +1,9 @@
-# KONEKSI.ID — Battle Plan v6.1 (ULTIMATE)
+# PBP.ID — Battle Plan v6.1
+
+> **Catatan rebranding (Mei 2026):** proyek ini sebelumnya bernama "KONEKSI.ID"
+> dan sekarang bernama **PBP.ID — Proyek Bagus Pemerintah**. Referensi lama di
+> dokumen ini tidak diganti massal; yang autoritatif adalah
+> `frontend/lib/constants.ts` dan `README.md`.
 
 > **"Siapa di balik proyek pemerintahmu?"**
 >
