@@ -1,7 +1,9 @@
 // Editorial opening for a single public-data note.
 
+import Link from "next/link";
 import type { DossierMeta } from "@/lib/dossier";
 import type { DossierFacts } from "@/lib/dossier";
+import { getDossierFocusIds } from "@/lib/dossier";
 
 interface Props {
   meta: DossierMeta;
@@ -10,6 +12,10 @@ interface Props {
 }
 
 export function DossierHero({ meta, facts: _facts, status }: Props) {
+  const focusIds = getDossierFocusIds(meta.slug);
+  const graphHref =
+    focusIds.length > 0 ? `/graf?focus=${focusIds.join(",")}` : "/graf";
+
   return (
     <section style={{ padding: "2rem 0 3rem", borderBottom: "1px solid var(--border-base)" }}>
       {/* Meta row */}
@@ -67,30 +73,67 @@ export function DossierHero({ meta, facts: _facts, status }: Props) {
 
       {/* Lede */}
       <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 720px) 1fr", gap: "3rem" }} className="dossier-lede-grid">
-        <p
-          style={{
-            fontSize: "1.0625rem",
-            lineHeight: 1.65,
-            color: "var(--text-primary)",
-            margin: 0,
-            maxWidth: "720px",
-          }}
-        >
-          <span
+        <div style={{ maxWidth: "720px" }}>
+          <p
             style={{
-              fontFamily: "'IBM Plex Serif', 'Georgia', serif",
-              fontSize: "3.75rem",
-              float: "left",
-              lineHeight: 0.9,
-              padding: "0.25rem 0.5rem 0 0",
-              color: "var(--accent-danger)",
-              fontWeight: 700,
+              fontSize: "1.0625rem",
+              lineHeight: 1.65,
+              color: "var(--text-primary)",
+              margin: 0,
             }}
           >
-            {meta.lede.charAt(0)}
-          </span>
-          {meta.lede.slice(1)}
-        </p>
+            <span
+              style={{
+                fontFamily: "'IBM Plex Serif', 'Georgia', serif",
+                fontSize: "3.75rem",
+                float: "left",
+                lineHeight: 0.9,
+                padding: "0.25rem 0.5rem 0 0",
+                color: "var(--accent-danger)",
+                fontWeight: 700,
+              }}
+            >
+              {meta.lede.charAt(0)}
+            </span>
+            {meta.lede.slice(1)}
+          </p>
+
+          {focusIds.length > 0 && (
+            <Link
+              href={graphHref}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                marginTop: "1.5rem",
+                padding: "0.75rem 1.25rem",
+                borderRadius: "6px",
+                border: "1px solid var(--border-strong)",
+                backgroundColor: "var(--bg-surface)",
+                color: "var(--text-primary)",
+                fontFamily: "'IBM Plex Mono', monospace",
+                fontSize: "11px",
+                fontWeight: 700,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                textDecoration: "none",
+                transition: "all 0.15s ease",
+              }}
+              className="dossier-graph-cta"
+            >
+              Buka di graf ({focusIds.length} aktor)
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  strokeWidth="2.4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </Link>
+          )}
+        </div>
 
         {/* Budget callout */}
         {meta.anggaranFokus && (
@@ -147,6 +190,11 @@ export function DossierHero({ meta, facts: _facts, status }: Props) {
       <style>{`
         @media (max-width: 820px) {
           .dossier-lede-grid { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
+        }
+        .dossier-graph-cta:hover {
+          border-color: var(--accent-danger) !important;
+          color: var(--accent-danger) !important;
+          transform: translateY(-1px);
         }
       `}</style>
     </section>

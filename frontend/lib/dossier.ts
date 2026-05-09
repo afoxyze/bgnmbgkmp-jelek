@@ -180,6 +180,19 @@ export function getDossierMeta(slug: string): DossierMeta | null {
   return DOSSIER_REGISTRY.find((d) => d.slug === slug) ?? null;
 }
 
+// Returns the union of relatedEntityIds across all findings, deduplicated.
+// Used to deep-link a dossier into /graf?focus=... so the graph opens already
+// zoomed to the actors relevant for that specific note.
+export function getDossierFocusIds(slug: string): readonly string[] {
+  const meta = getDossierMeta(slug);
+  if (!meta) return [];
+  const seen = new Set<string>();
+  for (const f of meta.findings) {
+    f.relatedEntityIds?.forEach((id) => seen.add(id));
+  }
+  return Array.from(seen);
+}
+
 // ─── Data loader ─────────────────────────────────────────────────────────────
 
 export interface DossierFacts {

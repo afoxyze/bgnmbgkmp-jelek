@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { DossierMeta } from "@/lib/dossier";
+import { getDossierFocusIds } from "@/lib/dossier";
 
 interface Props {
   dossier: DossierMeta;
@@ -12,11 +13,16 @@ const SEVERITY_LABELS: Record<DossierMeta["severity"], string> = {
 };
 
 export function DossierIndexCard({ dossier }: Props) {
+  const focusIds = getDossierFocusIds(dossier.slug);
+  const graphHref =
+    focusIds.length > 0 ? `/graf?focus=${focusIds.join(",")}` : "/graf";
+
   return (
-    <Link
-      href={`/dossier/${dossier.slug}`}
-      className="group grid gap-5 rounded-lg border border-[var(--border-base)] bg-[var(--bg-surface)] p-5 text-inherit no-underline shadow-sm transition-all hover:-translate-y-0.5 hover:border-[var(--accent-danger)] hover:bg-[var(--bg-raised)] hover:shadow-lg md:grid-cols-[150px_minmax(0,1fr)_140px] md:items-center md:p-6"
-    >
+    <div className="relative">
+      <Link
+        href={`/dossier/${dossier.slug}`}
+        className="group grid gap-5 rounded-lg border border-[var(--border-base)] bg-[var(--bg-surface)] p-5 text-inherit no-underline shadow-sm transition-all hover:-translate-y-0.5 hover:border-[var(--accent-danger)] hover:bg-[var(--bg-raised)] hover:shadow-lg md:grid-cols-[150px_minmax(0,1fr)_140px] md:items-center md:p-6"
+      >
       <div className="flex items-center justify-between gap-4 md:block">
         <div className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--text-tertiary)]">
           {dossier.code}
@@ -77,5 +83,19 @@ export function DossierIndexCard({ dossier }: Props) {
         </span>
       </div>
     </Link>
+
+      {focusIds.length > 0 && (
+        <Link
+          href={graphHref}
+          className="absolute right-4 top-4 z-10 inline-flex items-center gap-1.5 rounded-md border border-[var(--border-base)] bg-[var(--bg-surface)]/95 px-2.5 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.12em] text-[var(--text-tertiary)] no-underline shadow-sm transition-all hover:border-[var(--accent-danger)] hover:text-[var(--accent-danger)] md:right-6 md:top-6"
+          aria-label={`Buka graf dengan fokus ${focusIds.length} aktor dari ${dossier.title}`}
+        >
+          Graf
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M7 17L17 7M7 7h10v10" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </Link>
+      )}
+    </div>
   );
 }
