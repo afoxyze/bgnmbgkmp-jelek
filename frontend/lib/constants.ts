@@ -10,7 +10,7 @@ export const SITE_CONFIG = {
   DESCRIPTION:
     "Arsip proyek pemerintah Indonesia. Angka, vendor, dan relasinya dari dokumen publik — dikumpulkan di satu tempat.",
 
-  CATALOG_TITLE: "Katalog Proyek",
+  CATALOG_TITLE: "Etalase",
   CATALOG_SUBTITLE: "Arsip Publik",
 
   DISCLAIMER:

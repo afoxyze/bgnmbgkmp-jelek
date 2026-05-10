@@ -1,8 +1,8 @@
-import type { DossierFacts, DossierMeta } from "@/lib/dossier";
+import type { EntryFacts, EntryMeta } from "@/lib/entry";
 
 interface Props {
-  facts: DossierFacts;
-  meta: DossierMeta;
+  facts: EntryFacts;
+  meta: EntryMeta;
 }
 
 export function KeyFactsGrid({ facts, meta }: Props) {
@@ -22,7 +22,7 @@ export function KeyFactsGrid({ facts, meta }: Props) {
           borderTop: "1px solid var(--text-primary)",
           borderBottom: "1px solid var(--text-primary)",
         }}
-        className="dossier-facts-grid"
+        className="entry-facts-grid"
       >
         {cells.map((c, i) => (
           <div
@@ -61,9 +61,9 @@ export function KeyFactsGrid({ facts, meta }: Props) {
       </div>
       <style>{`
         @media (max-width: 640px) {
-          .dossier-facts-grid { grid-template-columns: 1fr 1fr !important; }
-          .dossier-facts-grid > div { border-bottom: 1px solid var(--border-base); }
-          .dossier-facts-grid > div:nth-child(2n) { border-right: none !important; }
+          .entry-facts-grid { grid-template-columns: 1fr 1fr !important; }
+          .entry-facts-grid > div { border-bottom: 1px solid var(--border-base); }
+          .entry-facts-grid > div:nth-child(2n) { border-right: none !important; }
         }
       `}</style>
       <div style={{ marginTop: "0.75rem", fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.625rem", color: "var(--text-tertiary)", letterSpacing: "0.08em" }}>

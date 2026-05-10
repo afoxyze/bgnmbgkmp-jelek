@@ -1,10 +1,10 @@
 // Chronological events strip.
 
-import type { DossierTimelineEvent } from "@/lib/dossier";
+import type { EntryTimelineEvent } from "@/lib/entry";
 
-interface Props { events: readonly DossierTimelineEvent[]; }
+interface Props { events: readonly EntryTimelineEvent[]; }
 
-export function DossierTimeline({ events }: Props) {
+export function EntryTimeline({ events }: Props) {
   if (events.length === 0) return null;
   return (
     <section style={{ padding: "3rem 0", borderTop: "1px solid var(--border-base)" }}>

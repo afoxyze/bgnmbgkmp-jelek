@@ -1,20 +1,20 @@
 // Editorial opening for a single public-data note.
 
 import Link from "next/link";
-import type { DossierMeta } from "@/lib/dossier";
-import type { DossierFacts } from "@/lib/dossier";
-import { getDossierFocusIds } from "@/lib/dossier";
+import type { EntryMeta } from "@/lib/entry";
+import type { EntryFacts } from "@/lib/entry";
+import { getEntryFocusIds } from "@/lib/entry";
 import { timeAgoId, formatIsoDateId } from "@/lib/format";
 
 interface Props {
-  meta: DossierMeta;
-  facts: DossierFacts;
+  meta: EntryMeta;
+  facts: EntryFacts;
   status: string;
   lastUpdated?: string;
 }
 
-export function DossierHero({ meta, facts: _facts, status, lastUpdated }: Props) {
-  const focusIds = getDossierFocusIds(meta.slug);
+export function EntryHero({ meta, facts: _facts, status, lastUpdated }: Props) {
+  const focusIds = getEntryFocusIds(meta.slug);
   const graphHref =
     focusIds.length > 0 ? `/graf?focus=${focusIds.join(",")}` : "/graf";
 
@@ -80,7 +80,7 @@ export function DossierHero({ meta, facts: _facts, status, lastUpdated }: Props)
       </p>
 
       {/* Lede */}
-      <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 720px) 1fr", gap: "3rem" }} className="dossier-lede-grid">
+      <div style={{ display: "grid", gridTemplateColumns: "minmax(0, 720px) 1fr", gap: "3rem" }} className="entry-lede-grid">
         <div style={{ maxWidth: "720px" }}>
           <p
             style={{
@@ -127,7 +127,7 @@ export function DossierHero({ meta, facts: _facts, status, lastUpdated }: Props)
                 textDecoration: "none",
                 transition: "all 0.15s ease",
               }}
-              className="dossier-graph-cta"
+              className="entry-graph-cta"
             >
               Buka di graf ({focusIds.length} aktor)
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -197,9 +197,9 @@ export function DossierHero({ meta, facts: _facts, status, lastUpdated }: Props)
 
       <style>{`
         @media (max-width: 820px) {
-          .dossier-lede-grid { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
+          .entry-lede-grid { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
         }
-        .dossier-graph-cta:hover {
+        .entry-graph-cta:hover {
           border-color: var(--accent-danger) !important;
           color: var(--accent-danger) !important;
           transform: translateY(-1px);

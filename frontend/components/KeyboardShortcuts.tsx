@@ -7,9 +7,10 @@ import { useRouter } from "next/navigation";
  * Global keyboard shortcuts. Mounted once at the shell level.
  *
  *   /      → jump to /cari and focus the search input
- *   g d    → go to /dossier
+ *   g e    → go to /etalase
  *   g g    → go to /graf
  *   g s    → go to /sppg
+ *   g h    → go to home
  *   ?      → (reserved) help overlay
  *
  * Ignored while typing in an input, textarea, or contentEditable to avoid
@@ -46,9 +47,9 @@ export function KeyboardShortcuts() {
         gPending = false;
         if (gTimer) clearTimeout(gTimer);
         gTimer = null;
-        if (e.key === "d") {
+        if (e.key === "e") {
           e.preventDefault();
-          router.push("/dossier");
+          router.push("/etalase");
         } else if (e.key === "g") {
           e.preventDefault();
           router.push("/graf");

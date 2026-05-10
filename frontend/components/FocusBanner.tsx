@@ -3,11 +3,11 @@
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useCallback } from "react";
-import { getDossierMeta } from "@/lib/dossier";
+import { getEntryMeta } from "@/lib/entry";
 
 /**
  * Shown at the top of /graf when the graph is filtered by ?focus=....
- * Offers a way to exit focus mode (or roundtrip back to the source dossier).
+ * Offers a way to exit focus mode (or roundtrip back to the source entry).
  * Renders nothing when there is no focus param.
  */
 export function FocusBanner({ focusCount }: { focusCount: number }) {
@@ -27,7 +27,7 @@ export function FocusBanner({ focusCount }: { focusCount: number }) {
 
   if (!focusParam || focusCount === 0) return null;
 
-  const fromDossier = fromSlug ? getDossierMeta(fromSlug) : null;
+  const fromEntry = fromSlug ? getEntryMeta(fromSlug) : null;
 
   return (
     <div
@@ -40,26 +40,26 @@ export function FocusBanner({ focusCount }: { focusCount: number }) {
         <span className="font-mono font-bold uppercase tracking-[0.12em] text-[var(--text-secondary)]">
           Fokus: {focusCount} aktor
         </span>
-        {fromDossier && (
+        {fromEntry && (
           <>
             <span className="text-[var(--text-tertiary)]" aria-hidden="true">•</span>
             <span className="font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--text-tertiary)]">
-              dari {fromDossier.categoryShort}
+              dari {fromEntry.categoryShort}
             </span>
           </>
         )}
       </div>
 
       <div className="flex items-center gap-1.5">
-        {fromDossier && (
+        {fromEntry && (
           <Link
-            href={`/dossier/${fromDossier.slug}`}
+            href={`/etalase/${fromEntry.slug}`}
             className="inline-flex items-center gap-1 rounded-md border border-[var(--border-base)] bg-[var(--bg-surface-2)] px-2.5 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--text-secondary)] no-underline transition-colors hover:border-[var(--accent-danger)] hover:text-[var(--accent-danger)]"
           >
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M15 18l-6-6 6-6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            Dossier
+            Entri
           </Link>
         )}
         <button

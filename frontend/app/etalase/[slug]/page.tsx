@@ -1,15 +1,15 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { loadDossier, DOSSIER_SLUGS, getDossierSummaries } from "@/lib/dossier";
+import { loadEntry, ENTRY_SLUGS, getEntrySummaries } from "@/lib/entry";
 import { SITE_CONFIG } from "@/lib/constants";
-import { DossierHero } from "@/components/dossier/DossierHero";
-import { KeyFactsGrid } from "@/components/dossier/KeyFactsGrid";
-import { FindingsList } from "@/components/dossier/FindingsList";
-import { DossierTimeline } from "@/components/dossier/DossierTimeline";
-import { ActorGrid } from "@/components/dossier/ActorGrid";
-import { SourcesBlock } from "@/components/dossier/SourcesBlock";
-import { RelatedDossiers } from "@/components/dossier/RelatedDossiers";
+import { EntryHero } from "@/components/entry/EntryHero";
+import { KeyFactsGrid } from "@/components/entry/KeyFactsGrid";
+import { FindingsList } from "@/components/entry/FindingsList";
+import { EntryTimeline } from "@/components/entry/EntryTimeline";
+import { ActorGrid } from "@/components/entry/ActorGrid";
+import { SourcesBlock } from "@/components/entry/SourcesBlock";
+import { RelatedEntries } from "@/components/entry/RelatedEntries";
 import { ShareButtons } from "@/components/ShareButtons";
 
 interface PageProps {
@@ -17,23 +17,23 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return DOSSIER_SLUGS.map((slug) => ({ slug }));
+  return ENTRY_SLUGS.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  const dossier = await loadDossier(slug);
-  if (!dossier) {
+  const entry = await loadEntry(slug);
+  if (!entry) {
     return {
       title: "Entri tidak ditemukan",
       robots: { index: false, follow: false },
     };
   }
 
-  const url = `${SITE_CONFIG.URL}/dossier/${slug}`;
-  const title = dossier.meta.title;
-  const description = dossier.meta.lede.slice(0, 180);
-  const ogImage = `/og/dossier-${slug}.png`;
+  const url = `${SITE_CONFIG.URL}/etalase/${slug}`;
+  const title = entry.meta.title;
+  const description = entry.meta.lede.slice(0, 180);
+  const ogImage = `/og/entry-${slug}.png`;
 
   return {
     title,
@@ -46,9 +46,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       title: `${title} - ${SITE_CONFIG.NAME}`,
       description,
       locale: "id_ID",
-      publishedTime: dossier.caseStudy.metadata.tanggal_riset,
-      modifiedTime: dossier.caseStudy.metadata.tanggal_riset,
-      tags: [dossier.meta.categoryLong, dossier.meta.categoryShort, dossier.meta.thread],
+      publishedTime: entry.caseStudy.metadata.tanggal_riset,
+      modifiedTime: entry.caseStudy.metadata.tanggal_riset,
+      tags: [entry.meta.categoryLong, entry.meta.categoryShort, entry.meta.thread],
       images: [
         {
           url: ogImage,
@@ -67,21 +67,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-export default async function DossierPage({ params }: PageProps) {
+export default async function EntriPage({ params }: PageProps) {
   const { slug } = await params;
-  const dossier = await loadDossier(slug);
-  if (!dossier) notFound();
+  const entry = await loadEntry(slug);
+  if (!entry) notFound();
 
-  const others = getDossierSummaries().filter((d) => d.slug !== slug);
+  const others = getEntrySummaries().filter((d) => d.slug !== slug);
 
   // JSON-LD structured data for search engines.
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: dossier.meta.title,
-    description: dossier.meta.lede,
-    datePublished: dossier.caseStudy.metadata.tanggal_riset,
-    dateModified: dossier.caseStudy.metadata.tanggal_riset,
+    headline: entry.meta.title,
+    description: entry.meta.lede,
+    datePublished: entry.caseStudy.metadata.tanggal_riset,
+    dateModified: entry.caseStudy.metadata.tanggal_riset,
     author: { "@type": "Organization", name: SITE_CONFIG.NAME, url: SITE_CONFIG.URL },
     publisher: {
       "@type": "Organization",
@@ -89,13 +89,13 @@ export default async function DossierPage({ params }: PageProps) {
       url: SITE_CONFIG.URL,
       logo: { "@type": "ImageObject", url: `${SITE_CONFIG.URL}/og-image.png` },
     },
-    mainEntityOfPage: `${SITE_CONFIG.URL}/dossier/${slug}`,
+    mainEntityOfPage: `${SITE_CONFIG.URL}/etalase/${slug}`,
     keywords: [
-      dossier.meta.categoryLong,
-      dossier.meta.categoryShort,
-      dossier.meta.thread,
+      entry.meta.categoryLong,
+      entry.meta.categoryShort,
+      entry.meta.thread,
     ].join(", "),
-    isBasedOn: dossier.facts.allSources,
+    isBasedOn: entry.facts.allSources,
   };
 
   return (
@@ -120,29 +120,29 @@ export default async function DossierPage({ params }: PageProps) {
         >
           <Link href="/" style={{ color: "var(--text-tertiary)", textDecoration: "none" }}>Beranda</Link>
           <span style={{ opacity: 0.5 }}>/</span>
-          <span>Katalog</span>
+          <span>Etalase</span>
           <span style={{ opacity: 0.5 }}>/</span>
-          <span style={{ color: "var(--accent-danger)" }}>{dossier.meta.code}</span>
+          <span style={{ color: "var(--accent-danger)" }}>{entry.meta.code}</span>
           <span style={{ flex: 1 }} />
           <span style={{ fontSize: "0.625rem" }}>
-            Diperbarui {dossier.caseStudy.metadata.tanggal_riset}
+            Diperbarui {entry.caseStudy.metadata.tanggal_riset}
           </span>
         </nav>
 
-        <DossierHero meta={dossier.meta} facts={dossier.facts} status={dossier.caseStudy.metadata.status} lastUpdated={dossier.caseStudy.metadata.tanggal_riset} />
+        <EntryHero meta={entry.meta} facts={entry.facts} status={entry.caseStudy.metadata.status} lastUpdated={entry.caseStudy.metadata.tanggal_riset} />
         <div className="py-6 border-b border-[var(--border-base)]">
           <ShareButtons
-            url={`${SITE_CONFIG.URL}/dossier/${slug}`}
-            title={dossier.meta.title}
-            description={dossier.meta.subtitle}
+            url={`${SITE_CONFIG.URL}/etalase/${slug}`}
+            title={entry.meta.title}
+            description={entry.meta.subtitle}
           />
         </div>
-        <KeyFactsGrid facts={dossier.facts} meta={dossier.meta} />
-        <FindingsList findings={dossier.meta.findings} redFlags={dossier.facts.redFlags} entities={dossier.facts.entities} />
-        <DossierTimeline events={dossier.meta.timeline} />
-        <ActorGrid people={dossier.facts.people} orgs={dossier.facts.orgs} projects={dossier.facts.projects} />
-        <SourcesBlock sources={dossier.facts.allSources} primarySource={dossier.caseStudy.metadata.sumber} />
-        <RelatedDossiers dossiers={others} />
+        <KeyFactsGrid facts={entry.facts} meta={entry.meta} />
+        <FindingsList findings={entry.meta.findings} redFlags={entry.facts.redFlags} entities={entry.facts.entities} />
+        <EntryTimeline events={entry.meta.timeline} />
+        <ActorGrid people={entry.facts.people} orgs={entry.facts.orgs} projects={entry.facts.projects} />
+        <SourcesBlock sources={entry.facts.allSources} primarySource={entry.caseStudy.metadata.sumber} />
+        <RelatedEntries entries={others} />
       </div>
     </main>
   );

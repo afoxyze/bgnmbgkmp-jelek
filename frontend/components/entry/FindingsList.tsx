@@ -1,10 +1,10 @@
 // Numbered notes that tie back to entities and flagged public data.
 
-import type { DossierFinding } from "@/lib/dossier";
+import type { EntryFinding } from "@/lib/entry";
 import type { Entity, RedFlag } from "@/types/graph";
 
 interface Props {
-  findings: readonly DossierFinding[];
+  findings: readonly EntryFinding[];
   redFlags: readonly RedFlag[];
   entities: readonly Entity[];
 }
@@ -57,7 +57,7 @@ export function FindingsList({ findings, redFlags, entities }: Props) {
                 padding: "2rem 0",
                 borderBottom: i < findings.length - 1 ? "1px solid var(--border-subtle)" : "2px solid var(--text-primary)",
               }}
-              className="dossier-finding"
+              className="entry-finding"
             >
               <div>
                 <div
@@ -147,7 +147,7 @@ export function FindingsList({ findings, redFlags, entities }: Props) {
       </ol>
       <style>{`
         @media (max-width: 640px) {
-          .dossier-finding { grid-template-columns: 1fr !important; gap: 1rem !important; }
+          .entry-finding { grid-template-columns: 1fr !important; gap: 1rem !important; }
         }
       `}</style>
     </section>

@@ -7,7 +7,7 @@
  *
  * Generates:
  *   public/og-image.png                 — default site OG
- *   public/og/dossier-<slug>.png        — per-dossier OG
+ *   public/og/entry-<slug>.png        — per-entry OG
  *
  * Run manually: node scripts/generate-og.mjs
  * Auto-runs before next build via package.json "prebuild".
@@ -42,10 +42,10 @@ async function generateDefault() {
   console.log(`wrote ${outPath}`);
 }
 
-// ── Per-dossier OG ─────────────────────────────────────────────────────────
-// Dossier metadata is duplicated here from lib/dossier.ts to avoid importing
-// TS at build time. Keep in sync if DOSSIER_REGISTRY changes.
-const DOSSIERS = [
+// ── Per-entry OG ─────────────────────────────────────────────────────────
+// Entri metadata is duplicated here from lib/entry.ts to avoid importing
+// TS at build time. Keep in sync if ENTRY_REGISTRY changes.
+const ENTRIES = [
   {
     slug: "bgn-peruri",
     code: "PROYEK 01",
@@ -99,7 +99,7 @@ function wrapTitle(title, maxCharsPerLine = 34, maxLines = 3) {
   return lines.slice(0, maxLines);
 }
 
-function dossierSvg({ code, category, title, angka, angkaLabel }) {
+function entrySvg({ code, category, title, angka, angkaLabel }) {
   const titleLines = wrapTitle(title, 32, 3);
   const lineHeight = 70;
   const startY = 260;
@@ -139,11 +139,11 @@ function dossierSvg({ code, category, title, angka, angkaLabel }) {
 </svg>`;
 }
 
-async function generateDossiers() {
+async function generateEntries() {
   await mkdir(OG_DIR, { recursive: true });
-  for (const d of DOSSIERS) {
-    const svg = dossierSvg(d);
-    const outPath = join(OG_DIR, `dossier-${d.slug}.png`);
+  for (const d of ENTRIES) {
+    const svg = entrySvg(d);
+    const outPath = join(OG_DIR, `entry-${d.slug}.png`);
     await sharp(Buffer.from(svg), { density: 144 })
       .resize(WIDTH, HEIGHT, { fit: "cover" })
       .png({ compressionLevel: 9 })
@@ -154,7 +154,7 @@ async function generateDossiers() {
 
 async function main() {
   await generateDefault();
-  await generateDossiers();
+  await generateEntries();
   console.log("✓ OG images generated");
 }
 

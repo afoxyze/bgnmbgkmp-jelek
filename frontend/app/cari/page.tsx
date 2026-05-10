@@ -5,7 +5,7 @@ import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Cari Entitas",
-  description: "Pencarian entitas: pejabat, perusahaan, yayasan, dan proyek dalam katalog data publik PBP.ID.",
+  description: "Pencarian entitas: pejabat, perusahaan, yayasan, dan proyek di etalase PBP.ID.",
 };
 
 export default async function CariPage() {

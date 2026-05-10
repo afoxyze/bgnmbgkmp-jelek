@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE_CONFIG } from "@/lib/constants";
-import { DOSSIER_SLUGS, loadDossier } from "@/lib/dossier";
+import { ENTRY_SLUGS, loadEntry } from "@/lib/entry";
 import { getCaseStudy } from "@/lib/data";
 
 export const dynamic = "force-static";
@@ -10,7 +10,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${SITE_CONFIG.URL}/`, lastModified: now, priority: 1.0, changeFrequency: "weekly" },
-    { url: `${SITE_CONFIG.URL}/dossier`, lastModified: now, priority: 0.9, changeFrequency: "weekly" },
+    { url: `${SITE_CONFIG.URL}/etalase`, lastModified: now, priority: 0.9, changeFrequency: "weekly" },
     { url: `${SITE_CONFIG.URL}/graf`, lastModified: now, priority: 0.8, changeFrequency: "monthly" },
     { url: `${SITE_CONFIG.URL}/cari`, lastModified: now, priority: 0.6, changeFrequency: "monthly" },
     { url: `${SITE_CONFIG.URL}/sppg`, lastModified: now, priority: 0.7, changeFrequency: "monthly" },
@@ -18,14 +18,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_CONFIG.URL}/kontak`, lastModified: now, priority: 0.5, changeFrequency: "yearly" },
   ];
 
-  // Dossier pages with per-dossier lastModified from data
-  const dossierRoutes: MetadataRoute.Sitemap = await Promise.all(
-    DOSSIER_SLUGS.map(async (slug) => {
-      const loaded = await loadDossier(slug);
+  // Entri pages with per-entry lastModified from data
+  const entryRoutes: MetadataRoute.Sitemap = await Promise.all(
+    ENTRY_SLUGS.map(async (slug) => {
+      const loaded = await loadEntry(slug);
       const lastModifiedISO = loaded?.caseStudy.metadata.tanggal_riset;
       const lastModified = lastModifiedISO ? new Date(lastModifiedISO) : now;
       return {
-        url: `${SITE_CONFIG.URL}/dossier/${slug}`,
+        url: `${SITE_CONFIG.URL}/etalase/${slug}`,
         lastModified,
         priority: 0.85,
         changeFrequency: "weekly" as const,
@@ -44,5 +44,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       }))
     : [];
 
-  return [...staticRoutes, ...dossierRoutes, ...entityRoutes];
+  return [...staticRoutes, ...entryRoutes, ...entityRoutes];
 }

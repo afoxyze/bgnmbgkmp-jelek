@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from "react";
 
-// Share panel for dossier and entity pages. No external SDKs; all shares are
+// Share panel for entry and entity pages. No external SDKs; all shares are
 // plain URL constructions so the component is static-export safe.
 //
 // Indonesian audience skew: WhatsApp > Twitter/X > Copy Link. Ordering

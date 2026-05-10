@@ -90,7 +90,7 @@ export function SourcesBlock({ sources, primarySource }: Props) {
           color: "var(--text-secondary)",
         }}
       >
-        CATATAN: Katalog ini berbasis dokumen publik, data pengadaan, dan laporan media.
+        CATATAN: Etalase ini berbasis dokumen publik, data pengadaan, dan laporan media.
         Isinya bersifat informatif dan perlu dibaca bersama sumber aslinya.
       </p>
     </section>

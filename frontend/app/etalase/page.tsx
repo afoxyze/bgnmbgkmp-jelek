@@ -1,16 +1,15 @@
-import { getDossierSummaries } from "@/lib/dossier";
-import { DossierIndexCard } from "@/components/dossier/DossierIndexCard";
+import { getEntrySummaries } from "@/lib/entry";
+import { EntryIndexCard } from "@/components/entry/EntryIndexCard";
 import type { Metadata } from "next";
-import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: `Katalog Proyek`,
+  title: "Etalase",
   description:
-    "Daftar proyek-proyek bagus pemerintah Indonesia, diarsipkan dari dokumen publik yang sudah tersebar.",
+    "Etalase proyek pemerintah yang dokumennya sudah ada di ruang publik.",
 };
 
-export default function DossierIndexPage() {
-  const dossiers = getDossierSummaries();
+export default function EtalaseIndexPage() {
+  const entries = getEntrySummaries();
 
   return (
     <main className="content-page" style={{ fontFamily: "'Inter', 'system-ui', sans-serif" }}>
@@ -24,16 +23,17 @@ export default function DossierIndexPage() {
               marginBottom: "1rem",
             }}
           >
-            Katalog Proyek
+            Etalase
           </h1>
           <p style={{ color: "var(--text-secondary)", fontSize: "1.125rem", maxWidth: "640px" }}>
-            Proyek pemerintah, dirangkum dari dokumen publik.
+            Proyek yang sedang dipajang. Dokumennya publik, kami hanya
+            mengumpulkannya.
           </p>
         </header>
 
         <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-          {dossiers.map((d) => (
-            <DossierIndexCard key={d.slug} dossier={d} />
+          {entries.map((entry) => (
+            <EntryIndexCard key={entry.slug} entry={entry} />
           ))}
         </div>
       </div>

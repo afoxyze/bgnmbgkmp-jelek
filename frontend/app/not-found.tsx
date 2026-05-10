@@ -32,7 +32,7 @@ export default function NotFound() {
             Beranda
           </Link>
           <Link
-            href="/dossier"
+            href="/etalase"
             className="px-5 py-2.5 rounded-md border border-[var(--border-strong)] bg-[var(--bg-surface)] text-[var(--text-primary)] font-mono text-xs font-bold uppercase tracking-[0.14em] no-underline transition-colors hover:border-[var(--accent-danger)] hover:text-[var(--accent-danger)]"
           >
             Catatan Proyek

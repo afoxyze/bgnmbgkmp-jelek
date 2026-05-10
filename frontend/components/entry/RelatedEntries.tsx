@@ -1,12 +1,12 @@
 // Bottom "up next" block for other public-data notes.
 
 import Link from "next/link";
-import type { DossierMeta } from "@/lib/dossier";
+import type { EntryMeta } from "@/lib/entry";
 
-interface Props { dossiers: readonly DossierMeta[]; }
+interface Props { entries: readonly EntryMeta[]; }
 
-export function RelatedDossiers({ dossiers }: Props) {
-  if (dossiers.length === 0) return null;
+export function RelatedEntries({ entries }: Props) {
+  if (entries.length === 0) return null;
   return (
     <section style={{ padding: "3rem 0 4rem", borderTop: "2px solid var(--text-primary)" }}>
       <header style={{ marginBottom: "1.5rem" }}>
@@ -31,10 +31,10 @@ export function RelatedDossiers({ dossiers }: Props) {
           gap: "1rem",
         }}
       >
-        {dossiers.map((d) => (
+        {entries.map((d) => (
           <Link
             key={d.slug}
-            href={`/dossier/${d.slug}`}
+            href={`/etalase/${d.slug}`}
             style={{
               display: "block",
               padding: "1.5rem 1.5rem 1.75rem",

@@ -3,8 +3,8 @@ import { getLiveStats } from "@/lib/data";
 import type { Metadata } from "next";
 
 import { SITE_CONFIG } from "@/lib/constants";
-import { getDossierSummaries } from "@/lib/dossier";
-import { DossierIndexCard } from "@/components/dossier/DossierIndexCard";
+import { getEntrySummaries } from "@/lib/entry";
+import { EntryIndexCard } from "@/components/entry/EntryIndexCard";
 
 export const metadata: Metadata = {
   title: SITE_CONFIG.NAME_LONG,
@@ -121,10 +121,10 @@ function HeroSection({
 
           <div className="flex flex-col sm:flex-row gap-3">
             <Link
-              href="/dossier"
+              href="/etalase"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-[var(--accent-danger)] text-white font-mono text-xs font-bold tracking-[0.14em] no-underline transition-all shadow-[0_12px_22px_-10px_rgba(196,30,58,0.65)] hover:opacity-90 hover:translate-y-[-1px] active:translate-y-0"
             >
-              BUKA KATALOG
+              BUKA ETALASE
               <ArrowRight />
             </Link>
             <Link
@@ -210,15 +210,15 @@ function InvestigationsSection() {
   return (
     <section className="pb-12 md:pb-16">
       <SectionHeader
-        eyebrow="Katalog"
+        eyebrow="Etalase"
         title="Proyek yang sudah ada di dokumen publik."
-        actionHref="/dossier"
+        actionHref="/etalase"
         actionLabel="Semua entri"
       />
 
       <div className="flex flex-col gap-4">
-        {getDossierSummaries().map((dossier) => (
-          <DossierIndexCard key={dossier.slug} dossier={dossier} />
+        {getEntrySummaries().map((entry) => (
+          <EntryIndexCard key={entry.slug} entry={entry} />
         ))}
       </div>
     </section>
@@ -335,7 +335,7 @@ function Footer() {
         </div>
 
         <FooterColumn title="Baca">
-          <FooterLink href="/dossier">Katalog proyek</FooterLink>
+          <FooterLink href="/etalase">Etalase</FooterLink>
           <FooterLink href="/graf">Peta relasi</FooterLink>
           <FooterLink href="/cari">Cari entitas</FooterLink>
           <FooterLink href="/sppg">Titik SPPG</FooterLink>

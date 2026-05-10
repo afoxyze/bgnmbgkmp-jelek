@@ -24,7 +24,7 @@ export default function NotFound() {
           margin: "0 0 1rem",
         }}
       >
-        Entri ini belum ada di katalog.
+        Entri ini belum dipajang di etalase.
       </h1>
       <p style={{ color: "var(--text-secondary)", lineHeight: 1.6, marginBottom: "2rem" }}>
         Slug yang dituju tidak ada. Mungkin sudah pindah atau belum pernah

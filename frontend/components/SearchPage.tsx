@@ -114,8 +114,8 @@ export function SearchPage({ caseStudy }: SearchPageProps) {
                 </span>
               </div>
               <p className="text-sm" style={{ color: "var(--text-secondary)", maxWidth: "600px" }}>
-                Cari nama orang, organisasi, dan proyek yang muncul di katalog
-                data publik.
+                Cari nama orang, organisasi, dan proyek yang muncul di
+                etalase.
               </p>
             </div>
             <div className="text-right hidden md:block">

@@ -1,16 +1,16 @@
-// PBP.ID — Dossier loader & slug registry
+// PBP.ID — Entri loader & slug registry
 // Server-only. Loads a single case_study_*.json and enriches it with
 // pre-computed facts (severity counts, people/orgs split, budget totals).
 
 import { isCaseStudy, type CaseStudy, type Entity, type RedFlag } from "@/types/graph";
 
 // ─── Slug registry ───────────────────────────────────────────────────────────
-// Each dossier slug maps to a case_study JSON file + editorial metadata.
-// Adding a new dossier = add a row here.
+// Each entry slug maps to a case_study JSON file + editorial metadata.
+// Adding a new entry = add a row here.
 
-export interface DossierMeta {
+export interface EntryMeta {
   readonly slug: string;
-  readonly code: string;           // "DOSSIER 01"
+  readonly code: string;           // "PROYEK 01"
   readonly file: string;           // "case_study_bgn_peruri.json"
   readonly title: string;
   readonly subtitle: string;
@@ -21,11 +21,11 @@ export interface DossierMeta {
   readonly categoryLong: string;
   readonly anggaranFokus?: string; // headline budget line, e.g. "Rp 600 M"
   readonly anggaranLabel?: string;
-  readonly findings: readonly DossierFinding[];
-  readonly timeline: readonly DossierTimelineEvent[];
+  readonly findings: readonly EntryFinding[];
+  readonly timeline: readonly EntryTimelineEvent[];
 }
 
-export interface DossierFinding {
+export interface EntryFinding {
   readonly tag: string;            // "Temuan", "Anomali", "Konflik"
   readonly title: string;
   readonly body: string;
@@ -33,13 +33,13 @@ export interface DossierFinding {
   readonly relatedRedFlagIds?: readonly string[];
 }
 
-export interface DossierTimelineEvent {
+export interface EntryTimelineEvent {
   readonly date: string;           // "2024-08-15" or "Aug 2024"
   readonly event: string;
   readonly source?: string;
 }
 
-export const DOSSIER_REGISTRY: readonly DossierMeta[] = [
+export const ENTRY_REGISTRY: readonly EntryMeta[] = [
   {
     slug: "bgn-peruri",
     code: "PROYEK 01",
@@ -174,17 +174,17 @@ export const DOSSIER_REGISTRY: readonly DossierMeta[] = [
   },
 ] as const;
 
-export const DOSSIER_SLUGS = DOSSIER_REGISTRY.map((d) => d.slug);
+export const ENTRY_SLUGS = ENTRY_REGISTRY.map((d) => d.slug);
 
-export function getDossierMeta(slug: string): DossierMeta | null {
-  return DOSSIER_REGISTRY.find((d) => d.slug === slug) ?? null;
+export function getEntryMeta(slug: string): EntryMeta | null {
+  return ENTRY_REGISTRY.find((d) => d.slug === slug) ?? null;
 }
 
 // Returns the union of relatedEntityIds across all findings, deduplicated.
-// Used to deep-link a dossier into /graf?focus=... so the graph opens already
+// Used to deep-link an entry into /graf?focus=... so the graph opens already
 // zoomed to the actors relevant for that specific note.
-export function getDossierFocusIds(slug: string): readonly string[] {
-  const meta = getDossierMeta(slug);
+export function getEntryFocusIds(slug: string): readonly string[] {
+  const meta = getEntryMeta(slug);
   if (!meta) return [];
   const seen = new Set<string>();
   for (const f of meta.findings) {
@@ -195,7 +195,7 @@ export function getDossierFocusIds(slug: string): readonly string[] {
 
 // ─── Data loader ─────────────────────────────────────────────────────────────
 
-export interface DossierFacts {
+export interface EntryFacts {
   readonly entities: readonly Entity[];
   readonly people: readonly Entity[];
   readonly orgs: readonly Entity[];
@@ -207,14 +207,14 @@ export interface DossierFacts {
   readonly allSources: readonly string[];
 }
 
-export interface LoadedDossier {
-  readonly meta: DossierMeta;
+export interface LoadedEntry {
+  readonly meta: EntryMeta;
   readonly caseStudy: CaseStudy;
-  readonly facts: DossierFacts;
+  readonly facts: EntryFacts;
 }
 
-export async function loadDossier(slug: string): Promise<LoadedDossier | null> {
-  const meta = getDossierMeta(slug);
+export async function loadEntry(slug: string): Promise<LoadedEntry | null> {
+  const meta = getEntryMeta(slug);
   if (!meta) return null;
 
   try {
@@ -225,7 +225,7 @@ export async function loadDossier(slug: string): Promise<LoadedDossier | null> {
     const data: unknown = JSON.parse(raw);
 
     if (!isCaseStudy(data)) {
-      console.error(`[dossier] invalid case study: ${meta.file}`);
+      console.error(`[entry] invalid case study: ${meta.file}`);
       return null;
     }
 
@@ -256,12 +256,12 @@ export async function loadDossier(slug: string): Promise<LoadedDossier | null> {
       },
     };
   } catch (err) {
-    console.error(`[dossier] failed to load ${meta.file}:`, err);
+    console.error(`[entry] failed to load ${meta.file}:`, err);
     return null;
   }
 }
 
 // Lightweight summaries for the index grid — no file reads.
-export function getDossierSummaries(): readonly DossierMeta[] {
-  return DOSSIER_REGISTRY;
+export function getEntrySummaries(): readonly EntryMeta[] {
+  return ENTRY_REGISTRY;
 }

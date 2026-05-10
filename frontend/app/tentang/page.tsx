@@ -102,10 +102,10 @@ export default async function TentangPage() {
               GitHub
             </Link>
             <Link
-              href="/dossier"
+              href="/etalase"
               className="px-6 py-3 border-2 border-[var(--text-primary)] text-[var(--text-primary)] font-mono text-xs font-bold uppercase tracking-wider hover:bg-[var(--text-primary)] hover:text-[var(--bg-base)] transition-all"
             >
-              Buka Katalog
+              Buka Etalase
             </Link>
           </div>
         </section>
