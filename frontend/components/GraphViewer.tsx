@@ -13,6 +13,12 @@ import type {
   GraphSelection,
   Relation,
 } from "@/types/graph";
+import type {
+  Core,
+  EventObject,
+  EdgeSingular,
+  NodeSingular,
+} from "cytoscape";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 interface CyTheme {
@@ -66,7 +72,7 @@ export function GraphViewer({
   onReady,
 }: GraphViewerProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const cyRef = useRef<any>(null);
+  const cyRef = useRef<Core | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
 
   const redFlagIds = useMemo(() => getRedFlagEntityIds(caseStudy.red_flags), [caseStudy.red_flags]);
@@ -293,7 +299,7 @@ export function GraphViewer({
     if (!containerRef.current) return;
 
     let destroyed = false;
-    let cyInstance: any = null;
+    let cyInstance: Core | null = null;
 
     const init = async () => {
       try {
@@ -308,13 +314,13 @@ export function GraphViewer({
           maxZoom: 3,
         });
 
-        cyInstance.on("tap", "node", (evt: any) => {
+        cyInstance.on("tap", "node", (evt: EventObject) => {
           if (destroyed) return;
           const entity = caseStudy.entities.find((e) => e.id === evt.target.id());
           if (entity) onSelectionChange({ kind: "entity", entity });
         });
 
-        cyInstance.on("tap", "edge", (evt: any) => {
+        cyInstance.on("tap", "edge", (evt: EventObject) => {
           if (destroyed) return;
           const data = evt.target.data();
           const relation = caseStudy.relations.find(r => r.from === data.source && r.to === data.target && r.type === data.relationType);
@@ -325,7 +331,7 @@ export function GraphViewer({
           }
         });
 
-        cyInstance.on("tap", (evt: any) => {
+        cyInstance.on("tap", (evt: EventObject) => {
           if (destroyed) return;
           if (evt.target === cyInstance) onSelectionChange({ kind: "none" });
         });
@@ -377,15 +383,17 @@ export function GraphViewer({
   }, []);
 
   useEffect(() => {
-    if (cyRef.current && isLoaded) {
-      cyRef.current.style(buildStyle(theme) as any[]);
+    const cy = cyRef.current;
+    if (cy && isLoaded) {
+      cy.style(buildStyle(theme) as any[]);
     }
   }, [theme, isLoaded, buildStyle]);
 
   useEffect(() => {
-    if (cyRef.current && isLoaded) {
+    const cy = cyRef.current;
+    if (cy && isLoaded) {
       const timer = setTimeout(() => {
-        cyRef.current.resize();
+        cy.resize();
       }, 350);
       return () => clearTimeout(timer);
     }
@@ -408,18 +416,20 @@ export function GraphViewer({
     }
 
     const focusSet = new Set(focusNodeIds);
-    const focused = cy.nodes().filter((n: any) => focusSet.has(n.id()));
+    const focused = cy.nodes().filter((n: NodeSingular) => focusSet.has(n.id()));
     if (focused.length === 0) return;
 
     // Include immediate neighbors so relations stay readable.
     const neighborhood = focused.neighborhood().add(focused);
     const neighborhoodIds = new Set<string>();
-    neighborhood.forEach((el: any) => neighborhoodIds.add(el.id()));
+    neighborhood.forEach((el) => {
+      neighborhoodIds.add(el.id());
+    });
 
-    nodes.forEach((n: any) => {
+    nodes.forEach((n: NodeSingular) => {
       n.style("opacity", neighborhoodIds.has(n.id()) ? 1 : 0.15);
     });
-    edges.forEach((e: any) => {
+    edges.forEach((e: EdgeSingular) => {
       const inSubgraph = neighborhoodIds.has(e.source().id()) && neighborhoodIds.has(e.target().id());
       e.style("opacity", inSubgraph ? 0.9 : 0.08);
     });
@@ -428,7 +438,8 @@ export function GraphViewer({
   }, [focusNodeIds, isLoaded]);
 
   function handleFitGraph() {
-    if (cyRef.current) cyRef.current.fit(undefined, 30);
+    const cy = cyRef.current;
+    if (cy) cy.fit(undefined, 30);
   }
 
   return (
