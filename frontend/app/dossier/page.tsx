@@ -27,9 +27,7 @@ export default function DossierIndexPage() {
             Katalog Proyek
           </h1>
           <p style={{ color: "var(--text-secondary)", fontSize: "1.125rem", maxWidth: "640px" }}>
-            Arsip proyek pemerintah: anggaran, vendor, dan relasinya,
-            dirangkum dari dokumen publik yang sudah bisa diakses. Tidak ada
-            yang baru di sini — hanya lebih rapi.
+            Proyek pemerintah, dirangkum dari dokumen publik.
           </p>
         </header>
 

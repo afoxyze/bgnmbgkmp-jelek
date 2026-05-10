@@ -8,7 +8,7 @@ import { DossierIndexCard } from "@/components/dossier/DossierIndexCard";
 import { timeAgoId, formatIsoDateId } from "@/lib/format";
 
 export const metadata: Metadata = {
-  title: `${SITE_CONFIG.NAME} - Katalog Data Proyek Pemerintah`,
+  title: SITE_CONFIG.NAME_LONG,
   description: SITE_CONFIG.DESCRIPTION,
   keywords: SITE_CONFIG.KEYWORDS,
 };
@@ -28,8 +28,6 @@ function LandingPage({ stats }: LandingPageProps) {
   const totalEntitas = stats?.TOTAL_ENTITIES ?? 0;
   const totalRelasi = stats?.TOTAL_RELATIONS ?? 0;
   const totalRedFlags = stats?.TOTAL_RED_FLAGS ?? 0;
-  const totalSppg = stats?.TOTAL_SPPG ?? 0;
-  const mappedSppg = stats?.MAPPED_SPPG ?? 0;
   const latestUpdate = stats?.LATEST_UPDATE ?? "2026-04-18";
 
   // JSON-LD: WebSite + Organization for search engines
@@ -71,15 +69,10 @@ function LandingPage({ stats }: LandingPageProps) {
           totalEntitas={totalEntitas}
           totalRelasi={totalRelasi}
           totalRedFlags={totalRedFlags}
-          totalSppg={totalSppg}
           latestUpdate={latestUpdate}
         />
         <InvestigationsSection />
-        <OpenDataBand
-          totalSppg={totalSppg}
-          mappedSppg={mappedSppg}
-          certificationRate={stats?.CERTIFICATION_RATE ?? "0%"}
-        />
+        <OpenDataBand />
         <EditorialPrinciples />
         <Footer />
       </div>
@@ -91,7 +84,6 @@ interface HeroSectionProps {
   totalEntitas: number;
   totalRelasi: number;
   totalRedFlags: number;
-  totalSppg: number;
   latestUpdate: string;
 }
 
@@ -99,7 +91,6 @@ function HeroSection({
   totalEntitas,
   totalRelasi,
   totalRedFlags,
-  totalSppg,
   latestUpdate,
 }: HeroSectionProps) {
   return (
@@ -124,7 +115,7 @@ function HeroSection({
               maxWidth: "820px",
             }}
           >
-            Katalog proyek bagus pemerintah.
+            Proyek bagus pemerintah.
           </h1>
 
           <p
@@ -136,10 +127,8 @@ function HeroSection({
               maxWidth: "680px",
             }}
           >
-            {SITE_CONFIG.NAME} adalah arsip proyek pemerintah yang dirangkum dari
-            dokumen publik: AHU, LPSE, SiRUP, arsip berita, dan rilis resmi.
-            Kami tidak menambahkan apa-apa — hanya mengumpulkan data yang sudah
-            ada di satu tempat supaya bisa dibaca tanpa pindah-pindah tab.
+            Arsip proyek pemerintah yang dirangkum dari dokumen publik. Tidak
+            ada yang baru di sini, hanya lebih rapi.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
@@ -162,18 +151,17 @@ function HeroSection({
         <aside className="border border-[var(--border-base)] rounded-lg bg-[var(--bg-surface)] shadow-sm overflow-hidden">
           <div className="flex items-center justify-between gap-4 px-5 py-4 border-b border-[var(--border-base)]">
             <span className="font-mono text-[10px] font-bold tracking-[0.14em] uppercase text-[var(--text-tertiary)]">
-              Inventaris Data
+              Ringkasan
             </span>
             <span className="font-mono text-[10px] font-bold tracking-[0.12em] uppercase text-[var(--accent-danger)]">
               Terbuka
             </span>
           </div>
 
-          <div className="grid grid-cols-2">
-            <StatCell value={totalRelasi} label="Relasi" />
+          <div className="grid grid-cols-3">
             <StatCell value={totalEntitas} label="Entitas" />
+            <StatCell value={totalRelasi} label="Relasi" />
             <StatCell value={totalRedFlags} label="Sorotan" danger />
-            <StatCell value={formatCompact(totalSppg)} label="Titik SPPG" />
           </div>
 
           <SignalMap />
@@ -220,7 +208,7 @@ function StatCell({ value, label, danger = false }: StatCellProps) {
   const formattedValue = typeof value === "number" ? value.toLocaleString("id-ID") : value;
 
   return (
-    <div className="p-5 border-b border-r border-[var(--border-base)] last:border-r-0 odd:last:border-r">
+    <div className="p-5 border-b border-r border-[var(--border-base)] last:border-r-0">
       <div
         style={{
           fontFamily: "'IBM Plex Mono', monospace",
@@ -274,7 +262,7 @@ function InvestigationsSection() {
     <section className="pb-12 md:pb-16">
       <SectionHeader
         eyebrow="Katalog"
-        title="Proyek pemerintah yang angkanya besar, vendornya unik, dan dokumennya publik."
+        title="Proyek yang sudah ada di dokumen publik."
         actionHref="/dossier"
         actionLabel="Semua entri"
       />
@@ -288,58 +276,40 @@ function InvestigationsSection() {
   );
 }
 
-function OpenDataBand({
-  totalSppg,
-  mappedSppg,
-  certificationRate,
-}: {
-  totalSppg: number;
-  mappedSppg: number;
-  certificationRate: string;
-}) {
+function OpenDataBand() {
   return (
     <section className="py-12 md:py-16 border-y border-[var(--border-base)]">
-      <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-8 items-start">
-        <div>
-          <p className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--accent-danger)] mb-4">
-            Data Terbuka
-          </p>
-          <h2
-            style={{
-              fontFamily: "'IBM Plex Serif', 'Georgia', serif",
-              fontSize: "clamp(1.8rem, 4vw, 2.7rem)",
-              fontWeight: 700,
-              color: "var(--text-primary)",
-              lineHeight: 1.08,
-              letterSpacing: "-0.025em",
-              maxWidth: "760px",
-              marginBottom: "1rem",
-            }}
-          >
-            Unduh mentahnya, cek sendiri.
-          </h2>
-          <p className="max-w-[720px] text-[var(--text-secondary)] leading-relaxed">
-            Seluruh dataset tersedia dalam JSON dan CSV. Silakan dibanding-
-            kan dengan dokumen aslinya. Kalau kami salah, repo GitHub-nya
-            terbuka untuk koreksi.
-          </p>
-          <div className="mt-6 flex flex-col sm:flex-row gap-3">
-            <Link className="data-link-primary" href="/exports/pbp_id_sppg_data.csv">
-              Unduh CSV
-            </Link>
-            <Link className="data-link-secondary" href="/exports/pbp_id_sppg_data.json">
-              Unduh JSON
-            </Link>
-            <Link className="data-link-secondary" href="/cari">
-              Cari entitas
-            </Link>
-          </div>
-        </div>
-
-        <div className="rounded-lg border border-[var(--border-base)] bg-[var(--bg-surface)] p-5 shadow-sm">
-          <MetricRow label="Unit resmi" value={totalSppg.toLocaleString("id-ID")} />
-          <MetricRow label="Titik terpetakan" value={mappedSppg.toLocaleString("id-ID")} />
-          <MetricRow label="Sertifikasi SLHS" value={certificationRate} danger />
+      <div className="max-w-[760px]">
+        <p className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--accent-danger)] mb-4">
+          Data Terbuka
+        </p>
+        <h2
+          style={{
+            fontFamily: "'IBM Plex Serif', 'Georgia', serif",
+            fontSize: "clamp(1.8rem, 4vw, 2.7rem)",
+            fontWeight: 700,
+            color: "var(--text-primary)",
+            lineHeight: 1.08,
+            letterSpacing: "-0.025em",
+            marginBottom: "1rem",
+          }}
+        >
+          Unduh mentahnya, cek sendiri.
+        </h2>
+        <p className="text-[var(--text-secondary)] leading-relaxed">
+          Dataset dalam JSON dan CSV. Kalau ada yang salah, repo GitHub-nya
+          terbuka.
+        </p>
+        <div className="mt-6 flex flex-col sm:flex-row gap-3">
+          <Link className="data-link-primary" href="/exports/pbp_id_sppg_data.csv">
+            Unduh CSV
+          </Link>
+          <Link className="data-link-secondary" href="/exports/pbp_id_sppg_data.json">
+            Unduh JSON
+          </Link>
+          <Link className="data-link-secondary" href="/cari">
+            Cari entitas
+          </Link>
         </div>
       </div>
     </section>
@@ -349,23 +319,23 @@ function OpenDataBand({
 function EditorialPrinciples() {
   return (
     <section className="py-14 md:py-16">
-      <SectionHeader eyebrow="Cara Pakai" title="Bukan media, bukan penyidik, bukan analis." />
+      <SectionHeader eyebrow="Cara Pakai" title="Bukan media, bukan penyidik." />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         <PrincipleCard
           num="01"
           title="Hanya mengumpulkan"
-          body="Semua yang ada di sini sudah tersedia lebih dulu di AHU, LPSE, SiRUP, atau arsip berita. Kami menaruhnya di satu tempat."
+          body="Semuanya sudah ada di AHU, LPSE, SiRUP, atau arsip berita. Kami menaruhnya di satu tempat."
         />
         <PrincipleCard
           num="02"
           title="Tidak menuduh"
-          body="Tidak ada analisis, tidak ada kesimpulan hukum. Yang ditandai sebagai sorotan pun hanya penanda, bukan vonis."
+          body="Tidak ada analisis atau kesimpulan hukum. Sorotan hanyalah penanda, bukan vonis."
         />
         <PrincipleCard
           num="03"
-          title="Silakan cek ulang"
-          body="Tiap entitas dan angka punya tautan ke dokumen aslinya. Kalau ada yang janggal atau keliru, laporkan lewat GitHub."
+          title="Bisa dicek ulang"
+          body="Tiap entitas punya tautan ke dokumen aslinya. Kalau keliru, laporkan lewat GitHub."
         />
       </div>
     </section>
@@ -439,21 +409,6 @@ function PrincipleCard({ num, title, body }: { num: string; title: string; body:
   );
 }
 
-function MetricRow({ label, value, danger = false }: { label: string; value: string; danger?: boolean }) {
-  return (
-    <div className="flex items-baseline justify-between gap-4 border-b border-[var(--border-base)] py-4 first:pt-0 last:border-b-0 last:pb-0">
-      <span className="font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--text-tertiary)]">
-        {label}
-      </span>
-      <span
-        className={`font-mono text-lg font-bold ${danger ? "text-[var(--accent-danger)]" : "text-[var(--text-primary)]"}`}
-      >
-        {value}
-      </span>
-    </div>
-  );
-}
-
 function Footer() {
   return (
     <footer className="border-t border-[var(--border-base)] py-12">
@@ -491,8 +446,8 @@ function Footer() {
       </div>
 
       <div className="mt-12 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--border-base)] pt-6 font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--text-tertiary)]">
-        <span>2026 {SITE_CONFIG.NAME}</span>
-        <span>JKT-NODE-01 / STATIC EXPORT</span>
+        <span>© 2026 {SITE_CONFIG.NAME_LONG}</span>
+        <span>Dokumen publik · Open source</span>
       </div>
     </footer>
   );
@@ -529,11 +484,6 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
       </Link>
     </li>
   );
-}
-
-function formatCompact(value: number): string {
-  if (value >= 1000) return `${Math.round(value / 1000).toLocaleString("id-ID")}K+`;
-  return value.toLocaleString("id-ID");
 }
 
 interface ArrowRightProps {

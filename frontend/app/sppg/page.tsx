@@ -190,7 +190,7 @@ export default function SPPGPage() {
                 Peta SPPG
               </h1>
               <p className="text-xs text-[var(--text-secondary)] font-mono uppercase tracking-widest">
-                27.000+ titik layanan gizi, status operasional, dan yang disorot
+                27.000+ titik Satuan Pelayanan Pemenuhan Gizi
               </p>
             </div>
             <div className="bg-[var(--bg-surface)] border border-[var(--border-base)] p-3 rounded-lg">

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="PBP.ID - Proyek Bagus Pemerintah">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Proyek Bagus Pemerintah">
   <defs>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
@@ -11,26 +11,16 @@
   <rect x="0" y="0" width="1200" height="6" fill="#C41E3A"/>
 
   <text x="60" y="80" fill="#C41E3A" font-family="Menlo, Monaco, monospace" font-size="15" font-weight="700" letter-spacing="4">PBP.ID</text>
-  <text x="1140" y="80" text-anchor="end" fill="#666" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" letter-spacing="2">KATALOG / PUBLIK / 2026</text>
 
-  <text x="60" y="260" fill="#f5f5f5" font-family="Georgia, serif" font-size="78" font-weight="700" letter-spacing="-2">
-    Proyek Bagus
-  </text>
-  <text x="60" y="345" fill="#f5f5f5" font-family="Georgia, serif" font-size="78" font-weight="700" letter-spacing="-2">
-    Pemerintah.
-  </text>
+  <text x="60" y="275" fill="#f5f5f5" font-family="Georgia, serif" font-size="94" font-weight="700" letter-spacing="-2.5">Proyek Bagus</text>
+  <text x="60" y="375" fill="#f5f5f5" font-family="Georgia, serif" font-size="94" font-weight="700" letter-spacing="-2.5">Pemerintah.</text>
 
-  <text x="60" y="420" fill="#999" font-family="Georgia, serif" font-size="28" font-style="italic">
-    Dikumpulkan, bukan ditulis.
-  </text>
+  <text x="60" y="445" fill="#999" font-family="Georgia, serif" font-size="26" font-style="italic">Dikumpulkan, bukan ditulis.</text>
 
-  <line x1="60" y1="480" x2="1140" y2="480" stroke="#333" stroke-width="1"/>
+  <line x1="60" y1="510" x2="1140" y2="510" stroke="#333" stroke-width="1"/>
 
-  <text x="60" y="525" fill="#666" font-family="Menlo, Monaco, monospace" font-size="14" font-weight="600" letter-spacing="2">SUMBER</text>
-  <text x="60" y="560" fill="#e5e5e5" font-family="Menlo, Monaco, monospace" font-size="15" font-weight="600" letter-spacing="1">AHU · LPSE · SIRUP · ARSIP BERITA</text>
+  <text x="60" y="555" fill="#666" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="600" letter-spacing="2">SUMBER</text>
+  <text x="60" y="585" fill="#e5e5e5" font-family="Menlo, Monaco, monospace" font-size="14" font-weight="600" letter-spacing="1">AHU · LPSE · SIRUP · ARSIP BERITA</text>
 
-  <text x="1140" y="525" text-anchor="end" fill="#666" font-family="Menlo, Monaco, monospace" font-size="14" font-weight="600" letter-spacing="2">FOKUS</text>
-  <text x="1140" y="560" text-anchor="end" fill="#e5e5e5" font-family="Menlo, Monaco, monospace" font-size="15" font-weight="600" letter-spacing="1">MBG · BGN · KMP</text>
-
-  <circle cx="1140" cy="590" r="5" fill="#C41E3A"/>
+  <circle cx="1140" cy="578" r="5" fill="#C41E3A"/>
 </svg>
