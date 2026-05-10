@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { ThemeProvider, useTheme } from "@/lib/theme-context";
 import { Header } from "@/components/Header";
+import { KeyboardShortcuts } from "@/components/KeyboardShortcuts";
 import { usePathname } from "next/navigation";
 
 interface ClientShellProps {
@@ -51,9 +52,21 @@ function ShellInner({ children }: { children: React.ReactNode }) {
         backgroundColor: "var(--bg-base)",
       }}
     >
+      {/* Skip-to-content for keyboard users & screen readers */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100000] focus:px-4 focus:py-2 focus:rounded-md focus:bg-[var(--accent-danger)] focus:text-white focus:font-mono focus:text-xs focus:font-bold focus:uppercase focus:tracking-[0.12em] focus:shadow-xl focus:no-underline"
+      >
+        Lewati ke konten
+      </a>
+
+      <KeyboardShortcuts />
+
       <Header />
 
       <main
+        id="main-content"
+        tabIndex={-1}
         className="relative flex-1 min-h-0 flex flex-col"
         style={{
           color: "var(--text-primary)",

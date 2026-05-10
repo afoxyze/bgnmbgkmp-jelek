@@ -1,6 +1,7 @@
 import { getCaseStudy } from "@/lib/data";
 import { SearchPage } from "@/components/SearchPage";
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Cari Entitas",
@@ -22,5 +23,9 @@ export default async function CariPage() {
     );
   }
 
-  return <SearchPage caseStudy={caseStudy} />;
+  return (
+    <Suspense fallback={null}>
+      <SearchPage caseStudy={caseStudy} />
+    </Suspense>
+  );
 }

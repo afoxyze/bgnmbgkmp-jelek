@@ -10,6 +10,7 @@ import { DossierTimeline } from "@/components/dossier/DossierTimeline";
 import { ActorGrid } from "@/components/dossier/ActorGrid";
 import { SourcesBlock } from "@/components/dossier/SourcesBlock";
 import { RelatedDossiers } from "@/components/dossier/RelatedDossiers";
+import { ShareButtons } from "@/components/ShareButtons";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -129,6 +130,13 @@ export default async function DossierPage({ params }: PageProps) {
         </nav>
 
         <DossierHero meta={dossier.meta} facts={dossier.facts} status={dossier.caseStudy.metadata.status} lastUpdated={dossier.caseStudy.metadata.tanggal_riset} />
+        <div className="py-6 border-b border-[var(--border-base)]">
+          <ShareButtons
+            url={`${SITE_CONFIG.URL}/dossier/${slug}`}
+            title={dossier.meta.title}
+            description={dossier.meta.subtitle}
+          />
+        </div>
         <KeyFactsGrid facts={dossier.facts} meta={dossier.meta} />
         <FindingsList findings={dossier.meta.findings} redFlags={dossier.facts.redFlags} entities={dossier.facts.entities} />
         <DossierTimeline events={dossier.meta.timeline} />

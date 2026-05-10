@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { NodeBadge } from "@/components/NodeBadge";
 import {
@@ -29,9 +30,33 @@ function getPreviewProperties(entity: Entity): Array<{ key: string; value: strin
 }
 
 export function SearchPage({ caseStudy }: SearchPageProps) {
-  const [query, setQuery] = useState("");
-  const [activeType, setActiveType] = useState<EntityType | null>(null);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const [query, setQuery] = useState(searchParams.get("q") || "");
+  const [activeType, setActiveType] = useState<EntityType | null>(() => {
+    const t = searchParams.get("type");
+    return (ALL_TYPES as string[]).includes(t ?? "") ? (t as EntityType) : null;
+  });
   const [limit, setLimit] = useState(24);
+
+  // Autofocus the search input on mount.
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
+
+  // Mirror state to the URL so searches are shareable.
+  useEffect(() => {
+    const next = new URLSearchParams();
+    if (query.trim()) next.set("q", query.trim());
+    if (activeType) next.set("type", activeType);
+    const qs = next.toString();
+    const target = qs ? `/cari?${qs}` : "/cari";
+    if (typeof window !== "undefined" && window.location.pathname + window.location.search !== target) {
+      router.replace(target, { scroll: false });
+    }
+  }, [router, query, activeType]);
 
   // Reset limit when query or filter changes
   useEffect(() => {
@@ -111,6 +136,7 @@ export function SearchPage({ caseStudy }: SearchPageProps) {
               </div>
               <input
                 id="search-input"
+                ref={inputRef}
                 type="search"
                 placeholder="Cari nama entitas atau ID..."
                 value={query}

@@ -345,3 +345,31 @@ body {
     text-shadow: none !important;
   }
 }
+
+
+/* ── Accessibility: unified focus styling ─────────────────────────────
+   Tailwind's default outline is often reset away by third-party CSS.
+   These rules guarantee a visible focus ring on keyboard navigation
+   while keeping mouse clicks quiet via :focus-visible.
+   ─────────────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent-danger);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent-danger);
+  outline-offset: 2px;
+}
+
+/* Remove default outline only when focus came from a pointer input */
+:focus:not(:focus-visible) {
+  outline: none;
+}

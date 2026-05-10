@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Peta SPPG",
@@ -13,7 +14,7 @@ export default function SPPGLayout({ children }: { children: React.ReactNode }) 
           Browser can fetch it in parallel with HTML/JS rather than waiting
           for the client component's useEffect to fire. */}
       <link rel="preload" as="fetch" href="/data/sppg_points.json" crossOrigin="anonymous" />
-      {children}
+      <Suspense fallback={null}>{children}</Suspense>
     </>
   );
 }

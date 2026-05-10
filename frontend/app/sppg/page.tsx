@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo, useCallback } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 // Constants and types
 
@@ -48,17 +49,48 @@ const POLITICAL_FOUNDATIONS: Record<string, string> = {
 };
 
 export default function SPPGPage() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // Initialise state from URL so the page is bookmarkable and shareable.
+  // Unknown / truthy values map cleanly: presence = on.
   const [data, setData] = useState<MapData | null>(null);
   const [summary, setSummary] = useState<SummaryData | null>(null);
   const [points, setPoints] = useState<SPPGPoint[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedProv, setSelectedProv] = useState<string | null>("NASIONAL");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [showOnlyPolitical, setShowOnlyPolitical] = useState(false);
-  const [showOnlySuspended, setShowOnlySuspended] = useState(false);
-  const [showOnlyUncertified, setShowOnlyUncertified] = useState(false);
+  const [selectedProv, setSelectedProv] = useState<string | null>(
+    searchParams.get("prov") || "NASIONAL"
+  );
+  const [searchQuery, setSearchQuery] = useState(searchParams.get("q") || "");
+  const [showOnlyPolitical, setShowOnlyPolitical] = useState(
+    searchParams.get("politik") === "1"
+  );
+  const [showOnlySuspended, setShowOnlySuspended] = useState(
+    searchParams.get("ditangguhkan") === "1"
+  );
+  const [showOnlyUncertified, setShowOnlyUncertified] = useState(
+    searchParams.get("belum_slhs") === "1"
+  );
   const [selectedSPPG, setSelectedSPPG] = useState<SPPGPoint | null>(null);
   const [visibleCount, setVisibleCount] = useState(60);
+
+  // Mirror filter state into the URL query string. Debounced-ish by being a
+  // side effect on the relevant state only. history.replaceState would avoid
+  // the back-stack but router.replace is good enough here and keeps Next's
+  // App Router state in sync.
+  useEffect(() => {
+    const next = new URLSearchParams();
+    if (selectedProv && selectedProv !== "NASIONAL") next.set("prov", selectedProv);
+    if (searchQuery.trim()) next.set("q", searchQuery.trim());
+    if (showOnlyPolitical) next.set("politik", "1");
+    if (showOnlySuspended) next.set("ditangguhkan", "1");
+    if (showOnlyUncertified) next.set("belum_slhs", "1");
+    const qs = next.toString();
+    const target = qs ? `/sppg?${qs}` : "/sppg";
+    if (typeof window !== "undefined" && window.location.pathname + window.location.search !== target) {
+      router.replace(target, { scroll: false });
+    }
+  }, [router, selectedProv, searchQuery, showOnlyPolitical, showOnlySuspended, showOnlyUncertified]);
 
   useEffect(() => {
     let cancelled = false;
