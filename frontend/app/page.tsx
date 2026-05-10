@@ -5,7 +5,6 @@ import type { Metadata } from "next";
 import { SITE_CONFIG } from "@/lib/constants";
 import { getDossierSummaries } from "@/lib/dossier";
 import { DossierIndexCard } from "@/components/dossier/DossierIndexCard";
-import { timeAgoId, formatIsoDateId } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: SITE_CONFIG.NAME_LONG,
@@ -28,7 +27,6 @@ function LandingPage({ stats }: LandingPageProps) {
   const totalEntitas = stats?.TOTAL_ENTITIES ?? 0;
   const totalRelasi = stats?.TOTAL_RELATIONS ?? 0;
   const totalRedFlags = stats?.TOTAL_RED_FLAGS ?? 0;
-  const latestUpdate = stats?.LATEST_UPDATE ?? "2026-04-18";
 
   // JSON-LD: WebSite + Organization for search engines
   const siteSchema = {
@@ -69,7 +67,6 @@ function LandingPage({ stats }: LandingPageProps) {
           totalEntitas={totalEntitas}
           totalRelasi={totalRelasi}
           totalRedFlags={totalRedFlags}
-          latestUpdate={latestUpdate}
         />
         <InvestigationsSection />
         <OpenDataBand />
@@ -84,25 +81,17 @@ interface HeroSectionProps {
   totalEntitas: number;
   totalRelasi: number;
   totalRedFlags: number;
-  latestUpdate: string;
 }
 
 function HeroSection({
   totalEntitas,
   totalRelasi,
   totalRedFlags,
-  latestUpdate,
 }: HeroSectionProps) {
   return (
     <section className="pb-14 md:pb-20">
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_420px] gap-8 lg:gap-12 items-end">
         <div>
-          <div className="flex flex-wrap gap-3 mb-7">
-            <MetaPill label="Sumber" value="Dokumen publik" />
-            <MetaPill label="Mutakhir" value={timeAgoId(latestUpdate)} title={formatIsoDateId(latestUpdate)} />
-            <MetaPill label="Sifat" value="Arsip" danger />
-          </div>
-
           <h1
             style={{
               fontFamily: "'IBM Plex Serif', 'Georgia', serif",
@@ -115,7 +104,7 @@ function HeroSection({
               maxWidth: "820px",
             }}
           >
-            Proyek bagus pemerintah.
+            Proyek <span style={{ color: "var(--accent-danger)" }}>&ldquo;Bagus&rdquo;</span> Pemerintah.
           </h1>
 
           <p
@@ -168,33 +157,6 @@ function HeroSection({
         </aside>
       </div>
     </section>
-  );
-}
-
-function MetaPill({
-  label,
-  value,
-  danger = false,
-  title,
-}: {
-  label: string;
-  value: string;
-  danger?: boolean;
-  title?: string;
-}) {
-  return (
-    <div
-      className="inline-flex items-center gap-2 rounded-md border border-[var(--border-base)] bg-[var(--bg-surface)] px-3 py-2"
-      title={title}
-    >
-      <span className={`h-1.5 w-1.5 rounded-full ${danger ? "bg-[var(--accent-danger)]" : "bg-[var(--text-tertiary)]"}`} />
-      <span className="font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--text-tertiary)]">
-        {label}
-      </span>
-      <span className="font-mono text-[10px] font-bold uppercase tracking-[0.08em] text-[var(--text-primary)]">
-        {value}
-      </span>
-    </div>
   );
 }
 
