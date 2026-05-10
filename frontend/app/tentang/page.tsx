@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: `Tentang - ${SITE_CONFIG.NAME}`,
+  title: `Tentang`,
   description: "Tentang PBP.ID dan cara kami menyusun data publik proyek pemerintah.",
 };
 
@@ -66,7 +66,9 @@ export default async function TentangPage() {
           </div>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
-              href="https://github.com"
+              href={SITE_CONFIG.REPO_URL}
+              target="_blank"
+              rel="noreferrer"
               className="px-8 py-3 bg-[var(--text-primary)] text-[var(--bg-base)] font-mono text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity"
             >
               GitHub

@@ -12,8 +12,9 @@ const NAV_LINKS = [
   { href: "/dossier", label: "CATATAN" },
   { href: "/graf", label: "GRAF" },
   { href: "/cari", label: "CARI" },
-  { href: "/tentang", label: "TENTANG" },
   { href: "/sppg", label: "SPPG" },
+  { href: "/tentang", label: "TENTANG" },
+  { href: "/kontak", label: "KONTAK" },
 ] as const;
 
 export function Header() {

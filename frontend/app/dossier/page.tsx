@@ -4,8 +4,9 @@ import type { Metadata } from "next";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: `Catatan Proyek - ${SITE_CONFIG.NAME}`,
-  description: "Daftar catatan data publik tentang proyek pemerintah yang angkanya besar dan polanya perlu dilihat ulang.",
+  title: `Catatan Proyek`,
+  description:
+    "Daftar catatan data publik tentang proyek pemerintah yang angkanya besar dan polanya perlu dilihat ulang.",
 };
 
 export default function DossierIndexPage() {

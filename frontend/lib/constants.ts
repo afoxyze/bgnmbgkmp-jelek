@@ -2,15 +2,29 @@
 
 export const SITE_CONFIG = {
   NAME: "PBP.ID",
+  URL: "https://pbp.id",
+  REPO_URL: "https://github.com/afoxyze/bgnmbgkmp-jelek",
+  CONTACT_EMAIL: "kontak@pbp.id",
   TAGLINE: "Data Publik Proyek Pemerintah",
-  DESCRIPTION: "Katalog data publik untuk membantu masyarakat melihat proyek pemerintah, angka anggaran, vendor, dan relasinya dengan lebih mudah.",
-  
+  DESCRIPTION:
+    "Katalog data publik untuk membantu masyarakat melihat proyek pemerintah, angka anggaran, vendor, dan relasinya dengan lebih mudah.",
+
   INVESTIGATION_TITLE: "Catatan Proyek",
   INVESTIGATION_SUBTITLE: "Data Publik",
-  
-  DISCLAIMER: "Berbasis dokumen publik dan sumber terbuka. Situs ini bersifat informatif, bukan tuduhan atau putusan hukum.",
-  
-  KEYWORDS: ["Data proyek pemerintah", "Koperasi Merah Putih", "BGN", "Relasi bisnis politik", "Transparansi anggaran", "Data publik Indonesia"],
+
+  DISCLAIMER:
+    "Berbasis dokumen publik dan sumber terbuka. Situs ini bersifat informatif, bukan tuduhan atau putusan hukum.",
+
+  KEYWORDS: [
+    "Data proyek pemerintah",
+    "Koperasi Merah Putih",
+    "BGN",
+    "Makan Bergizi Gratis",
+    "Relasi bisnis politik",
+    "Transparansi anggaran",
+    "Data publik Indonesia",
+    "OSINT Indonesia",
+  ],
 };
 
 export const THEME_COLORS = {

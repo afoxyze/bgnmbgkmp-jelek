@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getCaseStudy } from "@/lib/data";
 import { EntityDetailPage } from "@/components/EntityDetailPage";
 import { findEntityById } from "@/lib/graph-utils";
+import { SITE_CONFIG } from "@/lib/constants";
 import type { Metadata } from "next";
 
 interface EntitasPageProps {
@@ -12,10 +13,37 @@ export async function generateMetadata({ params }: EntitasPageProps): Promise<Me
   const { id } = await params;
   const caseStudy = await getCaseStudy();
   const entity = caseStudy ? findEntityById(caseStudy.entities, id) : undefined;
+
+  if (!entity) {
+    return {
+      title: "Entitas tidak ditemukan",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const title = entity.label;
+  const description = `Profil publik ${entity.label} (${entity.type}) berdasarkan dokumen terbuka — relasi, kontrak, dan catatan yang perlu dicek.`;
+  const url = `${SITE_CONFIG.URL}/entitas/${id}`;
+
   return {
-    title: entity
-      ? `${entity.label} - PBP.ID`
-      : "Entitas Tidak Ditemukan - PBP.ID",
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "profile",
+      url,
+      siteName: SITE_CONFIG.NAME,
+      title: `${title} - ${SITE_CONFIG.NAME}`,
+      description,
+      locale: "id_ID",
+      images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} - ${SITE_CONFIG.NAME}`,
+      description,
+      images: ["/og-image.svg"],
+    },
   };
 }
 

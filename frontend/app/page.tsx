@@ -31,8 +31,40 @@ function LandingPage({ stats }: LandingPageProps) {
   const mappedSppg = stats?.MAPPED_SPPG ?? 0;
   const latestUpdate = stats?.LATEST_UPDATE ?? "2026-04-18";
 
+  // JSON-LD: WebSite + Organization for search engines
+  const siteSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": `${SITE_CONFIG.URL}/#website`,
+        url: SITE_CONFIG.URL,
+        name: SITE_CONFIG.NAME,
+        description: SITE_CONFIG.DESCRIPTION,
+        inLanguage: "id-ID",
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${SITE_CONFIG.URL}/cari?q={search_term_string}`,
+          "query-input": "required name=search_term_string",
+        },
+      },
+      {
+        "@type": "Organization",
+        "@id": `${SITE_CONFIG.URL}/#org`,
+        name: SITE_CONFIG.NAME,
+        url: SITE_CONFIG.URL,
+        logo: `${SITE_CONFIG.URL}/og-image.svg`,
+        description: SITE_CONFIG.DESCRIPTION,
+      },
+    ],
+  };
+
   return (
     <main className="content-page" style={{ fontFamily: "'Inter', 'system-ui', sans-serif" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
+      />
       <div style={{ maxWidth: "1160px", margin: "0 auto" }}>
         <HeroSection
           totalEntitas={totalEntitas}
@@ -438,8 +470,8 @@ function Footer() {
 
         <FooterColumn title="Tentang">
           <FooterLink href="/tentang">Metodologi</FooterLink>
-          <FooterLink href="https://github.com">GitHub</FooterLink>
-          <FooterLink href="/tentang">Kontribusi</FooterLink>
+          <FooterLink href={SITE_CONFIG.REPO_URL}>GitHub</FooterLink>
+          <FooterLink href="/kontak">Kontak & Koreksi</FooterLink>
         </FooterColumn>
       </div>
 

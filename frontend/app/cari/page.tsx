@@ -3,7 +3,8 @@ import { SearchPage } from "@/components/SearchPage";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Cari Entitas - PBP.ID",
+  title: "Cari Entitas",
+  description: "Pencarian entitas: pejabat, perusahaan, yayasan, dan proyek dalam katalog data publik PBP.ID.",
 };
 
 export default async function CariPage() {

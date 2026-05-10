@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 
 export const metadata: Metadata = {
-  title: "Graf Data - PBP.ID",
+  title: "Graf Data",
   description: "Peta relasi publik antar entitas, kontrak, dan proyek pemerintah.",
 };
 

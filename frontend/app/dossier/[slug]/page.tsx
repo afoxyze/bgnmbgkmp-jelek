@@ -22,10 +22,46 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const dossier = await loadDossier(slug);
-  if (!dossier) return { title: `${SITE_CONFIG.NAME} - Catatan tidak ditemukan` };
+  if (!dossier) {
+    return {
+      title: "Catatan tidak ditemukan",
+      robots: { index: false, follow: false },
+    };
+  }
+
+  const url = `${SITE_CONFIG.URL}/dossier/${slug}`;
+  const title = dossier.meta.title;
+  const description = dossier.meta.lede.slice(0, 180);
+
   return {
-    title: `${dossier.meta.title} - ${SITE_CONFIG.NAME}`,
-    description: dossier.meta.lede.slice(0, 180),
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      url,
+      siteName: SITE_CONFIG.NAME,
+      title: `${title} - ${SITE_CONFIG.NAME}`,
+      description,
+      locale: "id_ID",
+      publishedTime: dossier.caseStudy.metadata.tanggal_riset,
+      modifiedTime: dossier.caseStudy.metadata.tanggal_riset,
+      tags: [dossier.meta.categoryLong, dossier.meta.categoryShort, dossier.meta.thread],
+      images: [
+        {
+          url: "/og-image.svg",
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} - ${SITE_CONFIG.NAME}`,
+      description,
+      images: ["/og-image.svg"],
+    },
   };
 }
 
@@ -36,8 +72,36 @@ export default async function DossierPage({ params }: PageProps) {
 
   const others = getDossierSummaries().filter((d) => d.slug !== slug);
 
+  // JSON-LD structured data for search engines.
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: dossier.meta.title,
+    description: dossier.meta.lede,
+    datePublished: dossier.caseStudy.metadata.tanggal_riset,
+    dateModified: dossier.caseStudy.metadata.tanggal_riset,
+    author: { "@type": "Organization", name: SITE_CONFIG.NAME, url: SITE_CONFIG.URL },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_CONFIG.NAME,
+      url: SITE_CONFIG.URL,
+      logo: { "@type": "ImageObject", url: `${SITE_CONFIG.URL}/og-image.svg` },
+    },
+    mainEntityOfPage: `${SITE_CONFIG.URL}/dossier/${slug}`,
+    keywords: [
+      dossier.meta.categoryLong,
+      dossier.meta.categoryShort,
+      dossier.meta.thread,
+    ].join(", "),
+    isBasedOn: dossier.facts.allSources,
+  };
+
   return (
     <main className="content-page" style={{ fontFamily: "'Inter', 'system-ui', sans-serif" }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <div style={{ maxWidth: "1160px", margin: "0 auto", padding: "0 clamp(1rem, 3vw, 2rem)" }}>
         <nav
           style={{

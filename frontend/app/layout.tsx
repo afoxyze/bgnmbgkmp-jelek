@@ -1,12 +1,72 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { ClientShell } from "@/components/ClientShell";
+import { SITE_CONFIG } from "@/lib/constants";
 import Script from "next/script";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f5f5f5" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
+};
+
 export const metadata: Metadata = {
-  title: "PBP.ID - Data Publik Proyek Pemerintah",
-  description:
-    "Katalog data publik untuk melihat proyek pemerintah yang angkanya besar dan polanya perlu dicek ulang.",
+  metadataBase: new URL(SITE_CONFIG.URL),
+  title: {
+    default: `${SITE_CONFIG.NAME} - ${SITE_CONFIG.TAGLINE}`,
+    template: `%s - ${SITE_CONFIG.NAME}`,
+  },
+  description: SITE_CONFIG.DESCRIPTION,
+  keywords: SITE_CONFIG.KEYWORDS,
+  applicationName: SITE_CONFIG.NAME,
+  authors: [{ name: SITE_CONFIG.NAME }],
+  creator: SITE_CONFIG.NAME,
+  publisher: SITE_CONFIG.NAME,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: [{ url: "/favicon.svg" }],
+  },
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: SITE_CONFIG.URL,
+    siteName: SITE_CONFIG.NAME,
+    title: `${SITE_CONFIG.NAME} - ${SITE_CONFIG.TAGLINE}`,
+    description: SITE_CONFIG.DESCRIPTION,
+    images: [
+      {
+        url: "/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: `${SITE_CONFIG.NAME} - ${SITE_CONFIG.TAGLINE}`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_CONFIG.NAME} - ${SITE_CONFIG.TAGLINE}`,
+    description: SITE_CONFIG.DESCRIPTION,
+    images: ["/og-image.svg"],
+  },
+  alternates: {
+    canonical: SITE_CONFIG.URL,
+  },
 };
 
 interface RootLayoutProps {
@@ -17,7 +77,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="id" suppressHydrationWarning>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
