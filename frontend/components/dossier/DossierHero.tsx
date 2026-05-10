@@ -189,7 +189,7 @@ export function DossierHero({ meta, facts: _facts, status, lastUpdated }: Props)
                 letterSpacing: "0.06em",
               }}
             >
-              CATATAN: {status}
+              STATUS: {status}
             </div>
           </aside>
         )}

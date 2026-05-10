@@ -114,7 +114,7 @@ export function SearchPage({ caseStudy }: SearchPageProps) {
                 </span>
               </div>
               <p className="text-sm" style={{ color: "var(--text-secondary)", maxWidth: "600px" }}>
-                Cari nama orang, organisasi, dan proyek yang muncul di catatan
+                Cari nama orang, organisasi, dan proyek yang muncul di katalog
                 data publik.
               </p>
             </div>
@@ -267,7 +267,7 @@ function EntityCard({ entity, caseStudy }: EntityCardProps) {
             )}
             {isFlagged && (
               <span className="text-[9px] font-mono font-bold px-2 py-0.5 rounded bg-[var(--accent-danger)] text-white animate-pulse">
-                {redFlags.length} CATATAN
+                {redFlags.length} SOROTAN
               </span>
             )}
           </div>

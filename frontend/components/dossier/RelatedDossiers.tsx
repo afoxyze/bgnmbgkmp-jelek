@@ -20,7 +20,7 @@ export function RelatedDossiers({ dossiers }: Props) {
             fontWeight: 700,
           }}
         >
-          Catatan Lainnya
+          Entri Lainnya
         </span>
       </header>
 
@@ -91,7 +91,7 @@ export function RelatedDossiers({ dossiers }: Props) {
                 alignItems: "center",
               }}
             >
-              Buka catatan -&gt;
+              Buka entri -&gt;
             </div>
           </Link>
         ))}

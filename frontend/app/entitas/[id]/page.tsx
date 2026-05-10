@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: EntitasPageProps): Promise<Me
   }
 
   const title = entity.label;
-  const description = `Profil publik ${entity.label} (${entity.type}) berdasarkan dokumen terbuka — relasi, kontrak, dan catatan yang perlu dicek.`;
+  const description = `Profil ${entity.label} (${entity.type}) di PBP.ID — relasi, kontrak, dan sorotan yang tercatat di dokumen publik.`;
   const url = `${SITE_CONFIG.URL}/entitas/${id}`;
 
   return {

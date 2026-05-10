@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: `Catatan Proyek`,
+  title: `Katalog Proyek`,
   description:
-    "Daftar catatan data publik tentang proyek pemerintah yang angkanya besar dan polanya perlu dilihat ulang.",
+    "Daftar proyek-proyek bagus pemerintah Indonesia, diarsipkan dari dokumen publik yang sudah tersebar.",
 };
 
 export default function DossierIndexPage() {
@@ -24,11 +24,12 @@ export default function DossierIndexPage() {
               marginBottom: "1rem",
             }}
           >
-            Catatan Proyek
+            Katalog Proyek
           </h1>
           <p style={{ color: "var(--text-secondary)", fontSize: "1.125rem", maxWidth: "640px" }}>
-            Kumpulan catatan data publik tentang proyek pemerintah, anggaran,
-            vendor, dan relasi yang bisa diperiksa ulang.
+            Arsip proyek pemerintah: anggaran, vendor, dan relasinya,
+            dirangkum dari dokumen publik yang sudah bisa diakses. Tidak ada
+            yang baru di sini — hanya lebih rapi.
           </p>
         </header>
 

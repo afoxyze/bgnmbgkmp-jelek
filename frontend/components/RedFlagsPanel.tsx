@@ -32,7 +32,7 @@ export function RedFlagsPanel({
   if (redFlags.length === 0) {
     return (
       <div className="p-6 text-sm text-[var(--text-tertiary)] italic">
-        Belum ada catatan untuk bagian ini.
+        Belum ada sorotan untuk bagian ini.
       </div>
     );
   }

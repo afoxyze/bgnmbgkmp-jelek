@@ -62,10 +62,10 @@ export function DetailSidebar({
       <div style={{ borderTop: "1px solid var(--border-base)" }} className="flex-shrink-0 bg-[var(--bg-surface)]">
         <div className="px-6 py-3 flex items-center gap-2 border-b border-[var(--border-base)]">
           <span className="text-[11px] font-bold text-red-500 uppercase tracking-[0.15em]">
-            Panel Catatan
+            Panel Sorotan
           </span>
           <span className="ml-auto text-[10px] bg-red-500/10 text-red-500 border border-red-500/20 px-2 py-0.5 rounded-full font-mono font-bold">
-            {caseStudy.red_flags.length} CATATAN
+            {caseStudy.red_flags.length} SOROTAN
           </span>
         </div>
         <div className="max-h-64 overflow-y-auto pb-4 bg-[var(--bg-surface-2)]">
@@ -167,11 +167,11 @@ function OverviewPanel({ caseStudy }: { caseStudy: CaseStudy }) {
         <div className="grid grid-cols-3 gap-3">
           <StatCard label="Relasi" value={caseStudy.relations.length} />
           <StatCard label="Entitas" value={caseStudy.entities.length} />
-          <StatCard label="Catatan" value={caseStudy.red_flags.length} danger />
+          <StatCard label="Sorotan" value={caseStudy.red_flags.length} danger />
         </div>
 
         <div className="p-5 rounded-xl border bg-[var(--bg-surface)] shadow-sm" style={{ borderColor: "var(--border-base)" }}>
-          <SectionLabel>Yang Perlu Dicek</SectionLabel>
+          <SectionLabel>Tingkat Sorotan</SectionLabel>
           <div className="flex flex-col gap-3 mt-4">
             <div className="flex items-center gap-3">
               <span className="w-2.5 h-2.5 rounded-full bg-[var(--accent-danger)] shadow-[0_0_8px_var(--accent-danger)] flex-shrink-0" />
@@ -195,7 +195,7 @@ function OverviewPanel({ caseStudy }: { caseStudy: CaseStudy }) {
         </div>
 
         <div className="p-4 rounded-lg bg-blue-500/5 border border-blue-500/20 text-xs leading-relaxed text-blue-600 dark:text-blue-400">
-          <strong>Tip:</strong> Klik simpul atau garis relasi untuk melihat detail data.
+          <strong>Tip:</strong> Klik simpul atau garis relasi untuk melihat detail.
         </div>
       </div>
     </div>
@@ -222,7 +222,7 @@ function EntityPanel({ entity, caseStudy, onSelectEntity }: { entity: Entity; ca
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-red-500">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-              <SectionLabel>Catatan yang Perlu Dicek</SectionLabel>
+              <SectionLabel>Sorotan</SectionLabel>
             </div>
             <div className="flex flex-col gap-3">
               {entityRedFlags.map(rf => (

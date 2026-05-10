@@ -13,7 +13,7 @@ export default function NotFound() {
           marginBottom: "1rem",
         }}
       >
-        404 - Catatan tidak ditemukan
+        404 - Entri tidak ditemukan
       </div>
       <h1
         style={{
@@ -24,10 +24,11 @@ export default function NotFound() {
           margin: "0 0 1rem",
         }}
       >
-        Catatan ini belum tersedia.
+        Entri ini belum ada di katalog.
       </h1>
       <p style={{ color: "var(--text-secondary)", lineHeight: 1.6, marginBottom: "2rem" }}>
-        Slug yang dituju belum ada di katalog. Silakan kembali ke beranda untuk melihat catatan yang tersedia.
+        Slug yang dituju tidak ada. Mungkin sudah pindah atau belum pernah
+        dibuat. Kembali ke beranda untuk melihat entri yang tersedia.
       </p>
       <Link
         href="/"

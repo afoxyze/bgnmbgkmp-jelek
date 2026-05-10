@@ -2,28 +2,29 @@
 
 export const SITE_CONFIG = {
   NAME: "PBP.ID",
+  NAME_LONG: "Proyek Bagus Pemerintah",
   URL: "https://pbp.id",
   REPO_URL: "https://github.com/afoxyze/bgnmbgkmp-jelek",
   CONTACT_EMAIL: "kontak@pbp.id",
-  TAGLINE: "Data Publik Proyek Pemerintah",
+  TAGLINE: "Katalog Proyek Bagus Pemerintah",
   DESCRIPTION:
-    "Katalog data publik untuk membantu masyarakat melihat proyek pemerintah, angka anggaran, vendor, dan relasinya dengan lebih mudah.",
+    "Arsip proyek-proyek bagus pemerintah Indonesia. Angka anggaran, vendor, dan relasinya, dirangkum dari dokumen publik yang memang bisa diakses siapa saja.",
 
-  INVESTIGATION_TITLE: "Catatan Proyek",
-  INVESTIGATION_SUBTITLE: "Data Publik",
+  CATALOG_TITLE: "Katalog Proyek",
+  CATALOG_SUBTITLE: "Arsip Publik",
 
   DISCLAIMER:
-    "Berbasis dokumen publik dan sumber terbuka. Situs ini bersifat informatif, bukan tuduhan atau putusan hukum.",
+    "Disusun dari dokumen publik dan sumber terbuka. Tidak ada analisis, tidak ada opini, tidak ada tuduhan — hanya data yang sudah tersedia, dikumpulkan di satu tempat.",
 
   KEYWORDS: [
-    "Data proyek pemerintah",
+    "Proyek pemerintah Indonesia",
+    "Proyek Bagus Pemerintah",
     "Koperasi Merah Putih",
     "BGN",
     "Makan Bergizi Gratis",
-    "Relasi bisnis politik",
     "Transparansi anggaran",
-    "Data publik Indonesia",
-    "OSINT Indonesia",
+    "Katalog proyek pemerintah",
+    "Arsip data publik Indonesia",
   ],
 };
 

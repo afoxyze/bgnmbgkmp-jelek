@@ -107,9 +107,9 @@ function HeroSection({
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_420px] gap-8 lg:gap-12 items-end">
         <div>
           <div className="flex flex-wrap gap-3 mb-7">
-            <MetaPill label="Data" value="Dokumen publik" />
-            <MetaPill label="Update" value={timeAgoId(latestUpdate)} title={formatIsoDateId(latestUpdate)} />
-            <MetaPill label="Mode" value="Ringkas" danger />
+            <MetaPill label="Sumber" value="Dokumen publik" />
+            <MetaPill label="Mutakhir" value={timeAgoId(latestUpdate)} title={formatIsoDateId(latestUpdate)} />
+            <MetaPill label="Sifat" value="Arsip" danger />
           </div>
 
           <h1
@@ -124,7 +124,7 @@ function HeroSection({
               maxWidth: "820px",
             }}
           >
-            Data proyek pemerintah yang perlu dilihat lebih dekat.
+            Katalog proyek bagus pemerintah.
           </h1>
 
           <p
@@ -136,10 +136,10 @@ function HeroSection({
               maxWidth: "680px",
             }}
           >
-            {SITE_CONFIG.NAME} mengumpulkan data publik soal proyek pemerintah,
-            mulai dari angka anggaran, vendor, sumber, sampai relasi antar
-            entitas. Tujuannya sederhana: supaya data yang tersebar bisa lebih
-            mudah dibaca.
+            {SITE_CONFIG.NAME} adalah arsip proyek pemerintah yang dirangkum dari
+            dokumen publik: AHU, LPSE, SiRUP, arsip berita, dan rilis resmi.
+            Kami tidak menambahkan apa-apa — hanya mengumpulkan data yang sudah
+            ada di satu tempat supaya bisa dibaca tanpa pindah-pindah tab.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
@@ -147,14 +147,14 @@ function HeroSection({
               href="/dossier"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-[var(--accent-danger)] text-white font-mono text-xs font-bold tracking-[0.14em] no-underline transition-all shadow-[0_12px_22px_-10px_rgba(196,30,58,0.65)] hover:opacity-90 hover:translate-y-[-1px] active:translate-y-0"
             >
-              LIHAT CATATAN
+              BUKA KATALOG
               <ArrowRight />
             </Link>
             <Link
               href="/graf"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md border border-[var(--border-strong)] bg-[var(--bg-surface)] text-[var(--text-primary)] font-mono text-xs font-bold tracking-[0.14em] no-underline transition-all hover:border-[var(--accent-danger)] hover:text-[var(--accent-danger)]"
             >
-              BUKA GRAF
+              PETA RELASI
             </Link>
           </div>
         </div>
@@ -162,17 +162,17 @@ function HeroSection({
         <aside className="border border-[var(--border-base)] rounded-lg bg-[var(--bg-surface)] shadow-sm overflow-hidden">
           <div className="flex items-center justify-between gap-4 px-5 py-4 border-b border-[var(--border-base)]">
             <span className="font-mono text-[10px] font-bold tracking-[0.14em] uppercase text-[var(--text-tertiary)]">
-              Ringkasan Data
+              Inventaris Data
             </span>
             <span className="font-mono text-[10px] font-bold tracking-[0.12em] uppercase text-[var(--accent-danger)]">
-              Publik
+              Terbuka
             </span>
           </div>
 
           <div className="grid grid-cols-2">
             <StatCell value={totalRelasi} label="Relasi" />
             <StatCell value={totalEntitas} label="Entitas" />
-            <StatCell value={totalRedFlags} label="Catatan" danger />
+            <StatCell value={totalRedFlags} label="Sorotan" danger />
             <StatCell value={formatCompact(totalSppg)} label="Titik SPPG" />
           </div>
 
@@ -255,14 +255,14 @@ function SignalMap() {
       </svg>
       <div className="relative z-10 grid h-full min-h-[190px] grid-cols-2 content-between p-5">
         <span className="font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--accent-danger)]">
-          Perlu dicek
+          Sorotan
         </span>
         <span className="text-right font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--text-tertiary)]">
           AHU / LPSE / SiRUP
         </span>
         <span className="col-span-2 max-w-[260px] self-end text-sm leading-relaxed text-[var(--text-secondary)]">
-          Graf ini menyambungkan data yang muncul di dokumen publik supaya
-          relasi antar entitas lebih mudah dibaca.
+          Peta ini menyambungkan entitas yang namanya sudah muncul di dokumen
+          publik. Tinggal lihat sendiri.
         </span>
       </div>
     </div>
@@ -273,10 +273,10 @@ function InvestigationsSection() {
   return (
     <section className="pb-12 md:pb-16">
       <SectionHeader
-        eyebrow="Catatan"
-        title="Beberapa proyek yang bisa ditelusuri dari data publik."
+        eyebrow="Katalog"
+        title="Proyek pemerintah yang angkanya besar, vendornya unik, dan dokumennya publik."
         actionHref="/dossier"
-        actionLabel="Semua catatan"
+        actionLabel="Semua entri"
       />
 
       <div className="flex flex-col gap-4">
@@ -302,7 +302,7 @@ function OpenDataBand({
       <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-8 items-start">
         <div>
           <p className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--accent-danger)] mb-4">
-            Data Publik
+            Data Terbuka
           </p>
           <h2
             style={{
@@ -316,11 +316,12 @@ function OpenDataBand({
               marginBottom: "1rem",
             }}
           >
-            Dataset tersedia untuk diperiksa ulang.
+            Unduh mentahnya, cek sendiri.
           </h2>
           <p className="max-w-[720px] text-[var(--text-secondary)] leading-relaxed">
-            Data inti disajikan dalam format JSON dan CSV agar bisa dibuka,
-            dibandingkan, dan diperiksa lagi oleh siapa pun.
+            Seluruh dataset tersedia dalam JSON dan CSV. Silakan dibanding-
+            kan dengan dokumen aslinya. Kalau kami salah, repo GitHub-nya
+            terbuka untuk koreksi.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row gap-3">
             <Link className="data-link-primary" href="/exports/pbp_id_sppg_data.csv">
@@ -348,23 +349,23 @@ function OpenDataBand({
 function EditorialPrinciples() {
   return (
     <section className="py-14 md:py-16">
-      <SectionHeader eyebrow="Cara Baca" title="Cara membaca data ini." />
+      <SectionHeader eyebrow="Cara Pakai" title="Bukan media, bukan penyidik, bukan analis." />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         <PrincipleCard
           num="01"
-          title="Pakai sumber terbuka"
-          body="Setiap angka dan relasi diusahakan bisa ditelusuri ke sumber seperti AHU, LPSE, SiRUP, arsip berita, atau dokumen resmi."
+          title="Hanya mengumpulkan"
+          body="Semua yang ada di sini sudah tersedia lebih dulu di AHU, LPSE, SiRUP, atau arsip berita. Kami menaruhnya di satu tempat."
         />
         <PrincipleCard
           num="02"
-          title="Catatan bukan vonis"
-          body="Situs ini membantu menunjukkan pola yang perlu diperiksa. Kesimpulan hukum tetap menjadi kewenangan lembaga yang berwenang."
+          title="Tidak menuduh"
+          body="Tidak ada analisis, tidak ada kesimpulan hukum. Yang ditandai sebagai sorotan pun hanya penanda, bukan vonis."
         />
         <PrincipleCard
           num="03"
-          title="Bisa diperiksa ulang"
-          body="Dataset ekspor, halaman entitas, dan catatan proyek dibuat supaya informasinya bisa dicek ulang dengan lebih mudah."
+          title="Silakan cek ulang"
+          body="Tiap entitas dan angka punya tautan ke dokumen aslinya. Kalau ada yang janggal atau keliru, laporkan lewat GitHub."
         />
       </div>
     </section>
@@ -470,16 +471,16 @@ function Footer() {
         </div>
 
         <FooterColumn title="Baca">
-          <FooterLink href="/dossier">Catatan proyek</FooterLink>
-          <FooterLink href="/graf">Graf relasi</FooterLink>
+          <FooterLink href="/dossier">Katalog proyek</FooterLink>
+          <FooterLink href="/graf">Peta relasi</FooterLink>
           <FooterLink href="/cari">Cari entitas</FooterLink>
           <FooterLink href="/sppg">Titik SPPG</FooterLink>
         </FooterColumn>
 
         <FooterColumn title="Data">
-          <FooterLink href="/exports/pbp_id_sppg_data.csv">Ekspor CSV</FooterLink>
-          <FooterLink href="/exports/pbp_id_sppg_data.json">Ekspor JSON</FooterLink>
-          <FooterLink href="/data/case_study_bgn_peruri.json">Contoh catatan JSON</FooterLink>
+          <FooterLink href="/exports/pbp_id_sppg_data.csv">Unduh CSV</FooterLink>
+          <FooterLink href="/exports/pbp_id_sppg_data.json">Unduh JSON</FooterLink>
+          <FooterLink href="/data/case_study_bgn_peruri.json">Contoh entri JSON</FooterLink>
         </FooterColumn>
 
         <FooterColumn title="Tentang">

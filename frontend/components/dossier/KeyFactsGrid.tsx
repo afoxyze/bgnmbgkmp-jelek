@@ -9,8 +9,8 @@ export function KeyFactsGrid({ facts, meta }: Props) {
   const cells = [
     { v: facts.entities.length, k: "Entitas", danger: false },
     { v: facts.totalRelations, k: "Relasi", danger: false },
-    { v: facts.redFlagsHigh, k: "Catatan Prioritas Tinggi", danger: true },
-    { v: facts.redFlagsMedium, k: "Catatan Prioritas Sedang", danger: false },
+    { v: facts.redFlagsHigh, k: "Sorotan Prioritas Tinggi", danger: true },
+    { v: facts.redFlagsMedium, k: "Sorotan Prioritas Sedang", danger: false },
   ];
 
   return (

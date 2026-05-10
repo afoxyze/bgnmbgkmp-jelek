@@ -26,7 +26,7 @@ export function FindingsList({ findings, redFlags, entities }: Props) {
             margin: 0,
           }}
         >
-          Catatan Utama
+          Yang Dicatat
         </h2>
         <span style={{ flex: 1, height: "1px", background: "var(--border-base)" }} />
         <span
@@ -38,7 +38,7 @@ export function FindingsList({ findings, redFlags, entities }: Props) {
             color: "var(--text-tertiary)",
           }}
         >
-          {findings.length.toString().padStart(2, "0")} catatan
+          {findings.length.toString().padStart(2, "0")} poin
         </span>
       </header>
 

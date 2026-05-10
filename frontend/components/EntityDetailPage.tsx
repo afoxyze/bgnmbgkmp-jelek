@@ -80,7 +80,7 @@ export function EntityDetailPage({ entity, caseStudy }: EntityDetailPageProps) {
             <NodeBadge type={entity.type} />
             {redFlags.length > 0 && (
               <span className="text-xs px-1.5 py-0.5 rounded font-medium text-red-600 dark:text-red-400 bg-red-500/10 border border-red-500/20">
-                {redFlags.length} catatan
+                {redFlags.length} sorotan
               </span>
             )}
           </div>
@@ -126,7 +126,7 @@ export function EntityDetailPage({ entity, caseStudy }: EntityDetailPageProps) {
 
           {/* Public-data questions */}
           {redFlags.length > 0 && (
-            <Section title="CATATAN">
+            <Section title="SOROTAN">
               <div className="flex flex-col gap-3">
                 {redFlags.map((rf) => (
                   <RedFlagCard key={rf.id} redFlag={rf} />

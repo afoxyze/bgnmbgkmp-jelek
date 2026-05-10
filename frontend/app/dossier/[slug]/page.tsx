@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const dossier = await loadDossier(slug);
   if (!dossier) {
     return {
-      title: "Catatan tidak ditemukan",
+      title: "Entri tidak ditemukan",
       robots: { index: false, follow: false },
     };
   }
@@ -120,7 +120,7 @@ export default async function DossierPage({ params }: PageProps) {
         >
           <Link href="/" style={{ color: "var(--text-tertiary)", textDecoration: "none" }}>Beranda</Link>
           <span style={{ opacity: 0.5 }}>/</span>
-          <span>Catatan</span>
+          <span>Katalog</span>
           <span style={{ opacity: 0.5 }}>/</span>
           <span style={{ color: "var(--accent-danger)" }}>{dossier.meta.code}</span>
           <span style={{ flex: 1 }} />

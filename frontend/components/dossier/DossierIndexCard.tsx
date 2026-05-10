@@ -7,9 +7,9 @@ interface Props {
 }
 
 const SEVERITY_LABELS: Record<DossierMeta["severity"], string> = {
-  CRITICAL: "Perlu Dicek",
+  CRITICAL: "Sorotan",
   ACTIVE: "Berjalan",
-  VERIFIED: "Ada Sumber",
+  VERIFIED: "Dokumen Lengkap",
 };
 
 export function DossierIndexCard({ dossier }: Props) {

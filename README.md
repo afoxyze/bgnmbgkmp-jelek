@@ -1,53 +1,61 @@
-# PBP.ID — Data Publik Proyek Pemerintah
+# PBP.ID — Proyek Bagus Pemerintah
 
-> **"Data publik, tersaji agar bisa diperiksa ulang."**
+> Katalog proyek pemerintah Indonesia yang anggarannya besar, vendornya unik, dan dokumennya sudah tersedia di ruang publik.
 
-PBP.ID adalah katalog data publik yang memetakan entitas (pejabat, perusahaan, yayasan), relasi kepemilikan/pengurus, dan potensi konflik kepentingan di sekitar proyek strategis pemerintah Indonesia. Seluruh data disusun dari sumber terbuka: AHU Online, LPSE, SiRUP, laporan berita arus utama, dan dokumen resmi lembaga.
+**PBP.ID bukan investigasi.** Situs ini hanya mengumpulkan data yang memang sudah publik — dari AHU Online, LPSE, SiRUP, rilis resmi lembaga, dan arsip berita — lalu menaruhnya di satu tempat supaya bisa dibaca tanpa harus buka lima tab sekaligus.
 
-Situs ini bersifat informatif, bukan tuduhan atau putusan hukum.
+Kalau datanya terlihat aneh, itu bukan narasi kami. Itu datanya yang aneh.
 
 ---
 
-## Fitur
+## Apa yang ada di sini
 
-- **Graf relasi**: visualisasi interaktif hubungan antar aktor, perusahaan, dan yayasan (Cytoscape.js).
-- **Catatan proyek (dossier)**: ringkasan kasus per proyek strategis dengan sumber tertaut.
-- **Direktori SPPG**: peta sebaran Satuan Pelayanan Pemenuhan Gizi berdasarkan data resmi BGN.
-- **Pencarian entitas**: pencarian cepat profil individu dan organisasi dalam dataset.
-- **Ekspor data publik**: seluruh dataset tersedia dalam JSON/CSV.
+- **Katalog entri**: rangkuman per-proyek (anggaran, vendor, tanggal kunci, relasi, sumber).
+- **Peta relasi**: visualisasi antar entitas (pejabat, perusahaan, yayasan) dengan Cytoscape.js.
+- **Peta SPPG**: sebaran 27.000+ titik Satuan Pelayanan Pemenuhan Gizi.
+- **Pencarian entitas**: pencarian cepat profil individu dan organisasi.
+- **Ekspor publik**: seluruh dataset dalam JSON/CSV.
 
-## Fokus Investigasi Saat Ini
+## Apa yang TIDAK ada
 
-1. **Program MBG** — anggaran, mitra yayasan, dan pola pengadaan di Badan Gizi Nasional.
-2. **Pengadaan BGN** — paket-paket anomali pada sistem E-Purchasing dan penunjukan langsung.
-3. **Koperasi Merah Putih** — struktur kepemilikan, penugasan konstruksi, dan rantai pasok.
+- Analisis, opini, atau kesimpulan.
+- Wawancara narasumber atau laporan jurnalistik.
+- Tuduhan, putusan, atau penilaian hukum.
+
+## Fokus saat ini
+
+1. **MBG** (Makan Bergizi Gratis)
+2. **BGN** (Badan Gizi Nasional)
+3. **KMP** (Koperasi Merah Putih)
 
 ## Arsitektur
 
 ### Frontend
 - Next.js 15+ (App Router, static export).
-- Cytoscape.js untuk graf, React Leaflet untuk peta SPPG.
-- Tailwind CSS dengan dukungan dark/light mode.
-- Dioptimalkan untuk deployment di Cloudflare Pages.
+- Cytoscape.js untuk graf, React Leaflet untuk peta.
+- Tailwind CSS + dark/light mode.
+- Deploy di Cloudflare Pages.
 
 ### ETL & Data
-- Python (Playwright, Beautiful Soup) untuk scraper AHU Online, LPSE, dan portal berita.
-- Flat JSON di `frontend/public/data/` sebagai single source untuk aplikasi web.
-- Case studies tervalidasi ada di `frontend/public/data/case_study_*.json`.
+- Python (Playwright, Beautiful Soup) untuk scraper AHU, LPSE, berita.
+- Flat JSON di `frontend/public/data/` sebagai single source.
+- Entri tervalidasi di `frontend/public/data/case_study_*.json`.
 
-## Struktur Direktori
+## Struktur
 
 ```text
 ├── frontend/         # Aplikasi web Next.js
-│   ├── app/          # Routes (Beranda, Graf, Cari, Dossier, SPPG, Tentang)
+│   ├── app/          # Routes (Beranda, Graf, Cari, Dossier, SPPG, Tentang, Kontak)
 │   ├── components/   # UI components
 │   ├── lib/          # Data loaders, konstanta, utilitas graf
+│   ├── scripts/      # Build-time scripts (OG image generator)
 │   └── public/
-│       ├── data/     # Dataset statis untuk web (single source)
+│       ├── data/     # Dataset statis
 │       └── exports/  # Ekspor publik (CSV/JSON)
-├── etl/              # Skrip pemrosesan data & deteksi konflik
+├── etl/              # Pemrosesan data
 ├── scrapers/         # Crawler AHU, LPSE, berita, BGN
-├── data/             # Cache raw/processed lokal
+├── scripts/          # Audit sources, slim data
+├── data/             # Cache raw/processed
 └── docs/             # Metodologi dan catatan riset
 ```
 
@@ -56,26 +64,28 @@ Situs ini bersifat informatif, bukan tuduhan atau putusan hukum.
 Prasyarat: Node.js 20+, Python 3.10+.
 
 ```bash
-# Frontend
 cd frontend
 npm install
 npm run dev
-
-# ETL (jalankan skrip yang dibutuhkan saja)
-python etl/conflict_detector_v2.py
 ```
+
+## Kontribusi
+
+Semua kode dan data terbuka. Kalau data kami salah, laporkan lewat GitHub issue — perbaikan dicatat di riwayat commit.
 
 ## Deployment (Cloudflare Pages)
 
 1. Hubungkan repositori ke Cloudflare Pages.
 2. Root Directory: `frontend`.
 3. Build Command: `npm run build`.
-4. Output Directory: `out` (static export).
+4. Output Directory: `out`.
+
+`npm run build` otomatis menjalankan `scripts/generate-og.mjs` untuk generate OG PNG per-entri.
 
 ## Metodologi
 
-Data disusun dari dokumen publik resmi. Tiap entitas/relasi diusahakan disertai tautan sumber. Situs ini adalah alat bantu untuk melihat pola yang perlu diperiksa, bukan putusan hukum.
+Data disusun dari dokumen publik resmi. Tiap entitas dan relasi disertai tautan sumber. Situs ini adalah alat bantu melihat pola, bukan alat penilaian. Kesimpulan hukum adalah kewenangan lembaga yang berwenang.
 
 ---
 
-© 2026 PBP.ID — *Data publik untuk akuntabilitas publik.*
+© 2026 PBP.ID

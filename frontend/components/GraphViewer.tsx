@@ -494,7 +494,7 @@ export function GraphViewer({
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-6 border-t-2 border-dashed border-[#EF4444]" />
-                <span className="text-[11px] font-bold text-red-500">Perlu Dicek</span>
+                <span className="text-[11px] font-bold text-red-500">Disorot</span>
               </div>
             </div>
           </div>

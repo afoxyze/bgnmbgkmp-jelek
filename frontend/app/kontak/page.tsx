@@ -5,13 +5,13 @@ import { SITE_CONFIG } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Kontak & Koreksi",
   description:
-    "Cara melaporkan data yang perlu dikoreksi, mengusulkan dossier baru, atau berkontribusi ke repositori publik PBP.ID.",
+    "Lapor data yang salah, usul entri baru, atau berkontribusi ke repositori terbuka PBP.ID.",
 };
 
 export default function KontakPage() {
   const repoIssueUrl = `${SITE_CONFIG.REPO_URL}/issues/new`;
   const dataCorrectionUrl = `${SITE_CONFIG.REPO_URL}/issues/new?template=data-correction.md&labels=data-correction&title=%5BKoreksi%5D+`;
-  const newDossierUrl = `${SITE_CONFIG.REPO_URL}/issues/new?template=new-dossier.md&labels=new-dossier&title=%5BUsul+Dossier%5D+`;
+  const newDossierUrl = `${SITE_CONFIG.REPO_URL}/issues/new?template=new-dossier.md&labels=new-dossier&title=%5BUsul+Entri%5D+`;
 
   return (
     <main className="content-page py-12 px-6">
@@ -24,12 +24,12 @@ export default function KontakPage() {
             className="text-4xl md:text-5xl font-bold leading-tight text-[var(--text-primary)]"
             style={{ fontFamily: "'IBM Plex Serif', 'Georgia', serif" }}
           >
-            Temukan data yang perlu diperbaiki?
+            Datanya salah? Laporkan.
           </h1>
           <p className="text-lg text-[var(--text-secondary)] leading-relaxed max-w-2xl">
-            Data di {SITE_CONFIG.NAME} disusun dari dokumen publik. Kalau ada
-            angka, nama, atau relasi yang tidak tepat, kabarkan lewat jalur
-            berikut agar bisa diperbaiki dan dicatat secara terbuka.
+            {SITE_CONFIG.NAME} disusun dari dokumen publik. Kalau ada angka,
+            nama, atau relasi yang keliru, kabarkan lewat jalur di bawah.
+            Perbaikan dicatat secara terbuka di riwayat repositori.
           </p>
         </section>
 
@@ -37,31 +37,31 @@ export default function KontakPage() {
           <ContactCard
             label="Koreksi Data"
             title="Laporkan kesalahan fakta"
-            description="Angka keliru, nama tidak cocok, sumber rusak, atau klaim yang perlu diperbarui. Sertakan tautan dokumen publik sebagai bukti."
+            description="Angka keliru, nama tidak cocok, sumber rusak, atau klaim yang perlu diperbarui. Sertakan tautan dokumen publik sebagai rujukan."
             href={dataCorrectionUrl}
             cta="Buat issue koreksi"
             external
           />
           <ContactCard
-            label="Dossier Baru"
-            title="Usulkan topik investigasi"
-            description="Proyek pemerintah yang belum tercakup dan punya jejak dokumen publik (AHU, LPSE, SiRUP, berita arus utama)."
+            label="Entri Baru"
+            title="Usulkan proyek untuk dikatalog"
+            description="Proyek pemerintah yang belum tercakup dan punya jejak dokumen publik (AHU, LPSE, SiRUP, arsip berita arus utama)."
             href={newDossierUrl}
-            cta="Usulkan dossier"
+            cta="Usulkan entri"
             external
           />
           <ContactCard
             label="Kontribusi Kode"
             title="Pull request terbuka"
-            description="Semua kode, data JSON, dan skrip ETL ada di repositori publik. Fork, ubah, lalu kirim pull request."
+            description="Semua kode, data JSON, dan skrip ETL ada di repositori publik. Fork, ubah, kirim pull request."
             href={SITE_CONFIG.REPO_URL}
             cta="Buka repositori"
             external
           />
           <ContactCard
             label="Kontak Umum"
-            title="Email redaksi"
-            description="Untuk pertanyaan yang tidak cocok dijadikan issue publik, kirim ke alamat di bawah."
+            title="Email"
+            description="Untuk pertanyaan yang tidak cocok jadi issue publik, kirim ke alamat di bawah."
             href={`mailto:${SITE_CONFIG.CONTACT_EMAIL}`}
             cta={SITE_CONFIG.CONTACT_EMAIL}
           />
@@ -76,19 +76,19 @@ export default function KontakPage() {
           </h2>
           <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed max-w-3xl">
             <p>
-              Setiap laporan koreksi ditangani secara terbuka melalui issue
-              di GitHub. Perbaikan data dicatat dalam riwayat commit agar
-              bisa dilacak kembali.
+              Setiap laporan koreksi ditangani terbuka lewat issue di GitHub.
+              Perbaikan data dicatat di riwayat commit, bisa ditelusuri kapan
+              saja.
             </p>
             <p>
-              Jika laporan menyangkut nama individu atau perusahaan,
-              mohon sertakan tautan ke dokumen publik (putusan pengadilan,
-              rilis resmi lembaga, arsip berita) sebagai rujukan. Koreksi
-              tanpa sumber sulit untuk diverifikasi.
+              Untuk laporan yang menyangkut nama individu atau perusahaan,
+              sertakan tautan ke dokumen publik (putusan pengadilan, rilis
+              resmi, arsip berita) sebagai rujukan. Koreksi tanpa sumber sulit
+              diverifikasi.
             </p>
             <p>
-              {SITE_CONFIG.NAME} bukan media massa dan tidak menayangkan
-              opini atau tuduhan. Laporan yang hanya berisi penilaian pribadi
+              {SITE_CONFIG.NAME} bukan media, bukan penyidik, bukan analis.
+              Kami hanya mengumpulkan data. Laporan berupa opini atau dugaan
               tanpa dokumen pendukung tidak akan diproses.
             </p>
           </div>
@@ -114,13 +114,13 @@ export default function KontakPage() {
               href="/dossier"
               className="px-5 py-2.5 rounded-md border border-[var(--border-base)] bg-[var(--bg-surface)] text-[var(--text-secondary)] font-mono text-xs font-bold uppercase tracking-[0.12em] no-underline transition-colors hover:border-[var(--accent-danger)] hover:text-[var(--accent-danger)]"
             >
-              Baca dossier
+              Buka katalog
             </Link>
             <Link
               href="/tentang"
               className="px-5 py-2.5 rounded-md border border-[var(--border-base)] bg-[var(--bg-surface)] text-[var(--text-secondary)] font-mono text-xs font-bold uppercase tracking-[0.12em] no-underline transition-colors hover:border-[var(--accent-danger)] hover:text-[var(--accent-danger)]"
             >
-              Metodologi
+              Tentang
             </Link>
           </div>
         </section>

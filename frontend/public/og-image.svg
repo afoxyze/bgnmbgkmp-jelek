@@ -1,60 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="PBP.ID - Data Publik Proyek Pemerintah">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="PBP.ID - Proyek Bagus Pemerintah">
   <defs>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
       <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1a1a" stroke-width="0.5" opacity="0.4"/>
     </pattern>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#C41E3A"/>
-      <stop offset="100%" stop-color="#8B0000"/>
-    </linearGradient>
   </defs>
 
   <rect width="1200" height="630" fill="#0a0a0a"/>
   <rect width="1200" height="630" fill="url(#grid)"/>
 
-  <!-- Top bar accent -->
-  <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="#C41E3A"/>
 
-  <!-- Top-right mono label -->
-  <text x="1140" y="60" text-anchor="end" fill="#666" font-family="Menlo, Monaco, monospace" font-size="14" font-weight="700" letter-spacing="2">
-    DATA / PUBLIK / 2026
+  <text x="60" y="80" fill="#C41E3A" font-family="Menlo, Monaco, monospace" font-size="15" font-weight="700" letter-spacing="4">PBP.ID</text>
+  <text x="1140" y="80" text-anchor="end" fill="#666" font-family="Menlo, Monaco, monospace" font-size="13" font-weight="700" letter-spacing="2">KATALOG / PUBLIK / 2026</text>
+
+  <text x="60" y="260" fill="#f5f5f5" font-family="Georgia, serif" font-size="78" font-weight="700" letter-spacing="-2">
+    Proyek Bagus
+  </text>
+  <text x="60" y="345" fill="#f5f5f5" font-family="Georgia, serif" font-size="78" font-weight="700" letter-spacing="-2">
+    Pemerintah.
   </text>
 
-  <!-- Brand mark -->
-  <text x="60" y="120" fill="#C41E3A" font-family="Menlo, Monaco, monospace" font-size="18" font-weight="700" letter-spacing="4">
-    PBP.ID
+  <text x="60" y="420" fill="#999" font-family="Georgia, serif" font-size="28" font-style="italic">
+    Dikumpulkan, bukan ditulis.
   </text>
 
-  <!-- Main headline -->
-  <text x="60" y="260" fill="#f5f5f5" font-family="Georgia, serif" font-size="74" font-weight="700" letter-spacing="-2">
-    Data publik proyek
-  </text>
-  <text x="60" y="340" fill="#f5f5f5" font-family="Georgia, serif" font-size="74" font-weight="700" letter-spacing="-2">
-    pemerintah.
-  </text>
+  <line x1="60" y1="480" x2="1140" y2="480" stroke="#333" stroke-width="1"/>
 
-  <!-- Subtitle -->
-  <text x="60" y="410" fill="#999" font-family="Georgia, serif" font-size="28" font-style="italic">
-    Angka, vendor, dan relasi di dokumen publik.
-  </text>
+  <text x="60" y="525" fill="#666" font-family="Menlo, Monaco, monospace" font-size="14" font-weight="600" letter-spacing="2">SUMBER</text>
+  <text x="60" y="560" fill="#e5e5e5" font-family="Menlo, Monaco, monospace" font-size="15" font-weight="600" letter-spacing="1">AHU · LPSE · SIRUP · ARSIP BERITA</text>
 
-  <!-- Divider -->
-  <line x1="60" y1="470" x2="1140" y2="470" stroke="#333" stroke-width="1"/>
+  <text x="1140" y="525" text-anchor="end" fill="#666" font-family="Menlo, Monaco, monospace" font-size="14" font-weight="600" letter-spacing="2">FOKUS</text>
+  <text x="1140" y="560" text-anchor="end" fill="#e5e5e5" font-family="Menlo, Monaco, monospace" font-size="15" font-weight="600" letter-spacing="1">MBG · BGN · KMP</text>
 
-  <!-- Bottom meta row -->
-  <g font-family="Menlo, Monaco, monospace" font-size="15" font-weight="600" letter-spacing="2">
-    <text x="60" y="520" fill="#666">SUMBER</text>
-    <text x="60" y="550" fill="#e5e5e5">AHU / LPSE / SIRUP / ARSIP BERITA</text>
-  </g>
-
-  <g font-family="Menlo, Monaco, monospace" font-size="15" font-weight="600" letter-spacing="2">
-    <text x="600" y="520" fill="#666">FOKUS</text>
-    <text x="600" y="550" fill="#e5e5e5">MBG - BGN - KMP</text>
-  </g>
-
-  <!-- Red accent dot bottom-right -->
-  <circle cx="1140" cy="580" r="6" fill="#C41E3A"/>
-  <text x="1120" y="585" text-anchor="end" fill="#666" font-family="Menlo, Monaco, monospace" font-size="13" letter-spacing="2">
-    PBP.ID
-  </text>
+  <circle cx="1140" cy="590" r="5" fill="#C41E3A"/>
 </svg>

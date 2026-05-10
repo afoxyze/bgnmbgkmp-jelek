@@ -187,10 +187,10 @@ export default function SPPGPage() {
                 className="text-3xl font-bold mb-2 uppercase tracking-tight" 
                 style={{ fontFamily: "'IBM Plex Serif', serif", color: "var(--text-primary)" }}
               >
-                Data Nasional SPPG
+                Peta SPPG
               </h1>
               <p className="text-xs text-[var(--text-secondary)] font-mono uppercase tracking-widest">
-                Titik layanan, status operasional, dan hal-hal yang perlu dicek lagi
+                27.000+ titik layanan gizi, status operasional, dan yang disorot
               </p>
             </div>
             <div className="bg-[var(--bg-surface)] border border-[var(--border-base)] p-3 rounded-lg">
@@ -209,7 +209,7 @@ export default function SPPGPage() {
             highlight
           />
           <div className="p-6 bg-[var(--bg-surface)] border-l-4 border-[var(--accent-danger)] rounded-lg shadow-sm border border-[var(--border-base)]">
-            <h3 className="text-sm font-mono font-bold text-[var(--text-primary)] mb-4 uppercase">Yang Perlu Dicek</h3>
+            <h3 className="text-sm font-mono font-bold text-[var(--text-primary)] mb-4 uppercase">Sorotan</h3>
             <div className="space-y-4">
               <div>
                 <div className="flex justify-between text-[10px] font-mono mb-1">
@@ -361,7 +361,7 @@ export default function SPPGPage() {
                       )}
                       {isUncertified && <Badge label="BELUM SLHS" color="yellow" />}
                       {isPolitical && <Badge label="POLITIK" color="red" />}
-                      {p.investigation_status === "FLAGGED" && <Badge label="CEK LAGI" color="red" />}
+                      {p.investigation_status === "FLAGGED" && <Badge label="DISOROT" color="red" />}
                     </div>
                   </div>
                 );
@@ -413,7 +413,7 @@ export default function SPPGPage() {
 
               {selectedSPPG.operational_status === "SUSPENDED" && (
                 <div className="p-4 rounded-xl bg-orange-500/10 border border-orange-500/30">
-                  <div className="text-[10px] font-bold text-orange-600 dark:text-orange-400 uppercase mb-1">Catatan Operasional</div>
+                  <div className="text-[10px] font-bold text-orange-600 dark:text-orange-400 uppercase mb-1">Status Operasional</div>
                   <p className="text-xs text-orange-900 dark:text-orange-100 font-medium">Unit ini ditangguhkan operasionalnya per 1 April 2026 karena kegagalan standar IPAL/Sanitasi.</p>
                 </div>
               )}
@@ -421,7 +421,7 @@ export default function SPPGPage() {
               {/* Affiliation Info */}
               {(selectedSPPG.affiliated_foundations?.length || 0) > 0 && (
                 <div className="space-y-4 p-4 rounded-xl bg-red-500/5 border border-red-500/20">
-                  <div className="text-[10px] font-bold text-red-600 dark:text-red-400 uppercase tracking-widest">Afiliasi yang Perlu Dicek</div>
+                  <div className="text-[10px] font-bold text-red-600 dark:text-red-400 uppercase tracking-widest">Afiliasi Tercatat</div>
                   <div className="space-y-3">
                     <div className="space-y-1">
                        <div className="text-[9px] text-gray-500 uppercase">Yayasan Pengelola</div>

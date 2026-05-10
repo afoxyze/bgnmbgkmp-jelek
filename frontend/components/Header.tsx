@@ -9,7 +9,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 
 const NAV_LINKS = [
   { href: "/", label: "BERANDA" },
-  { href: "/dossier", label: "CATATAN" },
+  { href: "/dossier", label: "KATALOG" },
   { href: "/graf", label: "GRAF" },
   { href: "/cari", label: "CARI" },
   { href: "/sppg", label: "SPPG" },
@@ -49,13 +49,14 @@ export function Header() {
           <Link
             href="/"
             className="text-[15px] font-black tracking-tight transition-all hover:opacity-75 active:scale-95 text-[var(--text-primary)] whitespace-nowrap"
+            title={SITE_CONFIG.NAME_LONG}
           >
             {SITE_CONFIG.NAME}
           </Link>
           <span
             className="hidden lg:inline text-[10px] pl-3 border-l border-[var(--border-strong)] text-[var(--text-tertiary)] uppercase tracking-[0.14em] font-mono font-bold truncate"
           >
-            {SITE_CONFIG.TAGLINE}
+            {SITE_CONFIG.NAME_LONG}
           </span>
         </div>
 
@@ -154,7 +155,7 @@ export function Header() {
               Unduh Data
             </Link>
             <p className="text-[10px] text-[var(--text-tertiary)] font-bold tracking-widest opacity-40 uppercase">
-              {SITE_CONFIG.TAGLINE}
+              {SITE_CONFIG.NAME_LONG}
             </p>
           </div>
         </div>
