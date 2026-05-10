@@ -100,7 +100,7 @@ export function DossierHero({ meta, facts: _facts, status }: Props) {
 
           {focusIds.length > 0 && (
             <Link
-              href={graphHref}
+              href={`${graphHref}&from=${meta.slug}`}
               style={{
                 display: "inline-flex",
                 alignItems: "center",

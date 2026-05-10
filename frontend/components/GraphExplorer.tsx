@@ -1,6 +1,7 @@
 "use client";
 
 import { DetailSidebar } from "@/components/DetailSidebar";
+import { FocusBanner } from "@/components/FocusBanner";
 import { GraphViewer } from "@/components/GraphViewer";
 import type { CaseStudy, GraphSelection } from "@/types/graph";
 import { useState, useEffect, useCallback, useMemo } from "react";
@@ -73,6 +74,7 @@ export function GraphExplorer({ caseStudy, isDark }: GraphExplorerProps) {
       
       {/* Graph area */}
       <main className="flex-1 relative min-w-0 h-full bg-[var(--bg-base)] z-0">
+        <FocusBanner focusCount={focusNodeIds.length} />
         <GraphViewer
           caseStudy={caseStudy}
           onSelectionChange={handleSelectionChange}

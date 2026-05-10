@@ -15,7 +15,9 @@ const SEVERITY_LABELS: Record<DossierMeta["severity"], string> = {
 export function DossierIndexCard({ dossier }: Props) {
   const focusIds = getDossierFocusIds(dossier.slug);
   const graphHref =
-    focusIds.length > 0 ? `/graf?focus=${focusIds.join(",")}` : "/graf";
+    focusIds.length > 0
+      ? `/graf?focus=${focusIds.join(",")}&from=${dossier.slug}`
+      : "/graf";
 
   return (
     <div className="relative">
