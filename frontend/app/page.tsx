@@ -69,7 +69,6 @@ function LandingPage({ stats }: LandingPageProps) {
           totalRedFlags={totalRedFlags}
         />
         <InvestigationsSection />
-        <OpenDataBand />
         <EditorialPrinciples />
         <Footer />
       </div>
@@ -116,8 +115,8 @@ function HeroSection({
               maxWidth: "680px",
             }}
           >
-            Arsip proyek pemerintah yang dirangkum dari dokumen publik. Tidak
-            ada yang baru di sini, hanya lebih rapi.
+            Kumpulan proyek pemerintah. Dokumennya sudah ada di ruang
+            publik, kami hanya menaruhnya di satu tempat.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
@@ -193,8 +192,8 @@ function StatCell({ value, label, danger = false }: StatCellProps) {
 
 function SignalMap() {
   return (
-    <div className="relative min-h-[190px] bg-[var(--bg-surface-2)]">
-      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 420 190" aria-hidden="true">
+    <div className="relative min-h-[190px] bg-[var(--bg-surface-2)]" aria-hidden="true">
+      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 420 190">
         <path d="M88 95 C140 28, 238 40, 318 88" stroke="var(--border-strong)" strokeWidth="1.5" fill="none" />
         <path d="M88 95 C162 150, 235 148, 318 88" stroke="var(--border-strong)" strokeWidth="1.5" fill="none" />
         <path d="M200 48 L200 143" stroke="var(--border-strong)" strokeWidth="1.5" />
@@ -203,18 +202,6 @@ function SignalMap() {
         <circle cx="200" cy="143" r="18" fill="var(--bg-surface)" stroke="#10B981" strokeWidth="2" />
         <circle cx="318" cy="88" r="30" fill="var(--bg-surface)" stroke="#F59E0B" strokeWidth="2" />
       </svg>
-      <div className="relative z-10 grid h-full min-h-[190px] grid-cols-2 content-between p-5">
-        <span className="font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--accent-danger)]">
-          Sorotan
-        </span>
-        <span className="text-right font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-[var(--text-tertiary)]">
-          AHU / LPSE / SiRUP
-        </span>
-        <span className="col-span-2 max-w-[260px] self-end text-sm leading-relaxed text-[var(--text-secondary)]">
-          Peta ini menyambungkan entitas yang namanya sudah muncul di dokumen
-          publik. Tinggal lihat sendiri.
-        </span>
-      </div>
     </div>
   );
 }
@@ -233,46 +220,6 @@ function InvestigationsSection() {
         {getDossierSummaries().map((dossier) => (
           <DossierIndexCard key={dossier.slug} dossier={dossier} />
         ))}
-      </div>
-    </section>
-  );
-}
-
-function OpenDataBand() {
-  return (
-    <section className="py-12 md:py-16 border-y border-[var(--border-base)]">
-      <div className="max-w-[760px]">
-        <p className="font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--accent-danger)] mb-4">
-          Data Terbuka
-        </p>
-        <h2
-          style={{
-            fontFamily: "'IBM Plex Serif', 'Georgia', serif",
-            fontSize: "clamp(1.8rem, 4vw, 2.7rem)",
-            fontWeight: 700,
-            color: "var(--text-primary)",
-            lineHeight: 1.08,
-            letterSpacing: "-0.025em",
-            marginBottom: "1rem",
-          }}
-        >
-          Unduh mentahnya, cek sendiri.
-        </h2>
-        <p className="text-[var(--text-secondary)] leading-relaxed">
-          Dataset dalam JSON dan CSV. Kalau ada yang salah, repo GitHub-nya
-          terbuka.
-        </p>
-        <div className="mt-6 flex flex-col sm:flex-row gap-3">
-          <Link className="data-link-primary" href="/exports/pbp_id_sppg_data.csv">
-            Unduh CSV
-          </Link>
-          <Link className="data-link-secondary" href="/exports/pbp_id_sppg_data.json">
-            Unduh JSON
-          </Link>
-          <Link className="data-link-secondary" href="/cari">
-            Cari entitas
-          </Link>
-        </div>
       </div>
     </section>
   );
