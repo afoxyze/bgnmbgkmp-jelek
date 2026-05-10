@@ -4,14 +4,16 @@ import Link from "next/link";
 import type { DossierMeta } from "@/lib/dossier";
 import type { DossierFacts } from "@/lib/dossier";
 import { getDossierFocusIds } from "@/lib/dossier";
+import { timeAgoId, formatIsoDateId } from "@/lib/format";
 
 interface Props {
   meta: DossierMeta;
   facts: DossierFacts;
   status: string;
+  lastUpdated?: string;
 }
 
-export function DossierHero({ meta, facts: _facts, status }: Props) {
+export function DossierHero({ meta, facts: _facts, status, lastUpdated }: Props) {
   const focusIds = getDossierFocusIds(meta.slug);
   const graphHref =
     focusIds.length > 0 ? `/graf?focus=${focusIds.join(",")}` : "/graf";
@@ -36,6 +38,12 @@ export function DossierHero({ meta, facts: _facts, status }: Props) {
         <span style={{ color: "var(--accent-danger)", fontWeight: 700 }}>{meta.code}</span>
         <span style={{ opacity: 0.4 }}>/</span>
         <span>{meta.categoryLong}</span>
+        {lastUpdated && (
+          <>
+            <span style={{ opacity: 0.4 }}>/</span>
+            <span title={formatIsoDateId(lastUpdated)}>Update {timeAgoId(lastUpdated)}</span>
+          </>
+        )}
       </div>
 
       {/* Title */}

@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const url = `${SITE_CONFIG.URL}/dossier/${slug}`;
   const title = dossier.meta.title;
   const description = dossier.meta.lede.slice(0, 180);
+  const ogImage = `/og/dossier-${slug}.png`;
 
   return {
     title,
@@ -49,7 +50,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       tags: [dossier.meta.categoryLong, dossier.meta.categoryShort, dossier.meta.thread],
       images: [
         {
-          url: "/og-image.svg",
+          url: ogImage,
           width: 1200,
           height: 630,
           alt: title,
@@ -60,7 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       card: "summary_large_image",
       title: `${title} - ${SITE_CONFIG.NAME}`,
       description,
-      images: ["/og-image.svg"],
+      images: [ogImage],
     },
   };
 }
@@ -85,7 +86,7 @@ export default async function DossierPage({ params }: PageProps) {
       "@type": "Organization",
       name: SITE_CONFIG.NAME,
       url: SITE_CONFIG.URL,
-      logo: { "@type": "ImageObject", url: `${SITE_CONFIG.URL}/og-image.svg` },
+      logo: { "@type": "ImageObject", url: `${SITE_CONFIG.URL}/og-image.png` },
     },
     mainEntityOfPage: `${SITE_CONFIG.URL}/dossier/${slug}`,
     keywords: [
@@ -127,7 +128,7 @@ export default async function DossierPage({ params }: PageProps) {
           </span>
         </nav>
 
-        <DossierHero meta={dossier.meta} facts={dossier.facts} status={dossier.caseStudy.metadata.status} />
+        <DossierHero meta={dossier.meta} facts={dossier.facts} status={dossier.caseStudy.metadata.status} lastUpdated={dossier.caseStudy.metadata.tanggal_riset} />
         <KeyFactsGrid facts={dossier.facts} meta={dossier.meta} />
         <FindingsList findings={dossier.meta.findings} redFlags={dossier.facts.redFlags} entities={dossier.facts.entities} />
         <DossierTimeline events={dossier.meta.timeline} />

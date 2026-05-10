@@ -36,13 +36,13 @@ export async function generateMetadata({ params }: EntitasPageProps): Promise<Me
       title: `${title} - ${SITE_CONFIG.NAME}`,
       description,
       locale: "id_ID",
-      images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: title }],
+      images: [{ url: "/og-image.png", width: 1200, height: 630, alt: title }],
     },
     twitter: {
       card: "summary_large_image",
       title: `${title} - ${SITE_CONFIG.NAME}`,
       description,
-      images: ["/og-image.svg"],
+      images: ["/og-image.png"],
     },
   };
 }

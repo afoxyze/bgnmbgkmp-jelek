@@ -5,6 +5,7 @@ import type { Metadata } from "next";
 import { SITE_CONFIG } from "@/lib/constants";
 import { getDossierSummaries } from "@/lib/dossier";
 import { DossierIndexCard } from "@/components/dossier/DossierIndexCard";
+import { timeAgoId, formatIsoDateId } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: `${SITE_CONFIG.NAME} - Katalog Data Proyek Pemerintah`,
@@ -53,7 +54,7 @@ function LandingPage({ stats }: LandingPageProps) {
         "@id": `${SITE_CONFIG.URL}/#org`,
         name: SITE_CONFIG.NAME,
         url: SITE_CONFIG.URL,
-        logo: `${SITE_CONFIG.URL}/og-image.svg`,
+        logo: `${SITE_CONFIG.URL}/og-image.png`,
         description: SITE_CONFIG.DESCRIPTION,
       },
     ],
@@ -107,7 +108,7 @@ function HeroSection({
         <div>
           <div className="flex flex-wrap gap-3 mb-7">
             <MetaPill label="Data" value="Dokumen publik" />
-            <MetaPill label="Update" value={latestUpdate} />
+            <MetaPill label="Update" value={timeAgoId(latestUpdate)} title={formatIsoDateId(latestUpdate)} />
             <MetaPill label="Mode" value="Ringkas" danger />
           </div>
 
@@ -182,9 +183,22 @@ function HeroSection({
   );
 }
 
-function MetaPill({ label, value, danger = false }: { label: string; value: string; danger?: boolean }) {
+function MetaPill({
+  label,
+  value,
+  danger = false,
+  title,
+}: {
+  label: string;
+  value: string;
+  danger?: boolean;
+  title?: string;
+}) {
   return (
-    <div className="inline-flex items-center gap-2 rounded-md border border-[var(--border-base)] bg-[var(--bg-surface)] px-3 py-2">
+    <div
+      className="inline-flex items-center gap-2 rounded-md border border-[var(--border-base)] bg-[var(--bg-surface)] px-3 py-2"
+      title={title}
+    >
       <span className={`h-1.5 w-1.5 rounded-full ${danger ? "bg-[var(--accent-danger)]" : "bg-[var(--text-tertiary)]"}`} />
       <span className="font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--text-tertiary)]">
         {label}

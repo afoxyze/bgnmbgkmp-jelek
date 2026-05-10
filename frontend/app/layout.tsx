@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     description: SITE_CONFIG.DESCRIPTION,
     images: [
       {
-        url: "/og-image.svg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: `${SITE_CONFIG.NAME} - ${SITE_CONFIG.TAGLINE}`,
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_CONFIG.NAME} - ${SITE_CONFIG.TAGLINE}`,
     description: SITE_CONFIG.DESCRIPTION,
-    images: ["/og-image.svg"],
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: SITE_CONFIG.URL,

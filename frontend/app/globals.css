@@ -236,3 +236,112 @@ body {
 .investigation-card-hover * {
   pointer-events: none;
 }
+
+
+/* ── Print stylesheet ──────────────────────────────────────────────────────
+   Optimized for save-as-PDF by journalists archiving a dossier. Hides
+   navigation and interactive chrome; forces light colors and serif body
+   copy; keeps h2/h3 attached to their following content; surfaces link
+   targets next to each link so the PDF stays useful offline.
+   ────────────────────────────────────────────────────────────────────── */
+@media print {
+  :root,
+  .dark,
+  html {
+    color-scheme: light !important;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  /* Hide chrome: header, nav, sidebars, footers, and page-scoped actions */
+  header,
+  nav,
+  aside,
+  footer,
+  [role="navigation"],
+  [aria-label*="Menu"],
+  .dossier-graph-cta,
+  button[aria-label*="Tutup"],
+  button[aria-label*="Buka"] {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .content-page {
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Serif body for readability on paper */
+  body,
+  p,
+  li,
+  dd,
+  dt {
+    font-family: "IBM Plex Serif", Georgia, serif !important;
+    color: #111111 !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #000000 !important;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  a,
+  a:visited {
+    color: #111111 !important;
+    text-decoration: underline;
+  }
+
+  /* Surface URLs beside links so archived PDFs remain useful offline */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #555;
+    word-break: break-all;
+  }
+  /* Skip in-site link annotation to avoid clutter */
+  a[href^="/"]::after,
+  a[href^="#"]::after,
+  a[href^="mailto:"]::after {
+    content: "";
+  }
+
+  /* Avoid orphans/widows and keep tables together where possible */
+  p,
+  blockquote {
+    orphans: 3;
+    widows: 3;
+  }
+
+  article,
+  section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  img,
+  svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Strip surface backgrounds and shadows */
+  * {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
