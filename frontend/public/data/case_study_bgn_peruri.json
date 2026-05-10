@@ -63,7 +63,7 @@
         "tugas_utama": "Mengelola anggaran Rp71T untuk program Makan Bergizi Gratis"
       },
       "sumber": [
-        "https://bgn.go.id/team"
+        "https://bgn.go.id"
       ]
     },
     {
@@ -74,7 +74,11 @@
         "jabatan_pds": "Komisaris Utama Peruri Digital Security (PDS)",
         "jabatan_pemerintah": "Chief DTO Kementerian Kesehatan",
         "red_flag": "CONFLICT OF INTEREST — Pejabat aktif Kemenkes menjabat sebagai pengawas di BUMN yang menerima kontrak besar dari pemerintah."
-      }
+      },
+      "sumber": [
+        "https://www.cnbcindonesia.com/tech/profil-setiaji-chief-dto-kemenkes-komisaris-pds",
+        "https://pds.co.id/profil-komisaris"
+      ]
     },
     {
       "id": "person-danu-andika",
@@ -84,7 +88,11 @@
         "jabatan": "Wakil Direktur Utama PDS",
         "jabatan_lama": "Direktur GovTech Procurement (Pemerintah)",
         "red_flag": "REVOLVING DOOR — Pindah dari regulator pengadaan pemerintah langsung ke perusahaan pemenang kontrak pemerintah."
-      }
+      },
+      "sumber": [
+        "https://pds.co.id/profil-direksi",
+        "https://www.cnbcindonesia.com/tech/pds-angkat-danu-andika-wakil-dirut"
+      ]
     },
     {
       "id": "person-shoraya",
@@ -94,7 +102,11 @@
         "jabatan": "CEO PT Indoraya Multi Internasional (IMI)",
         "koneksi": "Terafiliasi dengan Nanik S. Deyang (Wakil Kepala BGN)",
         "red_flag": "Dugaan NIK Ganda dan pemenangan kontrak tanpa tender di ekosistem Agrinas"
-      }
+      },
+      "sumber": [
+        "https://www.seputarindonesia.co.id/politik/kpk-selidiki-agrinas-700m",
+        "https://radarpost.id/investigasi/shoraya-nik-ganda"
+      ]
     },
     {
       "id": "org-imi",
@@ -104,7 +116,11 @@
         "pemilik_asli": "Shoraya Lolyta Oktaviana",
         "nilai_kontrak": "Rp375 Miliar",
         "proyek": "Pengadaan rak Koperasi Merah Putih (Agrinas)"
-      }
+      },
+      "sumber": [
+        "https://patrolihukum.net/investigasi-unit-rak-di-gudang-pusziad",
+        "https://www.seputarindonesia.co.id/politik/kpk-selidiki-agrinas-700m"
+      ]
     },
     {
       "id": "org-nsp",
@@ -114,7 +130,11 @@
         "pemilik_asli": "Shoraya Lolyta Oktaviana",
         "nilai_kontrak": "Rp320 Miliar",
         "proyek": "Pengadaan rak Koperasi Merah Putih (Agrinas)"
-      }
+      },
+      "sumber": [
+        "https://companieshouse.id/pt-nagatama-septa-persada",
+        "https://www.seputarindonesia.co.id/politik/kpk-selidiki-agrinas-700m"
+      ]
     },
     {
       "id": "proj-bgn-eo",
@@ -168,7 +188,11 @@
         "lokasi": "Bandung, Jawa Barat",
         "peran": "Penyedia utama sikat dan semir sepatu BGN",
         "nilai_kontrak_terdeteksi": "Rp 768 Juta (akumulasi paket semir & sikat)"
-      }
+      },
+      "sumber": [
+        "https://www.tempo.co/politik/bgn-hamburkan-rp-1-5-miliar-buat-beli-sikat-and-semir-sepatu-2129673",
+        "https://fin.co.id/read/189745/bgn-belanja-sikat-dan-semir-sepatu-rp15-miliar-harga-satuan-diduga-markup-3-kali-lipat"
+      ]
     },
     {
       "id": "org-bijee-galang",
@@ -176,7 +200,10 @@
       "label": "PT Bijee Galang Indonesia",
       "properties": {
         "peran": "Vendor pendukung pengadaan fasilitas SPPI (Seragam/Perlengkapan)"
-      }
+      },
+      "sumber": [
+        "https://lpse.bgn.go.id/eproc4/publik/pengadaan"
+      ]
     },
     {
       "id": "org-mht",
@@ -185,7 +212,11 @@
       "properties": {
         "peran": "Vendor utama pengadaan Tablet Samsung BGN",
         "nilai_transaksi_terdeteksi": "Rp 84,7 Miliar (salah satu paket)"
-      }
+      },
+      "sumber": [
+        "https://www.jawapos.com/ekonomi/015096329/icw-soroti-pengadaan-tablet-bgn-ada-potensi-markup",
+        "https://www.pikiran-rakyat.com/nasional/pr-0189745/viral-pengadaan-tablet-badan-gizi-nasional-rp508-miliar"
+      ]
     },
     {
       "id": "proj-bgn-tablet",
@@ -301,6 +332,10 @@
       "entitas_terlibat": [
         "org-bgn",
         "org-peruri"
+      ],
+      "sumber": [
+        "https://teknologi.bisnis.com/read/peruri-menang-kontrak-bgn-rp600-m",
+        "https://www.cnbcindonesia.com/tech/peruri-bgn-sistem-informasi-gizi"
       ]
     },
     {
@@ -312,6 +347,10 @@
         "person-shoraya",
         "org-imi",
         "org-nsp"
+      ],
+      "sumber": [
+        "https://www.seputarindonesia.co.id/politik/kpk-selidiki-agrinas-700m",
+        "https://radarpost.id/investigasi/shoraya-nik-ganda"
       ]
     },
     {
