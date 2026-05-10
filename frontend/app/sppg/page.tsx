@@ -61,21 +61,35 @@ export default function SPPGPage() {
   const [visibleCount, setVisibleCount] = useState(60);
 
   useEffect(() => {
-    Promise.all([
-      fetch("/data/sppg_map_data.json").then((res) => res.json()),
-      fetch("/data/sppg_points.json").then((res) => res.json()),
-      fetch("/data/sppg_summary.json").then((res) => res.json()),
-    ])
-      .then(([stats, pointsData, summaryData]) => {
+    let cancelled = false;
+
+    // Phase 1: summary + map_data (small, < 50KB total) for instant header stats.
+    // Phase 2: points (~10MB) loads after, unblocking UI rendering.
+    (async () => {
+      try {
+        const [stats, summaryData] = await Promise.all([
+          fetch("/data/sppg_map_data.json").then((res) => res.json()),
+          fetch("/data/sppg_summary.json").then((res) => res.json()),
+        ]);
+        if (cancelled) return;
         setData(stats);
-        setPoints(pointsData);
         setSummary(summaryData);
         setLoading(false);
-      })
-      .catch((err) => {
+
+        // Phase 2 — points load in background; list view will light up once done.
+        const pointsData = await fetch("/data/sppg_points.json").then((res) => res.json());
+        if (cancelled) return;
+        setPoints(pointsData);
+      } catch (err) {
+        if (cancelled) return;
         console.error("Failed to load data:", err);
         setLoading(false);
-      });
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Reset pagination when filters change
@@ -107,9 +121,17 @@ export default function SPPGPage() {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center min-h-[60vh]">
-        <div className="animate-pulse text-sm" style={{ color: "var(--text-secondary)" }}>
-          Menata data nasional...
+      <div className="flex items-center justify-center min-h-[60vh] px-6">
+        <div className="flex flex-col items-center gap-4 max-w-md text-center">
+          <div className="w-10 h-10 border-2 rounded-full animate-spin border-[var(--border-strong)] border-t-[var(--accent-danger)]" />
+          <div className="space-y-1">
+            <div className="text-sm font-mono font-bold uppercase tracking-widest text-[var(--text-secondary)]">
+              Memuat data nasional
+            </div>
+            <div className="text-xs text-[var(--text-tertiary)]">
+              Ada 27.000+ titik SPPG, pertama kali buka butuh beberapa detik.
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -233,7 +255,16 @@ export default function SPPGPage() {
                     <h2 className="text-xl font-bold uppercase tracking-tight" style={{ color: "var(--text-primary)" }}>
                       {selectedProv === "NASIONAL" || !selectedProv ? "Seluruh Indonesia" : selectedProv}
                     </h2>
-                    <p className="text-xs text-gray-500">Hasil Filter: {filteredList.length} unit</p>
+                    <p className="text-xs text-gray-500">
+                      {points.length === 0 ? (
+                        <span className="inline-flex items-center gap-2">
+                          <span className="w-3 h-3 border-2 rounded-full animate-spin border-[var(--border-strong)] border-t-[var(--accent-danger)]" />
+                          Memuat 27.000+ titik...
+                        </span>
+                      ) : (
+                        <>Hasil Filter: {filteredList.length} unit</>
+                      )}
+                    </p>
                   </div>
                   <input 
                     type="text"

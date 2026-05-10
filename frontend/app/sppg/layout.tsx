@@ -7,5 +7,13 @@ export const metadata: Metadata = {
 };
 
 export default function SPPGLayout({ children }: { children: React.ReactNode }) {
-  return children;
+  return (
+    <>
+      {/* Prefetch the large dataset as soon as the SPPG route is mounted.
+          Browser can fetch it in parallel with HTML/JS rather than waiting
+          for the client component's useEffect to fire. */}
+      <link rel="preload" as="fetch" href="/data/sppg_points.json" crossOrigin="anonymous" />
+      {children}
+    </>
+  );
 }
