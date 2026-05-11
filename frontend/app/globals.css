@@ -264,7 +264,11 @@ body {
   footer,
   [role="navigation"],
   [aria-label*="Menu"],
-  .dossier-graph-cta,
+  [aria-label*="Bagikan"],
+  [aria-label="Bagikan entri ini"],
+  [aria-label="Pintasan eksplorasi graf"],
+  [role="status"][aria-live="polite"],
+  .entry-graph-cta,
   button[aria-label*="Tutup"],
   button[aria-label*="Buka"] {
     display: none !important;
