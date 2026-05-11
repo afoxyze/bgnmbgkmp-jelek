@@ -1,0 +1,1914 @@
+{
+  "checked_at": "2026-05-11T15:00:41Z",
+  "summary": {
+    "ok": 62,
+    "fail": 0,
+    "skipped": 176
+  },
+  "results": [
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-agrinas",
+      "url": "https://majalah.tempo.co/read/investigasi/164314/peran-agrinas-dalam-food-estate-kementerian-pertahanan",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-agrinas",
+      "url": "https://www.law-justice.co/artikel/94820/elit-prabowo-kuasai-bisnis-pangan-baru-via-agrinas/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-agrinas",
+      "url": "https://www.thejakartapost.com/business/2025/03/25/danantara-to-fund-new-soes-holding-company-agrinas-senior-minister-says.html",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-agrinas-pangan",
+      "url": "https://www.cnnindonesia.com/ekonomi/20260225052641-92-1331458/agrinas-bangun-1357-kopdes-merah-putih-30-ribu-lebih-dalam-proses",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-agrinas-pangan",
+      "url": "https://www.liputan6.com/bisnis/read/6307502/agrinas-pangan-bakal-kelola-koperasi-desa-merah-putih-2-tahun-pertama",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-tmi",
+      "url": "https://nasional.kompas.com/read/2021/06/02/15050321/profil-pt-tmi-dikaitkan-dengan-pengadaan-alutsista-rp-17-kuadriliun",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-tmi",
+      "url": "https://www.cnbcindonesia.com/news/20240108095847-4-503659/heboh-pt-tmi-perusahaan-kroni-prabowo-yang-disebut-anies",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-tmi",
+      "url": "https://pbhi.or.id/penunjukkan-pt-tmi-dalam-pengadaan-alutsista-diduga-maladministrasi-masyarakat-sipil-laporkan-menteri-pertahanan/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-tmi",
+      "url": "https://fin.co.id/2021/06/01/ini-ceo-rosoboronexport-yang-disurati-prabowo-soal-pt-tmi",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:person-glenny",
+      "url": "https://nasional.kompas.com/read/2025/10/15/18235781/profil-glenny-kairupan-teman-seangkatan-prabowo-di-akabri-yang-kini-jadi",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:person-angga-raka",
+      "url": "https://nasional.kompas.com/read/2021/06/02/15050321/profil-pt-tmi-dikaitkan-dengan-pengadaan-alutsista-rp-17-kuadriliun",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:person-angga-raka",
+      "url": "https://id.wikipedia.org/wiki/Angga_Raka_Prabowo",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:person-angga-raka",
+      "url": "https://kompaspedia.kompas.id/baca/profil/tokoh/kepala-badan-komunikasi-pemerintah-angga-raka-prabowo",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:person-angga-raka",
+      "url": "https://www.suara.com/news/2024/10/21/135703/angga-raka-prabowo-siapanya-prabowo-subianto-ditunjuk-lagi-jadi-wamen-komunikasi-dan-digital-kabinet-merah-putih",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-kmp",
+      "url": "https://presidenri.go.id/siaran-pers/presiden-prabowo-resmikan-kelembagaan-80-081-koperasi-desa-kelurahan-merah-putih/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-kmp",
+      "url": "https://setneg.go.id/baca/index/inilah_inpres_9_2025_tentang_percepatan_pembentukan_koperasi_desa_kelurahan_merah_putih",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-kmp",
+      "url": "https://voi.id/ekonomi/521950/danantara-segera-buka-akses-pembiayaan-untuk-kopdes-merah-putih-menkop-beri-bocoran-ini/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-pmjs",
+      "url": "https://www.idxchannel.com/market-news/pmjs-raih-kontrak-dari-agrinas-rp108-triliun-siap-suplai-20600-truk-untuk-kmp",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:person-rauf-purnama",
+      "url": "https://www.tempo.co/ekonomi/anies-sebut-orang-dalam-di-proyek-food-estate-prabowo-ada-kader-gerindra-hingga-pejabat-kemenhan-100222",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:person-dirgayuza",
+      "url": "https://www.tempo.co/politik/profil-dirgayuza-setiawan-asisten-khusus-prabowo-di-bidang-komunikasi-dan-analis-kebijakan-2077755",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:person-ferry",
+      "url": "https://www.idntimes.com/business/economy/profil-ferry-juliantono-politikus-gerindra-jadi-menteri-koperasi-00-gshdq-cs2ts2",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:person-prabowo",
+      "url": "https://presidenri.go.id",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-kmp-denpasar",
+      "url": "https://www.rubicnews.com/nasional/dugaan-korupsi-gerai-merah-putih-denpasar-anggaran-1-6-miliar-fisik-hanya-800-juta/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-kmp-denpasar",
+      "url": "https://www.balipolitika.com/denpasar/pembangunan-gerai-kdkmp-tegal-dimulai-mei-2026/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "entity:org-bgn",
+      "url": "https://bgn.go.id",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:person-prabowo->org-ppsdp",
+      "url": "https://majalah.tempo.co/read/investigasi/164314/peran-agrinas-dalam-food-estate-kementerian-pertahanan",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:org-ppsdp->org-agrinas",
+      "url": "https://majalah.tempo.co/read/investigasi/164314/peran-agrinas-dalam-food-estate-kementerian-pertahanan",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:org-agrinas->org-agrinas-pangan",
+      "url": "https://www.liputan6.com/bisnis/read/6307502/agrinas-pangan-bakal-kelola-koperasi-desa-merah-putih-2-tahun-pertama",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:person-rauf-purnama->org-agrinas",
+      "url": "https://www.tempo.co/ekonomi/anies-sebut-orang-dalam-di-proyek-food-estate-prabowo-ada-kader-gerindra-hingga-pejabat-kemenhan-100222",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:person-dirgayuza->org-agrinas",
+      "url": "https://www.tempo.co/politik/profil-dirgayuza-setiawan-asisten-khusus-prabowo-di-bidang-komunikasi-dan-analis-kebijakan-2077755",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:person-dirgayuza->person-prabowo",
+      "url": "https://www.tempo.co/politik/profil-dirgayuza-setiawan-asisten-khusus-prabowo-di-bidang-komunikasi-dan-analis-kebijakan-2077755",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:org-agrinas-pangan->org-kmp",
+      "url": "https://www.cnnindonesia.com/ekonomi/20260225052641-92-1331458/agrinas-bangun-1357-kopdes-merah-putih-30-ribu-lebih-dalam-proses",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:org-agrinas-pangan->org-kmp",
+      "url": "https://liputan.co.id/2026/02/proyek-raksasa-agrinas-diterpa-isu-penunjukan-langsung-kpk-bilang-begini/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:org-agrinas->org-pmjs",
+      "url": "https://www.idxchannel.com/market-news/pmjs-raih-kontrak-dari-agrinas-rp108-triliun-siap-suplai-20600-truk-untuk-kmp",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:org-danantara->org-kmp",
+      "url": "https://voi.id/ekonomi/521950/danantara-segera-buka-akses-pembiayaan-untuk-kopdes-merah-putih-menkop-beri-bocoran-ini/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:person-glenny->org-tmi",
+      "url": "https://nasional.kompas.com/read/2021/06/02/15050321/profil-pt-tmi-dikaitkan-dengan-pengadaan-alutsista-rp-17-kuadriliun",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:person-angga-raka->org-tmi",
+      "url": "https://www.tempo.co/arsip/kader-gerindra-di-perusahaan-makelar-senjata-850010",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:person-angga-raka->person-prabowo",
+      "url": "https://id.wikipedia.org/wiki/Angga_Raka_Prabowo",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:org-ppsdp->org-tmi",
+      "url": "https://www.kompas.id/artikel/ada-apa-dengan-pt-tmi-dan-pembelian-alutsista/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:org-danantara->org-agrinas",
+      "url": "https://www.thejakartapost.com/business/2025/03/25/danantara-to-fund-new-soes-holding-company-agrinas-senior-minister-says.html",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:person-ferry->org-kmp",
+      "url": "https://www.idntimes.com/business/economy/profil-ferry-juliantono-politikus-gerindra-jadi-menteri-koperasi-00-gshdq-cs2ts2",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "relation:org-kmp->org-bgn",
+      "url": "https://money.kompas.com/read/2025/11/06/203534026/kopdes-merah-putih-jadi-supplier-sppg-mbg-menkop-pastikan-bukan-monopoli-umkm",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d01",
+      "url": "https://majalah.tempo.co/read/investigasi/164314/peran-agrinas-dalam-food-estate-kementerian-pertahanan",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d01",
+      "url": "https://liputan.co.id/2026/02/proyek-raksasa-agrinas-diterpa-isu-penunjukan-langsung-kpk-bilang-begini/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d02",
+      "url": "https://www.tempo.co/politik/profil-dirgayuza-setiawan-asisten-khusus-prabowo-di-bidang-komunikasi-dan-analis-kebijakan-2077755",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d03",
+      "url": "https://antikorupsi.org/id/ketertutupan-informasi-pengadaan-mobil-untuk-koperasi-merah-putih",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d03",
+      "url": "https://money.kompas.com/read/2026/02/25/093100026/impor-105-000-pikap-india-bos-agrinas--kami-sudah-dp-30-persen-",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d03",
+      "url": "https://liputan.co.id/2026/02/proyek-raksasa-agrinas-diterpa-isu-penunjukan-langsung-kpk-bilang-begini/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d04",
+      "url": "https://voi.id/ekonomi/521950/danantara-segera-buka-akses-pembiayaan-untuk-kopdes-merah-putih-menkop-beri-bocoran-ini/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d04",
+      "url": "https://theconversation.com/koperasi-merah-putih-berisiko-tinggi-jadi-ladang-korupsi-baru-261401",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d05",
+      "url": "https://money.kompas.com/read/2025/11/06/203534026/kopdes-merah-putih-jadi-supplier-sppg-mbg-menkop-pastikan-bukan-monopoli-umkm",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d05",
+      "url": "https://www.thejakartapost.com/opinion/2026/04/10/analysis-agrinas-expanding-role-risks-turning-policy-ambition-into-liability.html",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d08",
+      "url": "https://nasional.kompas.com/read/2025/10/15/18235781/profil-glenny-kairupan-teman-seangkatan-prabowo-di-akabri-yang-kini-jadi",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d07",
+      "url": "https://yppsdp.id/pengurus-yppsdp-tahun-2025/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d07",
+      "url": "https://majalah.tempo.co/read/investigasi/164314/peran-agrinas-dalam-food-estate-kementerian-pertahanan",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d07",
+      "url": "https://www.kompas.id/artikel/ada-apa-dengan-pt-tmi-dan-pembelian-alutsista/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d06",
+      "url": "https://theconversation.com/koperasi-merah-putih-berisiko-tinggi-jadi-ladang-korupsi-baru-261401",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d06",
+      "url": "https://www.suara.com/news/2025/07/22/131350/hantu-korupsi-era-orba-bangkit-proyek-koperasi-merah-putih-berpotensi-jadi-bancakan-rp48-triliun",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d09",
+      "url": "https://www.rubicnews.com/nasional/dugaan-korupsi-gerai-merah-putih-denpasar-anggaran-1-6-miliar-fisik-hanya-800-juta/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_agrinas_kmp.json",
+      "location": "red_flag:rf-d09",
+      "url": "https://www.balipolitika.com/denpasar/pembangunan-gerai-kdkmp-tegal-dimulai-mei-2026/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:org-bgn",
+      "url": "https://bgn.go.id",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:org-peruri",
+      "url": "https://peruri.co.id",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:org-pds",
+      "url": "https://pds.co.id",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:person-dadan",
+      "url": "https://bgn.go.id",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:person-setiaji",
+      "url": "https://pds.co.id",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:person-setiaji",
+      "url": "https://www.kemkes.go.id",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:person-danu-andika",
+      "url": "https://pds.co.id",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:person-shoraya",
+      "url": "https://www.seputarindonesia.co.id/politik/kpk-selidiki-agrinas-700m",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:person-shoraya",
+      "url": "https://radarpost.id/investigasi/shoraya-nik-ganda",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:org-imi",
+      "url": "https://patrolihukum.net/investigasi-unit-rak-di-gudang-pusziad",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:org-imi",
+      "url": "https://www.seputarindonesia.co.id/politik/kpk-selidiki-agrinas-700m",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:org-nsp",
+      "url": "https://companieshouse.id/pt-nagatama-septa-persada",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:org-nsp",
+      "url": "https://www.seputarindonesia.co.id/politik/kpk-selidiki-agrinas-700m",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:proj-bgn-eo",
+      "url": "https://www.antaranews.com/berita/4321501/kepala-bgn-klarifikasi-anggaran-eo-rp113-miliar",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:proj-bgn-eo",
+      "url": "https://news.detik.com/berita/d-7531201/dadan-hindayana-buka-suara-soal-anggaran-eo-badan-gizi-rp-113-m",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:proj-bgn-alat-makan",
+      "url": "https://www.bbc.com/indonesia/articles/crr110erpyeo",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:proj-bgn-sikat-sepatu",
+      "url": "https://www.tempo.co/politik/bgn-hamburkan-rp-1-5-miliar-buat-beli-sikat-and-semir-sepatu-2129673",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:proj-bgn-sikat-sepatu",
+      "url": "https://fin.co.id/read/189745/bgn-belanja-sikat-dan-semir-sepatu-rp15-miliar-harga-satuan-diduga-markup-3-kali-lipat",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:org-gajah-mitra",
+      "url": "https://www.tempo.co/politik/bgn-hamburkan-rp-1-5-miliar-buat-beli-sikat-and-semir-sepatu-2129673",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:org-gajah-mitra",
+      "url": "https://fin.co.id/read/189745/bgn-belanja-sikat-dan-semir-sepatu-rp15-miliar-harga-satuan-diduga-markup-3-kali-lipat",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:org-bijee-galang",
+      "url": "https://lpse.bgn.go.id/eproc4/publik/pengadaan",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:org-mht",
+      "url": "https://www.jawapos.com/ekonomi/015096329/icw-soroti-pengadaan-tablet-bgn-ada-potensi-markup",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:org-mht",
+      "url": "https://www.pikiran-rakyat.com/nasional/pr-0189745/viral-pengadaan-tablet-badan-gizi-nasional-rp508-miliar",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:proj-bgn-tablet",
+      "url": "https://www.jawapos.com/ekonomi/015096329/icw-soroti-pengadaan-tablet-bgn-ada-potensi-markup",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "entity:proj-bgn-tablet",
+      "url": "https://www.pikiran-rakyat.com/nasional/pr-0189745/viral-pengadaan-tablet-badan-gizi-nasional-rp508-miliar",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "red_flag:rf-001",
+      "url": "https://www.bisnis.com",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "red_flag:rf-001",
+      "url": "https://www.cnbcindonesia.com",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "red_flag:rf-008",
+      "url": "https://www.seputarindonesia.co.id/politik/kpk-selidiki-agrinas-700m",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "red_flag:rf-008",
+      "url": "https://radarpost.id/investigasi/shoraya-nik-ganda",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "red_flag:rf-012",
+      "url": "https://www.tempo.co/politik/bgn-hamburkan-rp-1-5-miliar-buat-beli-sikat-and-semir-sepatu-2129673",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_bgn_peruri.json",
+      "location": "red_flag:rf-013",
+      "url": "https://www.bbc.com/indonesia/articles/crr110erpyeo",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:org-yasa",
+      "url": "https://www.suara.com/bisnis/2026/04/07/182618/siapa-pt-yasa-artha-trimanunggal-pemenang-pengadaan-motor-trail-listrik-mbg",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:org-yasa",
+      "url": "https://rmol.id/hukum/read/2025/11/03/685380/bos-pt-yasa-artha-trimanunggal-diperiksa-kpk-kasus-korupsi-penyaluran-bansos",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:org-yasa",
+      "url": "https://monitorindonesia.com/hukum/read/2025/11/616210/kpk-panggil-direktur-pt-yasa-artha-trimanunggal-yenna-yuniana-usut-korupsi-bansos",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:org-yasa",
+      "url": "https://monitorindonesia.com/hukum/read/2025/10/615616/kpk-periksa-komut-pt-yasa-artha-trimanunggal-andri-mulyono-terkait-korupsi-bansos-rp-200-m",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:org-adlas",
+      "url": "https://oto.detik.com/motor-listrik/d-8434152/diborong-proyek-mbg-desain-motor-listrik-emmo-baru-didaftarkan-akhir-tahun-lalu",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:org-adlas",
+      "url": "https://www.jawapos.com/otomotif/2604070320/spesifikasi-motor-listrik-mbg-emmo-jvx-gt-harga-rp-49-jutaan/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:org-adlas",
+      "url": "https://portal-islam.id/kejanggalan-proyek-pengadaan-motor-mbg/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:org-kaisar",
+      "url": "https://portal-islam.id/kejanggalan-proyek-pengadaan-motor-mbg/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:org-kaisar",
+      "url": "https://www.otoplus-online.com/post/siapa-di-balik-emmo-si-motor-mbg-simak-penelusuran-berbasis-data-berikut-ini",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:person-herman-jaya",
+      "url": "https://portal-islam.id/kejanggalan-proyek-pengadaan-motor-mbg/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:person-herman-jaya",
+      "url": "https://www.otoplus-online.com/post/siapa-di-balik-emmo-si-motor-mbg-simak-penelusuran-berbasis-data-berikut-ini",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:person-budiharja",
+      "url": "https://www.suara.com/lifestyle/2026/04/09/105355/profil-pt-yasa-artha-trimanunggal-pemasok-motor-operasional-mbg-bgn",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:person-ridho",
+      "url": "https://www.suara.com/lifestyle/2026/04/09/105355/profil-pt-yasa-artha-trimanunggal-pemasok-motor-operasional-mbg-bgn",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:org-samair",
+      "url": "https://investor.id/business/381251/yasa-artha-akuisisi-sam-air-dan-beli-pesawat-dari-ptdi",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:org-samair",
+      "url": "https://ekonomi.bisnis.com/read/20241125/98/1818881/yasa-artha-trimanunggal-akuisisi-maskapai-perintis-sam-air",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:org-samair",
+      "url": "https://yasa-sam.net/yasa-artha-trimanunggal-akuisisi-maskapai-sam-air/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:person-hendrar",
+      "url": "https://www.cnnindonesia.com/ekonomi/20250917192530-92-1274830/profil-sarah-sadiqa-kepala-lkpp-baru-pengganti-hendrar-prihadi",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:person-hendrar",
+      "url": "https://nasional.kompas.com/read/2025/09/17/16313921/sarah-sadiqa-dilantik-jadi-kepala-lkpp-gantikan-elite-pdi-p-hendrar-prihadi",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:person-dadan",
+      "url": "https://bgn.go.id",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "entity:org-bgn",
+      "url": "https://bgn.go.id",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "relation:org-bgn->org-yasa",
+      "url": "https://oto.detik.com/motor-listrik/d-8434070/ada-25-000-motor-listrik-buat-dipakai-mbg-habis-duit-berapa",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "relation:org-bgn->org-yasa",
+      "url": "https://nasional.kompas.com/read/2026/04/08/14463381/purbaya-langsung-potong-anggaran-bgn-pastikan-tak-beli-motor-listrik-rp-42",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "relation:org-yasa->org-adlas",
+      "url": "https://yasagroup.net/tentang-kami/profil-perusahaan/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "relation:org-adlas->org-kaisar",
+      "url": "https://portal-islam.id/kejanggalan-proyek-pengadaan-motor-mbg/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "relation:org-yasa->org-samair",
+      "url": "https://investor.id/business/381251/yasa-artha-akuisisi-sam-air-dan-beli-pesawat-dari-ptdi",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "relation:person-budiharja->org-yasa",
+      "url": "https://www.suara.com/lifestyle/2026/04/09/105355/profil-pt-yasa-artha-trimanunggal-pemasok-motor-operasional-mbg-bgn",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "relation:person-ridho->org-yasa",
+      "url": "https://www.suara.com/lifestyle/2026/04/09/105355/profil-pt-yasa-artha-trimanunggal-pemasok-motor-operasional-mbg-bgn",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "red_flag:rf-c01",
+      "url": "https://oto.detik.com/motor-listrik/d-8434152/diborong-proyek-mbg-desain-motor-listrik-emmo-baru-didaftarkan-akhir-tahun-lalu",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "red_flag:rf-c02",
+      "url": "https://yasagroup.net/tentang-kami/profil-perusahaan/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "red_flag:rf-c02",
+      "url": "https://www.pinterpolitik.com/in-depth/motor-bgn-agrinas-jilid-2/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "red_flag:rf-c02",
+      "url": "https://monitorindonesia.com/hukum/read/2025/11/616210/kpk-panggil-direktur-pt-yasa-artha-trimanunggal-yenna-yuniana-usut-korupsi-bansos",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "red_flag:rf-c03",
+      "url": "https://nasional.kompas.com/read/2026/04/08/14463381/purbaya-langsung-potong-anggaran-bgn-pastikan-tak-beli-motor-listrik-rp-42",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "red_flag:rf-c05",
+      "url": "https://www.suara.com/lifestyle/2026/04/09/105355/profil-pt-yasa-artha-trimanunggal-pemasok-motor-operasional-mbg-bgn",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "red_flag:rf-c06",
+      "url": "https://investor.id/business/381251/yasa-artha-akuisisi-sam-air-dan-beli-pesawat-dari-ptdi",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "red_flag:rf-c06",
+      "url": "https://ekonomi.bisnis.com/read/20241125/98/1818881/yasa-artha-trimanunggal-akuisisi-maskapai-perintis-sam-air",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "red_flag:rf-c04",
+      "url": "https://jakartasatu.com/2026/04/08/cba-minta-kejagung-selidiki-dugaan-penyimpangan-pengadaan-dan-jasa-pengiriman-motor-bgn-rp32-triliun/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_motor_bgn.json",
+      "location": "red_flag:rf-c04",
+      "url": "https://www.liputan6.com/news/read/6312652/kepala-bgn-soal-21800-motor-listrik-untuk-sppg-harga-pasaran-rp-52-juta-kita-beli-rp-42-juta-per-unit",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_shoraya_imi.json",
+      "location": "entity:person-shoraya",
+      "url": "https://www.seputarindonesia.co.id/politik/kpk-selidiki-agrinas-700m",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_shoraya_imi.json",
+      "location": "entity:person-shoraya",
+      "url": "https://radarpost.id/investigasi/shoraya-nik-ganda",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_shoraya_imi.json",
+      "location": "entity:org-imi",
+      "url": "https://patrolihukum.net/investigasi-unit-rak-di-gudang-pusziad",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_shoraya_imi.json",
+      "location": "entity:org-nsp",
+      "url": "https://companieshouse.id/pt-nagatama-septa-persada",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_shoraya_imi.json",
+      "location": "entity:org-agrinas-pangan",
+      "url": "https://agrinas.id",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_shoraya_imi.json",
+      "location": "red_flag:rf-nik-shoraya",
+      "url": "https://radarpost.id/investigasi/shoraya-nik-ganda",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_shoraya_imi.json",
+      "location": "red_flag:rf-gudang-tni",
+      "url": "https://patrolihukum.net/investigasi-unit-rak-di-gudang-pusziad",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-001",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-001",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-002",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-002",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-003",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-003",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-004",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-004",
+      "url": "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-005",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-005",
+      "url": "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-006",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-006",
+      "url": "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-007",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-icw-007",
+      "url": "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-nuralam",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-nuralam",
+      "url": "https://www.thejakartapost.com/news/2018/03/29/nur-alam-gets-12-years-for-bribery-linked-to-ecological-destruction.html",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-nuralam",
+      "url": "https://antikorupsi.org/en/article/disappointing-verdict-nur-alam",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-zayat",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-zayat",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-burhanuddin",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-burhanuddin",
+      "url": "https://en.wikipedia.org/wiki/Burhanuddin_Abdullah",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-burhanuddin",
+      "url": "https://news.detik.com/berita/d-1027781/burhanuddin-abdullah-divonis-5-tahun-bui",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-burhanuddin",
+      "url": "https://www.liputan6.com/regional/read/5933507/profil-burhanuddin-abdullah-ditunjuk-jadi-ketua-tim-pakar-dan-inisiator-danantara",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-burhanuddin",
+      "url": "https://money.kompas.com/read/2025/08/26/083100226/pernah-terjerat-korupsi-eks-gubernur-bi-burhanuddin-abdullah-dapat-bintang",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-burhanuddin",
+      "url": "https://money.kompas.com/read/2025/06/19/182546026/daftar-dewan-direksi-dan-komisaris-pln-tebaru-hasil-rups-2025",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-payapo",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-payapo",
+      "url": "https://www.liputan6.com/news/read/2896079/korupsi-pembangunan-jalan-amran-mustary-dituntut-9-tahun-penjara",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-payapo",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-nizar",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-nizar",
+      "url": "https://dprd.garutkab.go.id/anggota/rd-muhammad-nizar-s-pd",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-nizar",
+      "url": "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-sulaeman",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-sulaeman",
+      "url": "https://nasdemdprri.id/anggota/sulaeman-hamzah-profil",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-sulaeman",
+      "url": "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-amrina",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-amrina",
+      "url": "https://jelajahsumsell.com/2024/09/15/daerah/ogan-ilir/ra-amrina-rosyada-aktivis-perempuan-sekaligus-jurnalis-yang-kini-berkiprah-sebagai-anggota-dprd-ogan-ilir-periode-2024-2029/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-amrina",
+      "url": "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-aseprahmat",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-aseprahmat",
+      "url": "https://setdprd.ciamiskab.go.id/profile-anggota-dprd/asep-rahmat-s-h-m-m",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-aseprahmat",
+      "url": "https://www.gelora.co/2026/01/icw-ungkap-28-yayasan-mitra-mbg.html",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:proj-mbg",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-gsn",
+      "url": "https://www.tempo.co/politik/temuan-icw-soal-afiliasi-mitra-mbg-ke-partai-politik-hingga-eks-terpidana-korupsi-2093173",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-gsn",
+      "url": "https://yayasangsn.id/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-prabowo",
+      "url": "https://yayasangsn.id/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-prabowo",
+      "url": "https://www.tempo.co/politik/temuan-icw-soal-afiliasi-mitra-mbg-ke-partai-politik-hingga-eks-terpidana-korupsi-2093173",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-hashim",
+      "url": "https://yayasangsn.id/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-hashim",
+      "url": "https://www.tempo.co/politik/temuan-icw-soal-afiliasi-mitra-mbg-ke-partai-politik-hingga-eks-terpidana-korupsi-2093173",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-sjafrie",
+      "url": "https://kompaspedia.kompas.id/baca/profil/tokoh/menteri-pertahanan-ri-2024-2029-sjafri-sjamsoeddin",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-ppsdp",
+      "url": "https://yppsdp.id/sejarah/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-musa-bangun",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-musa-bangun",
+      "url": "https://www.cnnindonesia.com/ekonomi/20250612151622-92-1239059/waketum-gerindra-musa-bangun-diangkat-jadi-komut-inalum",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-idewa",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-yasika",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-yasika-aulia",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:person-yasir",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-pln",
+      "url": "https://money.kompas.com/read/2025/06/19/182546026/daftar-dewan-direksi-dan-komisaris-pln-tebaru-hasil-rups-2025",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-pln",
+      "url": "https://www.liputan6.com/regional/read/5652931/profil-burhanuddin-abdullah-jadi-komisaris-utama-pln",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-danantara",
+      "url": "https://www.liputan6.com/regional/read/5933507/profil-burhanuddin-abdullah-ditunjuk-jadi-ketua-tim-pakar-dan-inisiator-danantara",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "entity:org-danantara",
+      "url": "https://govinsider.asia/indo-en/article/danantara-dan-transformasi-bumn-menuju-indonesia-emas-2045",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-nuralam->org-icw-001",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-zayat->org-icw-001",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-burhanuddin->org-icw-002",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-payapo->org-icw-003",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-nizar->org-icw-004",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-sulaeman->org-icw-005",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-amrina->org-icw-006",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-aseprahmat->org-icw-007",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:org-icw-001->proj-mbg",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:org-icw-002->proj-mbg",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:org-icw-003->proj-mbg",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:org-icw-004->proj-mbg",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:org-icw-005->proj-mbg",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:org-icw-006->proj-mbg",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:org-icw-007->proj-mbg",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-prabowo->org-gsn",
+      "url": "https://yayasangsn.id/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-hashim->org-gsn",
+      "url": "https://yayasangsn.id/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-sjafrie->org-ppsdp",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-musa-bangun->org-ppsdp",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:org-ppsdp->proj-mbg",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-idewa->org-icw-002",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:org-gsn->proj-mbg",
+      "url": "https://www.tempo.co/politik/temuan-icw-soal-afiliasi-mitra-mbg-ke-partai-politik-hingga-eks-terpidana-korupsi-2093173",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-yasika-aulia->org-yasika",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-yasir->person-yasika-aulia",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:org-yasika->proj-mbg",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-burhanuddin->org-pln",
+      "url": "https://money.kompas.com/read/2025/06/19/182546026/daftar-dewan-direksi-dan-komisaris-pln-tebaru-hasil-rups-2025",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:person-burhanuddin->org-danantara",
+      "url": "https://www.liputan6.com/regional/read/5933507/profil-burhanuddin-abdullah-ditunjuk-jadi-ketua-tim-pakar-dan-inisiator-danantara",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "relation:org-danantara->org-pln",
+      "url": "https://infobanknews.com/daftar-7-bumn-beraset-jumbo-yang-dikelola-danantara/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b01",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b02",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b03",
+      "url": "https://www.tempo.co/politik/icw-temukan-3-yayasan-mbg-terafiliasi-mantan-terpidana-korupsi-2092968",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b04",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b05",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b06",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b06",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b09",
+      "url": "https://antikorupsi.org/sites/default/files/dokumen/ICW_Ada_Siapa_di_Balik_MBG_.pdf",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b07",
+      "url": "https://yayasangsn.id/",
+      "status": "ok",
+      "code": 200,
+      "error": null
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b07",
+      "url": "https://www.tempo.co/politik/temuan-icw-soal-afiliasi-mitra-mbg-ke-partai-politik-hingga-eks-terpidana-korupsi-2093173",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b11",
+      "url": "https://kabariku.com/politik/mk-mulai-sidang-gugatan-penggunaan-dana-pendidikan-untuk-makan-gratis/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b12",
+      "url": "https://katadata.co.id/ekonomi-hijau/anggaran-bgn-2026-rup-hanya-8-persen/",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b08",
+      "url": "https://www.tempo.co/politik/icw-temukan-28-yayasan-mbg-terafiliasi-dengan-partai-politik-2092889",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b10",
+      "url": "https://money.kompas.com/read/2025/08/26/083100226/pernah-terjerat-korupsi-eks-gubernur-bi-burhanuddin-abdullah-dapat-bintang",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b10",
+      "url": "https://www.liputan6.com/regional/read/5933507/profil-burhanuddin-abdullah-ditunjuk-jadi-ketua-tim-pakar-dan-inisiator-danantara",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    },
+    {
+      "case_file": "case_study_yayasan_sppg.json",
+      "location": "red_flag:rf-b10",
+      "url": "https://money.kompas.com/read/2025/06/19/182546026/daftar-dewan-direksi-dan-komisaris-pln-tebaru-hasil-rups-2025",
+      "status": "skipped",
+      "code": null,
+      "error": "host in SKIP_HOSTS"
+    }
+  ]
+}
