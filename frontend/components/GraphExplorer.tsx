@@ -4,6 +4,7 @@ import { DetailSidebar } from "@/components/DetailSidebar";
 import { FocusBanner } from "@/components/FocusBanner";
 import { GraphOnboarding } from "@/components/GraphOnboarding";
 import { GraphViewer } from "@/components/GraphViewer";
+import { MobileGraphHint } from "@/components/MobileGraphHint";
 import type { CaseStudy, GraphSelection } from "@/types/graph";
 import { useState, useEffect, useCallback, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
@@ -77,6 +78,7 @@ export function GraphExplorer({ caseStudy, isDark }: GraphExplorerProps) {
       <main className="flex-1 relative min-w-0 h-full bg-[var(--bg-base)] z-0">
         <FocusBanner focusCount={focusNodeIds.length} />
         <GraphOnboarding focusActive={focusNodeIds.length > 0 || selection.kind !== "none"} />
+        <MobileGraphHint />
         <GraphViewer
           caseStudy={caseStudy}
           onSelectionChange={handleSelectionChange}
