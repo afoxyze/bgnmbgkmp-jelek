@@ -191,17 +191,34 @@ function StatCell({ value, label, danger = false }: StatCellProps) {
 }
 
 function SignalMap() {
+  // Show the headline number from each of the first three registry entries
+  // instead of abstract circles. Same visual footprint, actual data.
+  const entries = getEntrySummaries().slice(0, 3);
+
   return (
-    <div className="relative min-h-[190px] bg-[var(--bg-surface-2)]" aria-hidden="true">
-      <svg className="absolute inset-0 h-full w-full" viewBox="0 0 420 190">
-        <path d="M88 95 C140 28, 238 40, 318 88" stroke="var(--border-strong)" strokeWidth="1.5" fill="none" />
-        <path d="M88 95 C162 150, 235 148, 318 88" stroke="var(--border-strong)" strokeWidth="1.5" fill="none" />
-        <path d="M200 48 L200 143" stroke="var(--border-strong)" strokeWidth="1.5" />
-        <circle cx="88" cy="95" r="26" fill="var(--bg-surface)" stroke="var(--accent-danger)" strokeWidth="2" />
-        <circle cx="200" cy="48" r="18" fill="var(--bg-surface)" stroke="#3B82F6" strokeWidth="2" />
-        <circle cx="200" cy="143" r="18" fill="var(--bg-surface)" stroke="#10B981" strokeWidth="2" />
-        <circle cx="318" cy="88" r="30" fill="var(--bg-surface)" stroke="#F59E0B" strokeWidth="2" />
-      </svg>
+    <div className="relative min-h-[190px] bg-[var(--bg-surface-2)] p-5 flex flex-col justify-between">
+      <div className="font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--text-tertiary)]">
+        Etalase
+      </div>
+      <div className="flex flex-col gap-1">
+        {entries.map((entry) => (
+          <Link
+            key={entry.slug}
+            href={`/etalase/${entry.slug}`}
+            className="group flex items-baseline gap-3 no-underline border-t border-[var(--border-base)] pt-2 first:pt-0 first:border-t-0"
+          >
+            <span
+              style={{ fontFamily: "'IBM Plex Serif', 'Georgia', serif" }}
+              className="text-lg font-bold text-[var(--accent-danger)] tracking-tight w-[72px] shrink-0"
+            >
+              {entry.anggaranFokus ?? entry.code}
+            </span>
+            <span className="flex-1 min-w-0 text-[11px] leading-snug text-[var(--text-secondary)] group-hover:text-[var(--text-primary)] transition-colors truncate">
+              {entry.categoryLong}
+            </span>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
