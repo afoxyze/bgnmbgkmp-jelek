@@ -337,12 +337,12 @@ function PrincipleCard({ num, title, body }: { num: string; title: string; body:
 
 function Footer() {
   return (
-    <footer className="border-t border-[var(--border-base)] py-12">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-        <div className="md:col-span-1">
+    <footer className="border-t border-[var(--border-base)] py-10">
+      <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between md:gap-10">
+        <div className="max-w-md">
           <Link
             href="/"
-            className="mb-4 block text-lg font-black tracking-tight text-[var(--text-primary)] no-underline"
+            className="mb-2 block text-lg font-black tracking-tight text-[var(--text-primary)] no-underline"
           >
             {SITE_CONFIG.NAME}
           </Link>
@@ -351,43 +351,27 @@ function Footer() {
           </p>
         </div>
 
-        <FooterColumn title="Baca">
-          <FooterLink href="/etalase">Etalase</FooterLink>
-          <FooterLink href="/graf">Peta relasi</FooterLink>
-          <FooterLink href="/cari">Cari entitas</FooterLink>
-          <FooterLink href="/sppg">Titik SPPG</FooterLink>
-        </FooterColumn>
-
-        <FooterColumn title="Data">
+        <nav
+          aria-label="Tautan footer"
+          className="flex flex-wrap gap-x-5 gap-y-2 text-sm"
+        >
+          <FooterLink href="/tentang">Tentang</FooterLink>
+          <FooterLink href="/perubahan">Perubahan</FooterLink>
+          <FooterLink href="/kontak">Kontak</FooterLink>
+          <FooterLink href={SITE_CONFIG.REPO_URL}>GitHub</FooterLink>
           <FooterLink href="/exports/pbp_id_sppg_data.csv">Unduh CSV</FooterLink>
           <FooterLink href="/exports/pbp_id_sppg_data.json">Unduh JSON</FooterLink>
-          <FooterLink href="/data/case_study_bgn_peruri.json">Contoh entri JSON</FooterLink>
-        </FooterColumn>
-
-        <FooterColumn title="Tentang">
-          <FooterLink href="/tentang">Metodologi</FooterLink>
-          <FooterLink href="/perubahan">Perubahan</FooterLink>
-          <FooterLink href={SITE_CONFIG.REPO_URL}>GitHub</FooterLink>
-          <FooterLink href="/kontak">Kontak & Koreksi</FooterLink>
-        </FooterColumn>
+        </nav>
       </div>
 
-      <div className="mt-12 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--border-base)] pt-6 font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--text-tertiary)]">
-        <span>© 2026 {SITE_CONFIG.NAME_LONG}</span>
+      <div className="mt-8 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--border-base)] pt-5 font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--text-tertiary)]">
+        <span>
+          © 2026 {" "}
+          Proyek <span className="text-[var(--accent-danger)]">&ldquo;Bagus&rdquo;</span> Pemerintah
+        </span>
         <span>Dokumen publik · Open source</span>
       </div>
     </footer>
-  );
-}
-
-function FooterColumn({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <div>
-      <h3 className="mb-4 font-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[var(--text-primary)]">
-        {title}
-      </h3>
-      <ul className="m-0 flex list-none flex-col gap-2 p-0">{children}</ul>
-    </div>
   );
 }
 
@@ -396,20 +380,16 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
 
   if (href.startsWith("http")) {
     return (
-      <li>
-        <a href={href} target="_blank" rel="noreferrer" className={className}>
-          {children}
-        </a>
-      </li>
+      <a href={href} target="_blank" rel="noreferrer" className={className}>
+        {children}
+      </a>
     );
   }
 
   return (
-    <li>
-      <Link href={href} className={className}>
-        {children}
-      </Link>
-    </li>
+    <Link href={href} className={className}>
+      {children}
+    </Link>
   );
 }
 
