@@ -19,15 +19,42 @@ interface SearchPageProps {
 
 const ALL_TYPES: EntityType[] = ["Person", "Organization", "Project"];
 
-// Picks the first 2-3 property entries for the card preview.
+// Picks the most informative 1–2 properties for the card preview.
+// Priority per entity type — fall back to any two non-empty strings.
+const PROPERTY_PRIORITY: Record<EntityType, readonly string[]> = {
+  Person: ["jabatan", "partai_politik", "afiliasi", "peran_yayasan", "red_flag"],
+  Organization: ["jenis", "bidang_utama", "direktur_utama", "nilai_kontrak", "red_flag"],
+  Project: ["nilai_total", "nilai_pagu", "alokasi_anggaran", "jenis_program", "red_flag"],
+  LegalCase: ["status", "putusan", "red_flag"],
+};
+
 function getPreviewProperties(entity: Entity): Array<{ key: string; value: string }> {
-  const entries = Object.entries(entity.properties).filter(
-    ([k, v]) => k !== "red_flag" && v !== null && v !== undefined && v !== ""
-  );
-  return entries.slice(0, 3).map(([key, value]) => ({
-    key: formatPropertyKey(key),
-    value: Array.isArray(value) ? (value as unknown[]).map(String).join(", ") : String(value),
-  }));
+  const order = PROPERTY_PRIORITY[entity.type] ?? [];
+  const picked: Array<{ key: string; value: string }> = [];
+  const seen = new Set<string>();
+
+  const addIfUsable = (key: string) => {
+    if (picked.length >= 2 || seen.has(key)) return;
+    const raw = entity.properties[key];
+    if (raw === null || raw === undefined || raw === "") return;
+    seen.add(key);
+    const value = Array.isArray(raw) ? (raw as unknown[]).map(String).join(", ") : String(raw);
+    picked.push({ key: formatPropertyKey(key), value });
+  };
+
+  // First pass: prioritized keys for this entity type.
+  for (const k of order) addIfUsable(k);
+
+  // Second pass: any other non-empty, non-internal string property.
+  if (picked.length < 2) {
+    for (const [k, v] of Object.entries(entity.properties)) {
+      if (k === "red_flag") continue; // handled separately on card via flag count
+      if (v === null || v === undefined || v === "") continue;
+      addIfUsable(k);
+    }
+  }
+
+  return picked;
 }
 
 export function SearchPage({ caseStudy }: SearchPageProps) {
