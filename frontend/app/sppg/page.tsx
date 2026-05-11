@@ -151,18 +151,17 @@ export default function SPPGPage() {
     return filteredList.slice(0, visibleCount);
   }, [filteredList, visibleCount]);
 
+  // Show a centered loader only while the tiny summary + map_data are in
+  // flight (a few hundred ms). Once they resolve we paint the full UI and
+  // let the 10 MB points file stream in underneath — the list area has
+  // its own placeholder for that.
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-[60vh] px-6">
         <div className="flex flex-col items-center gap-4 max-w-md text-center">
           <div className="w-10 h-10 border-2 rounded-full animate-spin border-[var(--border-strong)] border-t-[var(--accent-danger)]" />
-          <div className="space-y-1">
-            <div className="text-sm font-mono font-bold uppercase tracking-widest text-[var(--text-secondary)]">
-              Memuat data nasional
-            </div>
-            <div className="text-xs text-[var(--text-tertiary)]">
-              Ada 27.000+ titik SPPG, pertama kali buka butuh beberapa detik.
-            </div>
+          <div className="text-sm font-mono font-bold uppercase tracking-widest text-[var(--text-secondary)]">
+            Menyiapkan ringkasan
           </div>
         </div>
       </div>
@@ -170,6 +169,8 @@ export default function SPPGPage() {
   }
 
   if (!data) return <div>Gagal memuat data.</div>;
+
+  const pointsReady = points.length > 0;
 
   const sortedProvinces = Object.entries(data.by_province).sort((a, b) => a[0].localeCompare(b[0]));
   const totalOfficial = summary?.total_official ?? data.total_official ?? data.total ?? 0;
@@ -331,6 +332,29 @@ export default function SPPGPage() {
             </div>
 
             <div className="flex-1 overflow-y-auto p-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 align-start content-start bg-[var(--bg-surface-2)]">
+              {!pointsReady && (
+                <div className="col-span-full flex flex-col items-center gap-3 py-16 text-center">
+                  <div className="w-8 h-8 border-2 rounded-full animate-spin border-[var(--border-strong)] border-t-[var(--accent-danger)]" />
+                  <div className="text-xs font-mono uppercase tracking-widest text-[var(--text-tertiary)]">
+                    Mengambil 27.000+ titik...
+                  </div>
+                  <div className="text-[11px] text-[var(--text-tertiary)] max-w-xs">
+                    Ringkasan dan filter sudah siap. Daftar detail menyusul.
+                  </div>
+                </div>
+              )}
+
+              {pointsReady && displayedList.length === 0 && (
+                <div className="col-span-full flex flex-col items-center gap-2 py-16 text-center">
+                  <div className="text-sm font-bold text-[var(--text-primary)]">
+                    Tidak ada hasil.
+                  </div>
+                  <div className="text-[11px] text-[var(--text-tertiary)] max-w-xs">
+                    Coba hapus filter atau ganti provinsi.
+                  </div>
+                </div>
+              )}
+
               {displayedList.map((p) => {
                 const isPolitical = p.affiliated_foundations?.some(f => POLITICAL_FOUNDATIONS[f]);
                 const isSuspended = p.operational_status === "SUSPENDED";
