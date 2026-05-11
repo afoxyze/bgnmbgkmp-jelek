@@ -349,6 +349,7 @@ function Footer() {
 
         <FooterColumn title="Tentang">
           <FooterLink href="/tentang">Metodologi</FooterLink>
+          <FooterLink href="/perubahan">Perubahan</FooterLink>
           <FooterLink href={SITE_CONFIG.REPO_URL}>GitHub</FooterLink>
           <FooterLink href="/kontak">Kontak & Koreksi</FooterLink>
         </FooterColumn>

@@ -16,6 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_CONFIG.URL}/sppg`, lastModified: now, priority: 0.7, changeFrequency: "monthly" },
     { url: `${SITE_CONFIG.URL}/tentang`, lastModified: now, priority: 0.5, changeFrequency: "yearly" },
     { url: `${SITE_CONFIG.URL}/kontak`, lastModified: now, priority: 0.5, changeFrequency: "yearly" },
+    { url: `${SITE_CONFIG.URL}/perubahan`, lastModified: now, priority: 0.5, changeFrequency: "weekly" },
   ];
 
   // Entri pages with per-entry lastModified from data
