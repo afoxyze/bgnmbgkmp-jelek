@@ -3,9 +3,9 @@
 export const SITE_CONFIG = {
   NAME: "PBP.ID",
   NAME_LONG: "Proyek Bagus Pemerintah",
-  URL: "https://pbp.id",
+  URL: "https://proyekbagus.afoxyze.dev",
   REPO_URL: "https://github.com/afoxyze/bgnmbgkmp-jelek",
-  CONTACT_EMAIL: "kontak@pbp.id",
+  CONTACT_EMAIL: "kontak@afoxyze.dev",
   TAGLINE: "Proyek Bagus Pemerintah",
   DESCRIPTION:
     "Arsip proyek pemerintah Indonesia. Angka, vendor, dan relasinya dari dokumen publik — dikumpulkan di satu tempat.",
