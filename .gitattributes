@@ -1,0 +1,2 @@
+frontend/public/data/all_sppg_locations.json filter=lfs diff=lfs merge=lfs -text
+frontend/public/data/sppg_points.json filter=lfs diff=lfs merge=lfs -text
