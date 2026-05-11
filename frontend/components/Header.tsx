@@ -54,9 +54,10 @@ export function Header() {
             {SITE_CONFIG.NAME}
           </Link>
           <span
+            aria-label={SITE_CONFIG.NAME_LONG}
             className="hidden lg:inline text-[10px] pl-3 border-l border-[var(--border-strong)] text-[var(--text-tertiary)] uppercase tracking-[0.14em] font-mono font-bold truncate"
           >
-            {SITE_CONFIG.NAME_LONG}
+            Proyek <span className="text-[var(--accent-danger)]">&ldquo;Bagus&rdquo;</span> Pemerintah
           </span>
         </div>
 
@@ -141,7 +142,7 @@ export function Header() {
           
           <div className="mt-auto pb-10 text-center pt-8">
             <p className="text-[10px] text-[var(--text-tertiary)] font-bold tracking-widest opacity-40 uppercase">
-              {SITE_CONFIG.NAME_LONG}
+              Proyek <span className="text-[var(--accent-danger)]">&ldquo;Bagus&rdquo;</span> Pemerintah
             </p>
           </div>
         </div>

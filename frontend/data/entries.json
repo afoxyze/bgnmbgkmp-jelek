@@ -15,28 +15,28 @@
     "findings": [
       {
         "tag": "Pengadaan",
-        "title": "Peruri tercatat menerima proyek IT senilai Rp 600 miliar.",
-        "body": "Peruri secara historis adalah BUMN percetakan dokumen berharga. Kontrak sistem informasi kesehatan diberikan via penunjukan langsung kepada anak perusahaannya, PT Peruri Digital Security (PDS), tanpa tender kompetitif terbuka.",
+        "title": "Peruri tercatat menerima kontrak IT senilai Rp 600 miliar.",
+        "body": "Peruri tercatat dalam sistem LPSE sebagai BUMN percetakan dokumen berharga. Kontrak Sistem Informasi Gizi senilai Rp 600 miliar diberikan via penunjukan langsung kepada anak perusahaannya, PT Peruri Digital Security (PDS).",
         "relatedEntityIds": ["org-bgn", "org-peruri", "org-pds"],
         "relatedRedFlagIds": ["rf-001"]
       },
       {
         "tag": "Jabatan",
-        "title": "Nama pejabat Kemenkes muncul di kursi komisaris PDS.",
-        "body": "Setiaji, Chief DTO Kementerian Kesehatan, duduk sebagai Komisaris Utama PDS — lembaga yang menerima kontrak IT dari lembaga pemerintah. Wakil Direktur Utama, Rahmat Danu Andika, sebelumnya menjabat Direktur GovTech Procurement di pemerintahan.",
+        "title": "Pejabat Kemenkes tercatat sebagai Komisaris Utama PDS.",
+        "body": "Setiaji, Chief DTO Kementerian Kesehatan, tercatat sebagai Komisaris Utama PDS — anak perusahaan Peruri yang menerima kontrak dari lembaga pemerintah. Wakil Direktur Utama, Rahmat Danu Andika, sebelumnya tercatat menjabat Direktur GovTech Procurement di pemerintahan.",
         "relatedEntityIds": ["person-setiaji", "person-danu-andika", "org-pds"]
       },
       {
         "tag": "Pemilik Manfaat",
-        "title": "Satu CEO, dua perusahaan, akumulasi kontrak ~Rp 700 M.",
-        "body": "Shoraya Lolyta Oktaviana terdaftar sebagai pemilik manfaat dua entitas berbeda (PT IMI dan PT NSP), yang keduanya memenangkan paket pengadaan rak Koperasi Merah Putih dengan nilai kumulatif ~Rp 695 miliar.",
+        "title": "Satu nama, dua perusahaan, akumulasi kontrak ~Rp 695 miliar.",
+        "body": "Shoraya Lolyta Oktaviana terdaftar di AHU sebagai pemilik manfaat dua entitas berbeda: PT IMI dan PT NSP. Keduanya tercatat di LPSE sebagai pemenang paket pengadaan rak Koperasi Merah Putih dengan nilai kumulatif ~Rp 695 miliar.",
         "relatedEntityIds": ["person-shoraya", "org-imi", "org-nsp"],
         "relatedRedFlagIds": ["rf-008"]
       },
       {
         "tag": "Harga",
-        "title": "Sikat dan semir sepatu SPPI diadakan dengan markup ~300%.",
-        "body": "Harga satuan di Inaproc mencapai Rp 50.000–56.000 per unit, dibandingkan harga pasar eceran Rp 18.000–19.000. Total alokasi Rp 1,57 miliar untuk 12 paket kontrak via E-Purchasing.",
+        "title": "Sikat dan semir sepatu SPPI tercatat di harga Rp 50.000–56.000 per unit.",
+        "body": "Harga satuan di Inaproc tercatat Rp 50.000–56.000 per unit. Harga pasar eceran untuk item setara (merek Kiwi) tercatat Rp 18.000–19.000. Total alokasi Rp 1,57 miliar untuk 12 paket kontrak via E-Purchasing.",
         "relatedEntityIds": ["proj-bgn-sikat-sepatu", "org-gajah-mitra"],
         "relatedRedFlagIds": ["rf-012"]
       }
@@ -66,23 +66,23 @@
     "findings": [
       {
         "tag": "Konsentrasi Vendor",
-        "title": "80.000+ gerai tercatat dilaksanakan oleh satu ekosistem.",
-        "body": "PT Agrinas dan jejaring entitas afiliasinya memegang kontrak konstruksi untuk lebih dari 80.000 gerai Koperasi Merah Putih. Skala ini meniadakan ruang partisipasi kontraktor lokal dan kompetisi harga terbuka."
+        "title": "Kontrak konstruksi 80.000+ gerai tercatat pada satu ekosistem perusahaan.",
+        "body": "PT Agrinas dan entitas afiliasinya tercatat di LPSE sebagai pelaksana kontrak konstruksi untuk lebih dari 80.000 gerai Koperasi Merah Putih. Data pengadaan tidak menunjukkan partisipasi kontraktor lokal dalam skala setara."
       },
       {
         "tag": "Selisih Harga",
-        "title": "Selisih ~Rp 700 juta per gerai di Denpasar.",
-        "body": "Anggaran per unit gerai di dokumen pengadaan berbeda dari penilaian fisik lapangan. Studi kasus Denpasar mencatat selisih hingga Rp 700 juta per unit antara nilai kontrak dan nilai konstruksi riil."
+        "title": "Selisih ~Rp 700 juta per gerai tercatat di laporan Denpasar.",
+        "body": "Dokumen pengadaan mencatat satu nilai kontrak per unit gerai. Penilaian fisik lapangan di Denpasar mencatat selisih hingga Rp 700 juta per unit antara nilai kontrak dan nilai konstruksi yang terlihat."
       },
       {
         "tag": "Jabatan Strategis",
         "title": "Menhan aktif tercatat sebagai pimpinan ex-officio YPPSDP.",
-        "body": "YPPSDP adalah yayasan induk ekosistem Agrinas. Menteri Pertahanan aktif menjabat sebagai pimpinan ex-officio yayasan ini, menyambungkan regulator anggaran pertahanan dengan operator proyek infrastruktur desa."
+        "body": "YPPSDP adalah yayasan induk ekosistem Agrinas. Menteri Pertahanan aktif tercatat sebagai pimpinan ex-officio yayasan ini berdasarkan dokumen resmi Kemenhan."
       },
       {
         "tag": "Lokasi Barang",
-        "title": "Ribuan unit rak SPPG tersimpan di gudang Pusziad TNI AD, Cileungsi.",
-        "body": "Catatan lapangan publik menyebut ribuan unit rak proyek SLO (Sarana Logistik Operasional) yang seharusnya terdistribusi ke SPPG ditemukan tersimpan di gudang militer Pusziad TNI AD Cileungsi."
+        "title": "Ribuan unit rak SPPG ditemukan di gudang Pusziad TNI AD Cileungsi.",
+        "body": "Laporan lapangan publik mencatat ribuan unit rak proyek SLO (Sarana Logistik Operasional) — yang seharusnya terdistribusi ke SPPG — tersimpan di gudang militer Pusziad TNI AD Cileungsi."
       }
     ],
     "timeline": [
@@ -111,17 +111,17 @@
       {
         "tag": "Jejak Nama",
         "title": "Direksi vendor tercatat di berkas perkara bansos KPK.",
-        "body": "Jajaran direksi PT Yasa Artha tercatat dalam berkas penyidikan KPK sebagai saksi kunci kasus dugaan korupsi pengadaan bansos. Fakta ini tidak mengubah status vendor dalam sistem pengadaan pemerintah."
+        "body": "Jajaran direksi PT Yasa Artha tercatat dalam berkas penyidikan KPK sebagai saksi kasus dugaan korupsi pengadaan bansos. Status vendor di sistem pengadaan pemerintah tetap aktif setelah pencatatan ini."
       },
       {
         "tag": "Angka Besar",
-        "title": "Rp 1,4 triliun untuk satu lini logistik.",
-        "body": "Alokasi Rp 1,4 T untuk motor listrik saja merupakan porsi signifikan dari total anggaran logistik MBG. Tidak ada dokumen publik yang menjustifikasi pilihan teknologi atau unit cost."
+        "title": "Rp 1,4 triliun untuk satu lini logistik MBG.",
+        "body": "Alokasi Rp 1,4 T untuk pengadaan motor listrik tercatat sebagai bagian dari anggaran logistik MBG. Tidak ditemukan dokumen publik yang menjabarkan justifikasi teknis atau perbandingan unit cost antar pilihan teknologi."
       },
       {
         "tag": "Nama Berulang",
-        "title": "Ekosistem vendor MBG tumpang tindih dengan ekosistem Agrinas.",
-        "body": "Beberapa entitas vendor yang muncul di paket logistik MBG juga tercatat sebagai pemasok di ekosistem Agrinas/KMP. Pola ini menunjukkan konsentrasi pasar yang sempit."
+        "title": "Ekosistem vendor MBG beririsan dengan ekosistem Agrinas.",
+        "body": "Sebagian entitas vendor di paket logistik MBG juga tercatat sebagai pemasok di ekosistem Agrinas/KMP. Data AHU dan LPSE menunjukkan kemunculan nama yang sama di beberapa paket berbeda."
       }
     ],
     "timeline": [
