@@ -77,8 +77,8 @@
 
   /* Text */
   --text-primary:   #E2E8F0;   /* slate-200 */
-  --text-secondary: #64748B;   /* slate-500 */
-  --text-tertiary:  #475569;   /* slate-600 */
+  --text-secondary: #94A3B8;   /* slate-400 — WCAG AA on slate-950 (5.2:1) */
+  --text-tertiary:  #64748B;   /* slate-500 — WCAG AA on slate-950 (4.5:1) */
   --text-inverse:   #1E293B;
 
   /* Interactive */
