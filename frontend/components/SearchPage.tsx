@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect, useRef } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
+import Fuse from "fuse.js";
 import { NodeBadge } from "@/components/NodeBadge";
 import {
   ENTITY_TYPE_LABELS,
@@ -63,35 +64,63 @@ export function SearchPage({ caseStudy }: SearchPageProps) {
     setLimit(24);
   }, [query, activeType]);
 
-  const normalized = query.trim().toLowerCase();
-  const filtered = useMemo(() => {
-    // 1. Filter by type and query
-    const results = caseStudy.entities.filter((e) => {
-      const matchesType = !activeType || e.type === activeType;
-      const matchesQuery =
-        normalized === "" || e.label.toLowerCase().includes(normalized);
-      return matchesType && matchesQuery;
-    });
+  const normalized = query.trim();
 
-    // 2. Sort: Project > Organization > Person, and Red Flags first
-    return results.sort((a, b) => {
-      // Type Weight: Project=0, Organization=1, Person=2
+  // Fuse index is keyed to the entity list. Rebuilt only when the entity
+  // list changes, which is effectively once per page load. Searches on:
+  // label (primary), id (exact-matches like "person-dadan"), and property
+  // values (jabatan, afiliasi, etc.) so typing "DTO" finds Setiaji.
+  const fuse = useMemo(() => {
+    const indexable = caseStudy.entities.map((e) => ({
+      entity: e,
+      label: e.label,
+      id: e.id,
+      type: e.type,
+      properties: Object.values(e.properties)
+        .filter((v) => typeof v === "string" || typeof v === "number")
+        .map(String)
+        .join(" "),
+    }));
+    return new Fuse(indexable, {
+      keys: [
+        { name: "label", weight: 0.6 },
+        { name: "id", weight: 0.15 },
+        { name: "properties", weight: 0.25 },
+      ],
+      threshold: 0.4,          // 0 = exact, 1 = anything. 0.4 is a good balance.
+      ignoreLocation: true,    // match anywhere in field, not just the head
+      includeScore: true,
+      minMatchCharLength: 2,
+    });
+  }, [caseStudy.entities]);
+
+  const filtered = useMemo(() => {
+    // Step 1: text filter via Fuse (or identity when query is empty).
+    const byText: Entity[] =
+      normalized === ""
+        ? caseStudy.entities.slice()
+        : fuse.search(normalized).map((r) => r.item.entity);
+
+    // Step 2: type filter.
+    const typed = activeType ? byText.filter((e) => e.type === activeType) : byText;
+
+    // Step 3: stable sort when not searching. When searching, keep Fuse ordering
+    // (by relevance score).
+    if (normalized !== "") return typed;
+
+    return typed.slice().sort((a, b) => {
       const typeWeights: Record<string, number> = { Project: 0, Organization: 1, Person: 2 };
       const weightA = typeWeights[a.type] ?? 99;
       const weightB = typeWeights[b.type] ?? 99;
-
       if (weightA !== weightB) return weightA - weightB;
 
-      // Red Flags: True (flagged) first
       const hasFlagsA = getRedFlagsForEntity(caseStudy.red_flags, a.id).length > 0;
       const hasFlagsB = getRedFlagsForEntity(caseStudy.red_flags, b.id).length > 0;
-
       if (hasFlagsA !== hasFlagsB) return hasFlagsA ? -1 : 1;
 
-      // Alphabetical
       return a.label.localeCompare(b.label);
     });
-  }, [caseStudy.entities, caseStudy.red_flags, activeType, normalized]);
+  }, [caseStudy.entities, caseStudy.red_flags, activeType, normalized, fuse]);
 
   const displayed = filtered.slice(0, limit);
 
