@@ -77,10 +77,10 @@ Semua kode dan data terbuka. Kalau data kami salah, laporkan lewat GitHub issue 
 
 1. Hubungkan repositori ke Cloudflare Pages.
 2. Root Directory: `frontend`.
-3. Build Command: `npm run build`.
+3. Build Command: `git lfs pull && npm run build`.
 4. Output Directory: `out`.
 
-`npm run build` otomatis menjalankan `scripts/generate-og.mjs` untuk generate OG PNG per-entri.
+`npm run build` otomatis menjalankan `scripts/check-lfs.mjs` untuk memastikan LFS blob sudah ter-resolve, lalu `scripts/generate-og.mjs` untuk generate OG PNG per entri.
 
 ## Metodologi
 

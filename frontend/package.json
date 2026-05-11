@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "node scripts/generate-og.mjs",
+    "prebuild": "node scripts/check-lfs.mjs && node scripts/generate-og.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "generate-og": "node scripts/generate-og.mjs"
+    "generate-og": "node scripts/generate-og.mjs",
+    "check-lfs": "node scripts/check-lfs.mjs"
   },
   "dependencies": {
     "@types/leaflet": "^1.9.21",
