@@ -43,34 +43,13 @@ async function generateDefault() {
 }
 
 // ── Per-entry OG ─────────────────────────────────────────────────────────
-// Entri metadata is duplicated here from lib/entry.ts to avoid importing
-// TS at build time. Keep in sync if ENTRY_REGISTRY changes.
-const ENTRIES = [
-  {
-    slug: "bgn-peruri",
-    code: "PROYEK 01",
-    category: "BGN",
-    title: "Sistem Informasi Gizi BGN — Rp 600 Miliar",
-    angka: "Rp 600 M",
-    angkaLabel: "Kontrak penunjukan langsung",
-  },
-  {
-    slug: "agrinas-kmp",
-    code: "PROYEK 02",
-    category: "KMP",
-    title: "Koperasi Merah Putih — Rp 128 Triliun",
-    angka: "Rp 128 T",
-    angkaLabel: "80.000+ gerai, satu ekosistem",
-  },
-  {
-    slug: "motor-bgn",
-    code: "PROYEK 03",
-    category: "MBG",
-    title: "Motor Listrik MBG — Rp 1,4 Triliun",
-    angka: "Rp 1,4 T",
-    angkaLabel: "Vendor juga saksi perkara KPK",
-  },
-];
+// Registry lives in frontend/data/entries.json — same file used by
+// lib/entry.ts. One source of truth: adding an entry there updates both
+// the site rendering and the OG image build.
+async function loadRegistry() {
+  const raw = await readFile(join(FRONTEND_DIR, "data", "entries.json"), "utf-8");
+  return JSON.parse(raw);
+}
 
 function escapeXml(s) {
   return s
@@ -141,9 +120,16 @@ function entrySvg({ code, category, title, angka, angkaLabel }) {
 
 async function generateEntries() {
   await mkdir(OG_DIR, { recursive: true });
-  for (const d of ENTRIES) {
-    const svg = entrySvg(d);
-    const outPath = join(OG_DIR, `entry-${d.slug}.png`);
+  const entries = await loadRegistry();
+  for (const e of entries) {
+    const svg = entrySvg({
+      code: e.code,
+      category: e.categoryShort,
+      title: e.title,
+      angka: e.anggaranFokus ?? "—",
+      angkaLabel: e.anggaranLabel ?? "—",
+    });
+    const outPath = join(OG_DIR, `entry-${e.slug}.png`);
     await sharp(Buffer.from(svg), { density: 144 })
       .resize(WIDTH, HEIGHT, { fit: "cover" })
       .png({ compressionLevel: 9 })
